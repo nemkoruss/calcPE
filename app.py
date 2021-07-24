@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+
 x = st.sidebar.selectbox('Выберите что будем считать:', ['Введение', 'Замес гранулы','Пленку','Пакеты','Бахилы','Перчатки', 'Заказ на бахилы'])
 
 if x == 'Введение':
