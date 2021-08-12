@@ -3,7 +3,9 @@ import pandas as pd
 import numpy as np
 
 
-x = st.sidebar.selectbox('Выберите что будем считать:', ['Введение', 'Замес гранулы','Пленку','Пакеты','Бахилы','Перчатки', 'Заказ на бахилы'])
+x = st.sidebar.selectbox('Расчёт продукции:', ['Введение','Замес гранулы','Пленку','Пакеты','Бахилы','Перчатки', 'Заказ на бахилы', 'Очистить экран'])
+
+y = st.sidebar.selectbox('Сотрудники:', ['Выбрать','Упаковщик БС','Оператор БС', 'Очистить экран'])
 
 if x == 'Введение':
     st.write('')
@@ -11,6 +13,7 @@ if x == 'Введение':
     st.title('Введение')
     st.subheader('Для работы калькулятора выберите в боковом меню нужный расчёт !')
     st.markdown('*Для входа в боковое меню на устройстве с маленьким экраном нажмите, в левом вверхнем углу, значок в виде стрелки  ">"*')
+    st.markdown('*Для более комфортной работы, не забывайте "Очищать экран"  *')
     st.write('')
     st.header('Контакты:')
     st.markdown('**Телефон для связи: ** [8-903-260-96-61](tel:+79032609661)')
@@ -293,3 +296,98 @@ elif x == "Заказ на бахилы":
         dza < 0
     sza = dza / kza
     st.write('Для выполнения заказа нужно: ' + str(sza) + ' день/дня/дней')
+
+if y == 'Упаковщик БС':
+    st.write('')
+    st.write('')
+    st.title('Ставка: ')
+    za = st.number_input('Эконом: ')
+    
+    if za == 0:
+        za = 1
+    else:
+        za < 0
+    
+    zb = st.number_input('Стандарт: ')
+    
+    if zb == 0:
+        zb = 1
+    else:
+        zb < 0
+    
+    zc = st.number_input('Прочные: ')
+    
+    if zc == 0:
+        zc = 1
+    else:
+        zc < 0
+    
+    zd = st.number_input('Детские: ')
+    
+    if zd == 0:
+        zd = 1
+    else:
+        zd < 0
+    
+    st.write('Сделано: ')
+    wa = st.number_input('Количество Эконом в коробках: ')
+    wb = st.number_input('Количество Стандарта в коробках: ')
+    wc = st.number_input('Количество Прочных в коробках: ')
+    wd = st.number_input('Количество Детских в коробках: ')
+    
+    st.write('Отгруженно: ')
+    ya = st.number_input('Количество Экoном в коробках: ')
+    yb = st.number_input('Кoличество Стандарта в коробках: ')
+    yc = st.number_input('Количествo Прочных в коробках: ')
+    yd = st.number_input('Количество Детских в кoробках: ')
+    
+    xa = wa - ya
+    xb = wb - yb
+    xc = wc - wc
+    xd = wd - wd
+    
+    ua = za * wa
+    ub = zb * wb
+    uc = zc * wc
+    ud = zd * wd
+
+    va = za * ya
+    vb = zb * yb
+    vc = zc * yc
+    vd = zd * yd
+
+    ta = za * xa
+    tb = zb * xb
+    tc = zc * xc
+    td = zd * xd
+    
+    st.write('Эконом: ')
+    st.write('Сделано: '  + str(wa) + ' кор.' + 'Сумма ЗП' + str(ua) + ' руб.')
+    st.write('Отгруженно: '  + str(ya) + ' кор.' + 'Оплата' + str(va) + ' руб.')
+    st.write('Склад: '  + str(xa) + ' кор.' + 'Долг' + str(ta) + ' руб.')
+    
+    st.write('')
+    st.write('')
+    
+    st.write('Стандарт: ')
+    st.write('Сделано: '  + str(wb) + ' кор.' + 'Сумма ЗП' + str(ub) + ' руб.')
+    st.write('Отгруженно: '  + str(yb) + ' кор.' + 'Оплата' + str(vb) + ' руб.')
+    st.write('Склад: '  + str(xb) + ' кор.' + 'Долг' + str(tb) + ' руб.')
+    
+    st.write('')
+    st.write('')
+    
+    st.write('Прочные: ')
+    st.write('Сделано: '  + str(wc) + ' кор.' + 'Сумма ЗП' + str(uc) + ' руб.')
+    st.write('Отгруженно: '  + str(yc) + ' кор.' + 'Оплата' + str(vc) + ' руб.')
+    st.write('Склад: '  + str(xc) + ' кор.' + 'Долг' + str(tc) + ' руб.')
+    
+    st.write('')
+    st.write('')
+    
+    st.write('Детские: ')
+    st.write('Сделано: '  + str(wd) + ' кор.' + 'Сумма ЗП' + str(ud) + ' руб.')
+    st.write('Отгруженно: '  + str(yd) + ' кор.' + 'Оплата' + str(vd) + ' руб.')
+    st.write('Склад: '  + str(xd) + ' кор.' + 'Долг' + str(td) + ' руб.')
+    
+    
