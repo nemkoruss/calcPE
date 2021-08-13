@@ -301,7 +301,7 @@ if y == 'Цех бахил':
     st.write('')
     st.write('')
     st.title('Ставка: ')
-    za = st.number_input('Стоимость "Эконом" за пару: ')
+    za = st.number_input('Стоимость "Эконома" за пару: ')
     
     if za == 0:
         za = 1
@@ -334,16 +334,16 @@ if y == 'Цех бахил':
     zh = zd * 5400
     
     st.title('Сделано: ')
-    wa = st.number_input('Количество Эконом в коробках: ')
-    wb = st.number_input('Количество Стандарта в коробках: ')
-    wc = st.number_input('Количество Прочных в коробках: ')
-    wd = st.number_input('Количество Детских в коробках: ')
+    wa = st.number_input('Количество "Эконом" в коробках: ')
+    wb = st.number_input('Количество "Стандарта" в коробках: ')
+    wc = st.number_input('Количество "Прочных" в коробках: ')
+    wd = st.number_input('Количество "Детских" в коробках: ')
     
     st.title('Отгруженно: ')
-    ya = st.number_input('Количество Экoном в коробках: ')
-    yb = st.number_input('Кoличество Стандарта в коробках: ')
-    yc = st.number_input('Количествo Прочных в коробках: ')
-    yd = st.number_input('Количество Детских в кoробках: ')
+    ya = st.number_input('Количество "Экoном" в коробках: ')
+    yb = st.number_input('Кoличество "Стандарта" в коробках: ')
+    yc = st.number_input('Количествo "Прочных" в коробках: ')
+    yd = st.number_input('Количество "Детских" в кoробках: ')
     
     xa = wa - ya
     xb = wb - yb
