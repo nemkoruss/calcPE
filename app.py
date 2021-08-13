@@ -301,33 +301,37 @@ if y == 'Цех бахил':
     st.write('')
     st.write('')
     st.title('Ставка: ')
-    za = st.number_input('Эконом: ')
+    za = st.number_input('Стоимость "Эконом" за пару: ')
     
     if za == 0:
         za = 1
     else:
         za < 0
     
-    zb = st.number_input('Стандарт: ')
+    zb = st.number_input('Стоимость "Стандарта" за пару: ')
     
     if zb == 0:
         zb = 1
     else:
         zb < 0
     
-    zc = st.number_input('Прочные: ')
+    zc = st.number_input('Стоимость "Прочных" за пару: ')
     
     if zc == 0:
         zc = 1
     else:
         zc < 0
     
-    zd = st.number_input('Детские: ')
+    zd = st.number_input('Стоимость "Детских" за пару: ')
     
     if zd == 0:
         zd = 1
     else:
         zd < 0
+    ze = za * 4000
+    zf = zb * 3500
+    zg = zc * 2000
+    zh = zd * 5400
     
     st.title('Сделано: ')
     wa = st.number_input('Количество Эконом в коробках: ')
@@ -346,20 +350,20 @@ if y == 'Цех бахил':
     xc = wc - wc
     xd = wd - wd
     
-    ua = za * wa
-    ub = zb * wb
-    uc = zc * wc
-    ud = zd * wd
+    ua = ze * wa
+    ub = zf * wb
+    uc = zg * wc
+    ud = zh * wd
 
-    va = za * ya
-    vb = zb * yb
-    vc = zc * yc
-    vd = zd * yd
+    va = ze * ya
+    vb = zf * yb
+    vc = zg * yc
+    vd = zh * yd
 
-    ta = za * xa
-    tb = zb * xb
-    tc = zc * xc
-    td = zd * xd
+    ta = ze * xa
+    tb = zf * xb
+    tc = zg * xc
+    td = zh * xd
     
     st.write('Эконом: ')
     st.write('Сделано: '  + str(wa) + ' кор., ' + 'Сумма ЗП: ' + str(ua) + ' руб.')
