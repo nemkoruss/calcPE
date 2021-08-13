@@ -347,8 +347,8 @@ if z == "Цех бахил":
     
     xa = wa - ya
     xb = wb - yb
-    xc = wc - wc
-    xd = wd - wd
+    xc = wc - yc
+    xd = wd - yd
     
     ua = ze * wa
     ub = zf * wb
