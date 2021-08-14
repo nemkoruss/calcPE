@@ -1,12 +1,11 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import os
 
 
-x = st.sidebar.selectbox('РАСЧЁТ ПРОДУКЦИИ:', ['Введение','Замес гранулы','Пленка','Пакеты','Бахилы','Перчатки', 'Очистить экран'])
+a = st.sidebar.radio('ВКЛ/ВЫКЛ "ВВЕДЕНИЕ":', ['Включено','Выключено'])
 
-if x == 'Введение':
+if a == 'Включено':
     st.write('')
     st.write('')
     st.title('Введение')
@@ -21,7 +20,10 @@ if x == 'Введение':
     st.markdown('**Корпоративный сайт: ** [tpkpromed.ru](https://tpkpromed.ru)')
     st.markdown('**Производство бахил: ** [bioinvn.ru](https://bioinvn.ru)')
     st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')
-    
+
+
+x = st.sidebar.selectbox('РАСЧЁТ ПРОДУКЦИИ:', ['Выбрать','Замес гранулы','Пленка','Пакеты','Бахилы','Перчатки', 'Очистить экран'])
+
 if x == 'Замес гранулы':
     st.write('')
     st.write('')
@@ -399,5 +401,11 @@ if z == "Цех бахил":
 
 st.sidebar.write('')
 st.sidebar.write('')    
-d = st.sidebar.button('Открыть текстовый документ')
+#d = st.sidebar.button('Открыть текстовый документ')
 
+if st.sidebar.button("Открыть текстовый документ"):
+	st.subheader("Iris Dataset EDA App")
+	st.text("Built with Streamlit")
+    
+    
+st.sidebar.markdown("""[Example CSV input file](https://raw.githubusercontent.com/nemkoruss/calcPE/master/save.txt)""")
