@@ -24,23 +24,29 @@ if a == 'Включено':
 
 x = st.sidebar.selectbox('РАСЧЁТ ПРОДУКЦИИ:', ['Выбрать','Замес гранулы','Пленка','Пакеты','Бахилы','Перчатки', 'Очистить экран'])
 
+
 if x == 'Замес гранулы':
+    
     st.write('')
     st.write('')
     st.title('Считаем замес гранулы: ')
-    az = st.number_input('Вес ввода ПНД: ')
-    bz = st.number_input('Вес ввода ПНД втор.: ')
-    cz = st.number_input('Вес ввода мела: ')
-    dz = st.number_input('Вес ввода красителя: ')
-    ez = az + bz + cz + dz
-    if ez == 0:
-        ez = 1
-    else:
-        ez < 0
-    fz = az / ez
-    gz = bz / ez
-    hz = cz / ez
-    iz = dz / ez
+    col1, col2 = st.beta_columns(2)
+    with col1:
+        az = st.number_input('Вес ввода ПНД: ')    
+        bz = st.number_input('Вес ввода ПНД втор.: ')
+    with col2:
+        cz = st.number_input('Вес ввода мела: ')
+        dz = st.number_input('Вес ввода красителя: ')
+        ez = az + bz + cz + dz
+        if ez == 0:
+            ez = 1
+        else:
+            ez < 0
+        fz = az / ez
+        gz = bz / ez
+        hz = cz / ez
+        iz = dz / ez
+    
     st.write('В одном килограмме замеса: ')
     st.write('ПНД = ' + str(fz) + ' кг.')
     st.write('ПНД втор. = ' + str(gz) + ' кг.')
@@ -48,28 +54,33 @@ if x == 'Замес гранулы':
     st.write('Краситель = ' + str(iz) + ' кг.')
     
     st.title('Себес. замеса гранулы: ')
-    az1 = st.number_input('Цена ПНД: ')
-    bz1 = st.number_input('Цена ПНД вторичка: ')
-    cz1 = st.number_input('Цена Мела: ')
-    dz1 = st.number_input('Цену Красителя: ')        
+    col3, col4 = st.beta_columns(2)
+    with col3:
+        az1 = st.number_input('Цена ПНД: ')
+        bz1 = st.number_input('Цена ПНД вторичка: ')
+    with col4:
+        cz1 = st.number_input('Цена Мела: ')
+        dz1 = st.number_input('Цену Красителя: ')        
     az2 = az1 * fz
     bz2 = bz1 * gz
     cz2 = cz1 * hz
     dz2 = dz1 * iz
     xz = az2 + bz2 + cz2 + dz2    
-        
-    ez = st.number_input('Зарплатa сотрудников: ')
-    fz = st.number_input('Стоимость аренды: ')
-    gz = st.number_input('Стоимость электричества: ')
-    hz = st.number_input('Стоимость кредита: ')        
+
+    with col3:    
+        ez = st.number_input('Зарплатa сотрудников: ')
+        fz = st.number_input('Стоимость аренды: ')
+    with col4:      
+        gz = st.number_input('Стоимость электричества: ')
+        hz = st.number_input('Стоимость кредита: ')        
     zz = ez + fz + gz + hz        
-                 
-    iz = st.number_input('Стоимость ТО: ')
+    with col3:             
+        iz = st.number_input('Стоимость ТО: ')
     iz = xz * iz / 100    
-                
-    kz = st.number_input('Возврат за экструдер: ')
+    with col4:             
+        kz = st.number_input('Возврат за экструдер: ')
     kz = xz * kz / 100    
-                
+               
     lz = st.number_input('Введите БРАК: ')
     lz =   xz * lz / 100    
         
@@ -80,10 +91,13 @@ elif x == "Пленка":
     st.write('')
     st.write('')
     st.title('Цена 1 кг. плёнки: ')
-    ap = st.number_input('Длина изделия в метрах: ')
-    bp = st.number_input('Ширина излелия в метрах: ')
-    cp = st.number_input('Толщина в микронах: ')
-    dp = st.number_input('Количество стенок: ')
+    col5, col6 = st.beta_columns(2)
+    with col5:  
+        ap = st.number_input('Длина изделия в метрах: ')
+        bp = st.number_input('Ширина излелия в метрах: ')
+    with col6:  
+        cp = st.number_input('Толщина в микронах: ')
+        dp = st.number_input('Количество стенок: ')
     ip = int (1)
     fp = int (1000)
     gp = cp / 1000
@@ -94,10 +108,13 @@ elif x == "Пакеты":
     st.write('')
     st.write('')
     st.title('Цена 1 кг. пакетов: ')
-    apa = st.number_input('Длина изделия: ')
-    bpa = st.number_input('Ширина излелия: ')
-    cpa = st.number_input('Толщина в микронах: ')
-    dpa = st.number_input('Количество стенок: ')
+    col7, col8 = st.beta_columns(2)
+    with col7:
+        apa = st.number_input('Длина изделия: ')
+        bpa = st.number_input('Ширина излелия: ')
+    with col8:
+        cpa = st.number_input('Толщина в микронах: ')
+        dpa = st.number_input('Количество стенок: ')
     ipa = int (1)
     fpa = int (1000)
     gpa = cpa /1000
@@ -108,30 +125,33 @@ elif x == "Бахилы":
     st.write('')
     st.write('')
     st.title('Цена 1 кг. плёнки: ')
-    ab1 = st.number_input('Вес ввода ПНД: ')
-    ab2 = st.number_input('Цена ПНД: ')
-    bb1 = st.number_input('Вес ввода ПНД вторичка: ')
-    bb2 = st.number_input('Цена ПНД вторичка: ')
-    cb1 = st.number_input('Вес ввода Мела: ')
-    cb2 = st.number_input('Цена Мела: ')
-    db1 = st.number_input('Вес ввода Красителя: ')
-    db2 = st.number_input('Цена Красителя: ')        
+    col9, col10 = st.beta_columns(2)
+    with col9:
+        ab1 = st.number_input('Вес ввода ПНД: ')
+        ab2 = st.number_input('Цена ПНД: ')
+        bb1 = st.number_input('Вес ввода ПНД вторичка: ')
+        bb2 = st.number_input('Цена ПНД вторичка: ')    
+        cb1 = st.number_input('Вес ввода Мела: ')
+        cb2 = st.number_input('Цена Мела: ')
+        db1 = st.number_input('Вес ввода Красителя: ')
+    with col10: 
+        db2 = st.number_input('Цена Красителя: ')        
     ab = ab2 * ab1
     bb = bb2 * bb1
     cb = cb2 * cb1
     db = db2 * db1
     xb = ab + bb + cb + db        
-                
-    eb = st.number_input('Зарплата сотрудников: ')
-    fb = st.number_input('Стоимость аренды: ')
-    gb = st.number_input('Стоимость электричества: ')
-    hb = st.number_input('Стоимость кредита: ')        
+    with col10:            
+        eb = st.number_input('Зарплата сотрудников: ')
+        fb = st.number_input('Стоимость аренды: ')
+        gb = st.number_input('Стоимость электричества: ')
+        hb = st.number_input('Стоимость кредита: ')        
     zb = eb + fb + gb + hb
-                    
-    ib = st.number_input('Стоимость ТО: ')
+    with col10:                
+        ib = st.number_input('Стоимость ТО: ')
     ib = xb * ib / 100
-                
-    kb = st.number_input('Возврат за экструдер: ')
+    with col10:            
+        kb = st.number_input('Возврат за экструдер: ')
     kb = xb * kb / 100
                 
     lb = st.number_input('Введите БРАК: ')
@@ -140,8 +160,11 @@ elif x == "Бахилы":
     st.write('Цена 1 килограмма плёнки для бахил: ' + str(yb) + ' руб.')
 
     st.title('Вес одной пары бахил: ')
-    ab3 = st.number_input('Высота изделия в метрах: ')
-    bb3 = st.number_input('Длина излелия в метрах: ')
+    col11, col12 = st.beta_columns(2)
+    with col11:
+        ab3 = st.number_input('Высота изделия в метрах: ')
+    with col12:    
+        bb3 = st.number_input('Длина излелия в метрах: ')
     cb3 = st.number_input('Толщина в микронах: ')
     db3 = int (2)
     ib3 = int (1)
@@ -151,25 +174,28 @@ elif x == "Бахилы":
     st.write('Вес одной пары бахил: ' + str(zb3) + ' гр.')
 
     st.title('Себестоимость бахил: ')
-    mb4 = zb3 * yb
-    pb4 = mb4 * 1 /100
-    ab4 = st.number_input('Зaрплата сотрудников: ')
-    bb4 = st.number_input('Стоимость Аренды: ')
-    cb4 = st.number_input('Стоимость Электричества: ')
-    db4 = st.number_input('Стоимость Возврата электричества: ')
-    eb4 = st.number_input('Стоимость TO: ')
-    fb4 = st.number_input('Стоимость Скотча: ')
-    gb4 = st.number_input('Стоимость Пакетов: ')
-    hb4 = st.number_input('Стоимость Доставки: ')
-    ib4 = st.number_input('Стоимость Кредита: ')
-    jb41 = st.number_input('Стоимость Коробки: ')
-    jb4 = jb41 * 1 / 100
+    col13, col14 = st.beta_columns(2)
+    with col13:
+        mb4 = zb3 * yb
+        pb4 = mb4 * 1 /100
+        ab4 = st.number_input('Зaрплата сотрудников: ')
+        bb4 = st.number_input('Стоимость Аренды: ')
+        cb4 = st.number_input('Стоимость Электричества: ')
+        db4 = st.number_input('Стоимость Возврата электричества: ')
+        eb4 = st.number_input('Стоимость TO: ')
+        fb4 = st.number_input('Стоимость Скотча: ')
+    with col14:    
+        gb4 = st.number_input('Стоимость Пакетов: ')
+        hb4 = st.number_input('Стоимость Доставки: ')
+        ib4 = st.number_input('Стоимость Кредита: ')
+        jb41 = st.number_input('Стоимость Коробки: ')
+        jb4 = jb41 * 1 / 100
     ob41 = pb4 + ab4 + bb4 + cb4 + db4 + eb4 + fb4 + gb4 + hb4 + ib4 + jb4
-
-    kb41 = st.number_input('Стоимость Резинки: ')
+    with col14:
+        kb41 = st.number_input('Стоимость Резинки: ')
     kb4 = kb41 * 1 / 100
-
-    lb4 = st.number_input('Количество резинок [1 или 2]: ')
+    with col14:
+        lb4 = st.number_input('Количество резинок [1 или 2]: ')
     if lb4 == '1':
         tb4 = float (kb4 * 1)            
 
@@ -184,30 +210,33 @@ elif x == "Перчатки":
     st.write('')
     st.write('')
     st.title('Цена 1 кг. плёнки: ')
-    ape1 = st.number_input('Вес ввода ПНД: ')
-    ape2 = st.number_input('Цена ПНД: ')
-    bpe1 = st.number_input('Вес ввода ПНД вторичка: ')
-    bpe2 = st.number_input('Цена ПНД вторичка: ')
-    cpe1 = st.number_input('Вес ввода Мела: ')
-    cpe2 = st.number_input('Цена Мела: ')
-    dpe1 = st.number_input('Вес ввода Красителя: ')
-    dpe2 = st.number_input('Цена Красителя: ')
+    col15, col16 = st.beta_columns(2)
+    with col15:
+        ape1 = st.number_input('Вес ввода ПНД: ')
+        ape2 = st.number_input('Цена ПНД: ')
+        bpe1 = st.number_input('Вес ввода ПНД вторичка: ')
+        bpe2 = st.number_input('Цена ПНД вторичка: ')
+        cpe1 = st.number_input('Вес ввода Мела: ')
+        cpe2 = st.number_input('Цена Мела: ')
+        dpe1 = st.number_input('Вес ввода Красителя: ')
+    with col16:    
+        dpe2 = st.number_input('Цена Красителя: ')
     ape = ape2 * ape1
     bpe = bpe2 * bpe1
     cpe = cpe2 * cpe1
     dpe = dpe2 * dpe1
     xpe = ape + bpe + cpe + dpe
-        
-    epe = st.number_input('Зарплата сотрудников: ')
-    fpe = st.number_input('Стоимость аренды: ')
-    gpe = st.number_input('Стоимость электричества: ')
-    hpe = st.number_input('Стоимость кредита: ')        
+    with col16:    
+        epe = st.number_input('Зарплата сотрудников: ')
+        fpe = st.number_input('Стоимость аренды: ')
+        gpe = st.number_input('Стоимость электричества: ')
+        hpe = st.number_input('Стоимость кредита: ')        
     wpe = epe + fpe + gpe + hpe
-                     
-    ipe = st.number_input('Стоимость ТО: ')
+    with col16:                   
+        ipe = st.number_input('Стоимость ТО: ')
     ipe = xpe * ipe / 100
-                
-    kpe = st.number_input('Возврат за экструдер: ')
+    with col16:              
+        kpe = st.number_input('Возврат за экструдер: ')
     kpe = xpe * kpe / 100
                 
     lpe = st.number_input('Введите БРАК: ')
@@ -217,8 +246,11 @@ elif x == "Перчатки":
     st.write('Цена 1 килограмма плёнки для перчаток: ' + str(ype) + ' руб.')
         
     st.title('Вес одной пары перчаток: ')
-    ape3 = st.number_input('Высота изделия в метрах: ')
-    bpe3 = st.number_input('Длина излелия в метрах: ')
+    col17, col18 = st.beta_columns(2)
+    with col17:
+        ape3 = st.number_input('Высота изделия в метрах: ')
+    with col18:    
+        bpe3 = st.number_input('Длина излелия в метрах: ')
     cpe3 = st.number_input('Толщина в микронах: ')
     dpe3 = int (2)
     ipe3 = int (1)
@@ -228,18 +260,21 @@ elif x == "Перчатки":
     st.write('Вес одной пары перчаток: ' + str(zpe3) + ' кг.')
 
     st.title('Себестоимость перчаток: ')
+    col19, col20 = st.beta_columns(2)
     mpe4 = zpe3 * ype
     ppe4 = mpe4 * 1 /100
-    ape4 = st.number_input('Зарплатa сотрудников: ')
-    bpe4 = st.number_input('Стоимость Аренды: ')
-    cpe4 = st.number_input('Стоимость Электричества: ')
-    dpe4 = st.number_input('Стоимость Возврата электричества: ')
-    epe4 = st.number_input('Стоимость ТO: ')
-    fpe4 = st.number_input('Стоимость Скотча: ')
-    gpe4 = st.number_input('Стоимость Пакетов: ')
-    hpe4 = st.number_input('Стоимость Доставки: ')
-    ipe4 = st.number_input('Стоимость Кредита: ')
-    jpe41 = st.number_input('Стоимость Коробки: ')
+    with col19:
+        ape4 = st.number_input('Зарплатa сотрудников: ')
+        bpe4 = st.number_input('Стоимость Аренды: ')
+        cpe4 = st.number_input('Стоимость Электричества: ')
+        dpe4 = st.number_input('Стоимость Возврата электричества: ')
+        epe4 = st.number_input('Стоимость ТO: ')
+    with col20:    
+        fpe4 = st.number_input('Стоимость Скотча: ')
+        gpe4 = st.number_input('Стоимость Пакетов: ')
+        hpe4 = st.number_input('Стоимость Доставки: ')
+        ipe4 = st.number_input('Стоимость Кредита: ')
+        jpe41 = st.number_input('Стоимость Коробки: ')
     jpe4 = jpe41 * 1 / 100
     ope4 = ppe4 + ape4 + bpe4 + cpe4 + dpe4 + epe4 + fpe4 + gpe4 + hpe4 + ipe4 + jpe4        
     st.write('Себестоимость перчаток: ' + str(ope4) + ' руб.')
@@ -250,7 +285,9 @@ if y == "Заказ на бахилы":
     st.write('')
     st.write('')
     st.title('Расчёт выполнения заказа: ')
-    aza = st.number_input('Введите кол-во задейственного оборудования: ')
+    col21, col22 = st.beta_columns(2)
+    with col21:
+        aza = st.number_input('Введите кол-во задейственного оборудования: ')
     if aza == 5:
             aza = 5
     elif aza == 4:
@@ -265,8 +302,8 @@ if y == "Заказ на бахилы":
         aza = 1
     else:
         aza < 0
-    
-    bza = st.number_input('Выберите позицию: [Эконом = 1, Стандарт = 2, Прочные = 3, Детские = 4]')
+    with col21:
+        bza = st.number_input('[Эконом = 1, Стандарт = 2, Прочные = 3, Детские = 4]')
     if bza == 1:
             bza = 40000
     elif bza == 2:
@@ -280,8 +317,8 @@ if y == "Заказ на бахилы":
     else:
         bza < 0
     lza = aza * bza
-
-    cza = st.number_input('Введите график: [где 12 часов = 1, а 24 часа = 2]: ')
+    with col22:
+        cza = st.number_input('График: [где 12 часов = 1, а 24 часа = 2]: ')
     if cza == 1:
             cza = 1
     elif cza == 2:
@@ -291,8 +328,8 @@ if y == "Заказ на бахилы":
     else:
         cza < 0
     kza = lza * cza
-
-    dza = st.number_input('Введите кол-во бахил в парах: ')
+    with col22:
+        dza = st.number_input('Введите кол-во бахил в парах: ')
     if dza == 0:
         dza = 1
     else:
@@ -306,28 +343,30 @@ if z == "Цех бахил":
     st.write('')
     st.write('')
     st.title('Ставка: ')
-    za = st.number_input('Стоимость "Эконома" за пару: ')
+    col23, col24 = st.beta_columns(2)
+    with col23:
+        za = st.number_input('Стоимость "Эконома" за пару: ')
     
     if za == 0:
         za = 1
     else:
         za < 0
-    
-    zb = st.number_input('Стоимость "Стандарта" за пару: ')
+    with col23:
+        zb = st.number_input('Стоимость "Стандарта" за пару: ')
     
     if zb == 0:
         zb = 1
     else:
         zb < 0
-    
-    zc = st.number_input('Стоимость "Прочных" за пару: ')
+    with col24:
+        zc = st.number_input('Стоимость "Прочных" за пару: ')
     
     if zc == 0:
         zc = 1
     else:
         zc < 0
-    
-    zd = st.number_input('Стоимость "Детских" за пару: ')
+    with col24:
+        zd = st.number_input('Стоимость "Детских" за пару: ')
     
     if zd == 0:
         zd = 1
@@ -339,16 +378,22 @@ if z == "Цех бахил":
     zh = zd * 5400
     
     st.title('Сделано: ')
-    wa = st.number_input('Количество "Эконома" в коробках: ')
-    wb = st.number_input('Количество "Стандарта" в коробках: ')
-    wc = st.number_input('Количество "Прочных" в коробках: ')
-    wd = st.number_input('Количество "Детских" в коробках: ')
+    col25, col26 = st.beta_columns(2)
+    with col25:
+        wa = st.number_input('Количество "Эконома" в коробках: ')
+        wb = st.number_input('Количество "Стандарта" в коробках: ')
+    with col26:
+        wc = st.number_input('Количество "Прочных" в коробках: ')
+        wd = st.number_input('Количество "Детских" в коробках: ')
     
     st.title('Отгруженно: ')
-    ya = st.number_input('Количество "Экoнома" в коробках: ')
-    yb = st.number_input('Кoличество "Стандарта" в коробках: ')
-    yc = st.number_input('Количествo "Прочных" в коробках: ')
-    yd = st.number_input('Количество "Детских" в кoробках: ')
+    col27, col28 = st.beta_columns(2)
+    with col27:
+        ya = st.number_input('Количество "Экoнома" в коробках: ')
+        yb = st.number_input('Кoличество "Стандарта" в коробках: ')
+    with col28:
+        yc = st.number_input('Количествo "Прочных" в коробках: ')
+        yd = st.number_input('Количество "Детских" в кoробках: ')
     
     xa = wa - ya
     xb = wb - yb
@@ -369,6 +414,7 @@ if z == "Цех бахил":
     tb = zf * xb
     tc = zg * xc
     td = zh * xd
+    col29, col30 = st.beta_columns(2)
     
     st.write('Эконом: ')
     st.write('Сделано: '  + str(wa) + ' кор., ' + 'Сумма ЗП: ' + str(ua) + ' руб.')
@@ -404,8 +450,8 @@ st.sidebar.write('')
 #d = st.sidebar.button('Открыть текстовый документ')
 
 if st.sidebar.button("Открыть текстовый документ"):
-	st.subheader("Iris Dataset EDA App")
-	st.text("Built with Streamlit")
+	st.subheader("Открыть текстовый документ")
+	st.text("BОткрыть текстовый документ")
     
     
-st.sidebar.markdown("""[Example CSV input file](https://raw.githubusercontent.com/nemkoruss/calcPE/master/save.txt)""")
+#st.sidebar.markdown("""[Example CSV input file](https://raw.githubusercontent.com/nemkoruss/calcPE/master/save.txt)""")
