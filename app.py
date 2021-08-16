@@ -450,8 +450,6 @@ st.sidebar.write('')
 #d = st.sidebar.button('Открыть текстовый документ')
 
 if st.sidebar.button("Открыть текстовый документ"):
-	st.subheader("Открыть текстовый документ")
-	st.text("BОткрыть текстовый документ")
+    st.sidebar.markdown("""[Открыть текстовый документ](https://raw.githubusercontent.com/nemkoruss/calcPE/master/info.txt)""")
+
     
-    
-#st.sidebar.markdown("""[Example CSV input file](https://raw.githubusercontent.com/nemkoruss/calcPE/master/save.txt)""")
