@@ -386,14 +386,14 @@ if z == "Цех бахил":
         wc = st.number_input('Кол-во "Прочных": ')
         wd = st.number_input('Кол-во "Детских": ')
     
-    st.title('Отгруженно (указать кол-во коробок): ')
+    st.title('Отгрузили (указать кол-во коробок): ')
     col27, col28 = st.beta_columns(2)
     with col27:
         ya = st.number_input('Кол-во "Экoнома": ')
         yb = st.number_input('Кoл-во "Стандарта": ')
     with col28:
         yc = st.number_input('Кол-вo "Прочных": ')
-        yd = st.number_input('Кол-во "Детских": ')
+        yd = st.number_input('Кoл-во "Детских": ')
     
     xa = wa - ya
     xb = wb - yb
@@ -445,11 +445,5 @@ if z == "Цех бахил":
     st.write('Отгруженно: '  + str(yd) + ' кор., ' + 'Оплата: ' + str(vd) + ' руб.')
     st.write('Склад: '  + str(xd) + ' кор., ' + 'Долг: ' + str(td) + ' руб.')
 
-st.sidebar.write('')
-st.sidebar.write('')    
-#d = st.sidebar.button('Открыть текстовый документ')
-
-if st.sidebar.button("Открыть текстовый документ"):
-    st.sidebar.markdown("""[Открыть текстовый документ](https://raw.githubusercontent.com/nemkoruss/calcPE/master/info.txt)""")
 
     
