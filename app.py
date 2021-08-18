@@ -377,23 +377,23 @@ if z == "Цех бахил":
     zg = zc * 2000
     zh = zd * 5400
     
-    st.title('Сделано: ')
+    st.title('Сделано (указать количество коробок): ')
     col25, col26 = st.beta_columns(2)
     with col25:
-        wa = st.number_input('Количество "Эконома" в коробках: ')
-        wb = st.number_input('Количество "Стандарта" в коробках: ')
+        wa = st.number_input('Количество "Эконома": ')
+        wb = st.number_input('Количество "Стандарта": ')
     with col26:
-        wc = st.number_input('Количество "Прочных" в коробках: ')
-        wd = st.number_input('Количество "Детских" в коробках: ')
+        wc = st.number_input('Количество "Прочных": ')
+        wd = st.number_input('Количество "Детских": ')
     
-    st.title('Отгруженно: ')
+    st.title('Отгруженно (указать количество коробок): ')
     col27, col28 = st.beta_columns(2)
     with col27:
-        ya = st.number_input('Количество "Экoнома" в коробках: ')
-        yb = st.number_input('Кoличество "Стандарта" в коробках: ')
+        ya = st.number_input('Количество "Экoнома": ')
+        yb = st.number_input('Кoличество "Стандарта": ')
     with col28:
-        yc = st.number_input('Количествo "Прочных" в коробках: ')
-        yd = st.number_input('Количество "Детских" в кoробках: ')
+        yc = st.number_input('Количествo "Прочных": ')
+        yd = st.number_input('Количество "Детских": ')
     
     xa = wa - ya
     xb = wb - yb
