@@ -85,41 +85,47 @@ if b == 'Замес гранулы':
     yz = xz + zz + iz + kz + lz      
     st.write('Себестоимость замеса гранулы: ' + str(yz) + ' руб.')
 
-x = st.sidebar.selectbox('РАСЧЁТ ПРОДУКЦИИ:', ['Выбрать/Очистить','Пленка','Пакеты','Бахилы','Перчатки'])
+x = st.sidebar.selectbox('РАСЧЁТ ПРОДУКЦИИ:', ['Выбрать/Очистить','Пакеты','Бахилы','Перчатки'])
 
-if x == "Пленка":
+if x == "Пакеты":
     st.write('')
     st.write('')
-    st.title('Цена 1 кг. плёнки: ')
-    col5, col6 = st.beta_columns(2)
-    with col5:  
-        ap = st.number_input('Длина изделия в метрах: ')
-        bp = st.number_input('Ширина излелия в метрах: ')
-    with col6:  
-        cp = st.number_input('Толщина в микронах: ')
-        dp = st.number_input('Количество стенок: ')
-    ip = int (1)
-    fp = int (1000)
-    gp = cp / 1000
-    xp = ap * bp * gp * dp * ip * fp
-    st.write('Цена 1 килограмма плёнки: ' + str(xp) + ' руб.')
-
-elif x == "Пакеты":
-    st.write('')
-    st.write('')
-    st.title('Цена 1 кг. пакетов: ')
+    st.title('Вес 1 пакета: ')
     col7, col8 = st.beta_columns(2)
     with col7:
-        apa = st.number_input('Длина изделия: ')
-        bpa = st.number_input('Ширина излелия: ')
+        apa = st.number_input('Длина изделия в метрах: ')
+        bpa = st.number_input('Ширина излелия в метрах: ')
     with col8:
         cpa = st.number_input('Толщина в микронах: ')
         dpa = st.number_input('Количество стенок: ')
-    ipa = int (1)
+    ipa = float (0.95)
     fpa = int (1000)
     gpa = cpa /1000
-    xpa = apa * bpa * cpa * dpa * ipa * fpa        
-    st.write('Цена 1 кг пакетов: ' + str(xpa) + ' руб.')
+    xpa = apa * bpa * gpa * dpa * ipa * fpa
+    st.write('Вес 1-ого пакета: ' + str(xpa) + ' гр.')
+
+    st.write('')
+    st.write('')
+    st.title('Себестоимость плёнки в 1-ом пакете: ')
+    apb = st.number_input('Стоимость 1 кг. плёки: ')
+    xpb = apb * xpa / 1000   
+    st.write('Себестоимость плёнки в 1 пакете: ' + str(xpb) + ' руб.')
+    
+    st.write('')
+    st.write('')
+    st.title('Себестоимость 1 пакета: ')
+    col7, col8 = st.beta_columns(2)
+    with col7:
+        apc = st.number_input('Стоимость работы сотрудника: ')
+        apd = st.number_input('Стоимость Аренды: ')
+        ape = st.number_input('Стоимость Электричества: ')
+    with col8:    
+        apf = st.number_input('Стоимость ТО: ')
+        apg = st.number_input('Стоимость Доставки: ')
+        aph = st.number_input('Стоимость Упаковки: ')
+    api = st.number_input('Стоимость Коробки: ')
+    xpc = xpb + apc + apd + ape + apf + apg + aph + api
+    st.write('Себестоимость 1 пакета: ' + str(xpc) + ' руб.')        
 
 elif x == "Бахилы":
     st.write('')
@@ -167,7 +173,7 @@ elif x == "Бахилы":
         bb3 = st.number_input('Длина издeлия в метрах: ')
     cb3 = st.number_input('Тoлщина в микронах: ')
     db3 = int (2)
-    ib3 = int (1)
+    ib3 = float (0,95)
     gb3 = cb3 / 1000
     fb3 = int (1000)
     zb3 = ab3 * bb3 * gb3 * db3 * ib3 * fb3       
@@ -253,7 +259,7 @@ elif x == "Перчатки":
         bpe3 = st.number_input('Длина излелия в метрах: ')
     cpe3 = st.number_input('Толщина в микронах: ')
     dpe3 = int (2)
-    ipe3 = int (1)
+    ipe3 = float (0.95)
     gpe3 = cpe3 / 1000
     fpe3 = int (1000)
     zpe3 = ape3 * bpe3 * gpe3 * dpe3 * ipe3 * fpe3        
