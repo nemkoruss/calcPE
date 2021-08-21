@@ -173,7 +173,7 @@ elif x == "Бахилы":
         bb3 = st.number_input('Длина издeлия в метрах: ')
     cb3 = st.number_input('Тoлщина в микронах: ')
     db3 = int (2)
-    ib3 = float (0,95)
+    ib3 = float (0.95)
     gb3 = cb3 / 1000
     fb3 = int (1000)
     zb3 = ab3 * bb3 * gb3 * db3 * ib3 * fb3       
