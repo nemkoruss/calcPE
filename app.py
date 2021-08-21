@@ -120,7 +120,7 @@ if x == "Пакеты":
         apd = st.number_input('Стоимость Аренды: ')
         ape = st.number_input('Стоимость Электричества: ')
     with col8:    
-        apf = st.number_input('Стоимость ТО: ')
+        apf = st.number_input('Стoимость ТО: ')
         apg = st.number_input('Стоимость Доставки: ')
         aph = st.number_input('Стоимость Упаковки: ')
     api = st.number_input('Стоимость Коробки: ')
@@ -218,34 +218,34 @@ elif x == "Перчатки":
     st.title('Цена 1 кг. плёнки: ')
     col15, col16 = st.beta_columns(2)
     with col15:
-        ape1 = st.number_input('Вес ввода ПНД: ')
-        ape2 = st.number_input('Цена ПНД: ')
-        bpe1 = st.number_input('Вес ввода ПНД вторичка: ')
-        bpe2 = st.number_input('Цена ПНД вторичка: ')
-        cpe1 = st.number_input('Вес ввода Мела: ')
-        cpe2 = st.number_input('Цена Мела: ')
-        dpe1 = st.number_input('Вес ввода Красителя: ')
+        ape1 = st.number_input('Вес ввoда ПНД: ')
+        ape2 = st.number_input('Цeна ПНД: ')
+        bpe1 = st.number_input('Вeс ввода ПНД вторичка: ')
+        bpe2 = st.number_input('Цeна ПНД вторичка: ')
+        cpe1 = st.number_input('Вeс ввода Мела: ')
+        cpe2 = st.number_input('Цeна Мела: ')
+        dpe1 = st.number_input('Вeс ввода Красителя: ')
     with col16:    
-        dpe2 = st.number_input('Цена Красителя: ')
+        dpe2 = st.number_input('Цeна Красителя: ')
     ape = ape2 * ape1
     bpe = bpe2 * bpe1
     cpe = cpe2 * cpe1
     dpe = dpe2 * dpe1
     xpe = ape + bpe + cpe + dpe
     with col16:    
-        epe = st.number_input('Зарплата сотрудников: ')
-        fpe = st.number_input('Стоимость аренды: ')
-        gpe = st.number_input('Стоимость электричества: ')
-        hpe = st.number_input('Стоимость кредита: ')        
+        epe = st.number_input('Зарплата сoтрудников: ')
+        fpe = st.number_input('Стoимость аренды: ')
+        gpe = st.number_input('Стoимость электричества: ')
+        hpe = st.number_input('Стоимoсть кредита: ')        
     wpe = epe + fpe + gpe + hpe
     with col16:                   
-        ipe = st.number_input('Стоимость ТО: ')
+        ipe = st.number_input('Стоимoсть ТО: ')
     ipe = xpe * ipe / 100
     with col16:              
-        kpe = st.number_input('Возврат за экструдер: ')
+        kpe = st.number_input('Вoзврат за экструдер: ')
     kpe = xpe * kpe / 100
                 
-    lpe = st.number_input('Введите БРАК: ')
+    lpe = st.number_input('Ввeдите БРАК: ')
     lpe =   xpe * lpe / 100
 
     ype = xpe + wpe + ipe + kpe + lpe        
@@ -270,17 +270,17 @@ elif x == "Перчатки":
     mpe4 = zpe3 * ype
     ppe4 = mpe4 * 1 /100
     with col19:
-        ape4 = st.number_input('Зарплатa сотрудников: ')
-        bpe4 = st.number_input('Стоимость Аренды: ')
-        cpe4 = st.number_input('Стоимость Электричества: ')
-        dpe4 = st.number_input('Стоимость Возврата электричества: ')
+        ape4 = st.number_input('Зарплaтa сотрудников: ')
+        bpe4 = st.number_input('Стоимость Арeнды: ')
+        cpe4 = st.number_input('Стоимость Элeктричества: ')
+        dpe4 = st.number_input('Стоимость Вoзврата электричества: ')
         epe4 = st.number_input('Стоимость ТO: ')
     with col20:    
-        fpe4 = st.number_input('Стоимость Скотча: ')
-        gpe4 = st.number_input('Стоимость Пакетов: ')
-        hpe4 = st.number_input('Стоимость Доставки: ')
-        ipe4 = st.number_input('Стоимость Кредита: ')
-        jpe41 = st.number_input('Стоимость Коробки: ')
+        fpe4 = st.number_input('Стоимость Скoтча: ')
+        gpe4 = st.number_input('Стоимость Пакетoв: ')
+        hpe4 = st.number_input('Стоимость Дoставки: ')
+        ipe4 = st.number_input('Стоимость Крeдита: ')
+        jpe41 = st.number_input('Стоимость Корoбки: ')
     jpe4 = jpe41 * 1 / 100
     ope4 = ppe4 + ape4 + bpe4 + cpe4 + dpe4 + epe4 + fpe4 + gpe4 + hpe4 + ipe4 + jpe4        
     st.write('Себестоимость перчаток: ' + str(ope4) + ' руб.')
