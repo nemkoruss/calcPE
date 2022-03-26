@@ -63,9 +63,7 @@ if b == 'Замес гранулы':
                )
 
 '''
-
-    
-    st.title('Себес. замеса гранулы: ')
+    st.title('Себес. замеса грaнулы: ')
     col3, col4 = st.beta_columns(2)
     with col3:
         az1 = st.number_input('Цена ПНД: ')
