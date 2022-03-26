@@ -21,7 +21,7 @@ if a == 'Включено':
     st.markdown('**Производство бахил: ** [bioinvn.ru](https://bioinvn.ru)')
     st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')
 
-b = st.sidebar.selectbox('РАСЧЁТ ПРОДУКЦИИ:', ['Выбрать/Очистить','Замес гранулы'])
+b = st.sidebar.selectbox('РАСЧЁТ ПЛЕНКИ:', ['Выбрать/Очистить','Замес гранулы'])
 
 if b == 'Замес гранулы':
     
@@ -53,6 +53,16 @@ if b == 'Замес гранулы':
     st.write('Стрейч = ' + str(vstz) + ' кг.')
     st.write('Мел = ' + str(hz) + ' кг.')
     st.write('Краситель = ' + str(iz) + ' кг.')
+    fdown = open('xyz.txt','w')  # открытие в режиме записи
+    fdown.write('Hello \n World')  # запись Hello World в файл
+    fdown.close()  # закрытие файла
+
+
+
+
+
+
+
     
     st.title('Себес. замеса гранулы: ')
     col3, col4 = st.beta_columns(2)
@@ -391,7 +401,7 @@ if z == "Цех бахил":
     st.title('Сделано (указать кол-во коробок): ')
     col25, col26 = st.beta_columns(2)
     with col25:
-        wa = st.number_input('Кол-dо "Эконома": ')
+        wa = st.number_input('Кол-во "Эконома": ')
         wb = st.number_input('Кол-во "Стандарта": ')
     with col26:
         wc = st.number_input('Кол-во "Прочных": ')
