@@ -54,7 +54,7 @@ if b == 'Замес гранулы':
     st.write('Мел = ' + str(hz) + ' кг.')
     st.write('Краситель = ' + str(iz) + ' кг.')
     @st.cache
-     def convert_df(df):
+    def convert_df(df):
          # IMPORTANT: Cache the conversion to prevent computation on every rerun
          return df.to_csv().encode('utf-8')
     
