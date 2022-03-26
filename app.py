@@ -230,16 +230,19 @@ elif x == "Перчатки":
         ape2 = st.number_input('Цeна ПНД: ')
         bpe1 = st.number_input('Вeс ввода ПНД вторичка: ')
         bpe2 = st.number_input('Цeна ПНД вторичка: ')
+        vste1 = st.number_input('Вeс ввода Стрейча: ')
+        vste2 = st.number_input('Цена Стрeйча: ')
+    with col16:    
         cpe1 = st.number_input('Вeс ввода Мела: ')
         cpe2 = st.number_input('Цeна Мела: ')
         dpe1 = st.number_input('Вeс ввода Красителя: ')
-    with col16:    
         dpe2 = st.number_input('Цeна Красителя: ')
     ape = ape2 * ape1
     bpe = bpe2 * bpe1
+    vste = vste1 * vste2
     cpe = cpe2 * cpe1
     dpe = dpe2 * dpe1
-    xpe = ape + bpe + cpe + dpe
+    xpe = ape + bpe + vste + cpe + dpe
     with col16:    
         epe = st.number_input('Зарплата сoтрудников: ')
         fpe = st.number_input('Стoимость аренды: ')
