@@ -53,13 +53,13 @@ if b == 'Замес гранулы':
     st.write('Стрейч = ' + str(vstz) + ' кг.')
     st.write('Мел = ' + str(hz) + ' кг.')
     st.write('Краситель = ' + str(iz) + ' кг.')
-    @st.cache
-    def convert_df(df):
-         # IMPORTANT: Cache the conversion to prevent computation on every rerun
-         return df.to_csv().encode('utf-8')
-    
-    csv = convert_df(my_large_df)
-    
+    with open("flower.png", "rb") as file:
+         btn = st.download_button(
+                 label="Download image",
+                 data=file,
+                 file_name="flower.png",
+                 mime="image/png"
+               )
     st.download_button(
          label="Download data as CSV",
          data=csv,
