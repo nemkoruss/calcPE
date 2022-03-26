@@ -28,7 +28,7 @@ if b == 'Замес гранулы':
     st.write('')
     st.write('')
     st.title('Считаем замес гранулы: ')
-    col1, col2 = st.beta_columns(2)
+    col1, col2 = st.beta_columns(3)
     with col1:
         az = st.number_input('Вес ввода ПНД: ')    
         bz = st.number_input('Вес ввода ПНД втор.: ')
