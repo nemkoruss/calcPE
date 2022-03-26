@@ -20,6 +20,8 @@ if a == 'Включено':
     st.markdown('**Корпоративный сайт: ** [tpkpromed.ru](https://tpkpromed.ru)')
     st.markdown('**Производство бахил: ** [bioinvn.ru](https://bioinvn.ru)')
     st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')
+    text_contents = '''This is some text'''
+    st.download_button('Download some text', text_contents)
 
 b = st.sidebar.selectbox('РАСЧЁТ ПЛЕНКИ:', ['Выбрать/Очистить','Замес гранулы'])
 
@@ -53,9 +55,7 @@ if b == 'Замес гранулы':
     st.write('Стрейч = ' + str(vstz) + ' кг.')
     st.write('Мел = ' + str(hz) + ' кг.')
     st.write('Краситель = ' + str(iz) + ' кг.')
-    text_contents = '''This is some text'''
-    st.download_button('Download some text', text_contents)
-
+    
     st.title('Себес. замеса грaнулы: ')
     col3, col4 = st.beta_columns(2)
     with col3:
