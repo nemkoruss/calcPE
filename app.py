@@ -180,6 +180,7 @@ elif x == "Бахилы":
         ab3 = st.number_input('Высота издeлия в метрах: ')
     with col12:    
         bb3 = st.number_input('Длина издeлия в метрах: ')
+    with col11:
     cb3 = st.number_input('Тoлщина в микронах: ')
     db3 = int (2)
     ib3 = float (0.95)
