@@ -65,7 +65,7 @@ if b == 'Замес гранулы':
         dz1 = st.number_input('Цену Красителя: ')        
     az2 = az1 * fz
     bz2 = bz1 * gz
-    vsr2 = vst1 * vst
+    vst2 = vst1 * vst
     cz2 = cz1 * hz
     dz2 = dz1 * iz
     xz = az2 + bz2 + vst2 + cz2 + dz2    
