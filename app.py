@@ -53,20 +53,6 @@ if b == 'Замес гранулы':
     st.write('Стрейч = ' + str(vstz) + ' кг.')
     st.write('Мел = ' + str(hz) + ' кг.')
     st.write('Краситель = ' + str(iz) + ' кг.')
-    
-    text_contents = '''
-    Foo, Bar
-    123, 456
-    789, 000
-    '''
-    
-    # Different ways to use the API
-    
-    st.download_button('Download CSV', text_contents, 'text/csv')
-    st.download_button('Download CSV', text_contents)  # Defaults to 'text/plain'
-    
-    with open('myfile.csv', 't') as f:
-    	st.download_button('Download CSV', f)  # Defaults to 'text/plain
 
     st.title('Себес. замеса грaнулы: ')
     col3, col4 = st.beta_columns(2)
