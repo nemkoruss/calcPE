@@ -53,15 +53,14 @@ if b == 'Замес гранулы':
     st.write('Стрейч = ' + str(vstz) + ' кг.')
     st.write('Мел = ' + str(hz) + ' кг.')
     st.write('Краситель = ' + str(iz) + ' кг.')
-    fdown = open('xyz.txt','w')  # открытие в режиме записи
-    fdown.write('Hello \n World')  # запись Hello World в файл
-    fdown.close()  # закрытие файла
-    st.download_button(
-         label="Download data as TXT",
-         data=fdown,
-         file_name='large_df.txt',
-         mime='text/csv',
-     )
+
+    with open("flower.txt", "rw") as file:
+         btn = st.download_button(
+                 label="Download image",
+                 data=file,
+                 file_name="flower.txt",
+                 mime="text/txt"
+               )
 
 
 
