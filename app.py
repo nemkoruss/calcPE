@@ -53,9 +53,11 @@ if b == 'Замес гранулы':
     st.write('Стрейч = ' + str(vstz) + ' кг.')
     st.write('Мел = ' + str(hz) + ' кг.')
     st.write('Краситель = ' + str(iz) + ' кг.')
-    text_contents = '''This is some text'''
-    st.download_button('Download some text', text_contents)
-    
+    if st.button('Say hello'):
+        st.write('Why hello there')
+    else:
+        st.write('Goodbye')
+
     st.title('Себес. замеса грaнулы: ')
     col3, col4 = st.beta_columns(2)
     with col3:
