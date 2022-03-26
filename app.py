@@ -128,7 +128,8 @@ if x == "Пакеты":
         apf = st.number_input('Стoимость ТО: ')
         apg = st.number_input('Стоимость Доставки: ')
         aph = st.number_input('Стоимость Упаковки: ')
-    api = st.number_input('Стоимость Коробки: ')
+    with col7:
+        api = st.number_input('Стоимость Коробки: ')
     xpc = xpb + apc + apd + ape + apf + apg + aph + api
     st.write('Себестоимость 1 пакета: ' + str(xpc) + ' руб.')        
 
@@ -258,7 +259,7 @@ elif x == "Перчатки":
     with col16:              
         kpe = st.number_input('Вoзврат за экструдер: ')
     kpe = xpe * kpe / 100
-    with col16:           
+    with col15:           
         lpe = st.number_input('Ввeдите БРАК: ')
     lpe =   xpe * lpe / 100
 
@@ -271,7 +272,8 @@ elif x == "Перчатки":
         ape3 = st.number_input('Высота изделия в метрах: ')
     with col18:    
         bpe3 = st.number_input('Длина излелия в метрах: ')
-    cpe3 = st.number_input('Толщина в микронах: ')
+    with col17:
+        cpe3 = st.number_input('Толщина в микронах: ')
     dpe3 = int (2)
     ipe3 = float (0.95)
     gpe3 = cpe3 / 1000
