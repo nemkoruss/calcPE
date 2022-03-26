@@ -143,11 +143,11 @@ elif x == "Бахилы":
         bb1 = st.number_input('Вeс ввода ПНД вторичка: ')
         bb2 = st.number_input('Цeна ПНД вторичка: ')   
         vsta1 = st.number_input('Вeс ввода Стрейча: ') 
-        vsta2 = st.number_input('Цeна Стрейча: ')
+        vsta2 = st.number_input('Цена Стрeйча: ')
+    with col10: 
         cb1 = st.number_input('Вeс ввода Мела: ')
         cb2 = st.number_input('Цeна Мела: ')
         db1 = st.number_input('Вeс ввода Красителя: ')
-    with col10: 
         db2 = st.number_input('Цeна Красителя: ')        
     ab = ab2 * ab1
     bb = bb2 * bb1
