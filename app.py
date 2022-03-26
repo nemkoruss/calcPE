@@ -19,9 +19,7 @@ if a == 'Включено':
     st.markdown('**Почта: ** [8007005448@mail.ru](mailto:8007005448@mail.ru)')
     st.markdown('**Корпоративный сайт: ** [tpkpromed.ru](https://tpkpromed.ru)')
     st.markdown('**Производство бахил: ** [bioinvn.ru](https://bioinvn.ru)')
-    st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')
-    text_contents = '''This is some text'''
-    st.download_button('Download some text', text_contents)
+    st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')  
 
 b = st.sidebar.selectbox('РАСЧЁТ ПЛЕНКИ:', ['Выбрать/Очистить','Замес гранулы'])
 
