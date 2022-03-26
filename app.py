@@ -28,14 +28,15 @@ if b == 'Замес гранулы':
     st.write('')
     st.write('')
     st.title('Считаем замес гранулы: ')
-    col1, col2 = st.beta_columns(3)
+    col1, col2, col3 = st.beta_columns(2)
     with col1:
         az = st.number_input('Вес ввода ПНД: ')    
         bz = st.number_input('Вес ввода ПНД втор.: ')
-        vst = st.number_input('Вес ввода Стрейча: ')
     with col2:
         cz = st.number_input('Вес ввода Мела: ')
         dz = st.number_input('Вес ввода Красителя: ')
+    with col3:
+        vst = st.number_input('Вес ввода Стрейча: ')
         ez = az + bz + vst + cz + dz
         if ez == 0:
             ez = 1
