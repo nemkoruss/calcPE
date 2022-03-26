@@ -82,7 +82,8 @@ if b == 'Замес гранулы':
     iz = xz * iz / 100    
     with col4:             
         kz = st.number_input('Возврат за экструдер: ')
-    kz = xz * kz / 100    
+    kz = xz * kz / 100
+    with col3:    
         lz = st.number_input('Введите БРАК: ')
     lz =   xz * lz / 100    
         
