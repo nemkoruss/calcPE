@@ -32,7 +32,7 @@ if b == 'Замес гранулы':
     with col1:
         az = st.number_input('Вес ввода ПНД: ')    
         bz = st.number_input('Вес ввода ПНД втор.: ')
-        vst = st.number_imput('Вес ввода Стрейча: ')
+        vst = st.number_input('Вес ввода Стрейча: ')
     with col2:
         cz = st.number_input('Вес ввода Мела: ')
         dz = st.number_input('Вес ввода Красителя: ')
