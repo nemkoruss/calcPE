@@ -32,22 +32,25 @@ if b == 'Замес гранулы':
     with col1:
         az = st.number_input('Вес ввода ПНД: ')    
         bz = st.number_input('Вес ввода ПНД втор.: ')
+        vst = st.number_imput('Вес ввода Стрейча: ')
     with col2:
-        cz = st.number_input('Вес ввода мела: ')
-        dz = st.number_input('Вес ввода красителя: ')
-        ez = az + bz + cz + dz
+        cz = st.number_input('Вес ввода Мела: ')
+        dz = st.number_input('Вес ввода Красителя: ')
+        ez = az + bz + vst + cz + dz
         if ez == 0:
             ez = 1
         else:
             ez < 0
         fz = az / ez
         gz = bz / ez
+        vstz = vst / ez
         hz = cz / ez
         iz = dz / ez
     
     st.write('В одном килограмме замеса: ')
     st.write('ПНД = ' + str(fz) + ' кг.')
     st.write('ПНД втор. = ' + str(gz) + ' кг.')
+    st.write('Стрейч = ' + str(vstz) + ' кг.')
     st.write('Мел = ' + str(hz) + ' кг.')
     st.write('Краситель = ' + str(iz) + ' кг.')
     
@@ -56,14 +59,16 @@ if b == 'Замес гранулы':
     with col3:
         az1 = st.number_input('Цена ПНД: ')
         bz1 = st.number_input('Цена ПНД вторичка: ')
+        vst1 = st.number_imput('Цена Стрейча: ')
     with col4:
         cz1 = st.number_input('Цена Мела: ')
         dz1 = st.number_input('Цену Красителя: ')        
     az2 = az1 * fz
     bz2 = bz1 * gz
+    vsr2 = vst1 * vst
     cz2 = cz1 * hz
     dz2 = dz1 * iz
-    xz = az2 + bz2 + cz2 + dz2    
+    xz = az2 + bz2 + vst2 + cz2 + dz2    
 
     with col3:    
         ez = st.number_input('Зарплатa сотрудников: ')
