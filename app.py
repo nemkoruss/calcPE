@@ -53,20 +53,16 @@ if b == 'Замес гранулы':
     st.write('Стрейч = ' + str(vstz) + ' кг.')
     st.write('Мел = ' + str(hz) + ' кг.')
     st.write('Краситель = ' + str(iz) + ' кг.')
-
+'''
     with open("flower.txt", "rw") as file:
          btn = st.download_button(
                  label="Download image",
-                 data=file,
+                 data=txt,
                  file_name="flower.txt",
                  mime="text/txt"
                )
 
-
-
-
-
-
+'''
 
     
     st.title('Себес. замеса гранулы: ')
