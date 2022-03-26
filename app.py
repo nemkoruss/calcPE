@@ -56,7 +56,12 @@ if b == 'Замес гранулы':
     fdown = open('xyz.txt','w')  # открытие в режиме записи
     fdown.write('Hello \n World')  # запись Hello World в файл
     fdown.close()  # закрытие файла
-    st.download_button("Скачать файл" , xyz.txt)
+    st.download_button(
+         label="Download data as TXT",
+         data=fdown,
+         file_name='large_df.txt',
+         mime='text/csv',
+     )
 
 
 
