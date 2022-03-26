@@ -60,12 +60,7 @@ if b == 'Замес гранулы':
                  file_name="flower.png",
                  mime="image/png"
                )
-    st.download_button(
-         label="Download data as CSV",
-         data=csv,
-         file_name='large_df.csv',
-         mime='text/csv',
-     )
+
     st.title('Себес. замеса грaнулы: ')
     col3, col4 = st.beta_columns(2)
     with col3:
