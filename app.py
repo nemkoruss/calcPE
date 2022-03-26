@@ -141,7 +141,9 @@ elif x == "Бахилы":
         ab1 = st.number_input('Вeс ввода ПНД: ')
         ab2 = st.number_input('Цeна ПНД: ')
         bb1 = st.number_input('Вeс ввода ПНД вторичка: ')
-        bb2 = st.number_input('Цeна ПНД вторичка: ')    
+        bb2 = st.number_input('Цeна ПНД вторичка: ')   
+        vsta1 = st.number_input('Вeс ввода Стрейча: ') 
+        vsta2 = st.number_input('Цeна Стрейча: ')
         cb1 = st.number_input('Вeс ввода Мела: ')
         cb2 = st.number_input('Цeна Мела: ')
         db1 = st.number_input('Вeс ввода Красителя: ')
@@ -149,9 +151,10 @@ elif x == "Бахилы":
         db2 = st.number_input('Цeна Красителя: ')        
     ab = ab2 * ab1
     bb = bb2 * bb1
+    vsta = vsta1 * vsta2
     cb = cb2 * cb1
     db = db2 * db1
-    xb = ab + bb + cb + db        
+    xb = ab + bb + vsta + cb + db        
     with col10:            
         eb = st.number_input('Зарплата сoтрудников: ')
         fb = st.number_input('Стoимость аренды: ')
