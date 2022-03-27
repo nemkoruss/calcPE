@@ -6,6 +6,7 @@ import numpy as np
 a = st.sidebar.radio('ВКЛ/ВЫКЛ "ВВЕДЕНИЕ":', ['Включено','Выключено'])
 
 if a == 'Включено':
+    st.title('Введение:')
     st.write('')
     st.write('')
     st.write('')
