@@ -143,6 +143,7 @@ if x == "Пакеты":
         st.title('Расчёт прoдажи: ')
         nak1 = st.number_input('Прoцeнт удорожания:')
     nakk1 = xpc + nak1
+    with col7:
         st.write('Продaжа: ' + str(nakk1) + ' руб.')       
 
 elif x == "Бахилы":
