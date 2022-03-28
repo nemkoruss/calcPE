@@ -117,6 +117,7 @@ if x == "Пакеты":
     st.write('')
     st.write('')
     st.title('Себестоимость плёнки в 1-ом пакете: ')
+    col7, col8 = st.beta_columns(2)
     with col7:
         apb = st.number_input('Стоимость 1 кг. плёки: ')
     xpb = apb * xpa / 1000   
@@ -138,13 +139,13 @@ if x == "Пакеты":
         api = st.number_input('Стоимость Коробки: ')
     xpc = xpb + apc + apd + ape + apf + apg + aph + api
     st.write('Себестоимость 1 пакета: ' + str(xpc) + ' руб.') 
-    col71, col81 = st.beta_columns(2)
-    with col71:
+    col7, col8 = st.beta_columns(2)
+    with col7:
         st.write('')
         st.title('Расчёт прoдажи: ')
         nak1 = st.number_input('Прoцeнт удорожания:')
     nakk1 = xpc + nak1
-    with col71:
+    with col7:
         st.write('Продaжа: ' + str(nakk1) + ' руб.')       
 
 elif x == "Бахилы":
