@@ -676,21 +676,21 @@ if z == "Цех пакеты":
     st.title('Ставка: ')
     col330, col340 = st.beta_columns(2)
     with col330:
-        za1 = st.number_input('Стоимость "4 ручья" за пару: ')
+        za1 = st.number_input('Стоимость "4 ручья" за штуку: ')
 
     if za1 == 0:
         za1 = 1
     else:
         za1 < 0
     with col330:
-        zb1 = st.number_input('Стоимость "2 ручья" за пару: ')
+        zb1 = st.number_input('Стоимость "2 ручья" за штуку: ')
 
     if zb1 == 0:
         zb1 = 1
     else:
         zb1 < 0
     with col340:
-        zc1 = st.number_input('Стоимость "1 ручей" за пару: ')
+        zc1 = st.number_input('Стоимость "1 ручей" за штуку: ')
 
     if zc1 == 0:
         zc1 = 1
@@ -710,7 +710,7 @@ if z == "Цех пакеты":
         wc1 = st.number_input('Кол-во "1 ручей": ')
 
     st.title('Отгрузили (указать кол-во коробок): ')
-    col370, col480 = st.beta_columns(2)
+    col370, col380 = st.beta_columns(2)
     with col370:
         ya1 = st.number_input('Кол-во "4 pучья": ')
         yb1 = st.number_input('Кoл-во "2 pучья": ')
