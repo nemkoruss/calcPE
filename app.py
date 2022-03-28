@@ -697,20 +697,20 @@ if z == "Цех экструзии":
     st.title('Сделано (указать кол-во кг): ')
     col350, col360 = st.beta_columns(2)
     with col350:
-        wa1 = st.number_input('Кол-во "Эконома": ')
-        wb1 = st.number_input('Кол-во "Стандарта": ')
+        wa1 = st.number_input('Кол-во "Плёнка 1": ')
+        wb1 = st.number_input('Кол-во "Плёнка 2": ')
     with col360:
-        wc1 = st.number_input('Кол-во "Прочных": ')
-        wd1 = st.number_input('Кол-во "Детских": ')
+        wc1 = st.number_input('Кол-во "Плёнка 3": ')
+        wd1 = st.number_input('Кол-во "Плёнка 4": ')
 
-    st.title('Отгрузили (указать кол-во коробок): ')
+    st.title('Отгрузили (указать кол-во кг): ')
     col370, col380 = st.beta_columns(2)
     with col370:
-        ya1 = st.number_input('Кол-во "Экoнома": ')
-        yb1 = st.number_input('Кoл-во "Стандарта": ')
+        ya1 = st.number_input('Кол-во "Плёнка 1": ')
+        yb1 = st.number_input('Кoл-во "Плёнка 2": ')
     with col380:
-        yc1 = st.number_input('Кол-вo "Прочных": ')
-        yd1 = st.number_input('Кoл-во "Детских": ')
+        yc1 = st.number_input('Кол-вo "Плёнка 3": ')
+        yd1 = st.number_input('Кoл-во "Плёнка 4": ')
 
     xa1 = wa1 - ya1
     xb1 = wb1 - yb1
