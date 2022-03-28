@@ -85,13 +85,15 @@ if b == 'Замес гранулы':
         lz = st.number_input('Введите БРАК: ')
     lz =   xz * lz / 100       
     yz = xz + zz + iz + kz + lz 
-    with col4:     
+    with col3:     
         st.write('Себестоимость замеса гранулы: ' + str(yz) + ' руб.')
-    with col4:
+    with col3:
         st.write('')
-        st.title('Продажа: ')
+        st.title('Расчёт продажи: ')
         nak = st.number_input('Процент удорожания:')
-        st.write('Продажа: ' + str(nak) + ' руб.')    
+    nakk = yz + nak
+    with col3:
+        st.write('Продажа: ' + str(nakk) + ' руб.')    
 
 x = st.sidebar.selectbox('РАСЧЁТ ПРОДУКЦИИ:', ['Выбрать/Очистить','Пакеты','Бахилы','Перчатки'])
 
@@ -134,7 +136,14 @@ if x == "Пакеты":
     with col7:
         api = st.number_input('Стоимость Коробки: ')
     xpc = xpb + apc + apd + ape + apf + apg + aph + api
-    st.write('Себестоимость 1 пакета: ' + str(xpc) + ' руб.')        
+    with col17:
+        st.write('Себестоимость 1 пакета: ' + str(xpc) + ' руб.') 
+    with col7:
+        st.write('')
+        st.title('Расчёт прoдажи: ')
+        nak1 = st.number_input('Прoцент удорожания:')
+    nakk1 = xpc + nak1
+        st.write('Продажа: ' + str(nakk1) + ' руб.')       
 
 elif x == "Бахилы":
     st.write('')
@@ -224,7 +233,15 @@ elif x == "Бахилы":
 
     ob4 = kb4 * lb4
     zb4 = ob41 + ob4
-    st.write('Себестоимость бахил: ' + str(zb4) + ' руб.')
+    with col13:
+        st.write('Себестоимость бахил: ' + str(zb4) + ' руб.')
+    with col13:
+        st.write('')
+        st.title('Расчёт продажи: ')
+        nak2 = st.number_input('Процент удорожания:')
+    nakk2 = zb4 + nak2
+    with col13:
+        st.write('Продажа: ' + str(nakk2) + ' руб.')
     
 elif x == "Перчатки":
     st.write('')
@@ -302,7 +319,15 @@ elif x == "Перчатки":
         jpe41 = st.number_input('Стоимость Корoбки: ')
     jpe4 = jpe41 * 1 / 100
     ope4 = ppe4 + ape4 + bpe4 + cpe4 + dpe4 + epe4 + fpe4 + gpe4 + hpe4 + ipe4 + jpe4        
-    st.write('Себестоимость перчаток: ' + str(ope4) + ' руб.')
+    with col19:
+        st.write('Себестоимость перчаток: ' + str(ope4) + ' руб.')
+    with col19:
+        st.write('')
+        st.title('Расчёт продажи: ')
+        nak3 = st.number_input('Процент удорожания:')
+    nakk3 = ope4 + nak3
+    with col19:
+        st.write('Продажа: ' + str(nakk3) + ' руб.')
 
 y = st.sidebar.selectbox('РАСЧЁТ ЗАКАЗА:', ['Выбрать/Очистить','Заказ на бахилы','Заказ на пленку', 'Заказ на пакеты','Заказ на перчатки'])
 
