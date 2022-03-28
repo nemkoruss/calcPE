@@ -27,6 +27,7 @@ b = st.sidebar.selectbox('РАСЧЁТ ПЛЕНКИ:', ['Выбрать/Очис
 if b == 'Замес гранулы':
     
     st.write('')
+    st.title('ПЛЕНКА')
     st.write('')
     st.title('Считаем замес гранулы: ')
     col1, col2 = st.beta_columns(2)
@@ -104,6 +105,7 @@ x = st.sidebar.selectbox('РАСЧЁТ ПРОДУКЦИИ:', ['Выбрать/О
 
 if x == "Пакеты":
     st.write('')
+    st.title ('ПАКЕТЫ')
     st.write('')
     st.title('Вес 1 пакета: ')
     col7, col8 = st.beta_columns(2)
@@ -157,6 +159,7 @@ if x == "Пакеты":
 
 elif x == "Бахилы":
     st.write('')
+    st.title('БАХИЛЫ')
     st.write('')
     st.title('Цена 1 кг. плёнки: ')
     col9, col10 = st.beta_columns(2)
@@ -257,6 +260,7 @@ elif x == "Бахилы":
     
 elif x == "Перчатки":
     st.write('')
+    st.title('ПЕРЧАТКИ')
     st.write('')
     st.title('Цена 1 кг. плёнки: ')
     col15, col16 = st.beta_columns(2)
@@ -347,6 +351,7 @@ y = st.sidebar.selectbox('РАСЧЁТ ЗАКАЗА:', ['Выбрать/Очис
 
 if y == "Заказ на бахилы":
     st.write('')
+    st.title('ЗАЯВКА БАХИЛЫ')
     st.write('')
     st.title('Расчёт выполнения заказа: ')
     col21, col22 = st.beta_columns(2)
@@ -405,6 +410,7 @@ if y == "Заказ на бахилы":
 
 if y == "Заказ на пленку":
     st.write('')
+    st.title('ЗАЯВКА ПЛЕНКА')
     st.write('')
     st.title('Расчёт выполнения заказа: ')
     col23, col24 = st.beta_columns(2)
@@ -466,6 +472,7 @@ if y == "Заказ на пленку":
 
 if y == "Заказ на пакеты":
     st.write('')
+    st.title('ЗАЯВКА ПАКЕТЫ')
     st.write('')
     st.title('Расчёт выполнения заказа: ')
     col25, col26 = st.beta_columns(2)
@@ -517,6 +524,7 @@ if y == "Заказ на пакеты":
 
 if y == "Заказ на перчатки":
     st.write('')
+    st.title('ЗАЯВКА ПЕРЧАТКИ')
     st.write('')
     st.title('Расчёт выполнения заказа: ')
     col27, col28 = st.beta_columns(2)
@@ -565,6 +573,7 @@ z = st.sidebar.selectbox('РАСЧЁТ ВЫПЛАТ:', ['Выбрать/Очис
 
 if z == "Цех бахил":
     st.write('')
+    st.title('ЗП БАХИЛЫ')
     st.write('')
     st.title('Ставка: ')
     col230, col240 = st.beta_columns(2)
@@ -673,6 +682,7 @@ if z == "Цех бахил":
 
 if z == "Цех экструзии":
     st.write('')
+    st.title('ЗП ЭКСТРУЗИЯ')
     st.write('')
     st.title('Ставка: ')
     col330, col340 = st.beta_columns(2)
@@ -735,6 +745,7 @@ if z == "Цех экструзии":
 
 if z == "Цех перчатки":
     st.write('')
+    st.title('ЗП ПЕРЧАТКИ')
     st.write('')
     st.title('Ставка: ')
     col430, col440 = st.beta_columns(2)
@@ -797,6 +808,7 @@ if z == "Цех перчатки":
 
 if z == "Цех пакеты":
     st.write('')
+    st.title('ЗП ПАКЕТЫ')
     st.write('')
     st.title('Ставка: ')
     col530, col540 = st.beta_columns(2)
