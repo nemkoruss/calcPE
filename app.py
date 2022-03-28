@@ -423,9 +423,11 @@ if y == "Заказ на пленку":
     if zza1 == 2:
         zza1 = 4
     elif zza1 == 1:
-        zza1 =  2
+        zza1 =  1
     elif zza1 == 0:
-        zza1 < 0
+        zza1 = 1
+    else:
+        zza1 <0
     wza1 = aza1 * zza1
     with col23:
         bza1 = st.number_input('[7 - 10 мкм = 1, 10 - 15 мкм = 2, 16 - 21 мкм = 3]')
@@ -447,7 +449,7 @@ if y == "Заказ на пленку":
     elif cza1 == 2:
             cza1 = 2
     elif cza1 == 0:
-        cza1 = 1
+        cza1 < 0
     else:
         cza1 < 0
     kza1 = lza1 * cza1
