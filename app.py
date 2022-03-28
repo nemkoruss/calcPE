@@ -86,7 +86,7 @@ if b == 'Замес гранулы':
     lz =   xz * lz / 100       
     yz = xz + zz + iz + kz + lz 
     with col4:     
-        st.write('Себестоимость замеса гранулы: ' + str(yz) + ' руб.'
+        st.write('Себестоимость замеса гранулы: ' + str(yz) + ' руб.')
     with col4:
         st.write('')
         st.title('Продажа: ')
