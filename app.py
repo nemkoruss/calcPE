@@ -691,8 +691,8 @@ if z == "Цех экструзии":
     else:
         zb1 < 0
     
-    ze1 = za * 300
-    zf1 = zb * 600
+    ze1 = za1 * 300
+    zf1 = zb1 * 600
 
     st.title('Сделано (указать кол-во кг): ')
     col350, col360 = st.beta_columns(2)
