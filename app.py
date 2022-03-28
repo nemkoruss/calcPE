@@ -449,7 +449,7 @@ if y == "Заказ на пленку":
     elif cza1 == 2:
             cza1 = 2
     elif cza1 == 0:
-        cza1 < 0
+        cza1 = 1
     else:
         cza1 < 0
     kza1 = lza1 * cza1
