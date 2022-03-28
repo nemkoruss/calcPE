@@ -440,7 +440,7 @@ if y == "Заказ на пленку":
     else:
         bza1 < 0
     lza1 = wza1 * bza1
-    with col22:
+    with col24:
         cza1 = st.number_input('График: [где 12 часов = 1, а 24 часа = 2]: ')
     if cza1 == 1:
             cza1 = 1
@@ -451,7 +451,7 @@ if y == "Заказ на пленку":
     else:
         cza1 < 0
     kza1 = lza1 * cza1
-    with col22:
+    with col23:
         dza1 = st.number_input('Введите кол-во плёнки в кг: ')
     if dza1 == 0:
         dza1 = 1
@@ -466,8 +466,8 @@ if y == "Заказ на пакеты":
     st.write('')
     st.write('')
     st.title('Расчёт выполнения заказа: ')
-    col21, col22 = st.beta_columns(2)
-    with col21:
+    col25, col26 = st.beta_columns(2)
+    with col25:
         aza11 = st.number_input('Введите кол-во задейственного оборудования: ')
     if aza11 == 2:
             aza11 = 2
@@ -477,7 +477,7 @@ if y == "Заказ на пакеты":
         aza11 = 1
     else:
         aza11 < 0
-    with col21:
+    with col26:
         bza11 = st.number_input('[Толстая плёнка = 1, Тонкая плёнка = 2, Флекс-печать = 3]')
     if bza11 == 1:
             bza11 = 2000
@@ -490,7 +490,7 @@ if y == "Заказ на пакеты":
     else:
         bza11 < 0
     lza11 = aza11 * bza11
-    with col22:
+    with col25:
         cza11 = st.number_input('График: [где 12 часов = 1, а 24 часа = 2]: ')
     if cza11 == 1:
             cza11 = 1
@@ -501,7 +501,7 @@ if y == "Заказ на пакеты":
     else:
         cza11 < 0
     kza11 = lza11 * cza11
-    with col22:
+    with col26:
         dza11 = st.number_input('Введите кол-во бахил в штуках: ')
     if dza11 == 0:
         dza11 = 1
@@ -516,8 +516,8 @@ if y == "Заказ на перчатки":
     st.write('')
     st.write('')
     st.title('Расчёт выполнения заказа: ')
-    col21, col22 = st.beta_columns(2)
-    with col21:
+    col27, col28 = st.beta_columns(2)
+    with col27:
         aza111 = st.number_input('Введите кол-во задейственного оборудования: ')
     if aza111 == 2:
             aza111 = 2
@@ -527,7 +527,7 @@ if y == "Заказ на перчатки":
         aza111 = 1
     else:
         aza111 < 0
-    with col21:
+    with col28:
         bza111 = st.number_input('[С манжетой = 1, Обычные = 2]')
     if bza111 == 1:
             bza111 = 50000
@@ -536,7 +536,7 @@ if y == "Заказ на перчатки":
     else:
         bza111 < 0
     lza = aza111 * bza111
-    with col22:
+    with col27:
         cza111 = st.number_input('График: [где 12 часов = 1, а 24 часа = 2]: ')
     if cza111 == 1:
             cza111 = 1
@@ -547,7 +547,7 @@ if y == "Заказ на перчатки":
     else:
         cza111 < 0
     kza111 = lza111 * cza111
-    with col22:
+    with col28:
         dza111 = st.number_input('Введите кол-во бахил в парах: ')
     if dza111 == 0:
         dza111 = 1
