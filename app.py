@@ -771,7 +771,8 @@ if z == "Цех перчатки":
     xa11 = wa11 - ya11
     xb11 = wb11 - yb11
 
-    ua11 = ze11 * wa11                                                                                 ub1 = zf1 * wb1
+    ua11 = ze11 * wa11 
+    ub11 = zf11 * wb11                                                                                ub1 = zf1 * wb1
 
     va11 = ze11 * ya11
     vb11 = zf11 * yb11
