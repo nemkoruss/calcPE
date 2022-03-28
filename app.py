@@ -829,7 +829,6 @@ if z == "Цех пакеты":
     ta111 = ze111 * xa111
     tb111 = zf111 * xb111
     tc111 = zg111 * xc111
-    col590, col600 = st.beta_columns(2)
 
     st.write('4 ручья: ')
     st.write('Сделано: '  + str(wa111) + ' кор., ' + 'Сумма ЗП: ' + str(ua111) + ' руб.')
