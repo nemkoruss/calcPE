@@ -88,7 +88,6 @@ if b == 'Замес гранулы':
     with col4:     
         st.write('Себестоимость замеса гранулы: ' + str(yz) + ' руб.'
     st.write('')
-    st.write('')
     with col4:
         st.title('Продажа: ')
         nak = st.number_input('Процент удорожания:')
