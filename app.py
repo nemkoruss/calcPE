@@ -675,7 +675,7 @@ if z == "Цех бахил":
 #--------------------------
 
 if z == "Цех экструзии":
-st.write('')
+    st.write('')
     st.write('')
     st.title('Ставка: ')
     col230, col240 = st.beta_columns(2)
