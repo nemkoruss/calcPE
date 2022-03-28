@@ -731,7 +731,6 @@ if z == "Цех экструзии":
     tb1 = zf1 * xb1
     tc1 = zg1 * xc1
     td1 = zh1 * xd1
-    col390, col400 = st.beta_columns(2)
 
     st.write('Эконом: ')
     st.write('Сделано: '  + str(wa1) + ' кор., ' + 'Сумма ЗП: ' + str(ua1) + ' руб.')
