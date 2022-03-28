@@ -85,12 +85,13 @@ if b == 'Замес гранулы':
         lz = st.number_input('Введите БРАК: ')
     lz =   xz * lz / 100       
     yz = xz + zz + iz + kz + lz 
-    with col3:     
-        st.write('Себестоимость замеса гранулы: ' + str(yz) + ' руб.')
-    with col4:
-        st.write('Продажа: ')
+    with col4:     
+        st.write('Себестоимость замеса гранулы: ' + str(yz) + ' руб.'
+        st.write('')
+        st.write('')
+        st.title('Продажа: ')
         nak = st.number_input('Процент удорожания:')
-    st.write('Продажа: ' + str(nak) + ' руб.')    
+        st.write('Продажа: ' + str(nak) + ' руб.')    
 
 x = st.sidebar.selectbox('РАСЧЁТ ПРОДУКЦИИ:', ['Выбрать/Очистить','Пакеты','Бахилы','Перчатки'])
 
