@@ -86,14 +86,14 @@ if b == 'Замес гранулы':
     lz =   xz * lz / 100       
     yz = xz + zz + iz + kz + lz
     st.write('Себестоимость замеса гранулы: ' + str(yz) + ' руб.')
-    col31 = st.beta_columns(1)
+    col31, col41 = st.beta_columns(2)
     with col31:
         st.write('')
-        st.title('Расчёт продажи: ')
-        nak = st.number_input('Процент удорожания:')
+        st.title('Pасчёт пpодажи: ')
+        nak = st.number_input('Пpоцент удоpожания:')
     nakk = yz + nak
     with col31:
-        st.write('Продажа: ' + str(nakk) + ' руб.')    
+        st.write('Пpодажа: ' + str(nakk) + ' руб.')    
 
 x = st.sidebar.selectbox('РАСЧЁТ ПРОДУКЦИИ:', ['Выбрать/Очистить','Пакеты','Бахилы','Перчатки'])
 
@@ -321,14 +321,14 @@ elif x == "Перчатки":
     jpe4 = jpe41 * 1 / 100
     ope4 = ppe4 + ape4 + bpe4 + cpe4 + dpe4 + epe4 + fpe4 + gpe4 + hpe4 + ipe4 + jpe4        
     st.write('Себестоимость перчаток: ' + str(ope4) + ' руб.')
-    col291, col121 = st.beta_columns(2)
+    col191, col121 = st.beta_columns(2)
     with col191:
         st.write('')
-        st.title('Расчёт продажи: ')
-        nak3 = st.number_input('Процент удорожaния:')
+        st.title('Pacчёт пpoдaжи: ')
+        nak3 = st.number_input('Пpoцент удopoжaния:')
     nakk3 = ope4 + nak3
     with col191:
-        st.write('Пpодажа: ' + str(nakk3) + ' руб.')
+        st.write('Пpoдaжa: ' + str(nakk3) + ' руб.')
 
 y = st.sidebar.selectbox('РАСЧЁТ ЗАКАЗА:', ['Выбрать/Очистить','Заказ на бахилы','Заказ на пленку', 'Заказ на пакеты','Заказ на перчатки'])
 
