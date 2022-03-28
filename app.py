@@ -706,11 +706,11 @@ if z == "Цех экструзии":
     st.title('Отгрузили (указать кол-во кг): ')
     col370, col380 = st.beta_columns(2)
     with col370:
-        ya1 = st.number_input('Кол-во "Плёнка 1": ')
-        yb1 = st.number_input('Кoл-во "Плёнка 2": ')
+        ya1 = st.number_input('Кол-во "Плёнкa 1": ')
+        yb1 = st.number_input('Кoл-во "Плёнкa 2": ')
     with col380:
-        yc1 = st.number_input('Кол-вo "Плёнка 3": ')
-        yd1 = st.number_input('Кoл-во "Плёнка 4": ')
+        yc1 = st.number_input('Кол-вo "Плёнкa 3": ')
+        yd1 = st.number_input('Кoл-во "Плёнкa 4": ')
 
     xa1 = wa1 - ya1
     xb1 = wb1 - yb1
