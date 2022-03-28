@@ -474,11 +474,11 @@ if y == "Заказ на пакеты":
     if aza11 == 2:
             aza11 = 2
     elif aza11 == 1:
-#           aza11 = 1
-#    elif aza11 == 0:
-        aza11 = 1
-#    else:
-#        aza11 < 0
+            aza11 = 1
+    elif aza11 == 0:
+            aza11 = 1
+    else:
+        aza11 < 0
     with col25:
         bza11 = st.number_input('[Толстая плёнка = 1, Тонкая плёнка = 2, Флекс-печать = 3]')
     if bza11 == 1:
@@ -510,10 +510,10 @@ if y == "Заказ на пакеты":
 #    else:
 #        dza11 < 0
     sza11 = dza11 / kza11
-    if sza11 == 0
-        sza11 = 1
-    else:
-        sza11 < 0
+#    if sza11 == 0
+#        sza11 = 1
+#    else:
+#        sza11 < 0
     st.write('Для выполнения заказа нужно: ' + str(sza11) + ' день/дня/дней')
 
 #--------------------------
