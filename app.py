@@ -85,7 +85,7 @@ if b == 'Замес гранулы':
         lz = st.number_input('Введите БРАК: ')
     lz =   xz * lz / 100       
     yz = xz + zz + iz + kz + lz
-    col31 = st.beta_columns(2) 
+    col31, col41 = st.beta_columns(2) 
     with col31:     
         st.write('Себестоимость замеса гранулы: ' + str(yz) + ' руб.')
     with col31:
