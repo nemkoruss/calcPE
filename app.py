@@ -537,7 +537,7 @@ if y == "Заказ на перчатки":
         bza111 = 1
     else:
         bza111 < 0
-    lza = aza111 * bza111
+    lza111 = aza111 * bza111
     with col28:
         cza111 = st.number_input('График: [где 12 часов = 1, а 24 часа = 2]: ')
     if cza111 == 1:
