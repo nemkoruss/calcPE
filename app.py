@@ -477,7 +477,7 @@ if y == "Заказ на пакеты":
         aza11 = 1
     else:
         aza11 < 0
-    with col26:
+    with col25:
         bza11 = st.number_input('[Толстая плёнка = 1, Тонкая плёнка = 2, Флекс-печать = 3]')
     if bza11 == 1:
             bza11 = 2000
@@ -490,7 +490,7 @@ if y == "Заказ на пакеты":
     else:
         bza11 < 0
     lza11 = aza11 * bza11
-    with col25:
+    with col26:
         cza11 = st.number_input('График: [где 12 часов = 1, а 24 часа = 2]: ')
     if cza11 == 1:
             cza11 = 1
@@ -527,7 +527,7 @@ if y == "Заказ на перчатки":
         aza111 = 1
     else:
         aza111 < 0
-    with col28:
+    with col27:
         bza111 = st.number_input('[С манжетой = 1, Обычные = 2]')
     if bza111 == 1:
             bza111 = 50000
@@ -536,7 +536,7 @@ if y == "Заказ на перчатки":
     else:
         bza111 < 0
     lza = aza111 * bza111
-    with col27:
+    with col28:
         cza111 = st.number_input('График: [где 12 часов = 1, а 24 часа = 2]: ')
     if cza111 == 1:
             cza111 = 1
@@ -564,29 +564,29 @@ if z == "Цех бахил":
     st.write('')
     st.write('')
     st.title('Ставка: ')
-    col23, col24 = st.beta_columns(2)
-    with col23:
+    col230, col240 = st.beta_columns(2)
+    with col230:
         za = st.number_input('Стоимость "Эконома" за пару: ')
     
     if za == 0:
         za = 1
     else:
         za < 0
-    with col23:
+    with col230:
         zb = st.number_input('Стоимость "Стандарта" за пару: ')
     
     if zb == 0:
         zb = 1
     else:
         zb < 0
-    with col24:
+    with col240:
         zc = st.number_input('Стоимость "Прочных" за пару: ')
     
     if zc == 0:
         zc = 1
     else:
         zc < 0
-    with col24:
+    with col240:
         zd = st.number_input('Стоимость "Детских" за пару: ')
     
     if zd == 0:
@@ -599,20 +599,20 @@ if z == "Цех бахил":
     zh = zd * 5400
     
     st.title('Сделано (указать кол-во коробок): ')
-    col25, col26 = st.beta_columns(2)
-    with col25:
+    col250, col260 = st.beta_columns(2)
+    with col250:
         wa = st.number_input('Кол-во "Эконома": ')
         wb = st.number_input('Кол-во "Стандарта": ')
-    with col26:
+    with col260:
         wc = st.number_input('Кол-во "Прочных": ')
         wd = st.number_input('Кол-во "Детских": ')
     
     st.title('Отгрузили (указать кол-во коробок): ')
-    col27, col28 = st.beta_columns(2)
-    with col27:
+    col270, col280 = st.beta_columns(2)
+    with col270:
         ya = st.number_input('Кол-во "Экoнома": ')
         yb = st.number_input('Кoл-во "Стандарта": ')
-    with col28:
+    with col280:
         yc = st.number_input('Кол-вo "Прочных": ')
         yd = st.number_input('Кoл-во "Детских": ')
     
@@ -635,7 +635,7 @@ if z == "Цех бахил":
     tb = zf * xb
     tc = zg * xc
     td = zh * xd
-    col29, col30 = st.beta_columns(2)
+    col290, col300 = st.beta_columns(2)
     
     st.write('Эконом: ')
     st.write('Сделано: '  + str(wa) + ' кор., ' + 'Сумма ЗП: ' + str(ua) + ' руб.')
