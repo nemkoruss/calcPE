@@ -510,6 +510,10 @@ if y == "Заказ на пакеты":
     else:
         dza11 < 0
     sza11 = dza11 / kza11
+    if sza11 == 0
+        sza11 = 1
+    else:
+        sza11 < 0
     st.write('Для выполнения заказа нужно: ' + str(sza11) + ' день/дня/дней')
 
 #--------------------------
@@ -560,7 +564,7 @@ if y == "Заказ на перчатки":
 
 #-----------------------------------------------------------------
 
-z = st.sidebar.selectbox('РАСЧЁТ ВЫПЛАТ:', ['Выбрать/Очистить','Цех бахил','Цех экструзии', 'Цех перчатки','Цех пакеты',])
+z = st.sidebar.selectbox('РАСЧЁТ ВЫПЛАТ:', ['Выбрать/Очистить','Цех бахил','Цех экструзии', 'Цех перчатки','Цех пакеты  ',])
 
 if z == "Цех бахил":
     st.write('')
@@ -670,6 +674,102 @@ if z == "Цех бахил":
 
 #--------------------------
 
+if z == "Цех экструзии":
+st.write('')
+    st.write('')
+    st.title('Ставка: ')
+    col230, col240 = st.beta_columns(2)
+    with col230:
+        za = st.number_input('Стоимость "Смены" 12 часов: ')
+
+    if za == 0:
+        za = 1
+    else:
+        za < 0
+    with col230:
+        zb = st.number_input('Стоимость "Смены" 24 часа: ')
+
+    if zb == 0:
+        zb = 1
+    else:
+        zb < 0
+    
+    ze = za * 300
+    zf = zb * 600
+
+    st.title('Сделано (указать кол-во коробок): ')
+    col250, col260 = st.beta_columns(2)
+    with col250:
+        wa = st.number_input('Кол-во "Эконома": ')
+        wb = st.number_input('Кол-во "Стандарта": ')
+    with col260:
+        wc = st.number_input('Кол-во "Прочных": ')
+        wd = st.number_input('Кол-во "Детских": ')
+
+    st.title('Отгрузили (указать кол-во коробок): ')
+    col270, col280 = st.beta_columns(2)
+    with col270:
+        ya = st.number_input('Кол-во "Экoнома": ')
+        yb = st.number_input('Кoл-во "Стандарта": ')
+    with col280:
+        yc = st.number_input('Кол-вo "Прочных": ')
+        yd = st.number_input('Кoл-во "Детских": ')
+
+    xa = wa - ya
+    xb = wb - yb
+    xc = wc - wc
+    xd = wd - yd
+
+    ua = ze * wa
+    ub = zf * wb
+    uc = zg * wc
+    ud = zh * wd
+
+    va = ze * ya
+    vb = zf * yb
+    vc = zg * yc
+    vd = zh * yd
+
+    ta = ze * xa
+    tb = zf * xb
+    tc = zg * xc
+    td = zh * xd
+    col290, col300 = st.beta_columns(2)
+
+    st.write('Эконом: ')
+    st.write('Сделано: '  + str(wa) + ' кор., ' + 'Сумма ЗП: ' + str(ua) + ' руб.')
+    st.write('Отгрузили: '  + str(ya) + ' кор., ' + 'Оплата: ' + str(va) + ' руб.')
+    st.write('Склад: '  + str(xa) + ' кор., ' + 'Долг: ' + str(ta) + ' руб.')
+
+    st.write('')
+    st.write('')
+
+    st.write('Стандарт: ')
+    st.write('Сделано: '  + str(wb) + ' кор., ' + 'Сумма ЗП: ' + str(ub) + ' руб.')
+    st.write('Отгрузили: '  + str(yb) + ' кор., ' + 'Оплата: ' + str(vb) + ' руб.')
+    st.write('Склад: '  + str(xb) + ' кор., ' + 'Долг: ' + str(tb) + ' руб.')
+
+    st.write('')
+    st.write('')
+
+    st.write('Прочные: ')
+    st.write('Сделано: '  + str(wc) + ' кор., ' + 'Сумма ЗП: ' + str(uc) + ' руб.')
+    st.write('Отгрузили: '  + str(yc) + ' кор., ' + 'Оплата: ' + str(vc) + ' руб.')
+    st.write('Склад: '  + str(xc) + ' кор., ' + 'Долг: ' + str(tc) + ' руб.')
+
+    st.write('')
+    st.write('')
+
+    st.write('Детские: ')
+    st.write('Сделано: '  + str(wd) + ' кор., ' + 'Сумма ЗП: ' + str(ud) + ' руб.')
+    st.write('Отгрузили: '  + str(yd) + ' кор., ' + 'Оплата: ' + str(vd) + ' руб.')
+    st.write('Склад: '  + str(xd) + ' кор., ' + 'Долг: ' + str(td) + ' руб.')
+
+#--------------------------
+
+if z == "Цех перчатки":
+
+#--------------------------
 if z == "Цех пакеты":
     st.write('')
     st.write('')
