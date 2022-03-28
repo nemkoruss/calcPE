@@ -524,7 +524,7 @@ if y == "Заказ на перчатки":
     if aza111 == 2:
             aza111 = 2
     elif aza111 == 1:
-            aza11й = 1
+            aza111 = 1
     elif aza111 == 0:
         aza111 = 1
     else:
