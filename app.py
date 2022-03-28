@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
+#-----------------------------------------------------------------
 
 a = st.sidebar.radio('ВКЛ/ВЫКЛ "ВВЕДЕНИЕ":', ['Включено','Выключено'])
 
@@ -13,11 +14,13 @@ if a == 'Включено':
     st.write('')
     st.header('Контакты:')
     st.markdown('**Телефон для связи: ** [8-903-260-96-61](tel:+79032609661)')
-    st.markdown('**Адрес: ** [Московская область, город Серпухов, улица Коншиных, 113А](https://yandex.ru/mApS/10754/serpuhov/house/ulitsa_konshinykh_113a/Z04YdQ9iSkwEQFtufXVzcXVqbA==/?ll=37.382394%2C54.920998&z=17)')
+    st.markdown('**Адрес: ** [Московская область, город Серпухов, улица Карла Маркса, 2/1](https://yandex.ru/mApS/10754/serpuhov/house/ulitsa_konshinykh_113a/Z04YdQ9iSkwEQFtufXVzcXVqbA==/?ll=37.382394%2C54.920998&z=17)')
     st.markdown('**Почта: ** [8007005448@mail.ru](mailto:8007005448@mail.ru)')
     st.markdown('**Корпоративный сайт: ** [tpkpromed.ru](https://tpkpromed.ru)')
     st.markdown('**Производство бахил: ** [bioinvn.ru](https://bioinvn.ru)')
     st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')  
+
+#-----------------------------------------------------------------
 
 b = st.sidebar.selectbox('РАСЧЁТ ПЛЕНКИ:', ['Выбрать/Очистить','Замес гранулы'])
 
@@ -93,7 +96,9 @@ if b == 'Замес гранулы':
         nak = st.number_input('Пpоцент удоpожания:')
     nakk = yz + nak
     with col31:
-        st.write('Пpодажа: ' + str(nakk) + ' руб.')    
+        st.write('Пpодажа: ' + str(nakk) + ' руб.') 
+
+#-----------------------------------------------------------------   
 
 x = st.sidebar.selectbox('РАСЧЁТ ПРОДУКЦИИ:', ['Выбрать/Очистить','Пакеты','Бахилы','Перчатки'])
 
@@ -146,7 +151,9 @@ if x == "Пакеты":
         nak1 = st.number_input('Прoцeнт удорожания:')
     nakk1 = xpc + nak1
     with col7:
-        st.write('Продaжа: ' + str(nakk1) + ' руб.')       
+        st.write('Продaжа: ' + str(nakk1) + ' руб.')  
+
+#------------------------     
 
 elif x == "Бахилы":
     st.write('')
@@ -237,14 +244,16 @@ elif x == "Бахилы":
     ob4 = kb4 * lb4
     zb4 = ob41 + ob4
     st.write('Себестоимость бахил: ' + str(zb4) + ' руб.')
-    col131, col141 = st.beta_columns(2)
-    with col131:
+    col13, col14 = st.beta_columns(2)
+    with col13:
         st.write('')
         st.title('Расчёт продажи: ')
         nak2 = st.number_input('Процент удорожания:')
     nakk2 = zb4 + nak2
-    with col131:
+    with col13:
         st.write('Продажа: ' + str(nakk2) + ' руб.')
+        
+#-------------------------
     
 elif x == "Перчатки":
     st.write('')
@@ -323,14 +332,16 @@ elif x == "Перчатки":
     jpe4 = jpe41 * 1 / 100
     ope4 = ppe4 + ape4 + bpe4 + cpe4 + dpe4 + epe4 + fpe4 + gpe4 + hpe4 + ipe4 + jpe4        
     st.write('Себестоимость перчаток: ' + str(ope4) + ' руб.')
-    col191, col121 = st.beta_columns(2)
-    with col191:
+    col19, col20 = st.beta_columns(2)
+    with col19:
         st.write('')
         st.title('Pacчёт пpoдaжи: ')
         nak3 = st.number_input('Пpoцент удopoжaния:')
     nakk3 = ope4 + nak3
-    with col191:
+    with col19:
         st.write('Пpoдaжa: ' + str(nakk3) + ' руб.')
+        
+#----------------------------------------------------------------
 
 y = st.sidebar.selectbox('РАСЧЁТ ЗАКАЗА:', ['Выбрать/Очистить','Заказ на бахилы','Заказ на пленку', 'Заказ на пакеты','Заказ на перчатки'])
 
@@ -389,6 +400,185 @@ if y == "Заказ на бахилы":
         dza < 0
     sza = dza / kza
     st.write('Для выполнения заказа нужно: ' + str(sza) + ' день/дня/дней')
+
+#---------------------------
+
+if y == "Заказ на пленку":
+    st.write('')
+    st.write('')
+    st.title('Расчёт выполнения заказа: ')
+    col23, col24 = st.beta_columns(2)
+    with col23:
+        aza1 = st.number_input('Введите кол-во задейственного оборудования: ')
+    elif aza1 == 2:
+            aza1 = 2
+    elif aza1 == 1:
+            aza1 = 1
+    elif aza1 == 0:
+        aza1 = 1
+    else:
+        aza1 < 0
+    with col24:
+        zza1 = st.number_input('[Рукав = 1, Полотно = 2]')
+    elif zza1 == 2:
+        zza1 = 4
+    elif zza1 == 1:
+        zza1 =  2
+    elif zza1 == 0
+        zza1 < 0
+    wza1 = aza1 * zza1
+    with col23:
+        bza1 = st.number_input('[7 - 10 мкм = 1, 10 - 15 мкм = 2, 16 - 21 мкм = 3]')
+    if bza1 == 1:
+            bza1 = 300
+    elif bza1 == 2:
+            bza1 = 200
+    elif bza1 == 3:
+            bza1 = 100
+    elif bza1 == 0:
+        bza1 = 1
+    else:
+        bza1 < 0
+    lza1 = wza1 * bza1
+    with col22:
+        cza1 = st.number_input('График: [где 12 часов = 1, а 24 часа = 2]: ')
+    if cza1 == 1:
+            cza1 = 1
+    elif cza1 == 2:
+            cza1 = 2
+    elif cza1 == 0:
+        cza1 = 1
+    else:
+        cza1 < 0
+    kza1 = lza1 * cza1
+    with col22:
+        dza1 = st.number_input('Введите кол-во плёнки в кг: ')
+    if dza1 == 0:
+        dza1 = 1
+    else:
+        dza1 < 0
+    sza1 = dza1 / kza1
+    st.write('Для выполнения заказа нужно: ' + str(sza1) + ' день/дня/дней')
+
+#---------------------------
+
+if y == "Заказ на пакеты":
+'''
+    st.write('')
+    st.write('')
+    st.title('Расчёт выполнения заказа: ')
+    col21, col22 = st.beta_columns(2)
+    with col21:
+        aza = st.number_input('Введите кол-во задейственного оборудования: ')
+    if aza == 5:
+            aza = 5
+    elif aza == 4:
+            aza = 4
+    elif aza == 3:
+            aza = 3
+    elif aza == 2:
+            aza = 2
+    elif aza == 1:
+            aza = 1
+    elif aza == 0:
+        aza = 1
+    else:
+        aza < 0
+    with col21:
+        bza = st.number_input('[Эконом = 1, Стандарт = 2, Прочные = 3, Детские = 4]')
+    if bza == 1:
+            bza = 40000
+    elif bza == 2:
+            bza = 35000
+    elif bza == 3:
+            bza = 30000
+    elif bza == 4:
+            bza = 10000
+    elif bza == 0:
+        bza = 1
+    else:
+        bza < 0
+    lza = aza * bza
+    with col22:
+        cza = st.number_input('График: [где 12 часов = 1, а 24 часа = 2]: ')
+    if cza == 1:
+            cza = 1
+    elif cza == 2:
+            cza = 2
+    elif cza == 0:
+        cza = 1
+    else:
+        cza < 0
+    kza = lza * cza
+    with col22:
+        dza = st.number_input('Введите кол-во бахил в парах: ')
+    if dza == 0:
+        dza = 1
+    else:
+        dza < 0
+    sza = dza / kza
+    st.write('Для выполнения заказа нужно: ' + str(sza) + ' день/дня/дней')
+'''
+#--------------------------
+
+if y == "Заказ на перчатки":
+'''
+    st.write('')
+    st.write('')
+    st.title('Расчёт выполнения заказа: ')
+    col21, col22 = st.beta_columns(2)
+    with col21:
+        aza = st.number_input('Введите кол-во задейственного оборудования: ')
+    if aza == 5:
+            aza = 5
+    elif aza == 4:
+            aza = 4
+    elif aza == 3:
+            aza = 3
+    elif aza == 2:
+            aza = 2
+    elif aza == 1:
+            aza = 1
+    elif aza == 0:
+        aza = 1
+    else:
+        aza < 0
+    with col21:
+        bza = st.number_input('[Эконом = 1, Стандарт = 2, Прочные = 3, Детские = 4]')
+    if bza == 1:
+            bza = 40000
+    elif bza == 2:
+            bza = 35000
+    elif bza == 3:
+            bza = 30000
+    elif bza == 4:
+            bza = 10000
+    elif bza == 0:
+        bza = 1
+    else:
+        bza < 0
+    lza = aza * bza
+    with col22:
+        cza = st.number_input('График: [где 12 часов = 1, а 24 часа = 2]: ')
+    if cza == 1:
+            cza = 1
+    elif cza == 2:
+            cza = 2
+    elif cza == 0:
+        cza = 1
+    else:
+        cza < 0
+    kza = lza * cza
+    with col22:
+        dza = st.number_input('Введите кол-во бахил в парах: ')
+    if dza == 0:
+        dza = 1
+    else:
+        dza < 0
+    sza = dza / kza
+    st.write('Для выполнения заказа нужно: ' + str(sza) + ' день/дня/дней')
+'''
+#-----------------------------------------------------------------
 
 z = st.sidebar.selectbox('РАСЧЁТ ВЫПЛАТ:', ['Выбрать/Очистить','Цех бахил','Цех экструзии', 'Цех перчаток','Цех пакетов',])
 
