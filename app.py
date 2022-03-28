@@ -117,7 +117,8 @@ if x == "Пакеты":
     st.write('')
     st.write('')
     st.title('Себестоимость плёнки в 1-ом пакете: ')
-    apb = st.number_input('Стоимость 1 кг. плёки: ')
+    with col7:
+        apb = st.number_input('Стоимость 1 кг. плёки: ')
     xpb = apb * xpa / 1000   
     st.write('Себестоимость плёнки в 1 пакете: ' + str(xpb) + ' руб.')
     
