@@ -420,7 +420,7 @@ if y == "Заказ на пленку":
         aza1 < 0
     with col24:
         zza1 = st.number_input('[Рукав = 1, Полотно = 2]')
-    elif zza1 == 2:
+    if zza1 == 2:
         zza1 = 4
     elif zza1 == 1:
         zza1 =  2
