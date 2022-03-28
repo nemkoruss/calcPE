@@ -508,7 +508,7 @@ if y == "Заказ на пакеты":
 #    if dza11 == 0:
 #        dza11 = 1
 #    else:
-        dza11 < 0
+#        dza11 < 0
     sza11 = dza11 / kza11
     if sza11 == 0
         sza11 = 1
