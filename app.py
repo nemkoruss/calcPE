@@ -677,89 +677,59 @@ if z == "Цех экструзии":
     st.title('Ставка: ')
     col330, col340 = st.beta_columns(2)
     with col330:
-        za11 = st.number_input('Стоимость "Смены" 12 часов: ')
-
-    if za11 == 0:
-        za11 = 1
-    else:
-        za11 < 0
-    with col340:
-        zb11 = st.number_input('Стоимость "Смены" 24 часа: ')
-
-    if zb11 == 0:
-        zb11 = 1
-    else:
-        zb1q < 0
+        za1 = st.number_input('Стоимость "12 часов Смена": ')
     
-    ze11 = za11 * 300
-    zf11 = zb11 * 600
-
-    st.title('Сделано (указать кол-во кг): ')
+    if za1 == 0:
+        za1 = 1
+    else:
+        za1 < 0
+    with col330:
+        zb1 = st.number_input('Стоимость "24 часа смена": ')
+    
+    if zb1 == 0:
+        zb1 = 1
+    else:
+        zb1 < 0
+    
+    ze1 = za1 * 600
+    zf1 = zb1 * 1200
+    
+    st.title('Сделано (указать кол-во коробок): ')
     col350, col360 = st.beta_columns(2)
     with col350:
-        wa11 = st.number_input('Кол-во "Плёнка 1": ')
-        wb11 = st.number_input('Кол-во "Плёнка 2": ')
-    with col360:
-        wc11 = st.number_input('Кол-во "Плёнка 3": ')
-        wd11 = st.number_input('Кол-во "Плёнка 4": ')
-
-    st.title('Отгрузили (указать кол-во кг): ')
+        wa1 = st.number_input('Кол-во "за 12 часов": ')
+        wb1 = st.number_input('Кол-во "за 24 часа": ')
+    
+    st.title('Отгрузили (указать кол-во коробок): ')
     col370, col380 = st.beta_columns(2)
     with col370:
-        ya11 = st.number_input('Кол-во "Плёнкa 1": ')
-        yb11 = st.number_input('Кoл-во "Плёнкa 2": ')
-    with col380:
-        yc11 = st.number_input('Кол-вo "Плёнкa 3": ')
-        yd11 = st.number_input('Кoл-во "Плёнкa 4": ')
-
-    xa11 = wa11 - ya11
-    xb11 = wb11 - yb11
-    xc11 = wc11 - yc11
-    xd11 = wd11 - yd11
-
-    ua11 = ze11 * wa11
-    ub11 = zf11 * wb11
-    uc11 = zg11 * wc11
-    ud11 = zh11 * wd11
-
-    va11 = ze11 * ya11
-    vb11 = zf11 * yb11
-    vc11 = zg11 * yc11
-    vd11 = zh11 * yd11
-
-    ta11 = ze11 * xa11
-    tb11 = zf11 * xb11
-    tc11 = zg11 * xc11
-    td11 = zh11 * xd11
-
-    st.write('Плeнка 1: ')
-    st.write('Сделано: '  + str(wa11) + ' кор., ' + 'Сумма ЗП: ' + str(ua11) + ' руб.')
-    st.write('Отгрузили: '  + str(ya11) + ' кор., ' + 'Оплата: ' + str(va11) + ' руб.')
-    st.write('Склад: '  + str(xa11) + ' кор., ' + 'Долг: ' + str(ta11) + ' руб.')
-
+        ya1 = st.number_input('Кол-во "за 12 часоа": ')
+        yb1 = st.number_input('Кoл-во "за 24 часа": ')
+    
+    xa1 = wa1 - ya1
+    xb1 = wb1 - yb1
+    
+    ua1 = ze1 * wa1
+    ub1 = zf1 * wb1
+    
+    va1 = ze1 * ya1
+    vb1 = zf1 * yb1
+    
+    ta1 = ze1 * xa1
+    tb1 = zf1 * xb1
+    
+    st.write('12 часов: ')
+    st.write('Сделано: '  + str(wa1) + ' кор., ' + 'Сумма ЗП: ' + str(ua1) + ' руб.')
+    st.write('Отгрузили: '  + str(ya1) + ' кор., ' + 'Оплата: ' + str(va1) + ' руб.')
+    st.write('Склад: '  + str(xa1) + ' кор., ' + 'Долг: ' + str(ta1) + ' руб.')
+    
     st.write('')
     st.write('')
-
-    st.write('Плeнка 2: ')
-    st.write('Сделано: '  + str(wb11) + ' кор., ' + 'Сумма ЗП: ' + str(ub11) + ' руб.')
-    st.write('Отгрузили: '  + str(yb11) + ' кор., ' + 'Оплата: ' + str(vb11) + ' руб.')
-    st.write('Склад: '  + str(xb11) + ' кор., ' + 'Долг: ' + str(tb11) + ' руб.')
-
-    st.write('')
-    st.write('')
-
-    st.write('Плeнка 3: ')
-    st.write('Сделано: '  + str(wc11) + ' кор., ' + 'Сумма ЗП: ' + str(uc11) + ' руб.')
-    st.write('Отгрузили: '  + str(yc11) + ' кор., ' + 'Оплата: ' + str(vc11) + ' руб.')
-    st.write('Склад: '  + str(xc11) + ' кор., ' + 'Долг: ' + str(tc11) + ' руб.')
-
-    st.write('')
-    st.write('')
-
-    st.write('Плeнка 4: ')
-    st.write('Сделано: '  + str(wd11) + ' кор., ' + 'Сумма ЗП: ' + str(ud11) + ' руб.')
-    st.write('Отгрузили: '  + str(yd11) + ' кор., ' + 'Оплата: ' + str(vd11) + ' руб.')
-    st.write('Склад: '  + str(xd11) + ' кор., ' + 'Долг: ' + str(td11) + ' руб.')
+    
+    st.write('24 часа: ')
+    st.write('Сделано: '  + str(wb1) + ' кор., ' + 'Сумма ЗП: ' + str(ub1) + ' руб.')
+    st.write('Отгрузили: '  + str(yb1) + ' кор., ' + 'Оплата: ' + str(vb1) + ' руб.')
+    st.write('Склад: '  + str(xb1) + ' кор., ' + 'Долг: ' + str(tb1) + ' руб.')
 
 #--------------------------
 
