@@ -560,7 +560,7 @@ if y == "Заказ на перчатки":
 
 #-----------------------------------------------------------------
 
-z = st.sidebar.selectbox('РАСЧЁТ ВЫПЛАТ:', ['Выбрать/Очистить','Цех бахил','Цех экструзии', 'Цех перчаток','Цех пакетов',])
+z = st.sidebar.selectbox('РАСЧЁТ ВЫПЛАТ:', ['Выбрать/Очистить','Цех бахил','Цех экструзии', 'Цех перчатки','Цех пакеты',])
 
 if z == "Цех бахил":
     st.write('')
@@ -621,7 +621,7 @@ if z == "Цех бахил":
     xa = wa - ya
     xb = wb - yb
     xc = wc - wc
-    xd = wd - wd
+    xd = wd - yd
     
     ua = ze * wa
     ub = zf * wb
@@ -667,4 +667,94 @@ if z == "Цех бахил":
     st.write('Сделано: '  + str(wd) + ' кор., ' + 'Сумма ЗП: ' + str(ud) + ' руб.')
     st.write('Отгрузили: '  + str(yd) + ' кор., ' + 'Оплата: ' + str(vd) + ' руб.')
     st.write('Склад: '  + str(xd) + ' кор., ' + 'Долг: ' + str(td) + ' руб.')
+
+#--------------------------
+
+if z == "Цех пакеты":
+    st.write('')
+    st.write('')
+    st.title('Ставка: ')
+    col330, col340 = st.beta_columns(2)
+    with col330:
+        za1 = st.number_input('Стоимость "4 ручья" за пару: ')
+
+    if za1 == 0:
+        za1 = 1
+    else:
+        za1 < 0
+    with col330:
+        zb1 = st.number_input('Стоимость "2 ручья" за пару: ')
+
+    if zb1 == 0:
+        zb1 = 1
+    else:
+        zb1 < 0
+    with col340:
+        zc1 = st.number_input('Стоимость "1 ручей" за пару: ')
+
+    if zc1 == 0:
+        zc1 = 1
+    else:
+        zc1 < 0
+    
+    ze1 = za1 * 4000
+    zf1 = zb1 * 3500
+    zg1 = zc1 * 2000
+
+    st.title('Сделано (указать кол-во коробок): ')
+    col350, col360 = st.beta_columns(2)
+    with col350:
+        wa1 = st.number_input('Кол-во "4 ручья": ')
+        wb1 = st.number_input('Кол-во "2 ручья": ')
+    with col360:
+        wc1 = st.number_input('Кол-во "1 ручей": ')
+
+    st.title('Отгрузили (указать кол-во коробок): ')
+    col370, col480 = st.beta_columns(2)
+    with col370:
+        ya1 = st.number_input('Кол-во "4 pучья": ')
+        yb1 = st.number_input('Кoл-во "2 pучья": ')
+    with col380:
+        yc1 = st.number_input('Кол-вo "1 pучей": ')
+
+    xa1 = wa1 - ya1
+    xb1 = wb1 - yb1
+    xc1 = wc1 - yc1
+
+    ua1 = ze1 * wa1
+    ub1 = zf1 * wb1
+    uc1 = zg1 * wc1
+
+    va1 = ze1 * ya1
+    vb1 = zf1 * yb1
+    vc1 = zg1 * yc1
+
+    ta1 = ze1 * xa1
+    tb1 = zf1 * xb1
+    tc1 = zg1 * xc1
+    col390, col400 = st.beta_columns(2)
+
+    st.write('4 ручья: ')
+    st.write('Сделано: '  + str(wa1) + ' кор., ' + 'Сумма ЗП: ' + str(ua1) + ' руб.')
+    st.write('Отгрузили: '  + str(ya1) + ' кор., ' + 'Оплата: ' + str(va1) + ' руб.')
+    st.write('Склад: '  + str(xa1) + ' кор., ' + 'Долг: ' + str(ta1) + ' руб.')
+
+    st.write('')
+    st.write('')
+
+    st.write('2 ручья: ')
+    st.write('Сделано: '  + str(wb1) + ' кор., ' + 'Сумма ЗП: ' + str(ub1) + ' руб.')
+    st.write('Отгрузили: '  + str(yb1) + ' кор., ' + 'Оплата: ' + str(vb1) + ' руб.')
+    st.write('Склад: '  + str(xb1) + ' кор., ' + 'Долг: ' + str(tb1) + ' руб.')
+
+    st.write('')
+    st.write('')
+
+    st.write('1 ручей: ')
+    st.write('Сделано: '  + str(wc1) + ' кор., ' + 'Сумма ЗП: ' + str(uc1) + ' руб.')
+    st.write('Отгрузили: '  + str(yc1) + ' кор., ' + 'Оплата: ' + str(vc1) + ' руб.')
+    st.write('Склад: '  + str(xc1) + ' кор., ' + 'Долг: ' + str(tc1) + ' руб.')
+
+#-------------------------
+
 
