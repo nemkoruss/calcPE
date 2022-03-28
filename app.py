@@ -487,10 +487,10 @@ if y == "Заказ на пакеты":
             bza11 = 4000
     elif bza11 == 3:
             bza11 = 3000
-#    elif bza11 == 0:
-#        bza11 = 1
-#    else:
-#        bza11 < 0
+    elif bza11 == 0:
+            bza11 = 1
+    else:
+        bza11 < 0
     lza11 = aza11 * bza11
     with col26:
         cza11 = st.number_input('График: [где 12 часов = 1, а 24 часа = 2]: ')
@@ -498,22 +498,19 @@ if y == "Заказ на пакеты":
             cza11 = 1
     elif cza11 == 2:
             cza11 = 2
-#    elif cza11 == 0:
-#        cza11 = 1
-#    else:
-#        cza11 < 0
+    elif cza11 == 0:
+            cza11 = 1
+    else:
+        cza11 < 0
     kza11 = lza11 * cza11
     with col26:
         dza11 = st.number_input('Введите кол-во пакетов в штуках: ')
-#    if dza11 == 0:
-#        dza11 = 1
-#    else:
-#        dza11 < 0
+    if dza11 == 0:
+            dza11 = 1
+    else:
+        dza11 < 0
     sza11 = dza11 / kza11
-#    if sza11 == 0
-#        sza11 = 1
-#    else:
-#        sza11 < 0
+    
     st.write('Для выполнения заказа нужно: ' + str(sza11) + ' день/дня/дней')
 
 #--------------------------
