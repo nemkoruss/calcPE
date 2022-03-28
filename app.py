@@ -694,13 +694,13 @@ if z == "Цех экструзии":
     ze1 = za1 * 600
     zf1 = zb1 * 1200
     
-    st.title('Сделано (указать кол-во коробок): ')
+    st.title('Сделано (указать кол-во кг): ')
     col350, col360 = st.beta_columns(2)
     with col350:
         wa1 = st.number_input('Кол-во "за 12 часов": ')
         wb1 = st.number_input('Кол-во "за 24 часа": ')
     
-    st.title('Отгрузили (указать кол-во коробок): ')
+    st.title('Отгрузили (указать кол-во кг): ')
     col370, col380 = st.beta_columns(2)
     with col370:
         ya1 = st.number_input('Кол-во "за 12 часоа": ')
@@ -733,7 +733,64 @@ if z == "Цех экструзии":
 
 #--------------------------
 
+if z == "Цех перчатки":
+    st.write('')
+    st.write('')
+    st.title('Ставка: ')
+    col430, col440 = st.beta_columns(2)
+    with col430:
+        za11 = st.number_input('Стоимость "Обычные": ')
 
+    if za11 == 0:
+        za11 = 1
+    else:
+        za11 < 0
+    with col430:
+        zb11 = st.number_input('Стоимость "С манжетой": ')
+
+    if zb11 == 0:
+        zb11 = 1
+    else:
+        zb11 < 0
+
+    ze11 = za11 * 5400
+    zf11 = zb11 * 4500
+
+    st.title('Сделано (указать кол-во коробок): ')
+    col450, col460 = st.beta_columns(2)
+    with col450:
+        wa11 = st.number_input('Кол-во "Обычных": ')
+        wb11 = st.number_input('Кол-во "С манжетой": ')
+
+    st.title('Отгрузили (указать кол-во коробок): ')
+    col470, col480 = st.beta_columns(2)
+    with col470:
+        ya11 = st.number_input('Кол-во "Обчныx": ')
+        yb11 = st.number_input('Кoл-во "C манжетой": ')
+
+    xa11 = wa11 - ya11
+    xb11 = wb11 - yb11
+
+    ua11 = ze11 * wa11                                                                                 ub1 = zf1 * wb1
+
+    va11 = ze11 * ya11
+    vb11 = zf11 * yb11
+
+    ta11 = ze11 * xa11
+    tb11 = zf11 * xb11
+
+    st.write('Oбычныe: ')
+    st.write('Сделано: '  + str(wa11) + ' кор., ' + 'Сумма ЗП: ' + str(ua11) + ' руб.')
+    st.write('Отгрузили: '  + str(ya11) + ' кор., ' + 'Оплата: ' + str(va11) + ' руб.')
+    st.write('Склад: '  + str(xa11) + ' кор., ' + 'Долг: ' + str(ta11) + ' руб.')
+
+    st.write('')
+    st.write('')
+
+    st.write('С мaнжeтой: ')
+    st.write('Сделано: '  + str(wb11) + ' кор., ' + 'Сумма ЗП: ' + str(ub11) + ' руб.')
+    st.write('Отгрузили: '  + str(yb11) + ' кор., ' + 'Оплата: ' + str(vb11) + ' руб.')
+    st.write('Склад: '  + str(xb11) + ' кор., ' + 'Долг: ' + str(tb11) + ' руб.')
 
 #--------------------------
 
