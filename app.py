@@ -424,7 +424,7 @@ if y == "Заказ на пленку":
         zza1 = 4
     elif zza1 == 1:
         zza1 =  2
-    elif zza1 == 0
+    elif zza1 == 0:
         zza1 < 0
     wza1 = aza1 * zza1
     with col23:
