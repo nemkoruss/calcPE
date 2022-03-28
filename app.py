@@ -325,10 +325,10 @@ elif x == "Перчатки":
     with col191:
         st.write('')
         st.title('Расчёт продажи: ')
-        nak3 = st.number_input('Процент удорожания:')
+        nak3 = st.number_input('Процент удорожaния:')
     nakk3 = ope4 + nak3
     with col191:
-        st.write('Продажа: ' + str(nakk3) + ' руб.')
+        st.write('Пpодажа: ' + str(nakk3) + ' руб.')
 
 y = st.sidebar.selectbox('РАСЧЁТ ЗАКАЗА:', ['Выбрать/Очистить','Заказ на бахилы','Заказ на пленку', 'Заказ на пакеты','Заказ на перчатки'])
 
