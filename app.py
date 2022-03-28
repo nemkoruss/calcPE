@@ -410,7 +410,7 @@ if y == "Заказ на пленку":
     col23, col24 = st.beta_columns(2)
     with col23:
         aza1 = st.number_input('Введите кол-во задейственного оборудования: ')
-    elif aza1 == 2:
+    if aza1 == 2:
             aza1 = 2
     elif aza1 == 1:
             aza1 = 1
