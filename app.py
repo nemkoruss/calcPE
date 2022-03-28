@@ -418,7 +418,7 @@ if y == "Заказ на пленку":
         aza1 = 1
     else:
         aza1 < 0
-    with col24:
+    with col23:
         zza1 = st.number_input('[Рукав = 1, Полотно = 2]')
     if zza1 == 2:
         zza1 = 4
@@ -451,7 +451,7 @@ if y == "Заказ на пленку":
     else:
         cza1 < 0
     kza1 = lza1 * cza1
-    with col23:
+    with col24:
         dza1 = st.number_input('Введите кол-во плёнки в кг: ')
     if dza1 == 0:
         dza1 = 1
