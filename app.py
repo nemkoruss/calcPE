@@ -463,123 +463,99 @@ if y == "Заказ на пленку":
 #---------------------------
 
 if y == "Заказ на пакеты":
-
-'''
     st.write('')
     st.write('')
     st.title('Расчёт выполнения заказа: ')
     col21, col22 = st.beta_columns(2)
     with col21:
-        aza = st.number_input('Введите кол-во задейственного оборудования: ')
-    if aza == 5:
-            aza = 5
-    elif aza == 4:
-            aza = 4
-    elif aza == 3:
-            aza = 3
-    elif aza == 2:
-            aza = 2
-    elif aza == 1:
-            aza = 1
-    elif aza == 0:
-        aza = 1
+        aza11 = st.number_input('Введите кол-во задейственного оборудования: ')
+    if aza11 == 2:
+            aza11 = 2
+    elif aza11 == 1:
+            aza11 = 1
+    elif aza11 == 0:
+        aza11 = 1
     else:
-        aza < 0
+        aza11 < 0
     with col21:
-        bza = st.number_input('[Эконом = 1, Стандарт = 2, Прочные = 3, Детские = 4]')
-    if bza == 1:
-            bza = 40000
-    elif bza == 2:
-            bza = 35000
-    elif bza == 3:
-            bza = 30000
-    elif bza == 4:
-            bza = 10000
-    elif bza == 0:
-        bza = 1
+        bza11 = st.number_input('[Толстая плёнка = 1, Тонкая плёнка = 2, Флекс-печать = 3]')
+    if bza11 == 1:
+            bza11 = 2000
+    elif bza11 == 2:
+            bza11 = 4000
+    elif bza11 == 3:
+            bza11 = 3000
+    elif bza11 == 0:
+        bza11 = 1
     else:
-        bza < 0
-    lza = aza * bza
+        bza11 < 0
+    lza11 = aza11 * bza11
     with col22:
-        cza = st.number_input('График: [где 12 часов = 1, а 24 часа = 2]: ')
-    if cza == 1:
-            cza = 1
-    elif cza == 2:
-            cza = 2
-    elif cza == 0:
-        cza = 1
+        cza11 = st.number_input('График: [где 12 часов = 1, а 24 часа = 2]: ')
+    if cza11 == 1:
+            cza11 = 1
+    elif cza11 == 2:
+            cza11 = 2
+    elif cza11 == 0:
+        cza11 = 1
     else:
-        cza < 0
-    kza = lza * cza
+        cza11 < 0
+    kza11 = lza11 * cza11
     with col22:
-        dza = st.number_input('Введите кол-во бахил в парах: ')
-    if dza == 0:
-        dza = 1
+        dza11 = st.number_input('Введите кол-во бахил в штуках: ')
+    if dza11 == 0:
+        dza11 = 1
     else:
-        dza < 0
-    sza = dza / kza
-    st.write('Для выполнения заказа нужно: ' + str(sza) + ' день/дня/дней')
+        dza11 < 0
+    sza11 = dza11 / kza11
+    st.write('Для выполнения заказа нужно: ' + str(sza11) + ' день/дня/дней')
 
-'''
 #--------------------------
 
 if y == "Заказ на перчатки":
-'''
     st.write('')
     st.write('')
     st.title('Расчёт выполнения заказа: ')
     col21, col22 = st.beta_columns(2)
     with col21:
-        aza = st.number_input('Введите кол-во задейственного оборудования: ')
-    if aza == 5:
-            aza = 5
-    elif aza == 4:
-            aza = 4
-    elif aza == 3:
-            aza = 3
-    elif aza == 2:
-            aza = 2
-    elif aza == 1:
-            aza = 1
-    elif aza == 0:
-        aza = 1
+        aza111 = st.number_input('Введите кол-во задейственного оборудования: ')
+    if aza111 == 2:
+            aza111 = 2
+    elif aza111 == 1:
+            aza11й = 1
+    elif aza111 == 0:
+        aza111 = 1
     else:
-        aza < 0
+        aza111 < 0
     with col21:
-        bza = st.number_input('[Эконом = 1, Стандарт = 2, Прочные = 3, Детские = 4]')
-    if bza == 1:
-            bza = 40000
-    elif bza == 2:
-            bza = 35000
-    elif bza == 3:
-            bza = 30000
-    elif bza == 4:
-            bza = 10000
-    elif bza == 0:
-        bza = 1
+        bza111 = st.number_input('[С манжетой = 1, Обычные = 2]')
+    if bza111 == 1:
+            bza111 = 50000
+    elif bza111 == 0:
+        bza111 = 1
     else:
-        bza < 0
-    lza = aza * bza
+        bza111 < 0
+    lza = aza111 * bza111
     with col22:
-        cza = st.number_input('График: [где 12 часов = 1, а 24 часа = 2]: ')
-    if cza == 1:
-            cza = 1
-    elif cza == 2:
-            cza = 2
-    elif cza == 0:
-        cza = 1
+        cza111 = st.number_input('График: [где 12 часов = 1, а 24 часа = 2]: ')
+    if cza111 == 1:
+            cza111 = 1
+    elif cza111 == 2:
+            cza111 = 2
+    elif cza111 == 0:
+        cza111 = 1
     else:
-        cza < 0
-    kza = lza * cza
+        cza111 < 0
+    kza111 = lza111 * cza111
     with col22:
-        dza = st.number_input('Введите кол-во бахил в парах: ')
-    if dza == 0:
-        dza = 1
+        dza111 = st.number_input('Введите кол-во бахил в парах: ')
+    if dza111 == 0:
+        dza111 = 1
     else:
-        dza < 0
-    sza = dza / kza
-    st.write('Для выполнения заказа нужно: ' + str(sza) + ' день/дня/дней')
-'''
+        dza111 < 0
+    sza111 = dza111 / kza111
+    st.write('Для выполнения заказа нужно: ' + str(sza111) + ' день/дня/дней')
+
 #-----------------------------------------------------------------
 
 z = st.sidebar.selectbox('РАСЧЁТ ВЫПЛАТ:', ['Выбрать/Очистить','Цех бахил','Цех экструзии', 'Цех перчаток','Цех пакетов',])
