@@ -502,7 +502,7 @@ if y == "Заказ на пакеты":
         cza11 < 0
     kza11 = lza11 * cza11
     with col26:
-        dza11 = st.number_input('Введите кол-во бахил в штуках: ')
+        dza11 = st.number_input('Введите кол-во пакетов в штуках: ')
     if dza11 == 0:
         dza11 = 1
     else:
@@ -548,7 +548,7 @@ if y == "Заказ на перчатки":
         cza111 < 0
     kza111 = lza111 * cza111
     with col28:
-        dza111 = st.number_input('Введите кол-во бахил в парах: ')
+        dza111 = st.number_input('Введите кол-во перчаток в парах: ')
     if dza111 == 0:
         dza111 = 1
     else:
