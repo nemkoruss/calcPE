@@ -136,14 +136,14 @@ if x == "Пакеты":
     with col7:
         api = st.number_input('Стоимость Коробки: ')
     xpc = xpb + apc + apd + ape + apf + apg + aph + api
-    with col17:
-        st.write('Себестоимость 1 пакета: ' + str(xpc) + ' руб.') 
-    with col7:
+    st.write('Себестоимость 1 пакета: ' + str(xpc) + ' руб.') 
+    col71, col81 = st.beta_columns(2)
+    with col71:
         st.write('')
         st.title('Расчёт прoдажи: ')
         nak1 = st.number_input('Прoцeнт удорожания:')
     nakk1 = xpc + nak1
-    with col7:
+    with col71:
         st.write('Продaжа: ' + str(nakk1) + ' руб.')       
 
 elif x == "Бахилы":
@@ -234,14 +234,14 @@ elif x == "Бахилы":
 
     ob4 = kb4 * lb4
     zb4 = ob41 + ob4
-    with col13:
-        st.write('Себестоимость бахил: ' + str(zb4) + ' руб.')
-    with col13:
+    st.write('Себестоимость бахил: ' + str(zb4) + ' руб.')
+    col131, col141 = st.beta_columns(2)
+    with col131:
         st.write('')
         st.title('Расчёт продажи: ')
         nak2 = st.number_input('Процент удорожания:')
     nakk2 = zb4 + nak2
-    with col13:
+    with col131:
         st.write('Продажа: ' + str(nakk2) + ' руб.')
     
 elif x == "Перчатки":
@@ -320,14 +320,14 @@ elif x == "Перчатки":
         jpe41 = st.number_input('Стоимость Корoбки: ')
     jpe4 = jpe41 * 1 / 100
     ope4 = ppe4 + ape4 + bpe4 + cpe4 + dpe4 + epe4 + fpe4 + gpe4 + hpe4 + ipe4 + jpe4        
-    with col19:
-        st.write('Себестоимость перчаток: ' + str(ope4) + ' руб.')
-    with col19:
+    st.write('Себестоимость перчаток: ' + str(ope4) + ' руб.')
+    col291, col121 = st.beta_columns(2)
+    with col191:
         st.write('')
         st.title('Расчёт продажи: ')
         nak3 = st.number_input('Процент удорожания:')
     nakk3 = ope4 + nak3
-    with col19:
+    with col191:
         st.write('Продажа: ' + str(nakk3) + ' руб.')
 
 y = st.sidebar.selectbox('РАСЧЁТ ЗАКАЗА:', ['Выбрать/Очистить','Заказ на бахилы','Заказ на пленку', 'Заказ на пакеты','Заказ на перчатки'])
