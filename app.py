@@ -50,7 +50,8 @@ if b == 'Замес гранулы':
         vstz = vst / ez
         hz = cz / ez
         iz = dz / ez
-    
+    ovz = az + bz + vst + cz + iz
+    st.write('Общий вес замеса = ' + str(ovz) + ' кг.')    
     st.write('В одном килограмме замеса: ')
     st.write('ПНД = ' + str(fz) + ' кг.')
     st.write('ПНД втор. = ' + str(gz) + ' кг.')
@@ -73,7 +74,7 @@ if b == 'Замес гранулы':
     cz2 = cz1 * hz
     dz2 = dz1 * iz
     xz = az2 + bz2 + vst2 + cz2 + dz2    
-
+    cks = xz / ovz
     with col3:    
         ez = st.number_input('Зарплатa сотрудников: ')
         fz = st.number_input('Стоимость аренды: ')
@@ -88,7 +89,7 @@ if b == 'Замес гранулы':
     with col4:    
         lz = st.number_input('Введите БРАК: ')
     lz =   xz * lz / 100       
-    yz = xz + zz + iz + kz + lz
+    yz = cks + zz + iz + kz + lz
     st.write('Себестоимость замеса гранулы: ' + str(yz) + ' руб.')
     col31, col41 = st.beta_columns(2)
     with col31:
