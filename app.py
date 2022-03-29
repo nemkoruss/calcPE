@@ -21,7 +21,15 @@ if a == 'Включено':
     image = Image.open('./qrcode/qrcode.jpg')
     st.image(image, width = 100, caption='QR код для скачивания',use_column_width=100)
     
-
+    st.markdown(get_table_download_link(df), unsafe_allow_html=True)
+    def get_table_download_link(df):
+        """Generates a link allowing the data in a given panda dataframe to be downloaded
+        in:  dataframe
+        out: href string
+        """
+        csv = df.to_csv(index=False)
+        b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
+        href = f'<a href="data:file/csv;base64,{b64}">Download csv file</a>'
     
 
 #-----------------------------------------------------------------
