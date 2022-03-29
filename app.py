@@ -53,8 +53,8 @@ if b == 'Замес гранулы':
     ovz = az + bz + vstz + cz + iz
     st.write('Общий вес замеса = ' + str(ovz) + ' кг.')    
     st.write('В одном килограмме замеса: ')
-    st.write('ПНД = ' + str(fz) + ' кг.')
-    st.write('ПНД втор. = ' + str(gz) + ' кг.')
+    st.write('ПНД = ' + str(fz1) + ' кг.')
+    st.write('ПНД втор. = ' + str(gz1) + ' кг.')
     st.write('Стрейч = ' + str(vstz) + ' кг.')
     st.write('Мел = ' + str(hz) + ' кг.')
     st.write('Краситель = ' + str(iz) + ' кг.')
