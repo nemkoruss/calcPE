@@ -77,10 +77,8 @@ if b == 'Замес гранулы':
     with col3:    
         ez = st.number_input('Зарплатa сотрудников: ')
         fz = st.number_input('Стоимость аренды: ')
-        gz = st.number_input('Стоимость электричества: ')
-    with col4:      
-        hz = st.number_input('Стоимость кредита: ')        
-    zz = ez + fz + gz + hz        
+        gz = st.number_input('Стоимость электричества: ')       
+    zz = ez + fz + gz      
     with col4:             
         iz = st.number_input('Стоимость ТО: ')
     iz = xz * iz / 100    
