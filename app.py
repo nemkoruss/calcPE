@@ -66,12 +66,12 @@ if b == 'Замес гранулы':
         vst1 = st.number_input('Цена Стрейча: ')
     with col3:
         cz1 = st.number_input('Цена Мела: ')
-        dz1 = st.number_input('Цену Красителя: ')        
-    az2 = az1 * fz1
-    bz2 = bz1 * gz1
-    vst2 = vst1 * vstz
-    cz2 = cz1 * hz
-    dz2 = dz1 * iz
+        dz1 = st.number_input('Ценa Красителя: ')        
+    az2 = az1 * az
+    bz2 = bz1 * bz
+    vst2 = vst1 * vst
+    cz2 = cz1 * cz
+    dz2 = dz1 * dz
     xz = az2 + bz2 + vst2 + cz2 + dz2
     with col3:    
         ez1 = st.number_input('Зарплатa сотрудников: ')
@@ -176,7 +176,7 @@ elif x == "Бахилы":
         cb2 = st.number_input('Цeна Мела: ')
         db1 = st.number_input('Вeс ввода Красителя: ')
         db2 = st.number_input('Цeна Красителя: ') 
-    ezur = ab1 + bb1 + vsta1 + cb1 + db1   
+    ezur = ab1 + bb1 + vsta1 + cb1 + db1   # Общий вес
     ab = ab2 * ab1
     bb = bb2 * bb1
     vsta = vsta1 * vsta2
