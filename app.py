@@ -20,7 +20,7 @@ if a == 'Включено':
     st.markdown('**Корпоративный сайт: ** [tpkpromed.ru](https://tpkpromed.ru)')
     st.markdown('**Производство бахил: ** [bioinvn.ru](https://bioinvn.ru)')
     st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')  
-    st.markdown('**Скачать приложение: ** [Скачать](https://goo.su/RH7qQ)
+    st.markdown('**Скачать приложение: ** [Скачать](https://goo.su/RH7qQ)')
     
     uploaded_file = st.file_uploader("Choose a image file", type="jpg")
     
