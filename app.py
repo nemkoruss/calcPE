@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-
+from PIL import Image
 #-----------------------------------------------------------------
 
 a = st.sidebar.radio('ВКЛ/ВЫКЛ "ВВЕДЕНИЕ":', ['Включено','Выключено'])
@@ -21,12 +21,8 @@ if a == 'Включено':
     st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')  
     st.markdown('**Скачать приложение: ** [Скачать](https://goo.su/RH7qQ)')
     
-    if use_default_image:
-        opencv_image = cv2.imread('qrcode.jpg')
-    
-    elif uploaded_file is not None:
-        file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
-        opencv_image = cv2.imdecode(file_bytes, 1)
+    img = Image.open(r'qrcode.jpg')
+    img.show()
 
     
 
