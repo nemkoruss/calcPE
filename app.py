@@ -64,7 +64,7 @@ if b == 'Замес гранулы':
         az1 = st.number_input('Цена ПНД: ')
         bz1 = st.number_input('Цена ПНД вторичка: ')
         vst1 = st.number_input('Цена Стрейча: ')
-    with col4:
+    with col3:
         cz1 = st.number_input('Цена Мела: ')
         dz1 = st.number_input('Цену Красителя: ')        
     az2 = az1 * fz
@@ -74,7 +74,7 @@ if b == 'Замес гранулы':
     dz2 = dz1 * iz
     xz = az2 + bz2 + vst2 + cz2 + dz2    
 
-    with col3:    
+    with col4:    
         ez = st.number_input('Зарплатa сотрудников: ')
         fz = st.number_input('Стоимость аренды: ')
     with col4:      
@@ -84,7 +84,7 @@ if b == 'Замес гранулы':
     with col3:             
         iz = st.number_input('Стоимость ТО: ')
     iz = xz * iz / 100    
-    with col4:             
+    with col3:             
         kz = st.number_input('Возврат за экструдер: ')
     kz = xz * kz / 100
     with col4:    
