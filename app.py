@@ -47,10 +47,10 @@ if b == 'Замес гранулы':
             ez < 0
         fz1 = az / ez
         gz1 = bz / ez
-        vst1 = vst / ez
+        vstz = vst / ez
         hz = cz / ez
         iz = dz / ez
-    ovz = az + bz + vst1 + cz + iz
+    ovz = az + bz + vstz + cz + iz
     st.write('Общий вес замеса = ' + str(ovz) + ' кг.')    
     st.write('В одном килограмме замеса: ')
     st.write('ПНД = ' + str(fz) + ' кг.')
@@ -70,7 +70,7 @@ if b == 'Замес гранулы':
         dz1 = st.number_input('Цену Красителя: ')        
     az2 = az1 * fz1
     bz2 = bz1 * gz1
-    vst2 = vst1 * vst
+    vst2 = vst1 * vstz
     cz2 = cz1 * hz
     dz2 = dz1 * iz
     xz = az2 + bz2 + vst2 + cz2 + dz2    
