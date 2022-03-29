@@ -45,9 +45,9 @@ if b == 'Замес гранулы':
             ez = 1
         else:
             ez < 0
-        fz = az / ez
-        gz = bz / ez
-        vstz = vst / ez
+        fz1 = az / ez
+        gz1 = bz / ez
+        vst1 = vst / ez
         hz = cz / ez
         iz = dz / ez
     ovz = az + bz + vst + cz + iz
@@ -68,8 +68,8 @@ if b == 'Замес гранулы':
     with col3:
         cz1 = st.number_input('Цена Мела: ')
         dz1 = st.number_input('Цену Красителя: ')        
-    az2 = az1 * fz
-    bz2 = bz1 * gz
+    az2 = az1 * fz1
+    bz2 = bz1 * gz1
     vst2 = vst1 * vst
     cz2 = cz1 * hz
     dz2 = dz1 * iz
@@ -91,6 +91,7 @@ if b == 'Замес гранулы':
     lz =   xz * lz / 100       
     yz = cks + zz + iz + kz + lz
     st.write('Себестоимость замеса гранулы: ' + str(yz) + ' руб.')
+    
     col31, col41 = st.beta_columns(2)
     with col31:
         st.write('')
