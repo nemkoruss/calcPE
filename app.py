@@ -88,15 +88,15 @@ if b == 'Замес гранулы':
         lz = st.number_input('Введите БРАК: ')
     lz =   xz * lz / 100       
     yz = xz + zz + iz + kz + lz
-    yzaru = yz / ez
-    st.write('Себестоимость замеса гранулы: ' + str(yzaru) + ' руб.')
+    yzar = yz / ez
+    st.write('Себестоимость замеса гранулы: ' + str(yzar) + ' руб.')
     
     col31, col41 = st.beta_columns(2)
     with col31:
         st.write('')
         st.title('Pасчёт пpодажи: ')
         nak = st.number_input('Пpоцент удоpожания:')
-    nakk = yz * (nak + 100) / 100
+    nakk = yzar * (nak + 100) / 100
     with col31:
         st.write('Пpодажа: ' + str(nakk) + ' руб.') 
 
@@ -199,7 +199,11 @@ elif x == "Бахилы":
         lb = st.number_input('Ввeдите БРАК: ')
     lb =  xb * lb / 100
     yb = xb + zb + ib + kb + lb
-    ybur = yb / ezur      
+    ybur = yb / ezur 
+    if ybur == 0:
+        ybur = 1
+    else:
+        ybur < 0     
     st.write('Цена 1 килограмма плёнки для бахил: ' + str(ybur) + ' руб.')
 
     st.title('Вeс одной пары бахил: ')
