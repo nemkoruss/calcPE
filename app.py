@@ -181,15 +181,7 @@ elif x == "Бахилы":
     vstuz = vsta1 / ezur
     hzur = cb1 / ezur
     izur = db1 / ezur
-    ovzur = az + bz + vstz + cz + iz
-
-
-
-
-
-
-
-           
+       
     ab = ab2 * ab1
     bb = bb2 * bb1
     vsta = vsta1 * vsta2
@@ -211,8 +203,9 @@ elif x == "Бахилы":
     with col10:            
         lb = st.number_input('Ввeдите БРАК: ')
     lb =  xb * lb / 100
-    yb = xb + zb + ib + kb + lb      
-    st.write('Цена 1 килограмма плёнки для бахил: ' + str(yb) + ' руб.')
+    yb = xb + zb + ib + kb + lb
+    ybur = yb / ezur      
+    st.write('Цена 1 килограмма плёнки для бахил: ' + str(ybur) + ' руб.')
 
     st.title('Вeс одной пары бахил: ')
     col11, col12 = st.beta_columns(2)
