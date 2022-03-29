@@ -233,7 +233,6 @@ elif x == "Бахилы":
         ab4 = st.number_input('Зaрплата сотрудников: ')
         bb4 = st.number_input('Стоимость Аренды: ')
         cb4 = st.number_input('Стоимость Электричества: ')
-        db4 = st.number_input('Стоимость Возврата электричества: ')
         eb4 = st.number_input('Стоимость TO: ')
         eb444 = eb4 /100
         fb4 = st.number_input('Стоимость Скотча: ')
@@ -246,7 +245,7 @@ elif x == "Бахилы":
         ib444 = ib4 / 100
         jb41 = st.number_input('Стоимость Коробки: ')
         jb444 = jb41 / 100
-    ob41 = pb4 + ab4 + bb4 + cb4 + db4 + eb444 + fb444 + gb444 + hb4 + ib444 + jb444
+    ob41 = pb4 + ab4 + bb4 + cb4 + eb444 + fb444 + gb444 + hb4 + ib444 + jb444
     with col14:
         kb41 = st.number_input('Стоимость Резинки: ')
     kb4 = kb41 * 1 / 100
