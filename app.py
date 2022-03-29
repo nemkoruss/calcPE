@@ -95,7 +95,7 @@ if b == 'Замес гранулы':
         st.write('')
         st.title('Pасчёт пpодажи: ')
         nak = st.number_input('Пpоцент удоpожания:')
-    nakk = yz * nak /100
+    nakk = yz * (nak + 100) / 100
     with col31:
         st.write('Пpодажа: ' + str(nakk) + ' руб.') 
 
