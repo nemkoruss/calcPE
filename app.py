@@ -18,10 +18,8 @@ if a == 'Включено':
     st.markdown('**Производство бахил: ** [bioinvn.ru](https://bioinvn.ru)')
     st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')  
     st.markdown('**Скачать приложение: ** [Скачать](https://goo.su/RH7qQ)')
-    col1000, col2000 = st.beta_columns(2)
-    with col1000:
-        image = Image.open('./qrcode/qrcode.jpg')
-        st.image(image, width = 200)
+    image = Image.open('./qrcode/qrcode.jpg')
+    st.image(image, width = 100, caption='QR код для скачивания')
     
 
     
