@@ -50,8 +50,7 @@ if b == 'Замес гранулы':
         vstz = vst / ez
         hz = cz / ez
         iz = dz / ez
-        ovz = fz1 + gz1 + vstz + hz + iz
-    st.write('Общий вес замеса = ' + str(ovz) + ' кг.')    
+    st.write('Общий вес замеса = ' + str(ez) + ' кг.')    
     st.write('В одном килограмме замеса: ')
     st.write('ПНД = ' + str(fz1) + ' кг.')
     st.write('ПНД втор. = ' + str(gz1) + ' кг.')
