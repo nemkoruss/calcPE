@@ -21,7 +21,7 @@ if a == 'Включено':
     col1000, col2000 = st.beta_columns(2)
     with col1000:
         image = Image.open('./qrcode/qrcode.jpg')
-        st.image(image, width = 200, caption = 'QR код для скачивания')
+        st.image(image, width = 200)
     
 
     
