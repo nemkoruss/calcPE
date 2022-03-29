@@ -22,7 +22,7 @@ if a == 'Включено':
     st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')  
     st.markdown('**Скачать приложение: ** [Скачать](https://goo.su/RH7qQ)')
     image = Image.open('./qrcode/qrcode.jpg')
-    st.image(image, width = 70, caption = 'QR код для скачивания',use_column_width=70)
+    st.image(image, width = 200, caption = 'QR код для скачивания',use_column_width=70)
     
 
     
