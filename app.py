@@ -74,17 +74,17 @@ if b == 'Замес гранулы':
     dz2 = dz1 * iz
     xz = az2 + bz2 + vst2 + cz2 + dz2    
 
-    with col4:    
+    with col3:    
         ez = st.number_input('Зарплатa сотрудников: ')
         fz = st.number_input('Стоимость аренды: ')
-    with col4:      
         gz = st.number_input('Стоимость электричества: ')
+    with col4:      
         hz = st.number_input('Стоимость кредита: ')        
     zz = ez + fz + gz + hz        
-    with col3:             
+    with col4:             
         iz = st.number_input('Стоимость ТО: ')
     iz = xz * iz / 100    
-    with col3:             
+    with col4:             
         kz = st.number_input('Возврат за экструдер: ')
     kz = xz * kz / 100
     with col4:    
