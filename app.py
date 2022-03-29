@@ -25,7 +25,7 @@ if a == 'Включено':
     feature_choice2 = st.sidebar.multiselect("Plot Size", task2)
     if st.button('Find Blueprint'):
         if feature_choice2 == 'qrcode':
-            image = Image.open('./qrcode/qrcode.jpg')
+            image = Image.open('./qrcode/qrcode.png')
             st.image(image, caption='qrcode',use_column_width=True)
     
 
