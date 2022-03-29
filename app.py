@@ -22,11 +22,9 @@ if a == 'Включено':
     st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')  
     st.markdown('**Скачать приложение: ** [Скачать](https://goo.su/RH7qQ)')
     
-    feature_choice2 = st.sidebar.multiselect("Plot Size", task2)
-    if st.button('Find Blueprint'):
-        if feature_choice2 == 'qrcode':
-            image = Image.open('./qrcode/qrcode.png')
-            st.image(image, caption='qrcode',use_column_width=True)
+    if feature_choice2 == 'qrcode':
+        image = Image.open('./qrcode/qrcode.png')
+        st.image(image, caption='qrcode',use_column_width=True)
     
 
     
