@@ -40,7 +40,7 @@ if b == 'Замес гранулы':
     with col2:
         cz = st.number_input('Вес ввода Мела: ')
         dz = st.number_input('Вес ввода Красителя: ')
-        ez = az + bz + vst + cz + dz
+        ez = az + bz + vst + cz + dz  # Общий вес
         if ez == 0:
             ez = 1
         else:
@@ -72,12 +72,12 @@ if b == 'Замес гранулы':
     vst2 = vst1 * vstz
     cz2 = cz1 * hz
     dz2 = dz1 * iz
-    xz = az2 + bz2 + vst2 + cz2 + dz2 
+    xz = az2 + bz2 + vst2 + cz2 + dz2
     with col3:    
-        ez = st.number_input('Зарплатa сотрудников: ')
+        ez1 = st.number_input('Зарплатa сотрудников: ')
         fz = st.number_input('Стоимость аренды: ')
         gz = st.number_input('Стоимость электричества: ')       
-    zz = ez + fz + gz      
+    zz = ez1 + fz + gz      
     with col4:             
         iz = st.number_input('Стоимость ТО: ')
     iz = xz * iz / 100    
@@ -88,7 +88,8 @@ if b == 'Замес гранулы':
         lz = st.number_input('Введите БРАК: ')
     lz =   xz * lz / 100       
     yz = xz + zz + iz + kz + lz
-    st.write('Себестоимость замеса гранулы: ' + str(yz) + ' руб.')
+    yzar = ez / yz
+    st.write('Себестоимость замеса гранулы: ' + str(yzar) + ' руб.')
     
     col31, col41 = st.beta_columns(2)
     with col31:
@@ -175,13 +176,7 @@ elif x == "Бахилы":
         cb2 = st.number_input('Цeна Мела: ')
         db1 = st.number_input('Вeс ввода Красителя: ')
         db2 = st.number_input('Цeна Красителя: ') 
-    ezur = ab1 + bb1 + vsta1 + cb1 + db1
-    fzur1 = ab1 / ezur
-    gzur1 = bb1 / ezur
-    vstuz = vsta1 / ezur
-    hzur = cb1 / ezur
-    izur = db1 / ezur
-       
+    ezur = ab1 + bb1 + vsta1 + cb1 + db1   
     ab = ab2 * ab1
     bb = bb2 * bb1
     vsta = vsta1 * vsta2
