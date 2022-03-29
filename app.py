@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import cv2
+from PIL import Image
 
 #-----------------------------------------------------------------
 
@@ -22,15 +22,11 @@ if a == 'Включено':
     st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')  
     st.markdown('**Скачать приложение: ** [Скачать](https://goo.su/RH7qQ)')
     
-    uploaded_file = st.file_uploader("Choose a image file", type="jpg")
-    
-    if uploaded_file is not None:
-        # Convert the file to an opencv image.
-        file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
-        opencv_image = cv2.imdecode(file_bytes, 1)
-    
-        # Now do something with the image! For example, let's display it:
-        st.image(opencv_image, channels="BGR")
+    feature_choice2 = st.sidebar.multiselect("Plot Size", task2)
+    if st.button('Find Blueprint'):
+        if feature_choice2 == 'qrcode':
+            image = Image.open('./qrcode/qrcode.jpg')
+            st.image(image, caption='qrcode',use_column_width=True)
     
 
     
