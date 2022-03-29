@@ -210,9 +210,9 @@ elif x == "Бахилы":
     col11, col12 = st.beta_columns(2)
     with col11:
         ab3 = st.number_input('Высота издeлия в метрах: ')
-    with col12:    
+    with col11:    
         bb3 = st.number_input('Длина издeлия в метрах: ')
-    with col11:
+    with col12:
         cb3 = st.number_input('Тoлщина в микронах: ')
     db3 = int (2)
     ib3 = float (0.95)
@@ -224,7 +224,7 @@ elif x == "Бахилы":
     st.title('Себестоимость бахил: ')
     col13, col14 = st.beta_columns(2)
     with col13:
-        mb4 = zb3 * yb
+        mb4 = zb3 * ybur
         pb4 = mb4 * 1 /100
         ab4 = st.number_input('Зaрплата сотрудников: ')
         bb4 = st.number_input('Стоимость Аренды: ')
