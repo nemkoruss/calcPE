@@ -166,6 +166,10 @@ elif x == "Бахилы":
     col9, col10 = st.beta_columns(2)
     with col9:
         ab1 = st.number_input('Вeс ввода ПНД: ')
+        if ab1 == 0:
+            ab1 = 1
+        else:
+            ab1 < 0
         ab2 = st.number_input('Цeна ПНД: ')
         bb1 = st.number_input('Вeс ввода ПНД вторичка: ')
         bb2 = st.number_input('Цeна ПНД вторичка: ')   
@@ -252,11 +256,7 @@ elif x == "Бахилы":
         tb4 = float (kb4 * 1)            
 
     elif lb4 == '2':
-        tb4 = float (kb4 * 2)
-    elif lb4 == '0':
-        lb4 = 1
-    else:
-        lb4 < 0            
+        tb4 = float (kb4 * 2)            
 
     ob4 = kb4 * lb4
     zb4 = ob41 + ob4
