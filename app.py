@@ -50,7 +50,7 @@ if b == 'Замес гранулы':
         vstz = vst / ez
         hz = cz / ez
         iz = dz / ez
-    ovz = az + bz + vstz + cz + iz
+        ovz = fz1 + gz1 + vstz + hz + iz
     st.write('Общий вес замеса = ' + str(ovz) + ' кг.')    
     st.write('В одном килограмме замеса: ')
     st.write('ПНД = ' + str(fz1) + ' кг.')
@@ -175,7 +175,22 @@ elif x == "Бахилы":
         cb1 = st.number_input('Вeс ввода Мела: ')
         cb2 = st.number_input('Цeна Мела: ')
         db1 = st.number_input('Вeс ввода Красителя: ')
-        db2 = st.number_input('Цeна Красителя: ')        
+        db2 = st.number_input('Цeна Красителя: ') 
+    ezur = ab1 + bb1 + vsta1 + cb1 + db1
+    fzur1 = ab1 / ezur
+    gzur1 = bb1 / ezur
+    vstuz = vsta1 / ezur
+    hzur = cb1 / ezur
+    izur = db1 / ezur
+    ovzur = az + bz + vstz + cz + iz
+
+
+
+
+
+
+
+           
     ab = ab2 * ab1
     bb = bb2 * bb1
     vsta = vsta1 * vsta2
