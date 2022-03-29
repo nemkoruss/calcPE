@@ -252,7 +252,11 @@ elif x == "Бахилы":
         tb4 = float (kb4 * 1)            
 
     elif lb4 == '2':
-        tb4 = float (kb4 * 2)            
+        tb4 = float (kb4 * 2)
+    elif lb4 == '0':
+        lb4 = 1
+    else:
+        lb4 < 0            
 
     ob4 = kb4 * lb4
     zb4 = ob41 + ob4
