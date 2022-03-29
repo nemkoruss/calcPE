@@ -41,10 +41,10 @@ if b == 'Замес гранулы':
         cz = st.number_input('Вес ввода Мела: ')
         dz = st.number_input('Вес ввода Красителя: ')
         ez = az + bz + vst + cz + dz  # Общий вес
-   #     if ez == 0:
-   #         ez = 1
-   #     else:
-   #         ez < 0
+        if ez == 0:
+            ez = 1
+        else:
+            ez < 0
         fz1 = az / ez
         gz1 = bz / ez
         vstz = vst / ez
