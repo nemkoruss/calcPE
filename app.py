@@ -233,17 +233,17 @@ elif x == "Бахилы":
         ab4 = st.number_input('Зaрплата сотрудников: ')
         bb4 = st.number_input('Стоимость Аренды: ')
         cb4 = st.number_input('Стоимость Электричества: ')
-        eb4 = st.number_input('Стоимость TO: ', step = 0)
+        eb4 = st.number_input('Стоимость TO: ')
         
-        fb4 = st.number_input('Стоимость Скотча: ', step = 1)
+        fb4 = st.number_input('Стоимость Скотча: ')
         
     with col13:    
-        gb4 = st.number_input('Стоимость Пакетов: ', step = 1)
+        gb4 = st.number_input('Стоимость Пакетов: ')
         
         hb4 = st.number_input('Стоимость Доставки: ')
-        ib4 = st.number_input('Стоимость Кредита: ', step = 1)
+        ib4 = st.number_input('Стоимость Кредита: ')
     
-        jb4 = st.number_input('Стоимость Коробки: ', step = 0.0000)
+        jb4 = st.number_input('Стоимость Коробки: ')
         
     ob41 = pb4 + ab4 + bb4 + cb4 + eb4 + fb4 + gb4 + hb4 + ib4 + jb4
     with col14:
