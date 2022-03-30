@@ -232,7 +232,7 @@ elif x == "Бахилы":
         pb4 = mb4 * 1 /100
         ab4 = st.number_input('Зaрплата сотрудников: ')
         bb4 = st.number_input('Стоимость Аренды: ')
-        cb4 = st.number_input('Стоимость Электричества: ', float('{:.3f}'.format(x)))
+        cb4 = st.number_input('Стоимость Электричества: ')
         eb4 = st.number_input('Стоимость TO: ')
         
         fb4 = st.number_input('Стоимость Скотча: ')
