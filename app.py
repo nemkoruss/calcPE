@@ -194,8 +194,8 @@ elif x == "Бахилы":
         gb = st.number_input('Стoимость электричества: ')       
     zb = eb + fb + gb
     with col10:                
-        ib = st.number_input('Стoимость ТО: ', step = int)
-    ib = xb * ib / 100
+        ib = st.number_input('Стoимость ТО: ', step = float)
+    
     with col10:            
         kb = st.number_input('Вoзврат за экструдер: ')
     kb = xb * kb / 100
