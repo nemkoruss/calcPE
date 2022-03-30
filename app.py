@@ -194,15 +194,15 @@ elif x == "Бахилы":
         gb = st.number_input('Стoимость электричества: ')       
     zb = eb + fb + gb
     with col10:                
-        ib = st.number_input('Стoимость ТО: ', step = 0.0001)
-    
+        ib = st.number_input('Стoимость ТО: ')
+    ibkus = xd * ib / 100
     with col10:            
         kb = st.number_input('Вoзврат за экструдер: ')
-    kb = xb * kb / 100
+    kbkus = xb * kb / 100
     with col10:            
         lb = st.number_input('Ввeдите БРАК: ')
-    lb =  xb * lb / 100
-    yb = xb + zb + ib + kb + lb
+    lbkus =  xb * lb / 100
+    yb = xb + zb + ibkus + kbkus + lbkus
     ybur = yb / ezur 
     if ybur == 0:
         ybur = 1
@@ -233,19 +233,19 @@ elif x == "Бахилы":
         ab4 = st.number_input('Зaрплата сотрудников: ')
         bb4 = st.number_input('Стоимость Аренды: ')
         cb4 = st.number_input('Стоимость Электричества: ')
-        eb4 = st.number_input('Стоимость TO: ')
-        eb444 = eb4 /100
-        fb4 = st.number_input('Стоимость Скотча: ')
-        fb444 = fb4 / 100
+        eb4 = st.number_input('Стоимость TO: ', step = 0.0001)
+        
+        fb4 = st.number_input('Стоимость Скотча: ', step = 0.0001)
+        
     with col13:    
-        gb4 = st.number_input('Стоимость Пакетов: ')
-        gb444 = gb4 / 100
+        gb4 = st.number_input('Стоимость Пакетов: ', step = 0.0001)
+        
         hb4 = st.number_input('Стоимость Доставки: ')
-        ib4 = st.number_input('Стоимость Кредита: ')
-        ib444 = ib4 / 100
-        jb41 = st.number_input('Стоимость Коробки: ')
-        jb444 = jb41 / 100
-    ob41 = pb4 + ab4 + bb4 + cb4 + eb444 + fb444 + gb444 + hb4 + ib444 + jb444
+        ib4 = st.number_input('Стоимость Кредита: ', step = 0.0001)
+    
+        jb41 = st.number_input('Стоимость Коробки: ', step = 0.0001)
+        
+    ob41 = pb4 + ab4 + bb4 + cb4 + eb4 + fb4 + gb4 + hb4 + ib4 + jb4
     with col14:
         kb41 = st.number_input('Стоимость Резинки: ')
     kb4 = kb41 * 1 / 100
