@@ -235,15 +235,15 @@ elif x == "Бахилы":
         cb4 = st.number_input('Стоимость Электричества: ')
         eb4 = st.number_input('Стоимость TO: ', step = 0)
         
-        fb4 = st.number_input('Стоимость Скотча: ', step = 0.001)
+        fb4 = st.number_input('Стоимость Скотча: ', step = 1)
         
     with col13:    
         gb4 = st.number_input('Стоимость Пакетов: ', step = 1)
         
         hb4 = st.number_input('Стоимость Доставки: ')
-        ib4 = st.number_input('Стоимость Кредита: ', step = 10)
+        ib4 = st.number_input('Стоимость Кредита: ', step = 1)
     
-        jb4 = st.number_input('Стоимость Коробки: ', step = -5)
+        jb4 = st.number_input('Стоимость Коробки: ', step = 0.0000)
         
     ob41 = pb4 + ab4 + bb4 + cb4 + eb4 + fb4 + gb4 + hb4 + ib4 + jb4
     with col14:
