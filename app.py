@@ -195,7 +195,7 @@ elif x == "Бахилы":
     zb = eb + fb + gb
     with col10:                
         ib = st.number_input('Стoимость ТО: ')
-    ibkus = xd * ib / 100
+    ibkus = xb * ib / 100
     with col10:            
         kb = st.number_input('Вoзврат за экструдер: ')
     kbkus = xb * kb / 100
