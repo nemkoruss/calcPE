@@ -243,7 +243,7 @@ elif x == "Бахилы":
         hb4 = st.number_input('Стоимость Доставки: ')
         ib4 = st.number_input('Стоимость Кредита: ', step = 0.0001)
     
-        jb41 = st.number_input('Стоимость Коробки: ', step = 0.0001)
+        jb4 = st.number_input('Стоимость Коробки: ', step = 0.0001)
         
     ob41 = pb4 + ab4 + bb4 + cb4 + eb4 + fb4 + gb4 + hb4 + ib4 + jb4
     with col14:
