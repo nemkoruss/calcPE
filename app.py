@@ -22,7 +22,7 @@ if a == 'Включено':
     st.image(image, width = 100, caption='QR код для скачивания',use_column_width=100)
     st.set_page_config(
          page_title="Ex-stream-ly Cool App",
-         page_icon="🧊",
+         page_icon=Image.open('./qrcode/qrcode.jpg'),
          layout="wide",
          initial_sidebar_state="expanded",
          menu_items={
