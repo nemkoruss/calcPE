@@ -21,7 +21,7 @@ if a == 'Включено':
     image = Image.open('./qrcode/qrcode.jpg')
     st.image(image, width = 100, caption='QR код для скачивания',use_column_width=100)
     with open('./txt/info.txt', "wb") as f:
-        f.write(buf.getbuffer())
+        f.write('hello')
 
 #-----------------------------------------------------------------
 
