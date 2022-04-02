@@ -20,7 +20,8 @@ if a == 'Включено':
     st.markdown('**Скачать приложение: ** [Скачать](https://goo.su/RH7qQ)')
     image = Image.open('./qrcode/qrcode.jpg')
     st.image(image, width = 100, caption='QR код для скачивания',use_column_width=100)
-
+    with open('./txt/info.txt', "wb") as f:
+        f.write(buf.getbuffer())
 
 #-----------------------------------------------------------------
 
