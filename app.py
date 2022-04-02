@@ -20,7 +20,17 @@ if a == 'Включено':
     st.markdown('**Скачать приложение: ** [Скачать](https://goo.su/RH7qQ)')
     image = Image.open('./qrcode/qrcode.jpg')
     st.image(image, width = 100, caption='QR код для скачивания',use_column_width=100)
-    txt = txt.open('./txt/info.txt')
+    st.set_page_config(
+         page_title="Ex-stream-ly Cool App",
+         page_icon="🧊",
+         layout="wide",
+         initial_sidebar_state="expanded",
+         menu_items={
+             'Get Help': 'https://www.extremelycoolapp.com/help',
+             'Report a bug': "https://www.extremelycoolapp.com/bug",
+             'About': "# This is a header. This is an *extremely* cool app!"
+         }
+     )
     
 
 #-----------------------------------------------------------------
