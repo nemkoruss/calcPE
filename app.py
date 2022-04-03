@@ -115,9 +115,9 @@ if x == "Пакеты":
     st.title('Вес 1 пакета: ')
     col7, col8 = st.beta_columns(2)
     with col7:
-        apaxv = st.number_input('Длина изделия в метрах: ')
+        apaxv = st.number_input('Длина изделия в сантиметрах: ')
         apa = apaxv / 100
-        bpaxv = st.number_input('Ширина излелия в метрах: ')
+        bpaxv = st.number_input('Ширина излелия в сантиметрах: ')
         bpa = bpaxv / 100
     with col8:
         cpa = st.number_input('Толщина в микронах: ')
