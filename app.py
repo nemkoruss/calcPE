@@ -1,14 +1,13 @@
 import streamlit as st
-import streamlit_authenticator as stauth
 import pandas as pd
 import numpy as np
 import local_settings as settings
 from PIL import Image
 
 
-names = ['Isaev Maxim']
-usernames = settings.MYSQL_USER,
-passwords = password=settings.MYSQL_PASSWORD,
+#names = ['Isaev Maxim']
+#usernames = settings.MYSQL_USER
+#passwords = settings.MYSQL_PASSWORD
 
 
 
