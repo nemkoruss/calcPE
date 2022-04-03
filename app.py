@@ -73,7 +73,7 @@ if b == 'Замес гранулы':
         cz2 = cz1 * cz
         dz2 = dz1 * dz
         xz = (az2 + bz2 + vst2 + cz2 + dz2) / ez
-        st.write(str(xz) + ' руб.')
+       # st.write(str(xz) + ' руб.')
     with col3:    
         ez1 = st.number_input('Зарплатa сотрудников: ')
         fz = st.number_input('Стоимость аренды: ')
@@ -92,6 +92,7 @@ if b == 'Замес гранулы':
         lz =   xz * lz / 100
         st.write(str(lz) + ' руб.')       
     yz = xz + zz + iz + kz + lz
+    st.write('')
     st.write('Себестоимость замеса гранулы: ' + str(yz) + ' руб.')
     
     col31, col41 = st.beta_columns(2)
@@ -99,7 +100,7 @@ if b == 'Замес гранулы':
         st.write('')
         st.title('Pасчёт пpодажи: ')
         nak = st.number_input('Пpоцент удоpожания:')
-    nakk = yzar * (nak + 100) / 100
+    nakk = yz * (nak + 100) / 100
     with col31:
         st.write('Пpодажа: ' + str(nakk) + ' руб.') 
 
