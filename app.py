@@ -706,15 +706,14 @@ if z == "Цех бахил":
     st.write('')
     with col300:
         st.write('Итого к оплате: ')
-        qwer = (str(ua) + str(ub) + str(uc) + str(ud))
+        qwer = ua + ub + uc + ud
         st.write(str(qwer) + ' руб.')
     st.write('')
     with col300:
-     st.title('Удержание с зарплаты: ')
-    nakiy = st.number_input('Процент удердания:')
-    nakkur = qwer * (nakiy +100) / 100
-    trio = nakkur - qwer
-    with col300:
+        st.title('Удержание с зарплаты: ')
+        nakiy = st.number_input('Процент удержания:')
+        nakkur = qwer * (nakiy + 100) / 100
+        trio = nakkur - qwer
         st.write(str(qwer) + ' руб.')
 
     
