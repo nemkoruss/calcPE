@@ -115,8 +115,10 @@ if x == "Пакеты":
     st.title('Вес 1 пакета: ')
     col7, col8 = st.beta_columns(2)
     with col7:
-        apa = st.number_input('Длина изделия в метрах: ')
-        bpa = st.number_input('Ширина излелия в метрах: ')
+        apaxv = st.number_input('Длина изделия в метрах: ')
+        apa = apaxv / 100
+        bpaxv = st.number_input('Ширина излелия в метрах: ')
+        bpa = bpaxv / 100
     with col8:
         cpa = st.number_input('Толщина в микронах: ')
         dpa = st.number_input('Количество стенок: ')
@@ -326,9 +328,11 @@ elif x == "Перчатки":
     st.title('Вес одной пары перчаток: ')
     col17, col18 = st.beta_columns(2)
     with col17:
-        ape3 = st.number_input('Высота изделия в метрах: ')
+        aperiv = st.number_input('Высота изделия в сантиметрах: ')
+        ape3 = aperiv / 100
     with col18:    
-        bpe3 = st.number_input('Длина излелия в метрах: ')
+        bperiv = st.number_input('Длина излелия в сантиметрах: ')
+        bpe3 = bperiv / 100
     with col17:
         cpe3 = st.number_input('Толщина в микронах: ')
     dpe3 = int (2)
