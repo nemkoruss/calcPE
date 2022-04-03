@@ -5,7 +5,11 @@ import local_settings as settings
 from PIL import Image
 
 
-#names = ['Isaev Maxim']
+#names = st.number_input('Введите имя: ')
+#login = st.number_input('Введите логин: ')
+password = st.text_input('Введите пароль: ')
+if password == 'tatoshka12':
+
 #usernames = settings.MYSQL_USER
 #passwords = settings.MYSQL_PASSWORD
 
