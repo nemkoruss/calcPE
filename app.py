@@ -92,8 +92,7 @@ if b == 'Замес гранулы':
         lz =   xz * lz / 100
         st.write(str(lz) + ' руб.')       
     yz = xz + zz + iz + kz + lz
-    yzar = yz / ez
-    st.write('Себестоимость замеса гранулы: ' + str(yzar) + ' руб.')
+    st.write('Себестоимость замеса гранулы: ' + str(yz) + ' руб.')
     
     col31, col41 = st.beta_columns(2)
     with col31:
