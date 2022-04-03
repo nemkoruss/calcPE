@@ -17,9 +17,9 @@ if a == 'Включено':
     st.markdown('**Корпоративный сайт: ** [tpkpromed.ru](https://tpkpromed.ru)')
     st.markdown('**Производство бахил: ** [bioinvn.ru](https://bioinvn.ru)')
     st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')  
-    st.markdown('**Скачать приложение: ** [Скачать](https://goo.su/RH7qQ)')
-    image = Image.open('./qrcode/qrcode.jpg')
-    st.image(image, width = 100, caption='QR код для скачивания',use_column_width=100)
+   # st.markdown('**Скачать приложение: ** [Скачать](https://goo.su/RH7qQ)')
+   # image = Image.open('./qrcode/qrcode.jpg')
+   # st.image(image, width = 100, caption='QR код для скачивания',use_column_width=100)
 
 
 #-----------------------------------------------------------------
