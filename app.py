@@ -254,7 +254,7 @@ elif x == "Бахилы":
         ib4 = float(0.005) # Стоимость кредита
     
         jb4 = st.number_input('Стоимость Коробки: ')
-        rit = st.number_inout('Количество в коробке пар')
+        rit = st.number_input('Количество в коробке пар')
         ret = jb4 / rit
         
     ob41 = pb4 + ab4 + bb4 + cb4 + eb4 + fb4 + gb4 + hb4 + ib4 + ret
