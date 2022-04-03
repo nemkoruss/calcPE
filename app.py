@@ -9,13 +9,14 @@ from PIL import Image
 #login = st.number_input('Введите логин: ')
 password = st.text_input('Введите пароль: ')
 if password == 'tatoshka12':
+    password == true
 
 #usernames = settings.MYSQL_USER
 #passwords = settings.MYSQL_PASSWORD
 
 
 else:
-    password == '45'
+    password == false
 
 
 #-----------------------------------------------------------------
