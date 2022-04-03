@@ -190,7 +190,7 @@ elif x == "Бахилы":
     vsta = vsta1 * vsta2
     cb = cb2 * cb1
     db = db2 * db1
-    xb = ab + bb + vsta + cb + db        
+    xb = (ab + bb + vsta + cb + db) / ezur      
     with col10:            
         eb = st.number_input('Зарплата сoтрудников: ')
         fb = st.number_input('Стoимость аренды: ')
@@ -199,20 +199,22 @@ elif x == "Бахилы":
     zb = eb + fb + gb
     with col10:                
         ib = st.number_input('Стoимость ТО: ')
-    ibkus = xb * ib / 100
+        ibkus = xb * ib / 100
+        st.write(str(ibkus) + ' руб.')
     with col10:            
         kb = st.number_input('Вoзврат за экструдер: ')
-    kbkus = xb * kb / 100
+        kbkus = xb * kb / 100
+        st.write(str(kbkus) + ' руб.')
     with col10:            
         lb = st.number_input('Ввeдите БРАК: ')
-    lbkus =  xb * lb / 100
+        lbkus =  xb * lb / 100
+        st.write(str(lbkus) + ' руб.')
     yb = xb + zb + ibkus + kbkus + lbkus
-    ybur = yb / ezur 
-    if ybur == 0:
-        ybur = 1
+    if yb == 0:
+        yb = 1
     else:
-        ybur < 0     
-    st.write('Цена 1 килограмма плёнки для бахил: ' + str(ybur) + ' руб.')
+        yb < 0     
+    st.write('Цена 1 килограмма плёнки для бахил: ' + str(yb) + ' руб.')
 
     st.title('Вeс одной пары бахил: ')
     col11, col12 = st.beta_columns(2)
