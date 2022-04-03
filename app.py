@@ -603,7 +603,7 @@ if z == "Цех бахил":
     st.title('Ставка: ')
     col230, col240 = st.beta_columns(2)
     with col230:
-        za = st.number_input float('Стоимость "Эконома" за пару: ')
+        za = st.number_input('Стоимость "Эконома" за пару: ')
     
     if za == 0:
         za = 1
@@ -674,7 +674,7 @@ if z == "Цех бахил":
     td = zh * xd
     col290, col300 = st.beta_columns(2)
     with col290:
-        st.write('Эконом: ')
+        st.subheader('Эконом: ')
         st.write('Сделано: '  + str(wa) + ' кор., ' + 'Сумма ЗП: ' + str(ua) + ' руб.')
         st.write('Отгрузили: '  + str(ya) + ' кор., ' + 'Оплата: ' + str(va) + ' руб.')
         st.write('Склад: '  + str(xa) + ' кор., ' + 'Долг: ' + str(ta) + ' руб.')
@@ -682,7 +682,7 @@ if z == "Цех бахил":
     st.write('')
     st.write('')
     with col290:
-        st.write('Стандарт: ')
+        st.subheader('Стандарт: ')
         st.write('Сделано: '  + str(wb) + ' кор., ' + 'Сумма ЗП: ' + str(ub) + ' руб.')
         st.write('Отгрузили: '  + str(yb) + ' кор., ' + 'Оплата: ' + str(vb) + ' руб.')
         st.write('Склад: '  + str(xb) + ' кор., ' + 'Долг: ' + str(tb) + ' руб.')
@@ -690,7 +690,7 @@ if z == "Цех бахил":
     st.write('')
     st.write('')
     with col290:
-        st.write('Прочные: ')
+        st.subheader('Прочные: ')
         st.write('Сделано: '  + str(wc) + ' кор., ' + 'Сумма ЗП: ' + str(uc) + ' руб.')
         st.write('Отгрузили: '  + str(yc) + ' кор., ' + 'Оплата: ' + str(vc) + ' руб.')
         st.write('Склад: '  + str(xc) + ' кор., ' + 'Долг: ' + str(tc) + ' руб.')
@@ -698,7 +698,7 @@ if z == "Цех бахил":
     st.write('')
     st.write('')
     with col290:
-        st.write('Детские: ')
+        st.subheader('Детские: ')
         st.write('Сделано: '  + str(wd) + ' кор., ' + 'Сумма ЗП: ' + str(ud) + ' руб.')
         st.write('Отгрузили: '  + str(yd) + ' кор., ' + 'Оплата: ' + str(vd) + ' руб.')
         st.write('Склад: '  + str(xd) + ' кор., ' + 'Долг: ' + str(td) + ' руб.')
