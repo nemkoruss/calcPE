@@ -1,0 +1,3 @@
+
+MYSQL_USER = 'Вася'
+MYSQL_PASSWORD = '123456'
