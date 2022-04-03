@@ -255,11 +255,11 @@ elif x == "Бахилы":
     
         jb4 = st.number_input('Стоимость Коробки: ')
         rit = st.number_input('Количество в коробке пар')
-        ret = jb4 / rit
-        if ret == 0:
-            ret = 1
+        if rit == 0:
+            rit = 1
         else:
-            ret < 0
+            rit < 0
+        ret = jb4 / rit
         
     ob41 = pb4 + ab4 + bb4 + cb4 + eb4 + fb4 + gb4 + hb4 + ib4 + ret
     with col14:
