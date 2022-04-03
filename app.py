@@ -673,36 +673,52 @@ if z == "Цех бахил":
     tc = zg * xc
     td = zh * xd
     col290, col300 = st.beta_columns(2)
-    
-    st.write('Эконом: ')
-    st.write('Сделано: '  + str(wa) + ' кор., ' + 'Сумма ЗП: ' + str(ua) + ' руб.')
-    st.write('Отгрузили: '  + str(ya) + ' кор., ' + 'Оплата: ' + str(va) + ' руб.')
-    st.write('Склад: '  + str(xa) + ' кор., ' + 'Долг: ' + str(ta) + ' руб.')
-    
-    st.write('')
-    st.write('')
-    
-    st.write('Стандарт: ')
-    st.write('Сделано: '  + str(wb) + ' кор., ' + 'Сумма ЗП: ' + str(ub) + ' руб.')
-    st.write('Отгрузили: '  + str(yb) + ' кор., ' + 'Оплата: ' + str(vb) + ' руб.')
-    st.write('Склад: '  + str(xb) + ' кор., ' + 'Долг: ' + str(tb) + ' руб.')
+    with col290:
+        st.write('Эконом: ')
+        st.write('Сделано: '  + str(wa) + ' кор., ' + 'Сумма ЗП: ' + str(ua) + ' руб.')
+        st.write('Отгрузили: '  + str(ya) + ' кор., ' + 'Оплата: ' + str(va) + ' руб.')
+        st.write('Склад: '  + str(xa) + ' кор., ' + 'Долг: ' + str(ta) + ' руб.')
     
     st.write('')
     st.write('')
-    
-    st.write('Прочные: ')
-    st.write('Сделано: '  + str(wc) + ' кор., ' + 'Сумма ЗП: ' + str(uc) + ' руб.')
-    st.write('Отгрузили: '  + str(yc) + ' кор., ' + 'Оплата: ' + str(vc) + ' руб.')
-    st.write('Склад: '  + str(xc) + ' кор., ' + 'Долг: ' + str(tc) + ' руб.')
+    with col290:
+        st.write('Стандарт: ')
+        st.write('Сделано: '  + str(wb) + ' кор., ' + 'Сумма ЗП: ' + str(ub) + ' руб.')
+        st.write('Отгрузили: '  + str(yb) + ' кор., ' + 'Оплата: ' + str(vb) + ' руб.')
+        st.write('Склад: '  + str(xb) + ' кор., ' + 'Долг: ' + str(tb) + ' руб.')
     
     st.write('')
     st.write('')
+    with col290:
+        st.write('Прочные: ')
+        st.write('Сделано: '  + str(wc) + ' кор., ' + 'Сумма ЗП: ' + str(uc) + ' руб.')
+        st.write('Отгрузили: '  + str(yc) + ' кор., ' + 'Оплата: ' + str(vc) + ' руб.')
+        st.write('Склад: '  + str(xc) + ' кор., ' + 'Долг: ' + str(tc) + ' руб.')
     
-    st.write('Детские: ')
-    st.write('Сделано: '  + str(wd) + ' кор., ' + 'Сумма ЗП: ' + str(ud) + ' руб.')
-    st.write('Отгрузили: '  + str(yd) + ' кор., ' + 'Оплата: ' + str(vd) + ' руб.')
-    st.write('Склад: '  + str(xd) + ' кор., ' + 'Долг: ' + str(td) + ' руб.')
+    st.write('')
+    st.write('')
+    with col290:
+        st.write('Детские: ')
+        st.write('Сделано: '  + str(wd) + ' кор., ' + 'Сумма ЗП: ' + str(ud) + ' руб.')
+        st.write('Отгрузили: '  + str(yd) + ' кор., ' + 'Оплата: ' + str(vd) + ' руб.')
+        st.write('Склад: '  + str(xd) + ' кор., ' + 'Долг: ' + str(td) + ' руб.')
+    st.write('')
+    st.write('')
+    with col300:
+        st.write('Итого к оплате: ')
+        qwer = (str(ua) + str(ub) + str(uc) + str(ud))
+        st.write(str(qwer) + ' руб.')
+    st.write('')
+    with col300:
+     st.title('Удержание с зарплаты: ')
+    nakiy = st.number_input('Процент удердания:')
+    nakkur = qwer * (nakiy +100) / 100
+    trio = nakkur - qwer
+    with col300:
+        st.write(str(qwer) + ' руб.')
 
+    
+    
 #--------------------------
 
 if z == "Цех экструзии":
