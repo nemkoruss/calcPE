@@ -603,7 +603,7 @@ if z == "Цех бахил":
     st.title('Ставка: ')
     col230, col240 = st.beta_columns(2)
     with col230:
-        za = st.number_input('Стоимость "Эконома" за пару: ')
+        za = st.number_input float('Стоимость "Эконома" за пару: ')
     
     if za == 0:
         za = 1
