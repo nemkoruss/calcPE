@@ -14,7 +14,8 @@ if password == 'tatoshka12':
 #passwords = settings.MYSQL_PASSWORD
 
 
-
+else:
+    password == '45'
 
 
 #-----------------------------------------------------------------
