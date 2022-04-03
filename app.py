@@ -262,6 +262,7 @@ elif x == "Бахилы":
         ret = jb4 / rit
         
     ob41 = pb4 + ab4 + bb4 + cb4 + eb4 + fb4 + gb4 + hb4 + ib4 + ret
+    st.write(str(ob41))
     with col14:
         kb4 = st.number_input('Стоимость Резинки: ')
    # kb4 = kb41 * 1 / 100
