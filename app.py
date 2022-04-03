@@ -239,7 +239,8 @@ elif x == "Бахилы":
     col13, col14 = st.beta_columns(2)
     with col13:
         mb4 = zb3 * yb
-        pb4 = mb4 * 1 / 100
+        pb4 = mb4 * 1 / 1000
+        st.write (str(pb4))
         ab4 = st.number_input('Зaрплата сотрудников: ')
         bb4 = st.number_input('Стоимость Аренды: ')
         cb4 = st.number_input('Стоимость Электричества: ')
