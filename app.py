@@ -80,16 +80,16 @@ if b == 'Замес гранулы':
     zz = ez1 + fz + gz      
     with col4:             
         iz = st.number_input('Стоимость ТО: ')
-    iz = xz * iz / 100
-    st.write(str(iz) + ' руб.')    
+        iz = xz * iz / 100
+        st.write(str(iz) + ' руб.')    
     with col4:             
         kz = st.number_input('Возврат за экструдер: ')
-    kz = xz * kz / 100
-    st.write(str(kz) + ' руб.')
+        kz = xz * kz / 100
+        st.write(str(kz) + ' руб.')
     with col4:    
         lz = st.number_input('Введите БРАК: ')
-    lz =   xz * lz / 100
-    st.write(str(lz) + ' руб.')       
+        lz =   xz * lz / 100
+        st.write(str(lz) + ' руб.')       
     yz = xz + zz + iz + kz + lz
     yzar = yz / ez
     st.write('Себестоимость замеса гранулы: ' + str(yzar) + ' руб.')
