@@ -245,17 +245,19 @@ elif x == "Бахилы":
         cb4 = st.number_input('Стоимость Электричества: ')
         eb4 = st.number_input('Стоимость TO: ')
         
-        fb4 = st.number_input('Стоимость Скотча: ')
+        fb4 = 0,004 #Стоимость Скотча
         
     with col13:    
-        gb4 = st.number_input('Стоимость Пакетов: ')
+        gb4 = 0,008 #Стоимость пакетов
         
         hb4 = st.number_input('Стоимость Доставки: ')
-        ib4 = st.number_input('Стоимость Кредита: ')
+        ib4 = 0,005 # Стоимость кредита
     
         jb4 = st.number_input('Стоимость Коробки: ')
+        rit = st.number_inout('Количество в коробке пар')
+        ret = jb4 / rit
         
-    ob41 = pb4 + ab4 + bb4 + cb4 + eb4 + fb4 + gb4 + hb4 + ib4 + jb4
+    ob41 = pb4 + ab4 + bb4 + cb4 + eb4 + fb4 + gb4 + hb4 + ib4 + ret
     with col14:
         kb41 = st.number_input('Стоимость Резинки: ')
     kb4 = kb41 * 1 / 100
@@ -707,7 +709,7 @@ if z == "Цех бахил":
     with col300:
         st.write('Итого к оплате: ')
         qwer = ua + ub + uc + ud
-        st.write(str(qwer) + ' руб.')
+        st.subheader(str(qwer) + ' руб.')
     st.write('')
     with col300:
         st.title('Удержание с зарплаты: ')
