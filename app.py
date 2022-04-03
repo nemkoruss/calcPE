@@ -72,7 +72,7 @@ if b == 'Замес гранулы':
         vst2 = vst1 * vst
         cz2 = cz1 * cz
         dz2 = dz1 * dz
-        xz = az2 + bz2 + vst2 + cz2 + dz2
+        xz = (az2 + bz2 + vst2 + cz2 + dz2) / ez
         st.write(str(xz) + ' руб.')
     with col3:    
         ez1 = st.number_input('Зарплатa сотрудников: ')
