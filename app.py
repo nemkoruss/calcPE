@@ -34,7 +34,7 @@ def main():
                     if b == 'Замес гранулы':
                         #from pl import plenka1
                         if b == pl.plastik:
-                            st.write('')
+                            st.write(str(b))
                         
                         
                     
