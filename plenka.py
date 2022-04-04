@@ -76,3 +76,5 @@ def plastik():
     with col31:
         st.write('Пpодажа: ' + str(nakk) + ' руб.')
 
+if __name__ == "__main__":
+    plastik()
