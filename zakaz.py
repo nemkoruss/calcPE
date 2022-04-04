@@ -93,7 +93,7 @@ def zakaz_plenka():
         elif zza1 == 0:
             zza1 = 1
         else:
-            1zza1 <0
+            zza1 <0
         wza1 = aza1 * zza1
     with col23:
         bza1 = st.number_input('[7 - 10 мкм = 1, 10 - 15 мкм = 2, 16 - 21 мкм = 3]')
