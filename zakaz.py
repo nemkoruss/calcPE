@@ -32,7 +32,7 @@ def zakaz_bahili():
             bza = 40000
         elif bza == 2:
             bza = 35000
-         elif bza == 3:
+        elif bza == 3:
             bza = 30000
         elif bza == 4:
             bza = 10000
