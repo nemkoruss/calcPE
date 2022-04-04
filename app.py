@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-#import local_settings as settings # Самописный модуль с информацией
+import local_settings as settings # Самописный модуль с информацией
 #from PIL import Image # Для отображения изображений
 def main():
     menu = ["Инструкция", "Калькулятор", "Контакты"]
@@ -19,7 +19,8 @@ def main():
             password = st.sidebar.text_input("Пароль", type='password')
             if st.sidebar.checkbox("Войти"):
 
-                if password == 'tatoshka12': 
+               # if password == 'tatoshka12':
+                if password == settings.MYSQL_PASSWORD 
 
                     st.success("Верный пароль! ") # {}".format(username) )
                                         
