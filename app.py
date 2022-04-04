@@ -279,31 +279,31 @@ elif x == "Бахилы":
             rit < 0
         ret = jb4 / rit
         
-    ob41 = pb4 + ab4 + bb4 + cb4 + eb4 + fb4 + gb4 + hb4 + ib4 + ret
+    ob4128 = pb4 + ab4 + bb4 + cb4 + eb4 + fb4 + gb4 + hb4 + ib4 + ret
     st.write(str(ob41))
     with col14:
-        kb4 = st.number_input('Стоимость Резинки: ')
+        kb481 = st.number_input('Стоимость Резинки: ')
         st.write(str(kb4))
    # kb4 = kb41 * 1 / 100
     with col14:
-        lb4 = st.number_input('Количество резинок [1 или 2]: ')
+        lb455 = st.number_input('Количество резинок [1 или 2]: ')
         st.write(str(lb4))
    # if lb4 == '1':
    #     zub4 = float (kb4 * 1)            
    # elif lb4 == '2':
    #     zub4 = float (kb4 * 2)
-    ob42 = kb4 * lb4
-    st.write(str(ob42))
-    zb42 = ob41 + ob42
-    st.write(str(zb42))
-    st.write('Себестоимость бахил: ' + str(zb42) + ' руб.')
+    ob4288 = kb481 * lb455
+    st.write(str(ob4288))
+    zb4256 = ob4128 + ob4288
+    st.write(str(zb4256))
+    st.write('Себестоимость бахил: ' + str(zb4256) + ' руб.')
     
     col13, col14 = st.beta_columns(2)
     with col13:
         st.write('')
         st.title('Расчёт продажи: ')
         nak2 = st.number_input('Процент удорожания:')
-    nakk2 = zb4 * (nak2 + 100) / 100
+    nakk2 = zb4256 * (nak2 + 100) / 100
     with col13:
         st.write('Продажа: ' + str(nakk2) + ' руб.')
         
