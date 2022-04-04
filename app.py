@@ -288,13 +288,10 @@ elif x == "Бахилы":
     with col14:
         lb4 = st.number_input('Количество резинок [1 или 2]: ')
         st.write(str(lb4))
-    if lb4 == '1':
-        zub4 = float (kb4 * 1)            
-    elif lb4 == '2':
-        zub4 = float (kb4 * 2)
-    else:
-        zub4 < 0
-        
+   # if lb4 == '1':
+   #     zub4 = float (kb4 * 1)            
+   # elif lb4 == '2':
+   #     zub4 = float (kb4 * 2)
     ob42 = kb4 * zub4
     st.write(str(ob42))
     zb42 = ob41 + ob42
