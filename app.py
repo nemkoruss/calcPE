@@ -8,7 +8,7 @@ from plenka import plastik
 import products as pr
 from products import paketi, bahili, perchatki
 import zakaz as za
-from zakaz import za_bahili, za_plenka, za_paketi, zaperchatki
+from zakaz import za_bahili, za_plenka, za_paketi, za_perchatki
 import viplati as vi
 from viplati import zp_bahili, zp_ekstruziya, zp_perchatki, zp_paketi
 
