@@ -32,8 +32,8 @@ def main():
                     b = st.sidebar.selectbox('РАСЧЁТ ПЛЕНКИ:', ['Выбрать/Очистить','Замес гранулы'])
                     
                     if b == 'Замес гранулы':
-                        from pl import plastik
-                        plastik()
+                        st.write(pl.plastik)
+                        
                         
                         
                         
