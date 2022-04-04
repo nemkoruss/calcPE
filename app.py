@@ -9,6 +9,8 @@ import products as pr
 from products import paketi, bahili, perchatki
 import zakaz as za
 from zakaz import zakaz_bahili, zakaz_plenka, zakaz_paketi, zakaz_perchatki
+import viplati as vi
+from viplati import zp_bahili, zp_ekstruziya, zp_perchatki, zp_paketi
 
 
 def main():
