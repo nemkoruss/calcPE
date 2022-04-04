@@ -6,7 +6,6 @@ import local_settings as settings # Самописный модуль с инф�
 import plenka as pl
 from plenka import plastik
 import products as pr
-from products import product
 from products import paketi, bahili, perchatki
 
 

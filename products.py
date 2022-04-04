@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 
 
-def product():
     def paketi():
         
         st.write('')
@@ -279,9 +278,3 @@ def product():
             
     if __name__ == "__main__":
         perchatki()
-
-
-
-
-if __name__ == "__main__":
-    product()
