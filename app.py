@@ -289,17 +289,17 @@ elif x == "Бахилы":
         lb4 = st.number_input('Количество резинок [1 или 2]: ')
         st.write(str(lb4))
     if lb4 == '1':
-        lb4 = float (kb4 * 1)            
+        zub4 = float (kb4 * 1)            
     elif lb4 == '2':
-        lb4 = float (kb4 * 2)
+        zub4 = float (kb4 * 2)
     else:
-        lb4 = 0          
-
-    ob4 = kb4 * lb4
-    st.write(str(ob4))
-    zb4 = ob41 + ob4
+        zub4 < 0
+        
+    ob42 = kb4 * zub4
+    st.write(str(ob42))
+    zb42 = ob41 + ob42
     st.write(str(zb4))
-    st.write('Себестоимость бахил: ' + str(zb4) + ' руб.')
+    st.write('Себестоимость бахил: ' + str(zb42) + ' руб.')
     
     col13, col14 = st.beta_columns(2)
     with col13:
