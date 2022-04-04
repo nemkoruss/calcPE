@@ -20,7 +20,7 @@ def main():
             if st.sidebar.checkbox("Войти"):
                 if password == 'tatoshka12': 
 
-                    st.success("Верный пароль, ") # {}".format(username) )
+                    st.success("Верный пароль! ") # {}".format(username) )
                                         
                     b = st.sidebar.selectbox('РАСЧЁТ ПЛЕНКИ:', ['Выбрать/Очистить','Замес гранулы'])
                     
@@ -934,7 +934,7 @@ def main():
                     #-------------------------
 
                 else:
-                    st.warning("Неверный пароль, ") # {}".format(username) )
+                    st.warning("Неверный пароль! ") # {}".format(username) )
 
     elif choice == "Контакты":
                 st.subheader("Контакты")
