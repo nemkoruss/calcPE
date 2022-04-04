@@ -188,7 +188,7 @@ if __name__ == "__main__":
 
                     #--------------------------
 
-def zaperchatki():
+def za_perchatki():
 
     st.write('')
     st.title('ЗАЯВКА ПЕРЧАТКИ')
@@ -235,7 +235,7 @@ def zaperchatki():
         st.write('Для выполнения заказа нужно: ' + str(sza111) + ' день/дня/дней')
 
 if __name__ == "__main__":
-    zaperchatki()
+    za_perchatki()
 
 
 
