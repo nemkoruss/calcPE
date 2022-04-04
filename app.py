@@ -251,15 +251,11 @@ elif x == "Бахилы":
     col13, col14 = st.beta_columns(2)
     with col13:
         mb4 = zb3 * yb
-        st.write(str(mb4))
         pb4 = mb4 * 1 / 1000
-        st.write(str(pb4))
         ab4 = st.number_input('Зaрплата сотрудников: ')
-        st.write(str(ab4))
         bb4 = st.number_input('Стоимость Аренды: ')
-        st.write(str(bb4))
         cb4 = st.number_input('Стоимость Электричества: ')
-        st.write(str(cb4))
+
         eb4 = 0.005 # Стоимость TO:
         
         fb4 = float(0.004) # Стоимость Скотча
@@ -268,13 +264,12 @@ elif x == "Бахилы":
         gb4 = float(0.008) # Стоимость пакетов
         
         hb4 = st.number_input('Стоимость Доставки: ')
-        st.write(str(hb4))
+
         ib4 = float(0.005) # Стоимость кредита
     
         jb4 = st.number_input('Стоимость Коробки: ')
-        st.write(str(jb4))
+
         rit = st.number_input('Количество в коробке пар')
-        st.write(str(rit))
         if rit == 0:
             rit = 1
         else:
@@ -282,20 +277,16 @@ elif x == "Бахилы":
         ret = jb4 / rit
         
     ob4128 = pb4 + ab4 + bb4 + cb4 + eb4 + fb4 + gb4 + hb4 + ib4 + ret
-    st.write(str(ob4128))
     with col14:
         kb481 = st.number_input('Стоимость Резинки: ')
-        st.write(str(kb481))
    # kb4 = kb41 * 1 / 100
     with col14:
         lb455 = st.number_input('Количество резинок [1 или 2]: ')
-        st.write(str(lb455))
    # if lb4 == '1':
    #     zub4 = float (kb4 * 1)            
    # elif lb4 == '2':
    #     zub4 = float (kb4 * 2)
         ob4288 = kb481 * lb455
-        st.write('резинка' + str(ob4288))
     
         zb4256 = ob4128 + ob4288
         st.write('Себестоимость бахил: ' + str(zb4256) + ' руб.')
