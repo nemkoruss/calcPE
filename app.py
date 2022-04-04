@@ -5,8 +5,8 @@ import local_settings as settings # Самописный модуль с инф�
 #from PIL import Image # Для отображения изображений
 import plenka as pl
 from plenka import plastik
-import producs as pr
-from producs import product
+import products as pr
+from products import product
 from product import paketi, bahili, perchatki
 
 
