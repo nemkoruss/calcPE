@@ -188,14 +188,14 @@ elif x == "Бахилы":
     col9, col10 = st.beta_columns(2)
     with col9:
         abur2 = st.number_input('Вeс ввода ПНД: ')
-        ab1 = abur2  < 0
+       # ab1 = abur2  < 0
        # if ab1 == 0:
        #     ab1 = 1
        # else:
        #     ab1 < 0
         ab2 = st.number_input('Цeна ПНД: ')
         bburu = st.number_input('Вeс ввода ПНД вторичка: ')
-        bb1 = bburu < 0
+       # bb1 = bburu < 0
         bb2 = st.number_input('Цeна ПНД вторичка: ')   
         vsta1 = st.number_input('Вeс ввода Стрейча: ') 
         vsta2 = st.number_input('Цена Стрeйча: ')
