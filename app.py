@@ -33,7 +33,7 @@ def main():
                     
                     if b == 'Замес гранулы':
                         from pl import plastik
-                        plastik
+                        plastik()
                         
                         
                         
