@@ -15,7 +15,7 @@ def main():
             username = st.sidebar.text_input("User Name")
             password = st.sidebar.text_input("Password", type='password')
             if st.sidebar.checkbox("Login"):
-                if password == '12345': I
+                if password == '12345': 
                     st.success("Logged In as {}".format(username) )
 
 
