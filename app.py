@@ -2,22 +2,40 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 #import local_settings as settings # Самописный модуль с информацией
-#from PIL import Image
+#from PIL import Image # Для отображения изображений
+
+menu = ["Home", "Login", "SignUp"]
+choice = st.sidebar.selectbox("Menu" ,menu)
+
+if choice == "Home":
+        st.subheader ("Home")
+
+elif choice = "Login":
+        st.subheader("Login Section")
+
+        username = st.sidebar.text_input("User Name")
+
+        password = st.sidebar.text_input("Password", type='password')
+
+        if st.sidebar.checkbox("Login"):
+                if password == '12345': I
+
+                        st.success("Logged In as {}".format(username) )
+
+                        task = st.selectbox("Task",["Add Post", "Analytics", "Profiles”])
+                        if task = "Add Post":
+                        st.subheader("Add Your Post")
+
+                        elif task = "Analytics":
+                        st.subheader("Analytics")
+
+                        elif task = “Profiles”:
+                        st.subheader("User Profiles")
 
 
-#names = st.number_input('Введите имя: ')
-#login = st.number_input('Введите логин: ')
-#password = st.text_input('Введите пароль: ')
-#if password == 'tatoshka12':
-#    password == True
 
-#usernames = settings.MYSQL_USER
-#passwords = settings.MYSQL_PASSWORD
-
-
-#else:
-#    password == False
-
+if_name_ == '_main_':
+        main()
 
 #-----------------------------------------------------------------
 
@@ -950,3 +968,9 @@ if z == "Цех пакеты":
     st.write('Склад: '  + str(xc111) + ' кор., ' + 'Долг: ' + str(tc111) + ' руб.')
 
 #-------------------------
+
+
+
+
+#if_name_ == '_main_':
+#        main()
