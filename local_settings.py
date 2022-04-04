@@ -1,3 +1,3 @@
 
 MYSQL_USER = 'Вася'
-MYSQL_PASSWORD = '123456'
+MYSQL_PASSWORD = 'tatoshka12'
