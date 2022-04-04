@@ -280,18 +280,13 @@ elif x == "Бахилы":
     ib4 = float(0.005) # Стоимость кредита
     gb4 = float(0.008) # Стоимость пакетов
     ob41220 = pb4 + ab4 + bb4 + cb4 + hb4 + ret
-    st.write('сум.ввод.данных: ' + str(ob41220))
     const = eb4 + fb4 + ib4 + gb4
-    st.write('сум.констант: ' + str(const))
-    
     if ob41220 == 0:
         consta = 0
     else:
         consta = 1
     const1 = consta * const
-    st.write('qw3 ' + str(const1))
     ob4128 = ob41220 + const1
-    st.write('qw4 ' + str(ob4128))
     with col14:
         zb4256 = ob4128 + ob4288
         st.write('Себестоимость бахил: ' + str(zb4256) + ' руб.')
