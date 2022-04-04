@@ -194,8 +194,8 @@ elif x == "Бахилы":
        # else:
        #     ab1 < 0
         ab2 = st.number_input('Цeна ПНД: ')
-        bb1 = st.number_input('Вeс ввода ПНД вторичка: ')
-        
+        bburu = st.number_input('Вeс ввода ПНД вторичка: ')
+        bb1 = bburu < 0
         bb2 = st.number_input('Цeна ПНД вторичка: ')   
         vsta1 = st.number_input('Вeс ввода Стрейча: ') 
         vsta2 = st.number_input('Цена Стрeйча: ')
