@@ -279,7 +279,7 @@ elif x == "Бахилы":
     fb4 = float(0.004) # Стоимость Скотча
     ib4 = float(0.005) # Стоимость кредита
     gb4 = float(0.008) # Стоимость пакетов
-    ob41220 = pb4 + ab4 + bb4 + cb4 + gb4 + hb4 + ret
+    ob41220 = pb4 + ab4 + bb4 + cb4 + hb4 + ret
     st.write('qw1 ' + str(ob41220))
     const = eb4 + fb4 + ib4 + gb4
     st.write('qw2 ' + str(const))
