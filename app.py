@@ -4,19 +4,19 @@ import numpy as np
 #import local_settings as settings # Самописный модуль с информацией
 #from PIL import Image # Для отображения изображений
 def main():
-    menu = ["Home", "Login"]
-    choice = st.sidebar.selectbox("Menu" ,menu)
+    menu = ["Инструкция", "Вход"]
+    choice = st.sidebar.selectbox("Меню" ,menu)
 
-    if choice == "Home":
-            st.subheader ("Home")
+    if choice == "Инструкция":
+            st.subheader ("Инструкция")
 
-    elif choice == "Login":
-            st.subheader("Login Section")
-            username = st.sidebar.text_input("User Name")
-            password = st.sidebar.text_input("Password", type='password')
-            if st.sidebar.checkbox("Login"):
-                if password == '12345': 
-                    st.success("Logged In as {}".format(username) )
+    elif choice == "Вход":
+            st.subheader("Входтв программу")
+            username = st.sidebar.text_input("Имя")
+            password = st.sidebar.text_input("Пароль", type='password')
+            if st.sidebar.checkbox("Войти"):
+                if password == 'tatoshka12': 
+                    st.success("Вход успешен {}".format(username) )
 
 
 
