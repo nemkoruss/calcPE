@@ -20,13 +20,11 @@ elif choice == "Login":
         if st.sidebar.checkbox("Login"):
             if password == '12345': I
             st.success("Logged In as {}".format(username) )
-            task = st.selectbox("Task",["Add Post", "Analytics", "Profiles”])
+            task = st.selectbox("Task",["Add Post", "Analytics"])
                 if task = "Add Post":
                     st.subheader("Add Your Post")
                 elif task = "Analytics":
                     st.subheader("Analytics")
-                elif task = “Profiles”:
-                    st.subheader("User Profiles")
 
 
 
