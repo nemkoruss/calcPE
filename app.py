@@ -33,7 +33,8 @@ def main():
                     
                     if b == 'Замес гранулы':
                         #from pl import plenka1
-                        if b == pl.plastik:
+                        b == pl.plastik
+                        
                         
                     
                     #-----------------------------------------------------------------
