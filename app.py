@@ -255,7 +255,9 @@ elif x == "Бахилы":
         ab4 = st.number_input('Зaрплата сотрудников: ')
         st.write(str(ab4))
         bb4 = st.number_input('Стоимость Аренды: ')
+        st.write(str(bb4))
         cb4 = st.number_input('Стоимость Электричества: ')
+        st.write(str(cb4))
         eb4 = 0.005 # Стоимость TO:
         
         fb4 = float(0.004) # Стоимость Скотча
@@ -264,10 +266,13 @@ elif x == "Бахилы":
         gb4 = float(0.008) # Стоимость пакетов
         
         hb4 = st.number_input('Стоимость Доставки: ')
+        st.write(str(hb4))
         ib4 = float(0.005) # Стоимость кредита
     
         jb4 = st.number_input('Стоимость Коробки: ')
+        st.write(str(jb4))
         rit = st.number_input('Количество в коробке пар')
+        st.write(str(rit))
         if rit == 0:
             rit = 1
         else:
@@ -275,12 +280,14 @@ elif x == "Бахилы":
         ret = jb4 / rit
         
     ob41 = pb4 + ab4 + bb4 + cb4 + eb4 + fb4 + gb4 + hb4 + ib4 + ret
-    
+    st.write(str(ob41))
     with col14:
         kb4 = st.number_input('Стоимость Резинки: ')
+        st.write(str(kb4))
    # kb4 = kb41 * 1 / 100
     with col14:
         lb4 = st.number_input('Количество резинок [1 или 2]: ')
+        st.write(str(lb4))
     if lb4 == '1':
         tb4 = float (kb4 * 1)            
 
