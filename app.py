@@ -3,7 +3,8 @@ import pandas as pd
 import numpy as np
 import local_settings as settings # Самописный модуль с информацией
 #from PIL import Image # Для отображения изображений
-from plenka import plastik
+import plenka as pl
+from pl import plastik
 
 
 
