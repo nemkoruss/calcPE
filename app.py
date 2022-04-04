@@ -218,15 +218,12 @@ elif x == "Бахилы":
     with col10:                
         ib = st.number_input('Стoимость ТО: ')
         ibkus = xb * ib / 100
-        st.write(str(ibkus) + ' руб.')
     with col10:            
         kb = st.number_input('Вoзврат за экструдер: ')
         kbkus = xb * kb / 100
-        st.write(str(kbkus) + ' руб.')
     with col10:            
         lb = st.number_input('Ввeдите БРАК: ')
         lbkus =  xb * lb / 100
-        st.write(str(lbkus) + ' руб.')
     yb = xb + zb + ibkus + kbkus + lbkus
     st.write('Цена 1 килограмма плёнки для бахил: ' + str(yb) + ' руб.')
 
