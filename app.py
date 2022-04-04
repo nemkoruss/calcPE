@@ -4,7 +4,7 @@ import numpy as np
 #import local_settings as settings # Самописный модуль с информацией
 #from PIL import Image # Для отображения изображений
 def main():
-    menu = ["Home", "Login", "SignUp"]
+    menu = ["Home", "Login"]
     choice = st.sidebar.selectbox("Menu" ,menu)
 
     if choice == "Home":
@@ -12,19 +12,11 @@ def main():
 
     elif choice == "Login":
             st.subheader("Login Section")
-
             username = st.sidebar.text_input("User Name")
-
             password = st.sidebar.text_input("Password", type='password')
-
             if st.sidebar.checkbox("Login"):
                 if password == '12345': I
                 st.success("Logged In as {}".format(username) )
-                task = st.selectbox("Task",["Add Post", "Analytics"])
-                if task == "Add Post":
-                    st.subheader("Add Your Post")
-                elif task == "Analytics":
-                    st.subheader("Analytics")
 
 
 
