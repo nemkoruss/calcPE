@@ -20,6 +20,7 @@ def main():
             if st.sidebar.checkbox("Войти"):
                 if password == 'tatoshka12': 
                     st.success("Вход успешен {}".format(username) )
+                    
                     b = st.sidebar.selectbox('РАСЧЁТ ПЛЕНКИ:', ['Выбрать/Очистить','Замес гранулы'])
                     
                     if b == 'Замес гранулы':
@@ -947,7 +948,7 @@ def main():
 
 
 
-
+'''
 
                     
 
