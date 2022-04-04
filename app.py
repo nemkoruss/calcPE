@@ -229,11 +229,12 @@ elif x == "Бахилы":
         lb = st.number_input('Ввeдите БРАК: ')
         lbkus =  xb * lb / 100
         st.write(str(lbkus) + ' руб.')
-    yb = xb + zb + ibkus + kbkus + lbkus
-    if yb == 0:
-        yb = 1
-    else:
-        yb < 0     
+    ybur = xb + zb + ibkus + kbkus + lbkus
+    yb = ybur < 0
+   # if yb == 0:
+   #     yb = 1
+   # else:
+   #     yb < 0     
     st.write('Цена 1 килограмма плёнки для бахил: ' + str(yb) + ' руб.')
 
     st.title('Вeс одной пары бахил: ')
