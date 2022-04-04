@@ -17,7 +17,8 @@ def main():
            # st.subheader("Пароль верный")
             #username = st.sidebar.text_input("Имя")
             password = st.sidebar.text_input("Пароль", type='password')
-            if st.sidebar.checkbox("Войти"):
+            #if st.sidebar.checkbox("Войти"):
+            if st.sidebar.button('ok'):
                 if password == 'tatoshka12': 
 
                     st.success("Верный пароль! ") # {}".format(username) )
