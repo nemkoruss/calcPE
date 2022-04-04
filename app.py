@@ -279,13 +279,16 @@ elif x == "Бахилы":
     fb4 = float(0.004) # Стоимость Скотча
     ib4 = float(0.005) # Стоимость кредита
     gb4 = float(0.008) # Стоимость пакетов
+    ob41220 = pb4 + ab4 + bb4 + cb4 + gb4 + hb4 + ret
     const = eb4 + fb4 + ib4 + gb4
-    ob4128 = pb4 + ab4 + bb4 + cb4 + gb4 + hb4 + ret + consta
+    const1 = consta * const
     if ob4128 == 0:
         consta = 0
     else:
-        consta = const
-    
+        consta = 1
+
+    ob4128 = ob41220 + const1
+    with col14:
         zb4256 = ob4128 + ob4288
         st.write('Себестоимость бахил: ' + str(zb4256) + ' руб.')
     
