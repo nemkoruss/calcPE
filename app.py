@@ -255,28 +255,15 @@ elif x == "Бахилы":
         ab4 = st.number_input('Зaрплата сотрудников: ')
         bb4 = st.number_input('Стоимость Аренды: ')
         cb4 = st.number_input('Стоимость Электричества: ')
-
-        eb4 = 0.005 # Стоимость TO:
-        
-        fb4 = float(0.004) # Стоимость Скотча
-        
     with col13:    
-        gb4 = float(0.008) # Стоимость пакетов
-        
-        hb4 = st.number_input('Стоимость Доставки: ')
-
-        ib4 = float(0.005) # Стоимость кредита
-    
+        hb4 = st.number_input('Стоимость Доставки: ')    
         jb4 = st.number_input('Стоимость Коробки: ')
-
         rit = st.number_input('Количество в коробке пар')
         if rit == 0:
             rit = 1
         else:
             rit < 0
         ret = jb4 / rit
-        
-    ob4128 = pb4 + ab4 + bb4 + cb4 + eb4 + fb4 + gb4 + hb4 + ib4 + ret
     with col14:
         kb481 = st.number_input('Стоимость Резинки: ')
    # kb4 = kb41 * 1 / 100
@@ -287,6 +274,17 @@ elif x == "Бахилы":
    # elif lb4 == '2':
    #     zub4 = float (kb4 * 2)
         ob4288 = kb481 * lb455
+
+    eb4 = 0.005 # Стоимость TO:
+    fb4 = float(0.004) # Стоимость Скотча
+    ib4 = float(0.005) # Стоимость кредита
+    gb4 = float(0.008) # Стоимость пакетов
+    const = eb4 + fb4 + ib4 + gb4
+    ob4128 = pb4 + ab4 + bb4 + cb4 + gb4 + hb4 + ret + consta
+    if ob4128 == 0:
+        consta = 0
+    else:
+        consta = const
     
         zb4256 = ob4128 + ob4288
         st.write('Себестоимость бахил: ' + str(zb4256) + ' руб.')
