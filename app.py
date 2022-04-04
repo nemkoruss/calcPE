@@ -32,9 +32,9 @@ def main():
                     b = st.sidebar.selectbox('РАСЧЁТ ПЛЕНКИ:', ['Выбрать/Очистить','Замес гранулы'])
                     
                     if b == 'Замес гранулы':
-                        #from pl import plenka1
-                        if b == pl.plastik:
-                            st.write(str(b))
+                        from pl import plenka1
+                        plenka1
+                        
                         
                         
                     
