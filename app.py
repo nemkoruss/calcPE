@@ -4,7 +4,7 @@ import numpy as np
 import local_settings as settings # Самописный модуль с информацией
 #from PIL import Image # Для отображения изображений
 import plenka as pl
-from pl import plastik
+from plenka import plastik
 
 
 
