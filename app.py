@@ -9,6 +9,17 @@ def main():
 
     if choice == "Инструкция":
             st.subheader ("Инструкция")
+            st.subheader('Для работы калькулятора выберите в боковом меню нужный расчёт !')
+            st.markdown('*Для входа в боковое меню на устройстве с маленьким экраном нажмите, в левом вверхнем углу, значок в виде стрелки  ">"*')
+            st.markdown('*Для более комфортной работы, не забывайте "Очищать экран"  *')
+            st.write('')
+            st.header('Информация:')
+            st.markdown('**Корпоративный сайт: ** [tpkpromed.ru](https://tpkpromed.ru)')
+            st.markdown('**Производство бахил: ** [bioinvn.ru](https://bioinvn.ru)')
+            st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')
+            # st.markdown('**Скачать приложение: ** [Скачать](https://goo.su/RH7qQ)')
+            # image = Image.open('./qrcode/qrcode.jpg')
+            # st.image(image, width = 100, caption='QR код для скачивания',use_column_width=100)
 
     elif choice == "Вход":
             st.subheader("Входтв программу")
