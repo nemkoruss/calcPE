@@ -290,13 +290,15 @@ elif x == "Бахилы":
         st.write(str(lb4))
     if lb4 == '1':
         tb4 = float (kb4 * 1)            
-
     elif lb4 == '2':
         tb4 = float (kb4 * 2)            
 
     ob4 = kb4 * lb4
+    st.write(str(ob4))
     zb4 = ob41 + ob4
+    st.write(str(zb4))
     st.write('Себестоимость бахил: ' + str(zb4) + ' руб.')
+    
     col13, col14 = st.beta_columns(2)
     with col13:
         st.write('')
