@@ -21,10 +21,10 @@ elif choice == "Login":
             if password == '12345': I
             st.success("Logged In as {}".format(username) )
             task = st.selectbox("Task",["Add Post", "Analytics"])
-                if task = "Add Post":
-                    st.subheader("Add Your Post")
-                elif task = "Analytics":
-                    st.subheader("Analytics")
+            if task = "Add Post":
+                st.subheader("Add Your Post")
+            elif task = "Analytics":
+                st.subheader("Analytics")
 
 
 
