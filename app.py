@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import local_settings as settings # Самописный модуль с информацией
 #from PIL import Image # Для отображения изображений
-import plenka as pl
+from plenka import plastik
 
 
 
@@ -32,7 +32,7 @@ def main():
                     b = st.sidebar.selectbox('РАСЧЁТ ПЛЕНКИ:', ['Выбрать/Очистить','Замес гранулы'])
                     
                     if b == 'Замес гранулы':
-                        st.write(pl.plastik)
+                        b = plastik()
                         
                         
                         
