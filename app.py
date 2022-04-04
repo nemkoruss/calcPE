@@ -4,7 +4,7 @@ import numpy as np
 #import local_settings as settings # Самописный модуль с информацией
 #from PIL import Image # Для отображения изображений
 def main():
-    menu = ["Инструкция", "Вход", "Контакты"]
+    menu = ["Инструкция", "Калькулятор", "Контакты"]
     choice = st.sidebar.selectbox("Меню" ,menu)
 
     if choice == "Инструкция":
@@ -13,7 +13,7 @@ def main():
             st.markdown('*Для входа в боковое меню на устройстве с маленьким экраном нажмите, в левом вверхнем углу, значок в виде стрелки  ">"*')
             st.markdown('*Для более комфортной работы, не забывайте "Очищать экран"  *')
 
-    elif choice == "Вход":
+    elif choice == "Калькулятор":
            # st.subheader("Пароль верный")
             #username = st.sidebar.text_input("Имя")
             password = st.sidebar.text_input("Пароль", type='password')
