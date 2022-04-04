@@ -7,7 +7,7 @@ import plenka as pl
 from plenka import plastik
 import products as pr
 from products import product
-from product import paketi, bahili, perchatki
+from products import paketi, bahili, perchatki
 
 
 
