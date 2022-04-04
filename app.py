@@ -1,22 +1,22 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import local_settings as settings
-from PIL import Image
+#import local_settings as settings # Самописный модуль с информацией
+#from PIL import Image
 
 
 #names = st.number_input('Введите имя: ')
 #login = st.number_input('Введите логин: ')
-password = st.text_input('Введите пароль: ')
-if password == 'tatoshka12':
-    password == True
+#password = st.text_input('Введите пароль: ')
+#if password == 'tatoshka12':
+#    password == True
 
 #usernames = settings.MYSQL_USER
 #passwords = settings.MYSQL_PASSWORD
 
 
-else:
-    password == False
+#else:
+#    password == False
 
 
 #-----------------------------------------------------------------
