@@ -292,7 +292,7 @@ elif x == "Бахилы":
    #     zub4 = float (kb4 * 1)            
    # elif lb4 == '2':
    #     zub4 = float (kb4 * 2)
-    ob42 = kb4 * zub4
+    ob42 = kb4 * lb4
     st.write(str(ob42))
     zb42 = ob41 + ob42
     st.write(str(zb42))
