@@ -208,7 +208,11 @@ elif x == "Бахилы":
     vsta = vsta1 * vsta2
     cb = cb2 * cb1
     db = db2 * db1
-    xb = (ab + bb + vsta + cb + db) / ezur      
+    xb = (ab + bb + vsta + cb + db) / ezur
+    if xb == 0:
+        xb = 1
+    else:
+        xb < 0    
     with col10:            
         eb = st.number_input('Зарплата сoтрудников: ')
         fb = st.number_input('Стoимость аренды: ')
