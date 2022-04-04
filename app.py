@@ -14,13 +14,13 @@ def main():
             st.markdown('*Для более комфортной работы, не забывайте "Очищать экран"  *')
 
     elif choice == "Вход":
-            st.subheader("Пароль верный")
+           # st.subheader("Пароль верный")
             username = st.sidebar.text_input("Имя")
             password = st.sidebar.text_input("Пароль", type='password')
             if st.sidebar.checkbox("Войти"):
                 if password == 'tatoshka12': 
-                    st.success("Приветствую, {}".format(username) )
-                    
+                    st.success("Верный пароль, {}".format(username) )
+                                        
                     b = st.sidebar.selectbox('РАСЧЁТ ПЛЕНКИ:', ['Выбрать/Очистить','Замес гранулы'])
                     
                     if b == 'Замес гранулы':
@@ -931,6 +931,9 @@ def main():
                         st.write('Склад: '  + str(xc111) + ' кор., ' + 'Долг: ' + str(tc111) + ' руб.')
                     
                     #-------------------------
+
+                    else:
+                        st.warning("Неверный пароль, {}".format(username) )
 
     elif choice == "Контакты":
                 st.subheader("Контакты")
