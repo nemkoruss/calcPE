@@ -229,8 +229,8 @@ elif x == "Бахилы":
         lb = st.number_input('Ввeдите БРАК: ')
         lbkus =  xb * lb / 100
         st.write(str(lbkus) + ' руб.')
-    ybur = xb + zb + ibkus + kbkus + lbkus
-    yb = ybur < 0
+    yb = xb + zb + ibkus + kbkus + lbkus
+    yb < 0
    # if yb == 0:
    #     yb = 1
    # else:
