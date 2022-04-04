@@ -20,7 +20,7 @@ def main():
             if st.sidebar.checkbox("Войти"):
 
                # if password == 'tatoshka12':
-                if password == settings.MYSQL_PASSWORD 
+                if password == settings.MYSQL_PASSWORD:
 
                     st.success("Верный пароль! ") # {}".format(username) )
                                         
