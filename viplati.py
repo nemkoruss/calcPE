@@ -106,12 +106,14 @@ def zp_bahili():
         st.write('Сделано: '  + str(wd) + ' кор., ' + 'Сумма ЗП: ' + str(ud) + ' руб.')
         st.write('Отгрузили: '  + str(yd) + ' кор., ' + 'Оплата: ' + str(vd) + ' руб.')
         st.write('Склад: '  + str(xd) + ' кор., ' + 'Долг: ' + str(td) + ' руб.')
+
         st.write('')
         st.write('')
     with col300:
         st.write('Итого к оплате: ')
         qwer = ua + ub + uc + ud
         st.subheader(str(qwer) + ' руб.')
+        
         st.write('')
     with col300:
         st.title('Удержание с зарплаты: ')
