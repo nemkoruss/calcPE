@@ -253,6 +253,7 @@ elif x == "Бахилы":
         mb4 = zb3 * yb
         pb4 = mb4 * 1 / 1000
         ab4 = st.number_input('Зaрплата сотрудников: ')
+        st.write(str(ab4)
         bb4 = st.number_input('Стоимость Аренды: ')
         cb4 = st.number_input('Стоимость Электричества: ')
         eb4 = 0.005 # Стоимость TO:
