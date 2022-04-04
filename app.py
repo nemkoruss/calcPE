@@ -67,7 +67,7 @@ if b == 'Замес гранулы':
         hz = cz / ez
         iz = dz / ez
     st.write('Общий вес замеса = ' + str(ez) + ' кг.')    
-    st.write('В одном килограмме замеса: ')
+    st.subheader('В одном килограмме замеса: ')
     st.write('ПНД = ' + str(fz1) + ' кг.')
     st.write('ПНД втор. = ' + str(gz1) + ' кг.')
     st.write('Стрейч = ' + str(vstz) + ' кг.')
@@ -187,11 +187,12 @@ elif x == "Бахилы":
     st.title('Цена 1 кг. плёнки: ')
     col9, col10 = st.beta_columns(2)
     with col9:
-        ab1 = st.number_input('Вeс ввода ПНД: ')
-        if ab1 == 0:
-            ab1 = 1
-        else:
-            ab1 < 0
+        ab2 = st.number_input('Вeс ввода ПНД: ')
+        ab1 = ab2  < 0
+       # if ab1 == 0:
+       #     ab1 = 1
+       # else:
+       #     ab1 < 0
         ab2 = st.number_input('Цeна ПНД: ')
         bb1 = st.number_input('Вeс ввода ПНД вторичка: ')
         bb2 = st.number_input('Цeна ПНД вторичка: ')   
