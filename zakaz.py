@@ -184,7 +184,7 @@ def za_paketi():
         st.write('Для выполнения заказа нужно: ' + str(sza11) + ' день/дня/дней')
 
 if __name__ == "__main__":
-    zakaz_paketi()
+    za_paketi()
 
                     #--------------------------
 
