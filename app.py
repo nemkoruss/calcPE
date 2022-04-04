@@ -23,7 +23,7 @@ elif choice == "Login":
             task = st.selectbox("Task",["Add Post", "Analytics"])
             if task == "Add Post":
                 st.subheader("Add Your Post")
-            elif task = "Analytics":
+            elif task == "Analytics":
                 st.subheader("Analytics")
 
 
