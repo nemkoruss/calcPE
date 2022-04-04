@@ -76,4 +76,3 @@ def plastik():
     with col31:
         st.write('Пpодажа: ' + str(nakk) + ' руб.')
 
-plenka1 = plastik
