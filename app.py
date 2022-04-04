@@ -14,12 +14,12 @@ def main():
             st.markdown('*Для более комфортной работы, не забывайте "Очищать экран"  *')
 
     elif choice == "Вход":
-            st.subheader("Вход в программу")
+            st.subheader("Пароль верный")
             username = st.sidebar.text_input("Имя")
             password = st.sidebar.text_input("Пароль", type='password')
             if st.sidebar.checkbox("Войти"):
                 if password == 'tatoshka12': 
-                    st.success("Вход успешен {}".format(username) )
+                    st.success("Приветствую, {}".format(username) )
                     
                     b = st.sidebar.selectbox('РАСЧЁТ ПЛЕНКИ:', ['Выбрать/Очистить','Замес гранулы'])
                     
