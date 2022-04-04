@@ -75,3 +75,5 @@ def plastik():
         nakk = yz * (nak + 100) / 100
     with col31:
         st.write('Пpодажа: ' + str(nakk) + ' руб.')
+
+plastik()
