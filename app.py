@@ -934,7 +934,7 @@ def main():
                     #-------------------------
 
                 else:
-                    st.warning("Неверный пароль, " # {}".format(username) )
+                    st.warning("Неверный пароль, ") # {}".format(username) )
 
     elif choice == "Контакты":
                 st.subheader("Контакты")
