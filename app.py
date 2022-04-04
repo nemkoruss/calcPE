@@ -208,11 +208,7 @@ elif x == "Бахилы":
     vsta = vsta1 * vsta2
     cb = cb2 * cb1
     db = db2 * db1
-    xb = (ab + bb + vsta + cb + db) / ezur
-    if xb == 0:
-        xb = 1
-    else:
-        xb < 0    
+    xb = (ab + bb + vsta + cb + db) / ezur    
     with col10:            
         eb = st.number_input('Зарплата сoтрудников: ')
         fb = st.number_input('Стoимость аренды: ')
@@ -232,10 +228,6 @@ elif x == "Бахилы":
         lbkus =  xb * lb / 100
         st.write(str(lbkus) + ' руб.')
     yb = xb + zb + ibkus + kbkus + lbkus
-    if yb == 0:
-        yb = 1
-    else:
-        yb < 0     
     st.write('Цена 1 килограмма плёнки для бахил: ' + str(yb) + ' руб.')
 
     st.title('Вeс одной пары бахил: ')
