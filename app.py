@@ -298,7 +298,7 @@ elif x == "Бахилы":
     ob42 = kb4 * zub4
     st.write(str(ob42))
     zb42 = ob41 + ob42
-    st.write(str(zb4))
+    st.write(str(zb42))
     st.write('Себестоимость бахил: ' + str(zb42) + ' руб.')
     
     col13, col14 = st.beta_columns(2)
