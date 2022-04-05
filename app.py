@@ -12,7 +12,7 @@ from zakaz import zabahili, zaplenka, zapaketi, zaperchatki
 import viplati # Модуль расчета зарплат
 from viplati import zpbahili, zpekstruziya, zpperchatki, zppaketi
 
-imgs = Image.open('./img/icon.jpg')
+imgs = Image.open('icon.jpg')
 #PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'./img/icon.jpg' , 'layout':'centered'}
 #st.set_page_config(**PAGE_CONFIG)
 st.set_page_config(page_title = 'calcPe', page_icon = 'imgs')
@@ -117,7 +117,7 @@ def main():
                 st.markdown('**Производство бахил: ** [bioinvn.ru](https://bioinvn.ru)')
                 st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')
                 # st.markdown('**Скачать приложение: ** [Скачать](https://goo.su/RH7qQ)')
-                image = Image.open('./img/qrcode.jpg')
+                #image = Image.open('./img/qrcode.jpg')
                 # st.image(image, width = 100, caption='QR код для скачивания',use_column_width=100)
 
 if __name__ == '__main__':
