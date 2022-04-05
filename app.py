@@ -122,6 +122,6 @@ def main():
                 # st.image(image, width = 100, caption='QR код для скачивания',use_column_width=100)
 
                 #Для файла Excel 
-                df = pd.read_excel("price.xlxs")
+                df = pd.read_excel("price.xlsx")
 if __name__ == '__main__':
         main()
