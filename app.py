@@ -117,7 +117,7 @@ def main():
                 st.markdown('**Производство бахил: ** [bioinvn.ru](https://bioinvn.ru)')
                 st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')
                 # st.markdown('**Скачать приложение: ** [Скачать](https://goo.su/RH7qQ)')
-                image = Image.open('./img/icon.jpg')
+                image = Image.open('./img/iconq.jpg')
                 # st.image(image, width = 100, caption='QR код для скачивания',use_column_width=100)
 
 if __name__ == '__main__':
