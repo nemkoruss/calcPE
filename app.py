@@ -13,7 +13,7 @@ import viplati # Модуль расчета зарплат
 from viplati import zpbahili, zpekstruziya, zpperchatki, zppaketi
 
 
-PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'./img/qrcode.jpg' , 'loyaut':'centered'}
+PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'./img/qrcode.jpg' , 'layaut':'centered'}
 st.set_page_config(**PAGE_CONFIG)
 
 
