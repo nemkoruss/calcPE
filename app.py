@@ -13,22 +13,9 @@ import viplati # Модуль расчета зарплат
 from viplati import zpbahili, zpekstruziya, zpperchatki, zppaketi
 
 
-st.set_page_config(
-     page_title="Ex-stream-ly Cool App",
-     page_icon="🧊",
-     layout="wide",
-     initial_sidebar_state="expanded",
-     menu_items={
-         'Get Help': 'https://www.extremelycoolapp.com/help',
-         'Report a bug': "https://www.extremelycoolapp.com/bug",
-         'About': "# This is a header. This is an *extremely* cool app!"
-     }
- )
-
-
 #imgs = Image.open('icon.jpg')
-#PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'qrcode.jpg' , 'layout':'centered'}
-#st.set_page_config(**PAGE_CONFIG)
+PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'qrcode.jpg' , 'layout':'centered'}
+st.set_page_config(**PAGE_CONFIG)
 #st.set_page_config(page_title = 'calcPe', page_icon = 'imgs')
 
 #–---------------------------------------------------------------------------
