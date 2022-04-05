@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 
-def zp_bahili():
+def zpbahili():
 
     st.write('')
     st.title('ЗП БАХИЛЫ')
@@ -123,11 +123,11 @@ def zp_bahili():
         st.write(str(qwer) + ' руб.')
 
 if __name__ == "__main__":
-    zp_bahili()
+    zpbahili()
 
                     #--------------------------
 
-def zp_ekstruziya():
+def zpekstruziya():
 
     st.write('')
     st.title('ЗП ЭКСТРУЗИЯ')
@@ -187,11 +187,11 @@ def zp_ekstruziya():
         st.write('Склад: '  + str(xb1) + ' кор., ' + 'Долг: ' + str(tb1) + ' руб.')
 
 if __name__ == "__main__":
-    zp_ekstruziya()
+    zpekstruziya()
 
                     #--------------------------
 
-def zp_perchatki():
+def zpperchatki():
 
     st.write('')
     st.title('ЗП ПЕРЧАТКИ')
@@ -252,11 +252,11 @@ def zp_perchatki():
         st.write('Склад: '  + str(xb11) + ' кор., ' + 'Долг: ' + str(tb11) + ' руб.')
 
 if __name__ == "__main__":
-    zp_perchatki()
+    zpperchatki()
 
                     #--------------------------
 
-def zp_paketi():
+def zppaketi():
     st.write('')
     st.title('ЗП ПАКЕТЫ')
     st.write('')
@@ -339,4 +339,4 @@ def zp_paketi():
         st.write('Склад: '  + str(xc111) + ' кор., ' + 'Долг: ' + str(tc111) + ' руб.')
                         
 if __name__ == "__main__":
-    zp_paketi()
+    zppaketi()

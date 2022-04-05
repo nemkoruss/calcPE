@@ -8,9 +8,9 @@ from plenka import plastik
 import products as pr
 from products import paketi, bahili, perchatki
 import zakaz as za
-from zakaz import za_bahili, za_plenka, za_paketi, za_perchatki
+from zakaz import zabahili, zaplenka, zapaketi, zaperchatki
 import viplati as vi
-from viplati import zp_bahili, zp_ekstruziya, zp_perchatki, zp_paketi
+from viplati import zpbahili, zpekstruziya, zpperchatki, zppaketi
 
 
 def main():
@@ -61,44 +61,44 @@ def main():
                     y = st.sidebar.selectbox('РАСЧЁТ ЗАКАЗА:', ['Выбрать/Очистить','Заказ на бахилы','Заказ на пленку', 'Заказ на пакеты','Заказ на перчатки'])
                     
                     if y == "Заказ на бахилы":
-                        y = za_bahili
+                        y = zabahili
                         
                     #---------------------------
                     
                     if y == "Заказ на пленку":
-                        y = za_plenka
+                        y = zaplenka
                         
                     #---------------------------
                     
                     if y == "Заказ на пакеты":
-                        y = za_paketi
+                        y = zapaketi
                     
                     #--------------------------
                     
                     if y == "Заказ на перчатки":
-                        y = za_perchatki
+                        y = zaperchatki
                    
                     #-----------------------------------------------------------------
                     
                     z = st.sidebar.selectbox('РАСЧЁТ ВЫПЛАТ:', ['Выбрать/Очистить','Цех бахил','Цех экструзии', 'Цех перчатки','Цех пакеты',])
                     
                     if z == "Цех бахил":
-                        z = zp_bahili
+                        z = zpbahili
                     
                     #--------------------------
                     
                     if z == "Цех экструзии":
-                        z = zp_ekstruziya   
+                        z = zpekstruziya   
                     
                     #--------------------------
                     
                     if z == "Цех перчатки":
-                        z = zp_perchatki
+                        z = zpperchatki
                     
                     #--------------------------
                     
                     if z == "Цех пакеты":
-                        z = zp_paketi    
+                        z = zppaketi    
                     
                     #-------------------------
 
