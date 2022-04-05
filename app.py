@@ -13,7 +13,7 @@ import viplati # Модуль расчета зарплат
 from viplati import zpbahili, zpekstruziya, zpperchatki, zppaketi
 
 #imgs = Image.open('icon.jpg')
-PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'icon.jpg' , 'layout':'centered'}
+PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'polietilen.png' , 'layout':'centered'}
 st.set_page_config(**PAGE_CONFIG)
 #st.set_page_config(page_title = 'calcPe', page_icon = 'imgs')
 
