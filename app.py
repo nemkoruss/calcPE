@@ -121,5 +121,7 @@ def main():
                 #image = Image.open('./img/qrcode.jpg')
                 # st.image(image, width = 100, caption='QR код для скачивания',use_column_width=100)
 
+                #Для файла Excel 
+                df = pd.read_excel("price.xlxs")
 if __name__ == '__main__':
         main()
