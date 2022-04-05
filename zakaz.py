@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 
-def zabahilki():
+def zabahili():
     
     st.write('')
     st.title('ЗАЯВКА БАХИЛЫ')
@@ -62,7 +62,7 @@ def zabahilki():
         st.write('Для выполнения заказа нужно: ' + str(sza) + ' день/дня/дней')
 
 if __name__ == "__main__":
-    zabahilki()
+    zabahili()
 
 
                     #---------------------------

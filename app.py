@@ -7,9 +7,9 @@ import plenka as pl
 from plenka import plastik
 import products as pr
 from products import paketi, bahili, perchatki
-import zakaz as za
-from zakaz import zabahilki, zaplenka, zapaketi, zaperchatki
-import viplati as vi
+import zakaz
+from zakaz import zaplenka, zapaketi, zaperchatki
+import viplati
 from viplati import zpbahili, zpekstruziya, zpperchatki, zppaketi
 
 
@@ -61,7 +61,7 @@ def main():
                     y = st.sidebar.selectbox('РАСЧЁТ ЗАКАЗА:', ['Выбрать/Очистить','Заказ на бахилы','Заказ на пленку', 'Заказ на пакеты','Заказ на перчатки'])
                     
                     if y == "Заказ на бахилы":
-                        y = zabahilki
+                        y = zabahili
                         
                     #---------------------------
                     
