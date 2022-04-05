@@ -13,16 +13,11 @@ import viplati # Модуль расчета зарплат
 from viplati import zpbahili, zpekstruziya, zpperchatki, zppaketi
 
 
-PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'./img/qrcode.jpg' , 'layout':'centered'}
+PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'./img/polietilen.png' , 'layout':'centered'}
 st.set_page_config(**PAGE_CONFIG)
 
 
-
-
-
-
-
-
+#–---------------------------------------------------------------------------
 
 def main():
     menu = ["Инструкция", "Калькулятор", "Контакты"]
