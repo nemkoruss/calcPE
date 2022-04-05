@@ -12,10 +12,10 @@ from zakaz import zabahili, zaplenka, zapaketi, zaperchatki
 import viplati # Модуль расчета зарплат
 from viplati import zpbahili, zpekstruziya, zpperchatki, zppaketi
 
-
-PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'./img/icon.jpg' , 'layout':'centered'}
-st.set_page_config(**PAGE_CONFIG)
-
+img = Image.open(' ./img/icon.jpg')
+#PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'./img/icon.jpg' , 'layout':'centered'}
+#st.set_page_config(**PAGE_CONFIG)
+st.set_config(page_title = 'calcPe', page_icon = 'img')
 
 #–---------------------------------------------------------------------------
 
