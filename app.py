@@ -14,7 +14,7 @@ from viplati import zpbahili, zpekstruziya, zpperchatki, zppaketi
 
 
 PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'./img/qrcode.jpg' , 'loyaut':'centered'}
-st.beta_set_page_config(**PAGE_CONFIG)
+st.set_page_config(**PAGE_CONFIG)
 
 
 
