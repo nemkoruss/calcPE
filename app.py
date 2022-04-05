@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import local_settings as settings # Самописный модуль с информацией
-from PIL import Image # Для отображения изображений
+#from PIL import Image # Для отображения изображений
 import plenka as pl # Модуль расчета замеса пленки
 from plenka import plastik 
 import products as pr # Молуль расчета пролукции
@@ -12,9 +12,23 @@ from zakaz import zabahili, zaplenka, zapaketi, zaperchatki
 import viplati # Модуль расчета зарплат
 from viplati import zpbahili, zpekstruziya, zpperchatki, zppaketi
 
+
+st.set_page_config(
+     page_title="Ex-stream-ly Cool App",
+     page_icon="🧊",
+     layout="wide",
+     initial_sidebar_state="expanded",
+     menu_items={
+         'Get Help': 'https://www.extremelycoolapp.com/help',
+         'Report a bug': "https://www.extremelycoolapp.com/bug",
+         'About': "# This is a header. This is an *extremely* cool app!"
+     }
+ )
+
+
 #imgs = Image.open('icon.jpg')
-PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'qrcode.jpg' , 'layout':'centered'}
-st.set_page_config(**PAGE_CONFIG)
+#PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'qrcode.jpg' , 'layout':'centered'}
+#st.set_page_config(**PAGE_CONFIG)
 #st.set_page_config(page_title = 'calcPe', page_icon = 'imgs')
 
 #–---------------------------------------------------------------------------
