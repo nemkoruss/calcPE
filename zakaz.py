@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 
-def zabah():
+def zabahili():
     
     st.write('')
     st.title('ЗАЯВКА БАХИЛЫ')
@@ -62,12 +62,12 @@ def zabah():
         st.write('Для выполнения заказа нужно: ' + str(sza) + ' день/дня/дней')
 
 if __name__ == "__main__":
-    zabah()
+    zabahili()
 
 
                     #---------------------------
 
-def zaplen():
+def zaplenka():
 
     st.write('')
     st.title('ЗАЯВКА ПЛЕНКА')
@@ -129,11 +129,11 @@ def zaplen():
         st.write('Для выполнения заказа нужно: ' + str(sza1) + ' день/дня/дней')
 
 if __name__ == "__main__":
-    zaplen()
+    zaplenka()
 
                     #---------------------------
 
-def zapak():
+def zapaketi():
     st.write('')
     st.title('ЗАЯВКА ПАКЕТЫ')
     st.write('')
@@ -184,11 +184,11 @@ def zapak():
         st.write('Для выполнения заказа нужно: ' + str(sza11) + ' день/дня/дней')
 
 if __name__ == "__main__":
-    zapak()
+    zapaketi()
 
                     #--------------------------
 
-def zaperch():
+def zaperchatki():
 
     st.write('')
     st.title('ЗАЯВКА ПЕРЧАТКИ')
@@ -235,7 +235,7 @@ def zaperch():
         st.write('Для выполнения заказа нужно: ' + str(sza111) + ' день/дня/дней')
 
 if __name__ == "__main__":
-    zaperch()
+    zaperchatki()
 
 
 
