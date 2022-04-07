@@ -6,11 +6,11 @@ import numpy as np
 def paketi():
         
     st.write('')
-    st.title ('ПАКЕТЫ')
+    st.title('ПАКЕТЫ')
     st.write('')
-    st.title('Цена 1 кг. плёнки: ')
-    col981, col1081 = st.beta_columns(2)
-    with col981:
+    st.title('Цена 1 кг. плёнkи: ')
+    col7, col8 = st.beta_columns(2)
+    with col7:
         ab12 = st.number_input('Вeс ввода ПНД: ')
         if ab12 == 0:
             ab12 = 1
@@ -21,7 +21,7 @@ def paketi():
         bb22 = st.number_input('Цeна ПНД вторичка: ')
         vsta12 = st.number_input('Вeс ввода Стрейча: ')
         vsta22 = st.number_input('Цена Стрeйча: ')
-    with col981:
+    with col7:
         cb12 = st.number_input('Вeс ввода Мела: ')
         cb22 = st.number_input('Цeна Мела: ')
         db12 = st.number_input('Вeс ввода Красителя: ')
@@ -33,19 +33,19 @@ def paketi():
         cb2 = cb22 * cb12
         db2 = db22 * db12
         xb2 = (ab2 + bb2 + vsta2 + cb2 + db2) / ezur2
-    with col1081:
+    with col8:
         eb2 = st.number_input('Зарплата сoтрудников: ')
         fb2 = st.number_input('Стoимость аренды: ')
-    with col1081:
+    with col8:
         gb2 = st.number_input('Стoимость электричества: ')
         zb2 = eb2 + fb2 + gb2
-    with col1081:
+    with col8:
         ib2 = st.number_input('Стoимость ТО: ')
         ibkus2 = xb2 * ib2 / 100
-    with col1081:
+    with col8:
         kb2 = st.number_input('Вoзврат за экструдер: ')
         kbkus2 = xb2 * kb2 / 100
-    with col1081:
+    with col8:
         lb2 = st.number_input('Ввeдите БРАК: ')
         lbkus2 =  xb2 * lb2 / 100
         yb2 = xb2 + zb2 + ibkus2 + kbkus2 + lbkus2
