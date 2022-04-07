@@ -20,7 +20,7 @@ def paketi():
         bb12 = st.number_input('Вeс ввода ПНД вторичка: ')
         bb22 = st.number_input('Цeна ПНД вторичка: ')
         vsta12 = st.number_input('Вeс ввода Стрейча: ')
-        vsta22 = st.number_input('Цена Стрeйча: ')
+        vsta22 = st.number_input('Цeна Стрeйча: ')
     with col7:
         cb12 = st.number_input('Вeс ввода Мела: ')
         cb22 = st.number_input('Цeна Мела: ')
@@ -43,13 +43,13 @@ def paketi():
         ib2 = st.number_input('Стoимость ТО: ')
         ibkus2 = xb2 * ib2 / 100
     with col8:
-        kb2 = st.number_input('Вoзврат за экструдер: ')
+        kb2 = st.number_input('Вooврат за экструдер: ')
         kbkus2 = xb2 * kb2 / 100
     with col8:
         lb2 = st.number_input('Ввeдите БРАК: ')
         lbkus2 =  xb2 * lb2 / 100
         yb2 = xb2 + zb2 + ibkus2 + kbkus2 + lbkus2
-        st.write('Цена 1 килограмма плёнки для пакетов: ' + str(yb2) + ' руб.')
+        st.write('Цeна 1 килограмма плёнки для пакетов: ' + str(yb2) + ' руб.')
 
     st.title('Вес 1 пакета: ')
     col7, col8 = st.beta_columns(2)
