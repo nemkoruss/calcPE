@@ -85,7 +85,7 @@ def paketi():
         apd = st.number_input('Стоимость Аренды: ')
         ape = st.number_input('Стоимость Электричества: ')
     with col8:
-        apf = st.number_input('Стoимость ТО: ')
+        apf = st.number_input('Стoимoсть ТO: ')
         apg = st.number_input('Стоимость Доставки: ')
         aph = st.number_input('Стоимость Упаковки: ')
     with col7:
