@@ -61,7 +61,6 @@ def main():
                 st.write(df)
                 st.download_button(
                     label="Download Excel workbook",
-                    data=output.getvalue(),
                     file_name="workbook.xlsx",
                     mime="price.xlsx"
                 )
