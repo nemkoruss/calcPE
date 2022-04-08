@@ -149,14 +149,14 @@ def zpekstruziya():
         ze1 = za1 * 600
         zf1 = zb1 * 1200
 
-        st.header('Сделано (указать кол-во кг): ')
+    st.header('Сделано (указать кол-во кг): ')
     col350, col360 = st.columns(2)
     with col350:
         wa1 = st.number_input('Кол-во "за 12 часов": ')
     with col360:
         wb1 = st.number_input('Кол-во "за 24 часа": ')
 
-        st.header('Отгрузили (указать кол-во кг): ')
+    st.header('Отгрузили (указать кол-во кг): ')
     col370, col380 = st.columns(2)
     with col370:
         ya1 = st.number_input('Кол-во "за 12 часоа": ')
@@ -216,14 +216,14 @@ def zpperchatki():
         ze11 = za11 * 5400
         zf11 = zb11 * 4500
 
-        st.header('Сделано (указать кол-во коробок): ')
+    st.header('Сделано (указать кол-во коробок): ')
     col450, col460 = st.columns(2)
     with col450:
         wa11 = st.number_input('Кол-во "Обычных": ')
     with col460:
         wb11 = st.number_input('Кол-во "С манжетой": ')
 
-        st.header('Отгрузили (указать кол-во коробок): ')
+    st.header('Отгрузили (указать кол-во коробок): ')
     col470, col480 = st.columns(2)
     with col470:
         ya11 = st.number_input('Кол-во "Обчныx": ')
