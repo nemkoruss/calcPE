@@ -109,13 +109,13 @@ def zpbahili():
 
         st.write('')
         st.write('')
-    with col300:
+    with col290:
         st.write('Итого к оплате: ')
         qwer = ua + ub + uc + ud
         st.subheader(str(qwer) + ' руб.')
 
         st.write('')
-    with col300:
+    with col290:
         st.title('Удержание с зарплаты: ')
         nakiy = st.number_input('Процент удержания:')
         nakkur = qwer * (nakiy + 100) / 100
@@ -140,7 +140,7 @@ def zpekstruziya():
             za1 = 1
         else:
             za1 < 0
-    with col330:
+    with col340:
         zb1 = st.number_input('Стоимость "24 часа смена": ')
         if zb1 == 0:
             zb1 = 1
@@ -153,12 +153,14 @@ def zpekstruziya():
     col350, col360 = st.columns(2)
     with col350:
         wa1 = st.number_input('Кол-во "за 12 часов": ')
+    with col360:
         wb1 = st.number_input('Кол-во "за 24 часа": ')
 
         st.header('Отгрузили (указать кол-во кг): ')
     col370, col380 = st.columns(2)
     with col370:
         ya1 = st.number_input('Кол-во "за 12 часоа": ')
+    with col380:
         yb1 = st.number_input('Кoл-во "за 24 часа": ')
 
         xa1 = wa1 - ya1
@@ -172,7 +174,7 @@ def zpekstruziya():
 
         ta1 = ze1 * xa1
         tb1 = zf1 * xb1
-
+    with col370:
         st.write('12 часов: ')
         st.write('Сделано: '  + str(wa1) + ' кор., ' + 'Сумма ЗП: ' + str(ua1) + ' руб.')
         st.write('Отгрузили: '  + str(ya1) + ' кор., ' + 'Оплата: ' + str(va1) + ' руб.')
@@ -204,7 +206,7 @@ def zpperchatki():
             za11 = 1
         else:
             za11 < 0
-    with col430:
+    with col440:
         zb11 = st.number_input('Стоимость "С манжетой": ')
         if zb11 == 0:
             zb11 = 1
@@ -218,12 +220,14 @@ def zpperchatki():
     col450, col460 = st.columns(2)
     with col450:
         wa11 = st.number_input('Кол-во "Обычных": ')
+    with col460:
         wb11 = st.number_input('Кол-во "С манжетой": ')
 
         st.header('Отгрузили (указать кол-во коробок): ')
     col470, col480 = st.columns(2)
     with col470:
         ya11 = st.number_input('Кол-во "Обчныx": ')
+    with col480:
         yb11 = st.number_input('Кoл-во "C манжетой": ')
 
         xa11 = wa11 - ya11
@@ -237,7 +241,7 @@ def zpperchatki():
 
         ta11 = ze11 * xa11
         tb11 = zf11 * xb11
-
+    with col470:
         st.write('Oбычныe: ')
         st.write('Сделано: '  + str(wa11) + ' кор., ' + 'Сумма ЗП: ' + str(ua11) + ' руб.')
         st.write('Отгрузили: '  + str(ya11) + ' кор., ' + 'Оплата: ' + str(va11) + ' руб.')
