@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 import local_settings as settings # Самописный модуль с информацией
 #from PIL import Image # Для отображения изображений
-import vibor as vib # Модуль расчета замеса пленки
-from vibor import products, orders, salarys
+import vibor_rascheta as vib # Модуль расчета продукции
+from vibor_rascheta import products, orders, salarys
 
 
 
