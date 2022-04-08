@@ -110,5 +110,24 @@ def perchatki():
     with col19:
         st.write('Продажа: ' + str(nakk212) + ' руб.')
 
+    with col19:
+        st.write('')
+        st.title('Pасчёт пpибыли: ')
+        prib123 = (nakk212- ob412812)
+        proc123 = prib123 - (20 / 100 * prib123)
+        ofi123 = (proc123 / 100) * 50
+        nal123 = (proc123 / 100) * 8
+        ras123 = (proc123 / 100) * 20
+        are123 = (proc123 / 100) * 20
+        kre123 = (proc123 / 100) * 2
+    with col19:
+        st.write('')
+        st.write('Пpибыль: ' + str(proc123) + ' руб.')
+        st.write('Офис: ' + str(ofi123) + ' руб.')
+        st.write('Расходы: ' + str(nal123) + ' руб.')
+        st.write('Аренда: ' + str(ras123) + ' руб.')
+        st.write('Пpибыль: ' + str(are123) + ' руб.')
+        st.write('Кредит: ' + str(kre123) + ' руб.')
+
 if __name__ == "__main__":
     perchatki()

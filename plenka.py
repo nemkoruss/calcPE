@@ -77,8 +77,18 @@ def plastik():
         st.title('Pасчёт пpибыли: ')
         prib = (nakk - yb2)
         proc = prib - (20 / 100 * prib)
+        ofi = (proc / 100) * 50
+        nal = (proc / 100) * 8
+        ras = (proc / 100) * 20
+        are = (proc / 100) * 20
+        kre = (proc / 100) * 2
     with col3:
+        st.write('')
         st.write('Пpибыль: ' + str(proc) + ' руб.')
-
+        st.write('Офис: ' + str(ofi) + ' руб.')
+        st.write('Расходы: ' + str(nal) + ' руб.')
+        st.write('Аренда: ' + str(ras) + ' руб.')
+        st.write('Пpибыль: ' + str(are) + ' руб.')
+        st.write('Кредит: ' + str(kre) + ' руб.')
 if __name__ == "__main__":
     plastik()

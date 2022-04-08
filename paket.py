@@ -120,5 +120,24 @@ def paketi():
     with col7:
         st.write('Продaжа: ' + str(nakk11) + ' руб.')
 
+    with col7:
+        st.write('')
+        st.title('Pасчёт пpибыли: ')
+        prib12 = (nakk11 - ob41281)
+        proc12 = prib12 - (20 / 100 * prib12)
+        ofi12 = (proc12 / 100) * 50
+        nal12 = (proc12 / 100) * 8
+        ras12 = (proc12 / 100) * 20
+        are12 = (proc12 / 100) * 20
+        kre12 = (proc12 / 100) * 2
+    with col7:
+        st.write('')
+        st.write('Пpибыль: ' + str(proc12) + ' руб.')
+        st.write('Офис: ' + str(ofi12) + ' руб.')
+        st.write('Расходы: ' + str(nal12) + ' руб.')
+        st.write('Аренда: ' + str(ras12) + ' руб.')
+        st.write('Пpибыль: ' + str(are12) + ' руб.')
+        st.write('Кредит: ' + str(kre12) + ' руб.')
+
 if __name__ == "__main__":
     paketi()

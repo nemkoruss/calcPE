@@ -121,5 +121,24 @@ def bahili():
     with col13:
         st.write('Продажа: ' + str(nakk2) + ' руб.')
 
+    with col13:
+        st.write('')
+        st.title('Pасчёт пpибыли: ')
+        prib1 = (nakk2 - zb4256)
+        proc1 = prib1 - (20 / 100 * prib1)
+        ofi1 = (proc1 / 100) * 50
+        nal1 = (proc1 / 100) * 8
+        ras1 = (proc1 / 100) * 20
+        are1 = (proc1 / 100) * 20
+        kre1 = (proc1 / 100) * 2
+    with col13:
+        st.write('')
+        st.write('Пpибыль: ' + str(proc1) + ' руб.')
+        st.write('Офис: ' + str(ofi1) + ' руб.')
+        st.write('Расходы: ' + str(nal1) + ' руб.')
+        st.write('Аренда: ' + str(ras1) + ' руб.')
+        st.write('Пpибыль: ' + str(are1) + ' руб.')
+        st.write('Кредит: ' + str(kre1) + ' руб.')
+
 if __name__ == "__main__":
     bahili()
