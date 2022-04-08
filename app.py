@@ -26,8 +26,7 @@ def main():
             st.markdown('*Для более комфортной работы, не забывайте "Очищать экран"  *')
 
     elif choice == 'Калькулятор':
-           # st.subheader("Пароль верный")
-            #username = st.sidebar.text_input("Имя")
+
             password = st.sidebar.text_input('Пароль', type='password')
             if st.sidebar.checkbox('Войти'):
 
@@ -50,14 +49,22 @@ def main():
 
     elif choice == 'Контакты':
                 st.subheader('Контакты')
-                st.markdown('**Корпоративный сайт: ** [tpkpromed.ru](https://tpkpromed.ru)')
-                st.markdown('**Производство бахил: ** [bioinvn.ru](https://bioinvn.ru)')
-                st.markdown('**Интернет магазин: ** [pmpsale.ru](https://pmpsale.ru)')
+                st.markdown('Корпоративный сайт: [tpkpromed.ru](https://tpkpromed.ru)')
+                st.markdown('Производство бахил: [bioinvn.ru](https://bioinvn.ru)')
+                st.markdown('Интернет магазин: [pmpsale.ru](https://pmpsale.ru)')
                 # st.markdown('**Скачать приложение: ** [Скачать](https://goo.su/RH7qQ)')
                 #image = Image.open('./img/qrcode.jpg')
                 # st.image(image, width = 100, caption='QR код для скачивания',use_column_width=100)
 
                 #Для файла Excel
                 df = pd.read_excel('price.xlsx')
+                st.write(df)
+                st.download_button(
+                    label="Download Excel workbook",
+                    data=output.getvalue(),
+                    file_name="workbook.xlsx",
+                    mime="price.xlsx"
+                )
+
 if __name__ == '__main__':
         main()
