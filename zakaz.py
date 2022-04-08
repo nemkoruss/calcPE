@@ -8,7 +8,7 @@ def zabahili():
     st.write('')
     st.title('ЗАЯВКА БАХИЛЫ')
     st.write('')
-    st.title('Расчёт выполнения заказа: ')
+    st.header('Расчёт выполнения заказа: ')
     col21, col22 = st.columns(2)
     with col21:
         aza = st.number_input('Введите кол-во задейственного оборудования: ')
@@ -72,7 +72,7 @@ def zaplenka():
     st.write('')
     st.title('ЗАЯВКА ПЛЕНКА')
     st.write('')
-    st.title('Расчёт выполнения заказа: ')
+    st.header('Расчёт выполнения заказа: ')
     col23, col24 = st.columns(2)
     with col23:
         aza1 = st.number_input('Введите кол-во задейственного оборудования: ')
@@ -137,7 +137,7 @@ def zapaketi():
     st.write('')
     st.title('ЗАЯВКА ПАКЕТЫ')
     st.write('')
-    st.title('Расчёт выполнения заказа: ')
+    st.header('Расчёт выполнения заказа: ')
     col25, col26 = st.columns(2)
     with col25:
         aza11 = st.number_input('Введите кол-во задейственного оборудования: ')
@@ -193,7 +193,7 @@ def zaperchatki():
     st.write('')
     st.title('ЗАЯВКА ПЕРЧАТКИ')
     st.write('')
-    st.title('Расчёт выполнения заказа: ')
+    st.header('Расчёт выполнения заказа: ')
     col27, col28 = st.columns(2)
     with col27:
         aza111 = st.number_input('Введите кол-во задейственного оборудования: ')

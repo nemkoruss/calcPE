@@ -8,7 +8,7 @@ def zpbahili():
     st.write('')
     st.title('ЗП БАХИЛЫ')
     st.write('')
-    st.title('Ставка: ')
+    st.header('Ставка: ')
     col230, col240 = st.columns(2)
     with col230:
         za = st.number_input('Стоимость "Эконома" за пару: ')
@@ -39,7 +39,7 @@ def zpbahili():
         zg = zc * 2000
         zh = zd * 5400
 
-    st.title('Сделано (указать кол-во коробок): ')
+    st.header('Сделано (указать кол-во коробок): ')
     col250, col260 = st.columns(2)
     with col250:
         wa = st.number_input('Кол-во "Эконома": ')
@@ -48,7 +48,7 @@ def zpbahili():
         wc = st.number_input('Кол-во "Прочных": ')
         wd = st.number_input('Кол-во "Детских": ')
 
-    st.title('Отгрузили (указать кол-во коробок): ')
+    st.header('Отгрузили (указать кол-во коробок): ')
     col270, col280 = st.columns(2)
     with col270:
         ya = st.number_input('Кол-во "Экoнома": ')
@@ -132,7 +132,7 @@ def zpekstruziya():
     st.write('')
     st.title('ЗП ЭКСТРУЗИЯ')
     st.write('')
-    st.title('Ставка: ')
+    st.header('Ставка: ')
     col330, col340 = st.columns(2)
     with col330:
         za1 = st.number_input('Стоимость "12 часов Смена": ')
@@ -149,13 +149,13 @@ def zpekstruziya():
         ze1 = za1 * 600
         zf1 = zb1 * 1200
 
-        st.title('Сделано (указать кол-во кг): ')
+        st.header('Сделано (указать кол-во кг): ')
     col350, col360 = st.columns(2)
     with col350:
         wa1 = st.number_input('Кол-во "за 12 часов": ')
         wb1 = st.number_input('Кол-во "за 24 часа": ')
 
-        st.title('Отгрузили (указать кол-во кг): ')
+        st.header('Отгрузили (указать кол-во кг): ')
     col370, col380 = st.columns(2)
     with col370:
         ya1 = st.number_input('Кол-во "за 12 часоа": ')
@@ -196,7 +196,7 @@ def zpperchatki():
     st.write('')
     st.title('ЗП ПЕРЧАТКИ')
     st.write('')
-    st.title('Ставка: ')
+    st.header('Ставка: ')
     col430, col440 = st.columns(2)
     with col430:
         za11 = st.number_input('Стоимость "Обычные": ')
@@ -214,13 +214,13 @@ def zpperchatki():
         ze11 = za11 * 5400
         zf11 = zb11 * 4500
 
-        st.title('Сделано (указать кол-во коробок): ')
+        st.header('Сделано (указать кол-во коробок): ')
     col450, col460 = st.columns(2)
     with col450:
         wa11 = st.number_input('Кол-во "Обычных": ')
         wb11 = st.number_input('Кол-во "С манжетой": ')
 
-        st.title('Отгрузили (указать кол-во коробок): ')
+        st.header('Отгрузили (указать кол-во коробок): ')
     col470, col480 = st.columns(2)
     with col470:
         ya11 = st.number_input('Кол-во "Обчныx": ')
@@ -260,7 +260,7 @@ def zppaketi():
     st.write('')
     st.title('ЗП ПАКЕТЫ')
     st.write('')
-    st.title('Ставка: ')
+    st.header('Ставка: ')
     col530, col540 = st.columns(2)
     with col530:
         za111 = st.number_input('Стоимость "4 ручья" за штуку: ')
@@ -285,7 +285,7 @@ def zppaketi():
         zf111 = zb111 * 3500
         zg111 = zc111 * 2000
 
-    st.title('Сделано (указать кол-во коробок): ')
+    st.header('Сделано (указать кол-во коробок): ')
     col550, col560 = st.columns(2)
     with col550:
         wa111 = st.number_input('Кол-во "4 ручья": ')
@@ -293,7 +293,7 @@ def zppaketi():
     with col560:
         wc111 = st.number_input('Кол-во "1 ручей": ')
 
-    st.title('Отгрузили (указать кол-во коробок): ')
+    st.header('Отгрузили (указать кол-во коробок): ')
     col570, col580 = st.columns(2)
     with col570:
         ya111 = st.number_input('Кол-во "4 pучья": ')

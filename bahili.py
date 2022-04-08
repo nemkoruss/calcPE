@@ -8,7 +8,7 @@ def bahili():
     st.write('')
     st.title('БАХИЛЫ')
     st.write('')
-    st.title('Цена 1 кг. плёнки: ')
+    st.header('Цена 1 кг. плёнки: ')
     col9, col10 = st.columns(2)
     with col9:
         ab1 = st.number_input('Вeс ввода ПНД: ')
@@ -51,7 +51,7 @@ def bahili():
         yb = xb + zb + ibkus + kbkus + lbkus
         st.write('Цена 1 килограмма плёнки для бахил: ' + str(yb) + ' руб.')
 
-    st.title('Вeс одной пары бахил: ')
+    st.header('Вeс одной пары бахил: ')
     col11, col12 = st.columns(2)
     with col11:
         abusi = st.number_input('Высота издeлия в сантиметрах: ')
@@ -68,7 +68,7 @@ def bahili():
         zb3 = ab3 * bb3 * gb3 * db3 * ib3 * fb3
         st.write('Вес одной пары бахил: ' + str(zb3) + ' гр.')
 
-    st.title('Себестоимость бахил: ')
+    st.header('Себестоимость бахил: ')
     col13, col14 = st.columns(2)
     with col13:
         mb4 = zb3 * yb
@@ -115,7 +115,7 @@ def bahili():
     col13, col14 = st.columns(2)
     with col13:
         st.write('')
-        st.title('Расчёт продажи: ')
+        st.header('Расчёт продажи: ')
         nak2 = st.number_input('Процент удорожания:')
         nakk2 = zb4256 * (nak2 + 100) / 100
     with col13:
@@ -123,7 +123,7 @@ def bahili():
 
     with col13:
         st.write('')
-        st.title('Pасчёт пpибыли: ')
+        st.header('Pасчёт пpибыли: ')
         prib1 = (nakk2 - zb4256)
         proc1 = prib1 - (20 / 100 * prib1)
         ofi1 = (proc1 / 100) * 50

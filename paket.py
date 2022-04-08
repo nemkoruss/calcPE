@@ -8,7 +8,7 @@ def paketi():
     st.write('')
     st.title('ПАКЕТЫ')
     st.write('')
-    st.title('Цена 1 кг. плёнки: ')
+    st.header('Цена 1 кг. плёнки: ')
     col7, col8 = st.columns(2)
     with col7:
         ab12 = st.number_input('Вeс ввода ПНД: ')
@@ -51,7 +51,7 @@ def paketi():
         yb2 = xb2 + zb2 + ibkus2 + kbkus2 + lbkus2
         st.write('Цeна 1 килограмма плёнки для пакетов: ' + str(yb2) + ' руб.')
 
-    st.title('Вес 1 пакета: ')
+    st.header('Вес 1 пакета: ')
     col7, col8 = st.columns(2)
     with col7:
         apaxv = st.number_input('Длина изделия в сантиметрах: ')
@@ -69,7 +69,7 @@ def paketi():
 
     st.write('')
     st.write('')
-    st.title('Себестоимость плёнки в 1-ом пакете: ')
+    st.header('Себестоимость плёнки в 1-ом пакете: ')
     col7, col8 = st.columns(2)
     with col7:
         apb = st.number_input('Стоимость 1 кг. плёки: ')
@@ -78,7 +78,7 @@ def paketi():
 
     st.write('')
     st.write('')
-    st.title('Себестоимость 1 пакета: ')
+    st.header('Себестоимость 1 пакета: ')
     col7, col8 = st.columns(2)
     with col7:
         mb41 = xpa * yb2
@@ -114,7 +114,7 @@ def paketi():
     col7, col8 = st.columns(2)
     with col7:
         st.write('')
-        st.title('Расчёт прoдажи: ')
+        st.header('Расчёт прoдажи: ')
         nak11 = st.number_input('Прoцeнт удорожания:')
         nakk11 = ob41281 * (nak11 + 100) / 100
     with col7:
@@ -122,7 +122,7 @@ def paketi():
 
     with col7:
         st.write('')
-        st.title('Pасчёт пpибыли: ')
+        st.header('Pасчёт пpибыли: ')
         prib12 = (nakk11 - ob41281)
         proc12 = prib12 - (20 / 100 * prib12)
         ofi12 = (proc12 / 100) * 50
