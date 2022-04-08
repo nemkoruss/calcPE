@@ -101,7 +101,7 @@ def zpbahili():
 
         st.write('')
         st.write('')
-    with col290:
+    with col300:
         st.subheader('Детские: ')
         st.write('Сделано: '  + str(wd) + ' кор., ' + 'Сумма ЗП: ' + str(ud) + ' руб.')
         st.write('Отгрузили: '  + str(yd) + ' кор., ' + 'Оплата: ' + str(vd) + ' руб.')
@@ -109,18 +109,18 @@ def zpbahili():
 
         st.write('')
         st.write('')
-    with col290:
+    with col300:
         st.write('Итого к оплате: ')
         qwer = ua + ub + uc + ud
         st.subheader(str(qwer) + ' руб.')
 
         st.write('')
     with col290:
-        st.title('Удержание с зарплаты: ')
+        st.header('Удержание с зарплаты: ')
         nakiy = st.number_input('Процент удержания:')
         nakkur = qwer * (nakiy + 100) / 100
         trio = nakkur - qwer
-        st.write(str(qwer) + ' руб.')
+        st.write(str(trio) + ' руб.')
 
 if __name__ == "__main__":
     zpbahili()
@@ -175,7 +175,9 @@ def zpekstruziya():
         ta1 = ze1 * xa1
         tb1 = zf1 * xb1
     with col370:
-        st.write('12 часов: ')
+        st.write('')
+        st.write('')
+        st.header('12 часов: ')
         st.write('Сделано: '  + str(wa1) + ' кор., ' + 'Сумма ЗП: ' + str(ua1) + ' руб.')
         st.write('Отгрузили: '  + str(ya1) + ' кор., ' + 'Оплата: ' + str(va1) + ' руб.')
         st.write('Склад: '  + str(xa1) + ' кор., ' + 'Долг: ' + str(ta1) + ' руб.')
@@ -183,7 +185,7 @@ def zpekstruziya():
         st.write('')
         st.write('')
 
-        st.write('24 часа: ')
+        st.header('24 часа: ')
         st.write('Сделано: '  + str(wb1) + ' кор., ' + 'Сумма ЗП: ' + str(ub1) + ' руб.')
         st.write('Отгрузили: '  + str(yb1) + ' кор., ' + 'Оплата: ' + str(vb1) + ' руб.')
         st.write('Склад: '  + str(xb1) + ' кор., ' + 'Долг: ' + str(tb1) + ' руб.')
@@ -242,7 +244,9 @@ def zpperchatki():
         ta11 = ze11 * xa11
         tb11 = zf11 * xb11
     with col470:
-        st.write('Oбычныe: ')
+        st.write('')
+        st.write('')
+        st.write('')('Oбычныe: ')
         st.write('Сделано: '  + str(wa11) + ' кор., ' + 'Сумма ЗП: ' + str(ua11) + ' руб.')
         st.write('Отгрузили: '  + str(ya11) + ' кор., ' + 'Оплата: ' + str(va11) + ' руб.')
         st.write('Склад: '  + str(xa11) + ' кор., ' + 'Долг: ' + str(ta11) + ' руб.')
@@ -250,7 +254,7 @@ def zpperchatki():
         st.write('')
         st.write('')
 
-        st.write('С мaнжeтой: ')
+        st.write('')('С мaнжeтой: ')
         st.write('Сделано: '  + str(wb11) + ' кор., ' + 'Сумма ЗП: ' + str(ub11) + ' руб.')
         st.write('Отгрузили: '  + str(yb11) + ' кор., ' + 'Оплата: ' + str(vb11) + ' руб.')
         st.write('Склад: '  + str(xb11) + ' кор., ' + 'Долг: ' + str(tb11) + ' руб.')
@@ -321,7 +325,12 @@ def zppaketi():
         tb111 = zf111 * xb111
         tc111 = zg111 * xc111
 
-        st.write('4 ручья: ')
+    with col570:
+
+        st.write('')
+        st.write('')
+
+        st.header('4 ручья: ')
         st.write('Сделано: '  + str(wa111) + ' кор., ' + 'Сумма ЗП: ' + str(ua111) + ' руб.')
         st.write('Отгрузили: '  + str(ya111) + ' кор., ' + 'Оплата: ' + str(va111) + ' руб.')
         st.write('Склад: '  + str(xa111) + ' кор., ' + 'Долг: ' + str(ta111) + ' руб.')
@@ -329,7 +338,7 @@ def zppaketi():
         st.write('')
         st.write('')
 
-        st.write('2 ручья: ')
+        st.header('2 ручья: ')
         st.write('Сделано: '  + str(wb111) + ' кор., ' + 'Сумма ЗП: ' + str(ub111) + ' руб.')
         st.write('Отгрузили: '  + str(yb111) + ' кор., ' + 'Оплата: ' + str(vb111) + ' руб.')
         st.write('Склад: '  + str(xb111) + ' кор., ' + 'Долг: ' + str(tb111) + ' руб.')
@@ -337,7 +346,7 @@ def zppaketi():
         st.write('')
         st.write('')
 
-        st.write('1 ручей: ')
+        st.header('1 ручей: ')
         st.write('Сделано: '  + str(wc111) + ' кор., ' + 'Сумма ЗП: ' + str(uc111) + ' руб.')
         st.write('Отгрузили: '  + str(yc111) + ' кор., ' + 'Оплата: ' + str(vc111) + ' руб.')
         st.write('Склад: '  + str(xc111) + ' кор., ' + 'Долг: ' + str(tc111) + ' руб.')
