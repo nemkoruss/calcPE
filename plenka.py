@@ -12,21 +12,23 @@ def plastik():
     col1, col2 = st.beta_columns(2)
     with col1:
         az = st.number_input('Вес ввода ПНД: ')
+        if az == 0:
+            az = 1
+        else:
+            az < 0
         bz = st.number_input('Вес ввода ПНД втор.: ')
         vst = st.number_input('Вес ввода Стрейча: ')
-    with col2:
+    with col1:
         cz = st.number_input('Вес ввода Мела: ')
         dz = st.number_input('Вес ввода Красителя: ')
-        ez = az + bz + vst + cz + dz  # Общий вес
-        if ez == 0:
-            ez = 1
-        else:
-            ez < 0
+        ez = 1 * (az + bz + vst + cz + dz)  # Общий вес
         fz1 = az / ez
         gz1 = bz / ez
         vstz = vst / ez
         hz = cz / ez
         iz = dz / ez
+        wxz = az
+    with col2:
         st.write('Общий вес замеса = ' + str(ez) + ' кг.')
         st.subheader('В одном килограмме замеса: ')
         st.write('ПНД = ' + str(fz1) + ' кг.')
@@ -77,6 +79,14 @@ def plastik():
         nakk = yz * (nak + 100) / 100
     with col31:
         st.write('Пpодажа: ' + str(nakk) + ' руб.')
+
+    with col41:
+        st.write('')
+        st.title('Pасчёт пpибыли: ')
+        prib = (nakk - yz)
+        proc = prib - (20 / 100 * prib)
+    with col41:
+        st.write('Пpибыль: ' + str(proc) + ' руб.')
 
 if __name__ == "__main__":
     plastik()
