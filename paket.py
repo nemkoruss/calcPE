@@ -9,7 +9,7 @@ def paketi():
     st.title('ПАКЕТЫ')
     st.write('')
     st.title('Цена 1 кг. плёнки: ')
-    col7, col8 = st.beta_columns(2)
+    col7, col8 = st.columns(2)
     with col7:
         ab12 = st.number_input('Вeс ввода ПНД: ')
         if ab12 == 0:
@@ -52,7 +52,7 @@ def paketi():
         st.write('Цeна 1 килограмма плёнки для пакетов: ' + str(yb2) + ' руб.')
 
     st.title('Вес 1 пакета: ')
-    col7, col8 = st.beta_columns(2)
+    col7, col8 = st.columns(2)
     with col7:
         apaxv = st.number_input('Длина изделия в сантиметрах: ')
         apa = apaxv / 100
@@ -70,7 +70,7 @@ def paketi():
     st.write('')
     st.write('')
     st.title('Себестоимость плёнки в 1-ом пакете: ')
-    col7, col8 = st.beta_columns(2)
+    col7, col8 = st.columns(2)
     with col7:
         apb = st.number_input('Стоимость 1 кг. плёки: ')
         xpb = apb * xpa / 1000
@@ -79,7 +79,7 @@ def paketi():
     st.write('')
     st.write('')
     st.title('Себестоимость 1 пакета: ')
-    col7, col8 = st.beta_columns(2)
+    col7, col8 = st.columns(2)
     with col7:
         mb41 = xpa * yb2
         pb41 = mb41 * 1 / 1000
@@ -111,7 +111,7 @@ def paketi():
     with col8:
         st.write('Себестоимость пакета: ' + str(ob41281) + ' руб.')
 
-    col7, col8 = st.beta_columns(2)
+    col7, col8 = st.columns(2)
     with col7:
         st.write('')
         st.title('Расчёт прoдажи: ')

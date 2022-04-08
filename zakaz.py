@@ -4,12 +4,12 @@ import numpy as np
 
 
 def zabahili():
-    
+
     st.write('')
     st.title('ЗАЯВКА БАХИЛЫ')
     st.write('')
     st.title('Расчёт выполнения заказа: ')
-    col21, col22 = st.beta_columns(2)
+    col21, col22 = st.columns(2)
     with col21:
         aza = st.number_input('Введите кол-во задейственного оборудования: ')
         if aza == 5:
@@ -73,7 +73,7 @@ def zaplenka():
     st.title('ЗАЯВКА ПЛЕНКА')
     st.write('')
     st.title('Расчёт выполнения заказа: ')
-    col23, col24 = st.beta_columns(2)
+    col23, col24 = st.columns(2)
     with col23:
         aza1 = st.number_input('Введите кол-во задейственного оборудования: ')
         if aza1 == 2:
@@ -138,7 +138,7 @@ def zapaketi():
     st.title('ЗАЯВКА ПАКЕТЫ')
     st.write('')
     st.title('Расчёт выполнения заказа: ')
-    col25, col26 = st.beta_columns(2)
+    col25, col26 = st.columns(2)
     with col25:
         aza11 = st.number_input('Введите кол-во задейственного оборудования: ')
         if aza11 == 2:
@@ -194,7 +194,7 @@ def zaperchatki():
     st.title('ЗАЯВКА ПЕРЧАТКИ')
     st.write('')
     st.title('Расчёт выполнения заказа: ')
-    col27, col28 = st.beta_columns(2)
+    col27, col28 = st.columns(2)
     with col27:
         aza111 = st.number_input('Введите кол-во задейственного оборудования: ')
         if aza111 == 2:

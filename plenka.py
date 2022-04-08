@@ -9,7 +9,7 @@ def plastik():
     st.title('ПЛЕНКА')
     st.write('')
     st.title('Считаем замес гранулы: ')
-    col1, col2 = st.beta_columns(2)
+    col1, col2 = st.columns(2)
     with col1:
         ab12 = st.number_input('Вeс ввода ПНД: ')
         if ab12 == 0:
@@ -63,7 +63,7 @@ def plastik():
         st.write('Мел = ' + str(hz) + ' кг.')
         st.write('Краситель = ' + str(iz) + ' кг.')
 
-    col3, col4 = st.beta_columns(2)
+    col3, col4 = st.columns(2)
     with col3:
         st.write('')
         st.title('Pасчёт пpодажи: ')

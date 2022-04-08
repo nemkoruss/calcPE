@@ -9,7 +9,7 @@ def perchatki():
     st.title('ПЕРЧАТКИ')
     st.write('')
     st.title('Цена 1 кг. плёнки: ')
-    col15, col16 = st.beta_columns(2)
+    col15, col16 = st.columns(2)
     with col15:
         ab112 = st.number_input('Вeс ввода ПНД: ')
         if ab112 == 0:
@@ -52,7 +52,7 @@ def perchatki():
         st.write('Цена 1 килограмма плёнки для перчаток: ' + str(yb12) + ' руб.')
 
     st.title('Вeс одной пары перчаток: ')
-    col17, col18 = st.beta_columns(2)
+    col17, col18 = st.columns(2)
     with col17:
         abusi12 = st.number_input('Высота издeлия в сантиметрах: ')
         ab312 = abusi12 / 100
@@ -69,7 +69,7 @@ def perchatki():
         st.write('Вес одной пары перчаток: ' + str(zb312) + ' гр.')
 
     st.title('Себестоимость перчаток: ')
-    col19, col20 = st.beta_columns(2)
+    col19, col20 = st.columns(2)
     with col19:
         mb412 = zb312 * yb12
         pb412 = mb412 * 1 / 1000
@@ -101,7 +101,7 @@ def perchatki():
     with col20:
         st.write('Себестоимость перчаток: ' + str(ob412812) + ' руб.')
 
-    col19, col20 = st.beta_columns(2)
+    col19, col20 = st.columns(2)
     with col19:
         st.write('')
         st.title('Расчёт продажи: ')

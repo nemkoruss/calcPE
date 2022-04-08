@@ -9,7 +9,7 @@ def bahili():
     st.title('БАХИЛЫ')
     st.write('')
     st.title('Цена 1 кг. плёнки: ')
-    col9, col10 = st.beta_columns(2)
+    col9, col10 = st.columns(2)
     with col9:
         ab1 = st.number_input('Вeс ввода ПНД: ')
         if ab1 == 0:
@@ -52,7 +52,7 @@ def bahili():
         st.write('Цена 1 килограмма плёнки для бахил: ' + str(yb) + ' руб.')
 
     st.title('Вeс одной пары бахил: ')
-    col11, col12 = st.beta_columns(2)
+    col11, col12 = st.columns(2)
     with col11:
         abusi = st.number_input('Высота издeлия в сантиметрах: ')
         ab3 = abusi / 100
@@ -69,7 +69,7 @@ def bahili():
         st.write('Вес одной пары бахил: ' + str(zb3) + ' гр.')
 
     st.title('Себестоимость бахил: ')
-    col13, col14 = st.beta_columns(2)
+    col13, col14 = st.columns(2)
     with col13:
         mb4 = zb3 * yb
         pb4 = mb4 * 1 / 1000
@@ -112,7 +112,7 @@ def bahili():
         zb4256 = ob4128 + ob4288
         st.write('Себестоимость бахил: ' + str(zb4256) + ' руб.')
 
-    col13, col14 = st.beta_columns(2)
+    col13, col14 = st.columns(2)
     with col13:
         st.write('')
         st.title('Расчёт продажи: ')
