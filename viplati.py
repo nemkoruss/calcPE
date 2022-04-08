@@ -177,7 +177,7 @@ def zpekstruziya():
     with col370:
         st.write('')
         st.write('')
-        st.header('12 часов: ')
+        st.subheader('12 часов: ')
         st.write('Сделано: '  + str(wa1) + ' кор., ' + 'Сумма ЗП: ' + str(ua1) + ' руб.')
         st.write('Отгрузили: '  + str(ya1) + ' кор., ' + 'Оплата: ' + str(va1) + ' руб.')
         st.write('Склад: '  + str(xa1) + ' кор., ' + 'Долг: ' + str(ta1) + ' руб.')
@@ -185,7 +185,7 @@ def zpekstruziya():
         st.write('')
         st.write('')
 
-        st.header('24 часа: ')
+        st.subheader('24 часа: ')
         st.write('Сделано: '  + str(wb1) + ' кор., ' + 'Сумма ЗП: ' + str(ub1) + ' руб.')
         st.write('Отгрузили: '  + str(yb1) + ' кор., ' + 'Оплата: ' + str(vb1) + ' руб.')
         st.write('Склад: '  + str(xb1) + ' кор., ' + 'Долг: ' + str(tb1) + ' руб.')
@@ -246,7 +246,7 @@ def zpperchatki():
     with col470:
         st.write('')
         st.write('')
-        st.write('')('Oбычныe: ')
+        st.subheader('Oбычныe: ')
         st.write('Сделано: '  + str(wa11) + ' кор., ' + 'Сумма ЗП: ' + str(ua11) + ' руб.')
         st.write('Отгрузили: '  + str(ya11) + ' кор., ' + 'Оплата: ' + str(va11) + ' руб.')
         st.write('Склад: '  + str(xa11) + ' кор., ' + 'Долг: ' + str(ta11) + ' руб.')
@@ -254,7 +254,7 @@ def zpperchatki():
         st.write('')
         st.write('')
 
-        st.write('')('С мaнжeтой: ')
+        st.subheader('С мaнжeтой: ')
         st.write('Сделано: '  + str(wb11) + ' кор., ' + 'Сумма ЗП: ' + str(ub11) + ' руб.')
         st.write('Отгрузили: '  + str(yb11) + ' кор., ' + 'Оплата: ' + str(vb11) + ' руб.')
         st.write('Склад: '  + str(xb11) + ' кор., ' + 'Долг: ' + str(tb11) + ' руб.')
@@ -330,7 +330,7 @@ def zppaketi():
         st.write('')
         st.write('')
 
-        st.header('4 ручья: ')
+        st.subheader('4 ручья: ')
         st.write('Сделано: '  + str(wa111) + ' кор., ' + 'Сумма ЗП: ' + str(ua111) + ' руб.')
         st.write('Отгрузили: '  + str(ya111) + ' кор., ' + 'Оплата: ' + str(va111) + ' руб.')
         st.write('Склад: '  + str(xa111) + ' кор., ' + 'Долг: ' + str(ta111) + ' руб.')
@@ -338,7 +338,7 @@ def zppaketi():
         st.write('')
         st.write('')
 
-        st.header('2 ручья: ')
+        st.subheader('2 ручья: ')
         st.write('Сделано: '  + str(wb111) + ' кор., ' + 'Сумма ЗП: ' + str(ub111) + ' руб.')
         st.write('Отгрузили: '  + str(yb111) + ' кор., ' + 'Оплата: ' + str(vb111) + ' руб.')
         st.write('Склад: '  + str(xb111) + ' кор., ' + 'Долг: ' + str(tb111) + ' руб.')
@@ -346,7 +346,7 @@ def zppaketi():
         st.write('')
         st.write('')
 
-        st.header('1 ручей: ')
+        st.subheader('1 ручей: ')
         st.write('Сделано: '  + str(wc111) + ' кор., ' + 'Сумма ЗП: ' + str(uc111) + ' руб.')
         st.write('Отгрузили: '  + str(yc111) + ' кор., ' + 'Оплата: ' + str(vc111) + ' руб.')
         st.write('Склад: '  + str(xc111) + ' кор., ' + 'Долг: ' + str(tc111) + ' руб.')
