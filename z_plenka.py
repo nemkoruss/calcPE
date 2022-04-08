@@ -1,3 +1,4 @@
+from ast import Try
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -91,36 +92,25 @@ def plenka():
         st.write('Пpибыль: ' + str(are) + ' руб.')
         st.write('Кредит: ' + str(kre) + ' руб.')
 
-    with open('./txt/info.txt', 'wb') as my_file:
-        my_file = ('Цeна 1 килограмма замеса: ' + str(yb2) + ' руб.')
-        st.sidebar.download_button(label = 'Скачать прайс-лист',
-        data = my_file,
-        file_name = 'info.txt',
+    with open('./txt/info.txt', 'a+', encoding = 'utf8') as file:
+
+        file.write('Цeна 1 килограмма замеса: ' + str(yb2) + ' руб.')
+
+        #st.sidebar.download_button(label = 'Скачать прайс-лист',
+        #data = file,
+        #file_name = 'info.txt',
+        #mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    with open('./txt/info.txt', 'r', encoding = 'utf8') as my_file:
+        st.sidebar.download_button(label = 'Скачать результат',
+        data = my_file, file_name = 'rinfo.txt',
         mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
-    st.sidebar.download_button(
-    label="Результат!",
-    data=(('Цeна 1 килограмма замеса: ' + str(yb2) + ' руб.') +
-        ('Общий вес замеса = ' + str(ezur2) + ' кг.') +
-        ('В одном килограмме замеса: ') +
-        ('ПНД = ' + str(fz1) + ' кг.') +
-        ('ПНД втор. = ' + str(gz1) + ' кг.') +
-        ('Стрейч = ' + str(vstz) + ' кг.') +
-        ('Мел = ' + str(hz) + ' кг.') +
-        ('Краситель = ' + str(iz) + ' кг.') +
-        ('Пpодажа: ' + str(nakk) + ' руб.') +
-        ('Пpибыль: ' + str(proc) + ' руб.') +
-        ('Офис: ' + str(ofi) + ' руб.') +
-        ('Расходы: ' + str(nal) + ' руб.') +
-        ('Аренда: ' + str(ras) + ' руб.') +
-        ('Пpибыль: ' + str(are) + ' руб.') +
-        ('Кредит: ' + str(kre) + ' руб.')
-
-        ),
-
-    file_name="result.txt",
-    mime="text/plain"
-    )
+    #st.sidebar.download_button(
+    #label="Результат!",
+    #data=('./txt/info.txt'),
+    #file_name="result.txt",
+    #mime="text/plain"
+    #)
 
 
 
