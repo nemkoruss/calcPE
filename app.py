@@ -1,3 +1,4 @@
+from csv import excel
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -58,8 +59,10 @@ def main():
 
                 #Для файла Excel
                 #df = pd.read_excel('price.xlsx')
-                #st.write(df)
-                st.download_button(label="Download Excel workbook", file_name="workbook.xlsx", mime="price.xlsx")
+                #st.table(df)
+
+                with open('./price.xlsx', 'rb') as my_file:
+                    st.download_button(label = 'Скачать прайс-лист', data = my_file, file_name = 'price.xlsx', mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
 if __name__ == '__main__':
         main()
