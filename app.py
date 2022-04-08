@@ -57,13 +57,9 @@ def main():
                 # st.image(image, width = 100, caption='QR код для скачивания',use_column_width=100)
 
                 #Для файла Excel
-                df = pd.read_excel('price.xlsx')
-                st.write(df)
-                st.download_button(
-                    label="Download Excel workbook",
-                    file_name="workbook.xlsx",
-                    mime="price.xlsx"
-                )
+                #df = pd.read_excel('price.xlsx')
+                #st.write(df)
+                st.download_button(label="Download Excel workbook", file_name="workbook.xlsx", mime="price.xlsx")
 
 if __name__ == '__main__':
         main()
