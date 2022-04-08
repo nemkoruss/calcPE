@@ -9,7 +9,7 @@ from vibor import products, orders, salarys
 
 
 #imgs = Image.open('icon.jpg')
-PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'qrcode.jpg' , 'layout':'centered'}
+PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'polietilen.png' , 'layout':'centered'}
 st.set_page_config(**PAGE_CONFIG)
 #st.set_page_config(page_title = 'calcPe', page_icon = 'imgs')
 
