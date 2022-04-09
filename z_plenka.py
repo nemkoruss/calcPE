@@ -93,26 +93,26 @@ def plenka():
         st.write('Кредит: ' + str(kre) + ' руб.')
 
     with open('./txt/info.txt', 'a+', encoding = 'utf8') as file:
+        file.write('Цeна 1 килограмма замеса: ' + str(yb2) + ' руб.' '\n'
+                'Общий вес замеса = ' + str(ezur2) + ' кг.' '\n' '\n'
+                'В одном килограмме замеса: ' '\n'
+                'ПНД = ' + str(fz1) + ' кг.' '\n'
+                'ПНД втор. = ' + str(gz1) + ' кг.' '\n'
+                'Стрейч = ' + str(vstz) + ' кг.' '\n'
+                'Мел = ' + str(hz) + ' кг.' '\n'
+                'Краситель = ' + str(iz) + ' кг.' '\n'
+                'Пpодажа: ' + str(nakk) + ' руб.' '\n'
+                'Пpибыль: ' + str(proc) + ' руб.' '\n'
+                'Офис: ' + str(ofi) + ' руб.' '\n'
+                'Расходы: ' + str(nal) + ' руб.' '\n'
+                'Аренда: ' + str(ras) + ' руб.' '\n'
+                'Пpибыль: ' + str(are) + ' руб.' '\n'
+                'Кредит: ' + str(kre) + ' руб.' '\n')
 
-        file.write('Цeна 1 килограмма замеса: ' + str(yb2) + ' руб.')
-
-        #st.sidebar.download_button(label = 'Скачать прайс-лист',
-        #data = file,
-        #file_name = 'info.txt',
-        #mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
     with open('./txt/info.txt', 'r', encoding = 'utf8') as my_file:
         st.sidebar.download_button(label = 'Скачать результат',
         data = my_file, file_name = 'rinfo.txt',
         mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
-
-    #st.sidebar.download_button(
-    #label="Результат!",
-    #data=('./txt/info.txt'),
-    #file_name="result.txt",
-    #mime="text/plain"
-    #)
-
-
 
 if __name__ == "__main__":
     plenka()
