@@ -93,7 +93,8 @@ def plenka():
         st.write('Кредит: ' + str(kre) + ' руб.')
 
     with open('./txt/info.txt', 'a+', encoding = 'utf8') as file:
-        file.write('Цeна 1 килограмма замеса: ' + str(yb2) + ' руб.' '\n'
+        if st.sidebar.button('Записать результат'):
+            file.write('Цeна 1 килограмма замеса: ' + str(yb2) + ' руб.' '\n'
                 'Общий вес замеса = ' + str(ezur2) + ' кг.' '\n' '\n'
                 'В одном килограмме замеса: ' '\n'
                 'ПНД = ' + str(fz1) + ' кг.' '\n'

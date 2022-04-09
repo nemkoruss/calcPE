@@ -62,7 +62,9 @@ def main():
                 #st.table(df)
 
                 with open('./price.xlsx', 'rb') as my_file:
-                    st.download_button(label = 'Скачать прайс-лист', data = my_file, file_name = 'price.xlsx', mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+                    st.download_button(label = 'Скачать прайс-лист',
+                    data = my_file, file_name = 'price.xlsx',
+                    mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
 if __name__ == '__main__':
         main()
