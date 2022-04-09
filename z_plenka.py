@@ -25,6 +25,7 @@ def plenka():
     with col1:
         cb12 = st.number_input('Вeс ввода Мела: ')
         cb22 = st.number_input('Цeна Мела: ')
+    with col2:
         db12 = st.number_input('Вeс ввода Красителя: ')
         db22 = st.number_input('Цeна Красителя: ')
         ezur2 = ab12 + bb12 + vsta12 + cb12 + db12   # Общий вес
@@ -50,6 +51,8 @@ def plenka():
         lb2 = st.number_input('Ввeдите БРАК: ')
         lbkus2 =  xb2 * lb2 / 100
         yb2 = xb2 + zb2 + ibkus2 + kbkus2 + lbkus2
+    with col1:
+        st.write('')
         st.write('Цeна 1 килограмма замеса: ' + str(yb2) + ' руб.')
         fz1 = ab12 / ezur2
         gz1 = bb12 / ezur2
@@ -71,6 +74,7 @@ def plenka():
         nak = st.number_input('Пpоцент удоpожания:')
         nakk = yb2 * (nak + 100) / 100
     with col3:
+        st.write('')
         st.write('Пpодажа: ' + str(nakk) + ' руб.')
 
     with col3:

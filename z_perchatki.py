@@ -24,6 +24,7 @@ def perchatki():
     with col15:
         cb112 = st.number_input('Вeс ввода Мела: ')
         cb212 = st.number_input('Цeна Мела: ')
+    with col16:
         db112 = st.number_input('Вeс ввода Красителя: ')
         db212 = st.number_input('Цeна Красителя: ')
         ezur12 = ab112 + bb112 + vsta112 + cb112 + db112  # Общий вес
@@ -49,6 +50,8 @@ def perchatki():
         lb12 = st.number_input('Ввeдите БРАК: ')
         lbkus12 =  xb12 * lb12 / 100
         yb12 = xb12 + zb12 + ibkus12 + kbkus12 + lbkus12
+    with col15:
+        st.write('')
         st.write('Цена 1 килограмма плёнки для перчаток: ' + str(yb12) + ' руб.')
 
     st.header('Вeс одной пары перчаток: ')
@@ -66,6 +69,8 @@ def perchatki():
         gb312 = cb312 / 1000
         fb312 = int (1000)
         zb312 = ab312 * bb312 * gb312 * db312 * ib312 * fb312
+    with col17:
+        st.write('')
         st.write('Вес одной пары перчаток: ' + str(zb312) + ' гр.')
 
     st.header('Себестоимость перчаток: ')
@@ -98,7 +103,8 @@ def perchatki():
             consta12 = 1
         const112 = consta12 * const12
         ob412812 = ob4122012 + const112
-    with col20:
+    with col19:
+        st.write('')
         st.write('Себестоимость перчаток: ' + str(ob412812) + ' руб.')
 
     col19, col20 = st.columns(2)
@@ -108,6 +114,7 @@ def perchatki():
         nak212 = st.number_input('Процент удорожания:')
         nakk212 = ob412812 * (nak212 + 100) / 100
     with col19:
+        st.write('')
         st.write('Продажа: ' + str(nakk212) + ' руб.')
 
     with col19:

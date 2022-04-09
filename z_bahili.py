@@ -24,6 +24,7 @@ def bahili():
     with col9:
         cb1 = st.number_input('Вeс ввода Мела: ')
         cb2 = st.number_input('Цeна Мела: ')
+    with col10:
         db1 = st.number_input('Вeс ввода Красителя: ')
         db2 = st.number_input('Цeна Красителя: ')
         ezur = ab1 + bb1 + vsta1 + cb1 + db1   # Общий вес
@@ -49,6 +50,8 @@ def bahili():
         lb = st.number_input('Ввeдите БРАК: ')
         lbkus =  xb * lb / 100
         yb = xb + zb + ibkus + kbkus + lbkus
+    with col9:
+        st.write('')
         st.write('Цена 1 килограмма плёнки для бахил: ' + str(yb) + ' руб.')
 
     st.header('Вeс одной пары бахил: ')
@@ -66,6 +69,8 @@ def bahili():
         gb3 = cb3 / 1000
         fb3 = int (1000)
         zb3 = ab3 * bb3 * gb3 * db3 * ib3 * fb3
+    with col11:
+        st.write('')
         st.write('Вес одной пары бахил: ' + str(zb3) + ' гр.')
 
     st.header('Себестоимость бахил: ')
@@ -78,6 +83,7 @@ def bahili():
         cb4 = st.number_input('Стоимость Электричества: ')
     with col13:
         hb4 = st.number_input('Стоимость Доставки: ')
+    with col14:
         jb4 = st.number_input('Стоимость Коробки: ')
         rit = st.number_input('Количество в коробке пар')
         if rit == 0:
@@ -110,6 +116,8 @@ def bahili():
         ob4128 = ob41220 + const1
     with col14:
         zb4256 = ob4128 + ob4288
+    with col13:
+        st.write('')
         st.write('Себестоимость бахил: ' + str(zb4256) + ' руб.')
 
     col13, col14 = st.columns(2)
@@ -119,6 +127,7 @@ def bahili():
         nak2 = st.number_input('Процент удорожания:')
         nakk2 = zb4256 * (nak2 + 100) / 100
     with col13:
+        st.write('')
         st.write('Продажа: ' + str(nakk2) + ' руб.')
 
     with col13:

@@ -24,6 +24,7 @@ def paketi():
     with col7:
         cb12 = st.number_input('Вeс ввода Мела: ')
         cb22 = st.number_input('Цeна Мела: ')
+    with col8:
         db12 = st.number_input('Вeс ввода Красителя: ')
         db22 = st.number_input('Цeна Красителя: ')
         ezur2 = ab12 + bb12 + vsta12 + cb12 + db12   # Общий вес
@@ -49,6 +50,8 @@ def paketi():
         lb2 = st.number_input('Ввeдите БРАК: ')
         lbkus2 =  xb2 * lb2 / 100
         yb2 = xb2 + zb2 + ibkus2 + kbkus2 + lbkus2
+    with col7:
+        st.write('')
         st.write('Цeна 1 килограмма плёнки для пакетов: ' + str(yb2) + ' руб.')
 
     st.header('Вес 1 пакета: ')
@@ -65,6 +68,8 @@ def paketi():
         fpa = int (1000)
         gpa = cpa /1000
         xpa = apa * bpa * gpa * dpa * ipa * fpa
+    with col7:
+        st.write('')
         st.write('Вес 1-ого пакета: ' + str(xpa) + ' гр.')
 
     st.write('')
@@ -74,6 +79,7 @@ def paketi():
     with col7:
         apb = st.number_input('Стоимость 1 кг. плёки: ')
         xpb = apb * xpa / 1000
+        st.write('')
         st.write('Себестоимость плёнки в 1 пакете: ' + str(xpb) + ' руб.')
 
     st.write('')
@@ -108,7 +114,8 @@ def paketi():
             consta1 = 1
         const11 = consta1 * const1
         ob41281 = ob412201 + const11
-    with col8:
+    with col7:
+        st.write('')
         st.write('Себестоимость пакета: ' + str(ob41281) + ' руб.')
 
     col7, col8 = st.columns(2)
@@ -118,6 +125,7 @@ def paketi():
         nak11 = st.number_input('Прoцeнт удорожания:')
         nakk11 = ob41281 * (nak11 + 100) / 100
     with col7:
+        st.write('')
         st.write('Продaжа: ' + str(nakk11) + ' руб.')
 
     with col7:
