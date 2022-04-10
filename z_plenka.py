@@ -31,7 +31,7 @@ def plenka():
         ezur2 = ab12 + bb12 + vsta12 + cb12 + db12   # Общий вес
         ab2 = ab22 * ab12
         bb2 = bb22 * bb12
-        vsta2 = vsta12 * vsta22
+        vsta2 = vsta22 * vsta12
         cb2 = cb22 * cb12
         db2 = db22 * db12
         xb2 = (ab2 + bb2 + vsta2 + cb2 + db2) / ezur2
@@ -51,14 +51,22 @@ def plenka():
         lb2 = st.number_input('Ввeдите БРАК: ')
         lbkus2 =  xb2 * lb2 / 100
         yb2 = xb2 + zb2 + ibkus2 + kbkus2 + lbkus2
+        yb2 = float('{:.3f}'.format(yb2))
     with col1:
         st.write('')
         st.write('Цeна 1 килограмма замеса: ' + str(yb2) + ' руб.')
         fz1 = ab12 / ezur2
         gz1 = bb12 / ezur2
-        vstz = vsta22 / ezur2
+        vstz = vsta12 / ezur2
         hz = cb12 / ezur2
         iz = db12 / ezur2
+        ezur2 = float('{:.3f}'.format(ezur2))
+        fz1 = float('{:.3f}'.format(fz1))
+        gz1 = float('{:.3f}'.format(gz1))
+        vstz = float('{:.3f}'.format(vstz))
+        hz = float('{:.3f}'.format(hz))
+        iz = float('{:.3f}'.format(iz))
+
         st.write('Общий вес замеса = ' + str(ezur2) + ' кг.')
         st.subheader('В одном килограмме замеса: ')
         st.write('ПНД = ' + str(fz1) + ' кг.')
@@ -73,6 +81,7 @@ def plenka():
         st.header('Pасчёт пpодажи: ')
         nak = st.number_input('Пpоцент удоpожания:')
         nakk = yb2 * (nak + 100) / 100
+        nakk = float('{:.3f}'.format(nakk))
     with col3:
         st.write('')
         st.write('Пpодажа: ' + str(nakk) + ' руб.')
@@ -87,6 +96,13 @@ def plenka():
         ras = (proc / 100) * 20
         are = (proc / 100) * 20
         kre = (proc / 100) * 2
+        proc = float('{:.3f}'.format(proc))
+        ofi = float('{:.3f}'.format(ofi))
+        nal = float('{:.3f}'.format(nal))
+        ras = float('{:.3f}'.format(ras))
+        are = float('{:.3f}'.format(are))
+        kre = float('{:.3f}'.format(kre))
+
     with col3:
         st.write('')
         st.write('Пpибыль: ' + str(proc) + ' руб.')
@@ -112,7 +128,7 @@ def plenka():
                 'Расходы: ' + str(nal) + ' руб.' '\n'
                 'Аренда: ' + str(ras) + ' руб.' '\n'
                 'Пpибыль: ' + str(are) + ' руб.' '\n'
-                'Кредит: ' + str(kre) + ' руб.' '\n')
+                'Кредит: ' + str(kre) + ' руб.' '\n' '\n')
 
     with open('./txt/info.txt', 'r', encoding = 'utf8') as my_file:
         st.sidebar.download_button(label = 'Скачать результат',
