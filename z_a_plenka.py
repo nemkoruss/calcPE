@@ -62,6 +62,7 @@ def zaplenka():
         else:
             dza1 < 0
         sza1 = dza1 / kza1
+        sza1 = float('{:.3f}'.format(sza1))
         st.write('Для выполнения заказа нужно: ' + str(sza1) + ' день/дня/дней')
 
 if __name__ == "__main__":

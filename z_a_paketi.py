@@ -49,7 +49,7 @@ def zapaketi():
         else:
             dza11 < 0
         sza11 = dza11 / kza11
-
+        sza11 = float('{:.3f}'.format(sza11))
         st.write('Для выполнения заказа нужно: ' + str(sza11) + ' день/дня/дней')
 
 if __name__ == "__main__":

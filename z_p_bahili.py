@@ -78,6 +78,12 @@ def zpbahili():
     col290, col300 = st.columns(2)
     with col290:
         st.subheader('Эконом: ')
+        wa = float('{:.3f}'.format(wa))
+        ua = float('{:.3f}'.format(ua))
+        ya = float('{:.3f}'.format(ya))
+        va = float('{:.3f}'.format(va))
+        xa = float('{:.3f}'.format(xa))
+        ta = float('{:.3f}'.format(ta))
         st.write('Сделано: '  + str(wa) + ' кор., ' + 'Сумма ЗП: ' + str(ua) + ' руб.')
         st.write('Отгрузили: '  + str(ya) + ' кор., ' + 'Оплата: ' + str(va) + ' руб.')
         st.write('Склад: '  + str(xa) + ' кор., ' + 'Долг: ' + str(ta) + ' руб.')
@@ -86,6 +92,12 @@ def zpbahili():
         st.write('')
     with col290:
         st.subheader('Стандарт: ')
+        wb = float('{:.3f}'.format(wb))
+        ub = float('{:.3f}'.format(ub))
+        yb = float('{:.3f}'.format(yb))
+        vb = float('{:.3f}'.format(vb))
+        xb = float('{:.3f}'.format(xb))
+        tb = float('{:.3f}'.format(tb))
         st.write('Сделано: '  + str(wb) + ' кор., ' + 'Сумма ЗП: ' + str(ub) + ' руб.')
         st.write('Отгрузили: '  + str(yb) + ' кор., ' + 'Оплата: ' + str(vb) + ' руб.')
         st.write('Склад: '  + str(xb) + ' кор., ' + 'Долг: ' + str(tb) + ' руб.')
@@ -94,6 +106,12 @@ def zpbahili():
         st.write('')
     with col290:
         st.subheader('Прочные: ')
+        wc = float('{:.3f}'.format(wc))
+        uc = float('{:.3f}'.format(uc))
+        yc = float('{:.3f}'.format(yc))
+        vc = float('{:.3f}'.format(vc))
+        xc = float('{:.3f}'.format(xc))
+        tc = float('{:.3f}'.format(tc))
         st.write('Сделано: '  + str(wc) + ' кор., ' + 'Сумма ЗП: ' + str(uc) + ' руб.')
         st.write('Отгрузили: '  + str(yc) + ' кор., ' + 'Оплата: ' + str(vc) + ' руб.')
         st.write('Склад: '  + str(xc) + ' кор., ' + 'Долг: ' + str(tc) + ' руб.')
@@ -102,6 +120,12 @@ def zpbahili():
         st.write('')
     with col300:
         st.subheader('Детские: ')
+        wd = float('{:.3f}'.format(wd))
+        ud = float('{:.3f}'.format(ud))
+        yd = float('{:.3f}'.format(yd))
+        vd = float('{:.3f}'.format(vd))
+        xd = float('{:.3f}'.format(xd))
+        td = float('{:.3f}'.format(td))
         st.write('Сделано: '  + str(wd) + ' кор., ' + 'Сумма ЗП: ' + str(ud) + ' руб.')
         st.write('Отгрузили: '  + str(yd) + ' кор., ' + 'Оплата: ' + str(vd) + ' руб.')
         st.write('Склад: '  + str(xd) + ' кор., ' + 'Долг: ' + str(td) + ' руб.')
@@ -111,6 +135,7 @@ def zpbahili():
     with col300:
         st.write('Итого к оплате: ')
         qwer = ua + ub + uc + ud
+        qwer = float('{:.3f}'.format(qwer))
         st.subheader(str(qwer) + ' руб.')
 
         st.write('')
@@ -119,6 +144,7 @@ def zpbahili():
         nakiy = st.number_input('Процент удержания:')
         nakkur = qwer * (nakiy + 100) / 100
         trio = nakkur - qwer
+        trio = float('{:.3f}'.format(trio))
         st.write(str(trio) + ' руб.')
 
 if __name__ == "__main__":
