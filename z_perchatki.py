@@ -50,6 +50,8 @@ def perchatki():
         lb12 = st.number_input('Ввeдите БРАК: ')
         lbkus12 =  xb12 * lb12 / 100
         yb12 = xb12 + zb12 + ibkus12 + kbkus12 + lbkus12
+        yb12 = float('{:.3f}'.format(yb12))
+
     with col15:
         st.write('')
         st.write('Цена 1 килограмма плёнки для перчаток: ' + str(yb12) + ' руб.')
@@ -68,7 +70,9 @@ def perchatki():
         ib312 = float (0.95)
         gb312 = cb312 / 1000
         fb312 = int (1000)
-        zb312 = ab312 * bb312 * gb312 * db312 * ib312 * fb312
+        zb312 = (ab312 * bb312 * gb312 * db312 * ib312 * fb312) * 2
+        zb312 = float('{:.3f}'.format(zb312))
+
     with col17:
         st.write('')
         st.write('Вес одной пары перчаток: ' + str(zb312) + ' гр.')
@@ -103,6 +107,8 @@ def perchatki():
             consta12 = 1
         const112 = consta12 * const12
         ob412812 = ob4122012 + const112
+        ob412812 = float('{:.3f}'.format(ob412812))
+
     with col19:
         st.write('')
         st.write('Себестоимость перчаток: ' + str(ob412812) + ' руб.')
@@ -113,6 +119,8 @@ def perchatki():
         st.header('Расчёт продажи: ')
         nak212 = st.number_input('Процент удорожания:')
         nakk212 = ob412812 * (nak212 + 100) / 100
+        nakk212 = float('{:.3f}'.format(nakk212))
+
     with col19:
         st.write('')
         st.write('Продажа: ' + str(nakk212) + ' руб.')
@@ -127,14 +135,39 @@ def perchatki():
         ras123 = (proc123 / 100) * 20
         are123 = (proc123 / 100) * 20
         kre123 = (proc123 / 100) * 2
+        proc123 = float('{:.3f}'.format(proc123))
+        ofi123 = float('{:.3f}'.format(ofi123))
+        nal123 = float('{:.3f}'.format(nal123))
+        ras123 = float('{:.3f}'.format(ras123))
+        are123 = float('{:.3f}'.format(are123))
+        kre123 = float('{:.3f}'.format(kre123))
+
     with col19:
         st.write('')
         st.write('Пpибыль: ' + str(proc123) + ' руб.')
         st.write('Офис: ' + str(ofi123) + ' руб.')
-        st.write('Расходы: ' + str(nal123) + ' руб.')
+        st.write('Налог: ' + str(nal123) + ' руб.')
         st.write('Аренда: ' + str(ras123) + ' руб.')
-        st.write('Налог: ' + str(are123) + ' руб.')
+        st.write('Расходы: ' + str(are123) + ' руб.')
         st.write('Кредит: ' + str(kre123) + ' руб.')
+
+    with open('./txt/info.txt', 'a+', encoding = 'utf8') as file:
+        if st.sidebar.button('Записать результат'):
+            file.write('Цена 1 килограмма плёнки для перчаток: ' + str(yb12) + ' руб.' '\n' '\n'
+                'Вес одной пары перчаток: ' + str(zb312) + ' гр.' '\n' '\n'
+                'Себестоимость перчаток: ' + str(ob412812) + ' руб.' '\n' '\n'
+                'Продажа: ' + str(nakk212) + ' руб.' '\n'
+                'Пpибыль: ' + str(proc123) + ' руб.' '\n'
+                'Офис: ' + str(ofi123) + ' руб.' '\n'
+                'Расходы: ' + str(nal123) + ' руб.' '\n'
+                'Аренда: ' + str(ras123) + ' руб.' '\n'
+                'Пpибыль: ' + str(are123) + ' руб.' '\n'
+                'Кредит: ' + str(kre123) + ' руб.' '\n' '\n')
+
+    with open('./txt/info.txt', 'r', encoding = 'utf8') as my_file:
+        st.sidebar.download_button(label = 'Скачать результат',
+        data = my_file, file_name = 'rinfo.txt',
+        mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
 if __name__ == "__main__":
     perchatki()

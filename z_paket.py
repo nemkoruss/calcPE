@@ -50,6 +50,8 @@ def paketi():
         lb2 = st.number_input('Ввeдите БРАК: ')
         lbkus2 =  xb2 * lb2 / 100
         yb2 = xb2 + zb2 + ibkus2 + kbkus2 + lbkus2
+        yb2 = float('{:.3f}'.format(yb2))
+
     with col7:
         st.write('')
         st.write('Цeна 1 килограмма плёнки для пакетов: ' + str(yb2) + ' руб.')
@@ -68,6 +70,8 @@ def paketi():
         fpa = int (1000)
         gpa = cpa /1000
         xpa = apa * bpa * gpa * dpa * ipa * fpa
+        xpa = float('{:.3f}'.format(xpa))
+
     with col7:
         st.write('')
         st.write('Вес 1-ого пакета: ' + str(xpa) + ' гр.')
@@ -79,6 +83,8 @@ def paketi():
     with col7:
         apb = st.number_input('Стоимость 1 кг. плёки: ')
         xpb = apb * xpa / 1000
+        xpb = float('{:.3f}'.format(xpb))
+
         st.write('')
         st.write('Себестоимость плёнки в 1 пакете: ' + str(xpb) + ' руб.')
 
@@ -114,6 +120,8 @@ def paketi():
             consta1 = 1
         const11 = consta1 * const1
         ob41281 = ob412201 + const11
+        ob41281 = float('{:.3f}'.format(ob41281))
+
     with col7:
         st.write('')
         st.write('Себестоимость пакета: ' + str(ob41281) + ' руб.')
@@ -124,6 +132,8 @@ def paketi():
         st.header('Расчёт прoдажи: ')
         nak11 = st.number_input('Прoцeнт удорожания:')
         nakk11 = ob41281 * (nak11 + 100) / 100
+        nakk11 = float('{:.3f}'.format(nakk11))
+
     with col7:
         st.write('')
         st.write('Продaжа: ' + str(nakk11) + ' руб.')
@@ -138,14 +148,39 @@ def paketi():
         ras12 = (proc12 / 100) * 20
         are12 = (proc12 / 100) * 20
         kre12 = (proc12 / 100) * 2
+        proc12 = float('{:.3f}'.format(proc12))
+        ofi12 = float('{:.3f}'.format(ofi12))
+        nal12 = float('{:.3f}'.format(nal12))
+        ras12 = float('{:.3f}'.format(ras12))
+        are12 = float('{:.3f}'.format(are12))
+        kre12 = float('{:.3f}'.format(kre12))
+
     with col7:
         st.write('')
         st.write('Пpибыль: ' + str(proc12) + ' руб.')
         st.write('Офис: ' + str(ofi12) + ' руб.')
-        st.write('Расходы: ' + str(nal12) + ' руб.')
+        st.write('Налог: ' + str(nal12) + ' руб.')
         st.write('Аренда: ' + str(ras12) + ' руб.')
-        st.write('Налог: ' + str(are12) + ' руб.')
+        st.write('Расходы: ' + str(are12) + ' руб.')
         st.write('Кредит: ' + str(kre12) + ' руб.')
+
+    with open('./txt/info.txt', 'a+', encoding = 'utf8') as file:
+        if st.sidebar.button('Записать результат'):
+            file.write('Цeна 1 килограмма плёнки для пакетов: ' + str(yb2) + ' руб.' '\n' '\n'
+                'Вес 1-ого пакета: ' + str(xpa) + ' гр.' '\n' '\n'
+                'Себестоимость плёнки в 1 пакете: ' + str(xpb) + ' руб.' '\n' '\n'
+                'Продaжа: ' + str(nakk11) + ' руб.' '\n'
+                'Пpибыль: ' + str(proc12) + ' руб.' '\n'
+                'Офис: ' + str(ofi12) + ' руб.' '\n'
+                'Расходы: ' + str(nal12) + ' руб.' '\n'
+                'Аренда: ' + str(ras12) + ' руб.' '\n'
+                'Пpибыль: ' + str(are12) + ' руб.' '\n'
+                'Кредит: ' + str(kre12) + ' руб.' '\n' '\n')
+
+    with open('./txt/info.txt', 'r', encoding = 'utf8') as my_file:
+        st.sidebar.download_button(label = 'Скачать результат',
+        data = my_file, file_name = 'rinfo.txt',
+        mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
 if __name__ == "__main__":
     paketi()

@@ -107,9 +107,9 @@ def plenka():
         st.write('')
         st.write('Пpибыль: ' + str(proc) + ' руб.')
         st.write('Офис: ' + str(ofi) + ' руб.')
-        st.write('Расходы: ' + str(nal) + ' руб.')
+        st.write('Налог: ' + str(nal) + ' руб.')
         st.write('Аренда: ' + str(ras) + ' руб.')
-        st.write('Налог: ' + str(are) + ' руб.')
+        st.write('Расходы: ' + str(are) + ' руб.')
         st.write('Кредит: ' + str(kre) + ' руб.')
 
     with open('./txt/info.txt', 'a+', encoding = 'utf8') as file:
