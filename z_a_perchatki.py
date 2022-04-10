@@ -47,7 +47,8 @@ def zaperchatki():
             dza111 < 0
         sza111 = dza111 / kza111
         sza111 = float('{:.3f}'.format(sza111))
-        st.write('Для выполнения заказа нужно: ' + str(sza111) + ' день/дня/дней')
+    st.write('')
+    st.write('Для выполнения заказа нужно: ' + str(sza111) + ' день/дня/дней')
 
 if __name__ == "__main__":
     zaperchatki()

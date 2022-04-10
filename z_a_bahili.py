@@ -60,7 +60,8 @@ def zabahili():
             dza < 0
         sza = dza / kza
         sza = float('{:.3f}'.format(sza))
-        st.write('Для выполнения заказа нужно: ' + str(sza) + ' день/дня/дней')
+    st.write('')
+    st.write('Для выполнения заказа нужно: ' + str(sza) + ' день/дня/дней')
 
 if __name__ == "__main__":
     zabahili()
