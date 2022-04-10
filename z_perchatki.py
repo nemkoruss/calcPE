@@ -133,7 +133,7 @@ def perchatki():
         st.write('Офис: ' + str(ofi123) + ' руб.')
         st.write('Расходы: ' + str(nal123) + ' руб.')
         st.write('Аренда: ' + str(ras123) + ' руб.')
-        st.write('Пpибыль: ' + str(are123) + ' руб.')
+        st.write('Налог: ' + str(are123) + ' руб.')
         st.write('Кредит: ' + str(kre123) + ' руб.')
 
 if __name__ == "__main__":

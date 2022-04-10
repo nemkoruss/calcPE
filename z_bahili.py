@@ -146,7 +146,7 @@ def bahili():
         st.write('Офис: ' + str(ofi1) + ' руб.')
         st.write('Расходы: ' + str(nal1) + ' руб.')
         st.write('Аренда: ' + str(ras1) + ' руб.')
-        st.write('Пpибыль: ' + str(are1) + ' руб.')
+        st.write('Налог: ' + str(are1) + ' руб.')
         st.write('Кредит: ' + str(kre1) + ' руб.')
 
 if __name__ == "__main__":

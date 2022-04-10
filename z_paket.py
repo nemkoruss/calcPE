@@ -144,7 +144,7 @@ def paketi():
         st.write('Офис: ' + str(ofi12) + ' руб.')
         st.write('Расходы: ' + str(nal12) + ' руб.')
         st.write('Аренда: ' + str(ras12) + ' руб.')
-        st.write('Пpибыль: ' + str(are12) + ' руб.')
+        st.write('Налог: ' + str(are12) + ' руб.')
         st.write('Кредит: ' + str(kre12) + ' руб.')
 
 if __name__ == "__main__":
