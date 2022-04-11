@@ -82,8 +82,21 @@ def perchatki():
         otho = st.number_input('Отход в %: ')
         oth = (pb412 /100) * otho
         ab412 = st.number_input('Зaрплата сотрудников: ')
-        bb412 = st.number_input('Стоимость Аренды: ')
-        cb412 = st.number_input('Стоимость Электричества: ')
+        #bb412 = st.number_input('Стоимость Аренды: ')
+        s_ar = st.text_input('Стоимость Аренды: ', '0.00')
+        bb412= s_ar
+        if bb412 == (''):
+            bb412 = 0
+        else:
+            bb412 = s_ar
+        #cb412 = st.number_input('Стоимость Электричества: ')
+        s_el = st.text_input('Стоимость Электричества: ', '0.00')
+        cb412= s_el
+        if cb412 == (''):
+            cb412 = 0
+        else:
+            cb412 = s_el
+
     with col20:
         hb412 = st.number_input('Стоимость Доставки: ')
         jb412 = st.number_input('Стоимость Коробки: ')
@@ -100,20 +113,20 @@ def perchatki():
             eb412 = 0
         else:
             eb412 = s_to
-    with col19:
-        s_sk = st.text_input('Стоимость Скотча: ', '0.00')
-        fb412 = s_sk
-        if fb412 == (''):
-            fb412 = 0
-        else:
-            fb412 = s_sk
-    with col20:
-        s_kr = st.text_input('Стоимость кредита: ', '0.00')
-        ib412 = s_kr
-        if ib412 == (''):
-            ib412 = 0
-        else:
-            ib412 = s_kr
+    #with col19:
+    #    s_sk = st.text_input('Стоимость Скотча: ', '0.00')
+    #    fb412 = s_sk
+    #    if fb412 == (''):
+    #        fb412 = 0
+    #    else:
+    #        fb412 = s_sk
+    #with col20:
+    #    s_kr = st.text_input('Стоимость кредита: ', '0.00')
+    #    ib412 = s_kr
+    #    if ib412 == (''):
+    #        ib412 = 0
+    #    else:
+    #        ib412 = s_kr
     with col20:
         s_pa = st.text_input('Стоимость пакетов: ', '0.00')
         gb412 = s_pa
@@ -122,7 +135,7 @@ def perchatki():
         else:
             gb412 = s_pa
         ob4122012 = (pb412 - oth) + ab412 + bb412 + cb412 + hb412 + ret12
-        ob412812 = ob4122012 + float(eb412) + float(fb412) + float(ib412) + float(gb412)
+        ob412812 = ob4122012 + float(eb412) + float(gb412) #+ float(fb412) + float(ib412)
         ob412812 = float('{:.3f}'.format(ob412812))
     st.write('')
     st.write('Себестоимость перчаток: ' + str(ob412812) + ' руб.')

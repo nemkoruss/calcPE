@@ -66,14 +66,13 @@ def plenka():
         vstz = float('{:.3f}'.format(vstz))
         hz = float('{:.3f}'.format(hz))
         iz = float('{:.3f}'.format(iz))
-
-        st.write('Общий вес замеса = ' + str(ezur2) + ' кг.')
-        st.subheader('В одном килограмме замеса: ')
-        st.write('ПНД = ' + str(fz1) + ' кг.')
-        st.write('ПНД втор. = ' + str(gz1) + ' кг.')
-        st.write('Стрейч = ' + str(vstz) + ' кг.')
-        st.write('Мел = ' + str(hz) + ' кг.')
-        st.write('Краситель = ' + str(iz) + ' кг.')
+    st.write('Общий вес замеса = ' + str(ezur2) + ' кг.')
+    st.subheader('В одном килограмме замеса: ')
+    st.write('ПНД = ' + str(fz1) + ' кг.')
+    st.write('ПНД втор. = ' + str(gz1) + ' кг.')
+    st.write('Стрейч = ' + str(vstz) + ' кг.')
+    st.write('Мел = ' + str(hz) + ' кг.')
+    st.write('Краситель = ' + str(iz) + ' кг.')
 
     col3, col4 = st.columns(2)
     with col3:
@@ -82,9 +81,8 @@ def plenka():
         nak = st.number_input('Пpоцент удоpожания:')
         nakk = yb2 * (nak + 100) / 100
         nakk = float('{:.3f}'.format(nakk))
-    with col3:
-        st.write('')
-        st.write('Пpодажа: ' + str(nakk) + ' руб.')
+    st.write('')
+    st.write('Пpодажа: ' + str(nakk) + ' руб.')
 
     with col3:
         st.write('')
@@ -102,15 +100,13 @@ def plenka():
         ras = float('{:.3f}'.format(ras))
         are = float('{:.3f}'.format(are))
         kre = float('{:.3f}'.format(kre))
-
-    with col3:
-        st.write('')
-        st.write('Пpибыль: ' + str(proc) + ' руб.')
-        st.write('Офис: ' + str(ofi) + ' руб.')
-        st.write('Налог: ' + str(nal) + ' руб.')
-        st.write('Аренда: ' + str(ras) + ' руб.')
-        st.write('Расходы: ' + str(are) + ' руб.')
-        st.write('Кредит: ' + str(kre) + ' руб.')
+    st.write('')
+    st.write('Пpибыль: ' + str(proc) + ' руб.')
+    st.write('Офис: ' + str(ofi) + ' руб.')
+    st.write('Налог: ' + str(nal) + ' руб.')
+    st.write('Аренда: ' + str(ras) + ' руб.')
+    st.write('Расходы: ' + str(are) + ' руб.')
+    st.write('Кредит: ' + str(kre) + ' руб.')
 
     with open('./txt/info.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):

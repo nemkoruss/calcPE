@@ -51,10 +51,8 @@ def bahili():
         lbkus =  xb * lb / 100
         yb = xb + zb + ibkus + kbkus + lbkus
         yb = float('{:.3f}'.format(yb))
-
-    with col9:
-        st.write('')
-        st.write('Цена 1 килограмма плёнки для бахил: ' + str(yb) + ' руб.')
+    st.write('')
+    st.write('Цена 1 килограмма плёнки для бахил: ' + str(yb) + ' руб.')
 
     st.header('Вeс одной пары бахил: ')
     col11, col12 = st.columns(2)
@@ -72,10 +70,8 @@ def bahili():
         fb3 = int (1000)
         zb3 = ab3 * bb3 * gb3 * db3 * ib3 * fb3
         zb3 = float('{:.3f}'.format(zb3))
-
-    with col11:
-        st.write('')
-        st.write('Вес одной пары бахил: ' + str(zb3) + ' гр.')
+    st.write('')
+    st.write('Вес одной пары бахил: ' + str(zb3) + ' гр.')
 
     st.header('Себестоимость бахил: ')
     col13, col14 = st.columns(2)
@@ -121,9 +117,8 @@ def bahili():
     with col14:
         zb4256 = ob4128 + ob4288
         zb4256 = float('{:.3f}'.format(zb4256))
-    with col13:
-        st.write('')
-        st.write('Себестоимость бахил: ' + str(zb4256) + ' руб.')
+    st.write('')
+    st.write('Себестоимость бахил: ' + str(zb4256) + ' руб.')
 
     col13, col14 = st.columns(2)
     with col13:
@@ -132,10 +127,8 @@ def bahili():
         nak2 = st.number_input('Процент удорожания:')
         nakk2 = zb4256 * (nak2 + 100) / 100
         nakk2 = float('{:.3f}'.format(nakk2))
-
-    with col13:
-        st.write('')
-        st.write('Продажа: ' + str(nakk2) + ' руб.')
+    st.write('')
+    st.write('Продажа: ' + str(nakk2) + ' руб.')
 
     with col13:
         st.write('')
@@ -153,15 +146,13 @@ def bahili():
         ras1 = float('{:.3f}'.format(ras1))
         are1 = float('{:.3f}'.format(are1))
         kre1 = float('{:.3f}'.format(kre1))
-
-    with col13:
-        st.write('')
-        st.write('Пpибыль: ' + str(proc1) + ' руб.')
-        st.write('Офис: ' + str(ofi1) + ' руб.')
-        st.write('Налог: ' + str(nal1) + ' руб.')
-        st.write('Аренда: ' + str(ras1) + ' руб.')
-        st.write('Расходы: ' + str(are1) + ' руб.')
-        st.write('Кредит: ' + str(kre1) + ' руб.')
+    st.write('')
+    st.write('Пpибыль: ' + str(proc1) + ' руб.')
+    st.write('Офис: ' + str(ofi1) + ' руб.')
+    st.write('Налог: ' + str(nal1) + ' руб.')
+    st.write('Аренда: ' + str(ras1) + ' руб.')
+    st.write('Расходы: ' + str(are1) + ' руб.')
+    st.write('Кредит: ' + str(kre1) + ' руб.')
 
     with open('./txt/info.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):

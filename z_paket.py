@@ -51,10 +51,8 @@ def paketi():
         lbkus2 =  xb2 * lb2 / 100
         yb2 = xb2 + zb2 + ibkus2 + kbkus2 + lbkus2
         yb2 = float('{:.3f}'.format(yb2))
-
-    with col7:
-        st.write('')
-        st.write('Цeна 1 килограмма плёнки для пакетов: ' + str(yb2) + ' руб.')
+    st.write('')
+    st.write('Цeна 1 килограмма плёнки для пакетов: ' + str(yb2) + ' руб.')
 
     st.header('Вес 1 пакета: ')
     col7, col8 = st.columns(2)
@@ -71,10 +69,8 @@ def paketi():
         gpa = cpa /1000
         xpa = apa * bpa * gpa * dpa * ipa * fpa
         xpa = float('{:.3f}'.format(xpa))
-
-    with col7:
-        st.write('')
-        st.write('Вес 1-ого пакета: ' + str(xpa) + ' гр.')
+    st.write('')
+    st.write('Вес 1-ого пакета: ' + str(xpa) + ' гр.')
 
     st.write('')
     st.write('')
@@ -84,9 +80,8 @@ def paketi():
         apb = st.number_input('Стоимость 1 кг. плёки: ')
         xpb = apb * xpa / 1000
         xpb = float('{:.3f}'.format(xpb))
-
-        st.write('')
-        st.write('Себестоимость плёнки в 1 пакете: ' + str(xpb) + ' руб.')
+    st.write('')
+    st.write('Себестоимость плёнки в 1 пакете: ' + str(xpb) + ' руб.')
 
     st.write('')
     st.write('')
@@ -121,10 +116,8 @@ def paketi():
         const11 = consta1 * const1
         ob41281 = ob412201 + const11
         ob41281 = float('{:.3f}'.format(ob41281))
-
-    with col7:
-        st.write('')
-        st.write('Себестоимость пакета: ' + str(ob41281) + ' руб.')
+    st.write('')
+    st.write('Себестоимость пакета: ' + str(ob41281) + ' руб.')
 
     col7, col8 = st.columns(2)
     with col7:
@@ -133,10 +126,8 @@ def paketi():
         nak11 = st.number_input('Прoцeнт удорожания:')
         nakk11 = ob41281 * (nak11 + 100) / 100
         nakk11 = float('{:.3f}'.format(nakk11))
-
-    with col7:
-        st.write('')
-        st.write('Продaжа: ' + str(nakk11) + ' руб.')
+    st.write('')
+    st.write('Продaжа: ' + str(nakk11) + ' руб.')
 
     with col7:
         st.write('')
@@ -154,15 +145,13 @@ def paketi():
         ras12 = float('{:.3f}'.format(ras12))
         are12 = float('{:.3f}'.format(are12))
         kre12 = float('{:.3f}'.format(kre12))
-
-    with col7:
-        st.write('')
-        st.write('Пpибыль: ' + str(proc12) + ' руб.')
-        st.write('Офис: ' + str(ofi12) + ' руб.')
-        st.write('Налог: ' + str(nal12) + ' руб.')
-        st.write('Аренда: ' + str(ras12) + ' руб.')
-        st.write('Расходы: ' + str(are12) + ' руб.')
-        st.write('Кредит: ' + str(kre12) + ' руб.')
+    st.write('')
+    st.write('Пpибыль: ' + str(proc12) + ' руб.')
+    st.write('Офис: ' + str(ofi12) + ' руб.')
+    st.write('Налог: ' + str(nal12) + ' руб.')
+    st.write('Аренда: ' + str(ras12) + ' руб.')
+    st.write('Расходы: ' + str(are12) + ' руб.')
+    st.write('Кредит: ' + str(kre12) + ' руб.')
 
     with open('./txt/info.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
