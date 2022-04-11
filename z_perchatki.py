@@ -171,7 +171,7 @@ def perchatki():
     st.write('Расходы: ' + str(are123) + ' руб.')
     st.write('Кредит: ' + str(kre123) + ' руб.')
 
-    with open('./txt/info.txt', 'a+', encoding = 'utf8') as file:
+    with open('./file/info.docx', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
             file.write(
                 'Общий вес замеса: ' + str(ezur12) + ' кг.' '\n' '\n'
@@ -218,9 +218,9 @@ def perchatki():
                 'Кредит: ' + str(kre123) + ' руб.' '\n' '\n'
                 )
 
-    with open('./txt/info.txt', 'r', encoding = 'utf8') as my_file:
+    with open('./file/info.docx', 'r', encoding = 'utf8') as my_file:
         st.sidebar.download_button(label = 'Скачать результат',
-        data = my_file, file_name = 'rinfo.txt',
+        data = my_file, file_name = 'rinfo.docx',
         mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
 if __name__ == "__main__":
