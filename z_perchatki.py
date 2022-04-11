@@ -96,7 +96,6 @@ def perchatki():
             cb412 = 0
         else:
             cb412 = s_el
-
     with col20:
         hb412 = st.number_input('Стоимость Доставки: ')
         jb412 = st.number_input('Стоимость Коробки: ')
@@ -134,7 +133,7 @@ def perchatki():
             gb412 = 0
         else:
             gb412 = s_pa
-        ob4122012 = (pb412 - oth) + ab412 + bb412 + cb412 + hb412 + ret12
+        ob4122012 = (pb412 - oth) + ab412 + float(bb412) + float(cb412) + hb412 + ret12
         ob412812 = ob4122012 + float(eb412) + float(gb412) #+ float(fb412) + float(ib412)
         ob412812 = float('{:.3f}'.format(ob412812))
     st.write('')
