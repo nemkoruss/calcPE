@@ -10,7 +10,7 @@ from vibor_rascheta import products, orders, salarys
 
 
 #imgs = Image.open('icon.jpg')
-PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'polietilen.png' , 'layout':'centered'}
+PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'./file/polietilen.png' , 'layout':'centered'}
 st.set_page_config(**PAGE_CONFIG)
 #st.set_page_config(page_title = 'calcPe', page_icon = 'imgs')
 
@@ -61,7 +61,7 @@ def main():
                 #df = pd.read_excel('price.xlsx')
                 #st.table(df)
 
-                with open('./price.xlsx', 'rb') as my_file:
+                with open('./file/price.xlsx', 'rb') as my_file:
                     st.download_button(label = 'Скачать прайс-лист',
                     data = my_file, file_name = 'price.xlsx',
                     mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
