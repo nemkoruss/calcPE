@@ -154,7 +154,7 @@ def bahili():
     st.write('Расходы: ' + str(are1) + ' руб.')
     st.write('Кредит: ' + str(kre1) + ' руб.')
 
-    with open('./txt/info.txt', 'a+', encoding = 'utf8') as file:
+    with open('./file/info.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
             file.write('Цена 1 килограмма плёнки для бахил: ' + str(yb) + ' руб.' '\n' '\n'
                 'Вес одной пары бахил: ' + str(zb3) + ' гр.' '\n' '\n'
@@ -167,7 +167,7 @@ def bahili():
                 'Пpибыль: ' + str(are1) + ' руб.' '\n'
                 'Кредит: ' + str(kre1) + ' руб.' '\n' '\n')
 
-    with open('./txt/info.txt', 'r', encoding = 'utf8') as my_file:
+    with open('./file/info.txt', 'r', encoding = 'utf8') as my_file:
         st.sidebar.download_button(label = 'Скачать результат',
         data = my_file, file_name = 'rinfo.txt',
         mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')

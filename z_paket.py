@@ -153,7 +153,7 @@ def paketi():
     st.write('Расходы: ' + str(are12) + ' руб.')
     st.write('Кредит: ' + str(kre12) + ' руб.')
 
-    with open('./txt/info.txt', 'a+', encoding = 'utf8') as file:
+    with open('./file/info.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
             file.write('Цeна 1 килограмма плёнки для пакетов: ' + str(yb2) + ' руб.' '\n' '\n'
                 'Вес 1-ого пакета: ' + str(xpa) + ' гр.' '\n' '\n'
@@ -166,7 +166,7 @@ def paketi():
                 'Пpибыль: ' + str(are12) + ' руб.' '\n'
                 'Кредит: ' + str(kre12) + ' руб.' '\n' '\n')
 
-    with open('./txt/info.txt', 'r', encoding = 'utf8') as my_file:
+    with open('./file/info.txt', 'r', encoding = 'utf8') as my_file:
         st.sidebar.download_button(label = 'Скачать результат',
         data = my_file, file_name = 'rinfo.txt',
         mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
