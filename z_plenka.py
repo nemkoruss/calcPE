@@ -2,7 +2,7 @@ from ast import Try
 import streamlit as st
 import pandas as pd
 import numpy as np
-
+from streamlit_echarts import st_echarts
 
 def plenka():
 
@@ -84,9 +84,10 @@ def plenka():
     st.write('')
     st.write('Пpодажа: ' + str(nakk) + ' руб.')
 
-    with col3:
-        st.write('')
-        st.header('Pасчёт пpибыли: ')
+    st.write('')
+    st.header('Pасчёт пpибыли: ')
+    col800, col801 = st.columns(2)
+    with col800:
         prib = (nakk - yb2)
         proc = prib - (20 / 100 * prib)
         ofi = (proc / 100) * 50
@@ -101,13 +102,15 @@ def plenka():
         are = float('{:.3f}'.format(are))
         kre = float('{:.3f}'.format(kre))
     st.write('')
-    st.write('Пpибыль: ' + str(proc) + ' руб.')
-    st.write('Офис: ' + str(ofi) + ' руб.')
-    st.write('Налог: ' + str(nal) + ' руб.')
-    st.write('Аренда: ' + str(ras) + ' руб.')
-    st.write('Расходы: ' + str(are) + ' руб.')
-    st.write('Кредит: ' + str(kre) + ' руб.')
-
+    with col800:
+        st.write('Пpибыль: ' + str(proc) + ' руб.')
+        st.write('Офис: ' + str(ofi) + ' руб.')
+        st.write('Налог: ' + str(nal) + ' руб.')
+    with col801:
+        st.write('Аренда: ' + str(ras) + ' руб.')
+        st.write('Расходы: ' + str(are) + ' руб.')
+        st.write('Кредит: ' + str(kre) + ' руб.')
+    st.write('')
     with open('./file/info.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
             file.write(
@@ -138,9 +141,9 @@ def plenka():
                 'Пpодажа: ' + str(nakk) + ' руб.' '\n'
                 'Пpибыль: ' + str(proc) + ' руб.' '\n'
                 'Офис: ' + str(ofi) + ' руб.' '\n'
-                'Расходы: ' + str(nal) + ' руб.' '\n'
+                'Налог: ' + str(nal) + ' руб.' '\n'
                 'Аренда: ' + str(ras) + ' руб.' '\n'
-                'Пpибыль: ' + str(are) + ' руб.' '\n'
+                'Расходы: ' + str(are) + ' руб.' '\n'
                 'Кредит: ' + str(kre) + ' руб.' '\n' '\n'
                 )
 
@@ -148,6 +151,44 @@ def plenka():
         st.sidebar.download_button(label = 'Скачать результат',
         data = my_file, file_name = 'rinfo.txt',
         mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
-
+    st.write('')
+    with col4:
+        st.write('')
+        options = {
+        "title": {"text": "Отображение расчёта: ", "subtext": "Прибыль", "left": "center"},
+        "tooltip": {"trigger": "item"},
+        "legend": {
+            "orient": "vertical",
+         "left": "left",
+        },
+        "series": [
+            {
+                "name": "Прибыль",
+                "type": "pie",
+                "radius": "50%",
+                "data": [
+                    {"value": proc, "name": "Пpибыль"},
+                    {"value": nakk, "name": "Пpодажа"},
+                    {"value": ofi, "name": "Офис"},
+                    {"value": nal, "name": "Налог"},
+                    {"value": ras, "name": "Аренда"},
+                    {"value": ras, "name": "Расходы"},
+                 {"value": ras, "name": "Кредит"},
+                ],
+                "emphasis": {
+                    "itemStyle": {
+                        "shadowBlur": 10,
+                        "shadowOffsetX": 0,
+                        "shadowColor": "rgba(0, 0, 0, 0.5)",
+                    }
+                },
+            }
+        ],
+    }
+    st.markdown("Что отобразить: ")
+    events = {"legendselectchanged": "function(params) { return params.selected }",}
+    s = st_echarts(options=options, events=events, height="600px", key="render_pie_events")
+    #if s is not None:
+    #    st.write(s)
 if __name__ == "__main__":
     plenka()
