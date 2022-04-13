@@ -83,7 +83,12 @@ def bahili():
     with col13:
         mb4 = zb3 * yb
         pb4 = mb4 * 1 / 1000
-        ab4 = st.number_input('Зaрплата сотрудников: ')
+        z_so = st.text_input('Зaрплата сотрудников: ', '0.00')
+        ab4 = z_so
+        if ab4 == (''):
+            ab4 = 0
+        else:
+            ab4 = z_so
         #bb4 = st.number_input('Стоимость Аренды: ')
         s_ar = st.text_input('Стоимость Аренды: ', '0.00')
         bb4= s_ar
@@ -149,7 +154,7 @@ def bahili():
         #fb4 = float(0.004) # Стоимость Скотча
         #ib4 = float(0.005) # Стоимость кредита
         #gb4 = float(0.008) # Стоимость пакетов
-        ob4128 = pb4 + ab4 + float(bb4) + float(cb4) + hb4 + ret + float(eb4) + float(fb4) + float(ib4) + float(gb4)
+        ob4128 = pb4 + float(ab4) + float(bb4) + float(cb4) + hb4 + ret + float(eb4) + float(fb4) + float(ib4) + float(gb4)
     with col14:
         zb4256 = ob4128 + ob4288
     zb4256 = float('{:.3f}'.format(zb4256))
