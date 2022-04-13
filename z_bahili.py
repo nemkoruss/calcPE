@@ -150,10 +150,9 @@ def bahili():
         #ib4 = float(0.005) # Стоимость кредита
         #gb4 = float(0.008) # Стоимость пакетов
         ob4128 = pb4 + ab4 + float(bb4) + float(cb4) + hb4 + ret + float(eb4) + float(fb4) + float(ib4) + float(gb4)
-
     with col14:
         zb4256 = ob4128 + ob4288
-        zb4256 = float('{:.3f}'.format(zb4256))
+    zb4256 = float('{:.3f}'.format(zb4256))
     st.write('')
     st.write('Себестоимость бахил: ' + str(zb4256) + ' руб.')
 
@@ -164,12 +163,13 @@ def bahili():
         nak2 = st.number_input('Процент удорожания:')
         nakk2 = zb4256 * (nak2 + 100) / 100
         nakk2 = float('{:.3f}'.format(nakk2))
-    st.write('')
+    nakk2 = float('{:.3f}'.format(nakk2))
     st.write('Продажа: ' + str(nakk2) + ' руб.')
 
-    with col13:
-        st.write('')
-        st.header('Pасчёт пpибыли: ')
+    st.write('')
+    st.header('Pасчёт пpибыли: ')
+    col800, col801 = st.columns(2)
+    with col800:
         prib1 = (nakk2 - zb4256)
         proc1 = prib1 - (20 / 100 * prib1)
         ofi1 = (proc1 / 100) * 50
@@ -184,12 +184,14 @@ def bahili():
         are1 = float('{:.3f}'.format(are1))
         kre1 = float('{:.3f}'.format(kre1))
     st.write('')
-    st.write('Пpибыль: ' + str(proc1) + ' руб.')
-    st.write('Офис: ' + str(ofi1) + ' руб.')
-    st.write('Налог: ' + str(nal1) + ' руб.')
-    st.write('Аренда: ' + str(ras1) + ' руб.')
-    st.write('Расходы: ' + str(are1) + ' руб.')
-    st.write('Кредит: ' + str(kre1) + ' руб.')
+    with col800:
+        st.write('Пpибыль: ' + str(proc1) + ' руб.')
+        st.write('Офис: ' + str(ofi1) + ' руб.')
+        st.write('Налог: ' + str(nal1) + ' руб.')
+    with col801:
+        st.write('Аренда: ' + str(ras1) + ' руб.')
+        st.write('Расходы: ' + str(are1) + ' руб.')
+        st.write('Кредит: ' + str(kre1) + ' руб.')
 
     with open('./file/info.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):

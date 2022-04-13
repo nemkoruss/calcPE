@@ -1,6 +1,6 @@
 from ast import Try
 import streamlit as st
-import datetime
+import datetime as dt
 import pandas as pd
 import numpy as np
 from streamlit_echarts import st_echarts
@@ -11,7 +11,7 @@ def plenka():
     st.write('')
     data_ras = st.date_input(
         "Дата расчёта: ",
-        datetime.date.today())
+        dt.date.today())
     st.write('')
     st.header('Считаем замес гранулы: ')
     col1, col2 = st.columns(2)

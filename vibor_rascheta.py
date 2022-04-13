@@ -5,6 +5,8 @@ import z_plenka as pl # Модуль расчета замеса пленки
 from z_plenka import plenka
 import z_bahili as pr # Модуль расчета бахил
 from z_bahili import bahili
+import z_individ # Модуль расчёта индивидуальной упаковки
+from z_individ import individualka
 import z_paket as pr # Модуль расчета пакетов
 from z_paket import paketi
 import z_perchatki as pr # Модуль расчета перчаток
@@ -27,9 +29,10 @@ import z_p_paketi # Модуль расчета зарплат пакеты
 from z_p_paketi import zppaketi
 
 
+
 def products():
 
-    b = st.sidebar.selectbox('ПРОДУКЦИЯ:', ['Выбрать/Очистить','Плёнка', 'Бахилы', 'Пакеты', 'Перчатки'])
+    b = st.sidebar.selectbox('ПРОДУКЦИЯ:', ['Выбрать/Очистить','Плёнка', 'Бахилы', 'Индивидуальная уп.', 'Пакеты', 'Перчатки'])
 
     if b == 'Плёнка':
         b = plenka()
@@ -38,6 +41,10 @@ def products():
 
     elif b == 'Пакеты':
         b = paketi()
+#------------------------
+
+    elif b == 'Индивидуальная уп.':
+        b = individualka()
 
 #------------------------
 
