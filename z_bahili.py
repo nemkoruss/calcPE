@@ -1,4 +1,5 @@
 import streamlit as st
+import datetime as dt
 import pandas as pd
 import numpy as np
 
@@ -7,6 +8,10 @@ def bahili():
 
     st.write('')
     st.title('БАХИЛЫ')
+    st.write('')
+    data_ras = st.date_input(
+        "Дата расчёта: ",
+        dt.date.today())
     st.write('')
     st.header('Цена 1 кг. плёнки: ')
     col9, col10 = st.columns(2)
@@ -189,6 +194,8 @@ def bahili():
     with open('./file/info.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
             file.write(
+                'БАХИЛЫ' '\n' '\n'
+                'Дата выполнения расчёта: ' + str(data_ras)  + '\n' '\n'
                 'Общий вес замеса: ' + str(ezur) + ' кг.' '\n' '\n'
                 'ПНД: ' + str(ab1) + ' кг.' '\n'
                 'Цeна ПНД: ' + str(ab2) + ' руб.' '\n' '\n'

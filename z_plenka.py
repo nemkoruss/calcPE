@@ -1,13 +1,17 @@
 from ast import Try
 import streamlit as st
+import datetime
 import pandas as pd
 import numpy as np
 from streamlit_echarts import st_echarts
 
 def plenka():
-
     st.write('')
     st.title('ПЛЕНКА')
+    st.write('')
+    data_ras = st.date_input(
+        "Дата расчёта: ",
+        datetime.date.today())
     st.write('')
     st.header('Считаем замес гранулы: ')
     col1, col2 = st.columns(2)
@@ -52,9 +56,9 @@ def plenka():
         lbkus2 =  xb2 * lb2 / 100
         yb2 = xb2 + zb2 + ibkus2 + kbkus2 + lbkus2
         yb2 = float('{:.3f}'.format(yb2))
+    st.write('')
+    st.write('Цeна 1 килограмма замеса: ' + str(yb2) + ' руб.')
     with col1:
-        st.write('')
-        st.write('Цeна 1 килограмма замеса: ' + str(yb2) + ' руб.')
         fz1 = ab12 / ezur2
         gz1 = bb12 / ezur2
         vstz = vsta12 / ezur2
@@ -114,6 +118,8 @@ def plenka():
     with open('./file/info.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
             file.write(
+                'ПЛЕНКА' '\n' '\n'
+                'Дата выполнения расчёта: ' + str(data_ras)  + '\n' '\n'
                 'Общий вес замеса: ' + str(ezur2) + ' кг.' '\n' '\n'
                 'ПНД: ' + str(ab12) + ' кг.' '\n'
                 'Цeна ПНД: ' + str(ab22) + ' руб.' '\n' '\n'
@@ -132,7 +138,7 @@ def plenka():
                 'Вoзврат за экструдер: ' + str(kb2) + ' %.' '\n'
                 'БРАК: ' + str(lb2) + ' %' '\n' '\n'
                 'Цена 1 килограмма плёнки: ' + str(yb2) + ' руб.' '\n' '\n'
-                'В одном килограмме замеса: ' '\n'
+                'В одном килограмме замеса:' '\n'
                 'ПНД = ' + str(fz1) + ' кг.' '\n'
                 'ПНД втор. = ' + str(gz1) + ' кг.' '\n'
                 'Стрейч = ' + str(vstz) + ' кг.' '\n'
@@ -159,17 +165,17 @@ def plenka():
         "legend": {"orient": "vertical","left": "left",},
         "series": [
             {
-                "name": "Прибыль",
+                "name": "Продажа",
                 "type": "pie",
                 "radius": "50%",
                 "data": [
                     {"value": proc, "name": "Пpибыль"},
-                    {"value": nakk, "name": "Пpодажа"},
-                    {"value": ofi, "name": "Офис"},
+                    #{"value": nakk, "name": "Пpодажа"},
+                    {"value": ofi , "name": "Офис"},
                     {"value": nal, "name": "Налог"},
                     {"value": ras, "name": "Аренда"},
-                    {"value": ras, "name": "Расходы"},
-                    {"value": ras, "name": "Кредит"},
+                    {"value": are, "name": "Расходы"},
+                    {"value": kre, "name": "Кредит"},
                 ],
                 "emphasis": {
                     "itemStyle": {

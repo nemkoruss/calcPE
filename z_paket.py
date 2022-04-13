@@ -1,4 +1,5 @@
 import streamlit as st
+import datetime as dt
 import pandas as pd
 import numpy as np
 
@@ -7,6 +8,10 @@ def paketi():
 
     st.write('')
     st.title('ПАКЕТЫ')
+    st.write('')
+    data_ras = st.date_input(
+        "Дата расчёта: ",
+        dt.date.today())
     st.write('')
     st.header('Цена 1 кг. плёнки: ')
     col7, col8 = st.columns(2)
@@ -189,6 +194,8 @@ def paketi():
     with open('./file/info.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
             file.write(
+                'ПАКЕТЫ' '\n' '\n'
+                'Дата выполнения расчёта: ' + str(data_ras)  + '\n' '\n'
                 'Общий вес замеса: ' + str(ezur2) + ' кг.' '\n' '\n'
                 'ПНД: ' + str(ab12) + ' кг.' '\n'
                 'Цeна ПНД: ' + str(ab22) + ' руб.' '\n' '\n'
