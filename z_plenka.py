@@ -157,10 +157,7 @@ def plenka():
         options = {
         "title": {"text": "Отображение расчёта: ", "subtext": "Прибыль", "left": "center"},
         "tooltip": {"trigger": "item"},
-        "legend": {
-            "orient": "vertical",
-         "left": "left",
-        },
+        "legend": {"orient": "vertical","left": "left",},
         "series": [
             {
                 "name": "Прибыль",
