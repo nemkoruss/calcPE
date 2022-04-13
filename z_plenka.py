@@ -155,7 +155,7 @@ def plenka():
     with col4:
         st.write('')
         options = {
-        "title": {"text": "Отображение расчёта: ", "subtext": "Прибыль", "left": "center"},
+        #"title": {"text": "Отображение расчёта: ", "subtext": "Прибыль", "left": "right"},
         "tooltip": {"trigger": "item"},
         "legend": {"orient": "vertical","left": "left",},
         "series": [
@@ -170,7 +170,7 @@ def plenka():
                     {"value": nal, "name": "Налог"},
                     {"value": ras, "name": "Аренда"},
                     {"value": ras, "name": "Расходы"},
-                 {"value": ras, "name": "Кредит"},
+                    {"value": ras, "name": "Кредит"},
                 ],
                 "emphasis": {
                     "itemStyle": {
@@ -182,10 +182,9 @@ def plenka():
             }
         ],
     }
-    st.markdown("Что отобразить: ")
+    st.header('Что отобразить: ')
     events = {"legendselectchanged": "function(params) { return params.selected }",}
     s = st_echarts(options=options, events=events, height="600px", key="render_pie_events")
-    #if s is not None:
-    #    st.write(s)
+
 if __name__ == "__main__":
     plenka()
