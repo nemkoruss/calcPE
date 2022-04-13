@@ -167,9 +167,10 @@ def paketi():
     st.write('')
     st.write('Продaжа: ' + str(nakk11) + ' руб.')
 
-    with col7:
-        st.write('')
-        st.header('Pасчёт пpибыли: ')
+    st.write('')
+    st.header('Pасчёт пpибыли: ')
+    col700, col701 = st.columns(2)
+    with col700:
         prib12 = (nakk11 - ob41281)
         proc12 = prib12 - (20 / 100 * prib12)
         ofi12 = (proc12 / 100) * 50
@@ -184,12 +185,14 @@ def paketi():
         are12 = float('{:.3f}'.format(are12))
         kre12 = float('{:.3f}'.format(kre12))
     st.write('')
-    st.write('Пpибыль: ' + str(proc12) + ' руб.')
-    st.write('Офис: ' + str(ofi12) + ' руб.')
-    st.write('Налог: ' + str(nal12) + ' руб.')
-    st.write('Аренда: ' + str(ras12) + ' руб.')
-    st.write('Расходы: ' + str(are12) + ' руб.')
-    st.write('Кредит: ' + str(kre12) + ' руб.')
+    with col700:
+        st.write('Пpибыль: ' + str(proc12) + ' руб.')
+        st.write('Офис: ' + str(ofi12) + ' руб.')
+        st.write('Налог: ' + str(nal12) + ' руб.')
+    with col701:
+        st.write('Аренда: ' + str(ras12) + ' руб.')
+        st.write('Расходы: ' + str(are12) + ' руб.')
+        st.write('Кредит: ' + str(kre12) + ' руб.')
 
     with open('./file/info.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):

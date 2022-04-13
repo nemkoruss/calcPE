@@ -152,9 +152,10 @@ def perchatki():
     st.write('')
     st.write('Продажа: ' + str(nakk212) + ' руб.')
 
-    with col19:
-        st.write('')
-        st.header('Pасчёт пpибыли: ')
+    st.write('')
+    st.header('Pасчёт пpибыли: ')
+    col600, col601 = st.columns(2)
+    with col600:
         prib123 = (nakk212- ob412812)
         proc123 = prib123 - (20 / 100 * prib123)
         ofi123 = (proc123 / 100) * 50
@@ -169,12 +170,14 @@ def perchatki():
         are123 = float('{:.3f}'.format(are123))
         kre123 = float('{:.3f}'.format(kre123))
     st.write('')
-    st.write('Пpибыль: ' + str(proc123) + ' руб.')
-    st.write('Офис: ' + str(ofi123) + ' руб.')
-    st.write('Налог: ' + str(nal123) + ' руб.')
-    st.write('Аренда: ' + str(ras123) + ' руб.')
-    st.write('Расходы: ' + str(are123) + ' руб.')
-    st.write('Кредит: ' + str(kre123) + ' руб.')
+    with col600:
+        st.write('Пpибыль: ' + str(proc123) + ' руб.')
+        st.write('Офис: ' + str(ofi123) + ' руб.')
+        st.write('Налог: ' + str(nal123) + ' руб.')
+    with col601:
+        st.write('Аренда: ' + str(ras123) + ' руб.')
+        st.write('Расходы: ' + str(are123) + ' руб.')
+        st.write('Кредит: ' + str(kre123) + ' руб.')
 
     with open('./file/info.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
