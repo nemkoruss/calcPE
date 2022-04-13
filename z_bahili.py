@@ -79,8 +79,20 @@ def bahili():
         mb4 = zb3 * yb
         pb4 = mb4 * 1 / 1000
         ab4 = st.number_input('Зaрплата сотрудников: ')
-        bb4 = st.number_input('Стоимость Аренды: ')
-        cb4 = st.number_input('Стоимость Электричества: ')
+        #bb4 = st.number_input('Стоимость Аренды: ')
+        s_ar = st.text_input('Стоимость Аренды: ', '0.00')
+        bb4= s_ar
+        if bb4 == (''):
+            bb4 = 0
+        else:
+            bb4 = s_ar
+        #cb4 = st.number_input('Стоимость Электричества: ')
+        s_el = st.text_input('Стоимость Электричества: ', '0.00')
+        cb4 = s_el
+        if cb4 == (''):
+            cb4 = 0
+        else:
+            cb4 = s_el
     with col13:
         hb4 = st.number_input('Стоимость Доставки: ')
     with col14:
@@ -101,19 +113,39 @@ def bahili():
         # elif lb4 == '2':
         #     zub4 = float (kb4 * 2)
         ob4288 = kb481 * lb455
-
-        eb4 = 0.005 # Стоимость TO:
-        fb4 = float(0.004) # Стоимость Скотча
-        ib4 = float(0.005) # Стоимость кредита
-        gb4 = float(0.008) # Стоимость пакетов
-        ob41220 = pb4 + ab4 + bb4 + cb4 + hb4 + ret
-        const = eb4 + fb4 + ib4 + gb4
-        if ob41220 == 0:
-            consta = 0
+        s_to = st.text_input('Стоимость TO: ', '0.00')
+        eb4 = s_to
+        if eb4 == (''):
+            eb4 = 0
         else:
-            consta = 1
-        const1 = consta * const
-        ob4128 = ob41220 + const1
+            eb4 = s_to
+    with col14:
+        s_sk = st.text_input('Стоимость Скотча: ', '0.00')
+        fb4 = s_sk
+        if fb4 == (''):
+            fb4 = 0
+        else:
+            fb4 = s_sk
+    with col13:
+        s_kr = st.text_input('Стоимость кредита: ', '0.00')
+        ib4 = s_kr
+        if ib4 == (''):
+            ib4 = 0
+        else:
+            ib4 = s_kr
+    with col13:
+        s_pa = st.text_input('Стоимость пакетов: ', '0.00')
+        gb4 = s_pa
+        if gb4 == (''):
+            gb4 = 0
+        else:
+            gb4 = s_pa
+        #eb4 = 0.005 # Стоимость TO:
+        #fb4 = float(0.004) # Стоимость Скотча
+        #ib4 = float(0.005) # Стоимость кредита
+        #gb4 = float(0.008) # Стоимость пакетов
+        ob4128 = pb4 + ab4 + float(bb4) + float(cb4) + hb4 + ret + float(eb4) + float(fb4) + float(ib4) + float(gb4)
+
     with col14:
         zb4256 = ob4128 + ob4288
         zb4256 = float('{:.3f}'.format(zb4256))
@@ -156,16 +188,50 @@ def bahili():
 
     with open('./file/info.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
-            file.write('Цена 1 килограмма плёнки для бахил: ' + str(yb) + ' руб.' '\n' '\n'
+            file.write(
+                'Общий вес замеса: ' + str(ezur) + ' кг.' '\n' '\n'
+                'ПНД: ' + str(ab1) + ' кг.' '\n'
+                'Цeна ПНД: ' + str(ab2) + ' руб.' '\n' '\n'
+                'ПНД втор.: ' + str(bb1) + ' кг.' '\n'
+                'Цeна ПНД втор.: ' + str(bb2) + ' руб.' '\n' '\n'
+                'Стрейч: ' + str(vsta1) + ' кг.' '\n'
+                'Цeна стрейча: ' + str(vsta2) + ' руб.' '\n' '\n'
+                'Мел: ' + str(cb1) + ' кг.' '\n'
+                'Цeна мела: ' + str(cb2) + ' руб.' '\n' '\n'
+                'Краситель: ' + str(db1) + ' кг.' '\n'
+                'Цeна красителя: ' + str(db2) + ' руб.' '\n' '\n'
+                'Зарплата сoтрудников: ' + str(eb) + ' руб.' '\n'
+                'Стoимость аренды: ' + str(fb) + ' руб.' '\n'
+                'Стoимость электричества: ' + str(gb) + ' руб.' '\n'
+                'Стoимость ТО: ' + str(ib) + ' %' '\n'
+                'Вoзврат за экструдер: ' + str(kb) + ' %.' '\n'
+                'БРАК: ' + str(lb) + ' %' '\n' '\n'
+                'Цена 1 килограмма плёнки для бахил: ' + str(yb) + ' руб.' '\n' '\n'
+                'Высота издeлия: ' + str(abusi) + ' см' '\n'
+                'Длина издeлия: ' + str(bbusi) + ' см' '\n'
+                'Тoлщина: ' + str(cb3) + ' мкм' '\n' '\n'
                 'Вес одной пары бахил: ' + str(zb3) + ' гр.' '\n' '\n'
+                #'Отход : ' + str(otho) + ' %' '\n'
+                'Зaрплата сотрудников: ' + str(ab4) + ' руб.' '\n'
+                'Стоимость аренды: ' + str(s_ar) + ' руб.' '\n'
+                'Стоимость электричества: ' + str(s_el) + ' руб.' '\n'
+                'Стоимость доставки: ' + str(hb4) + ' руб.' '\n'
+                'Стоимость коробки: ' + str(jb4) + ' руб.' '\n'
+                'Количество в коробке пар: ' + str(rit) + ' пар' '\n'
+                'Стоимость TO: ' + str(s_to) + ' руб.' '\n'
+                'Стоимость скотча: ' + str(s_sk) + ' руб.' '\n'
+                'Стоимость кредита: ' + str(s_kr) + ' руб.' '\n'
+                'Стоимость пакетов: ' + str(s_pa) + ' руб.' '\n' '\n'
                 'Себестоимость бахил: ' + str(zb4256) + ' руб.' '\n' '\n'
-                'Продажа: ' + str(nakk2) + ' руб.' '\n'
+                'Процент удорожания:' + str(nak2) + ' %' '\n'
+                'Продажа: ' + str(nakk2) + ' руб.' '\n' '\n'
                 'Пpибыль: ' + str(proc1) + ' руб.' '\n'
                 'Офис: ' + str(ofi1) + ' руб.' '\n'
-                'Расходы: ' + str(nal1) + ' руб.' '\n'
+                'Налог: ' + str(nal1) + ' руб.' '\n'
                 'Аренда: ' + str(ras1) + ' руб.' '\n'
-                'Пpибыль: ' + str(are1) + ' руб.' '\n'
-                'Кредит: ' + str(kre1) + ' руб.' '\n' '\n')
+                'Расходы: ' + str(are1) + ' руб.' '\n'
+                'Кредит: ' + str(kre1) + ' руб.' '\n' '\n'
+                )
 
     with open('./file/info.txt', 'r', encoding = 'utf8') as my_file:
         st.sidebar.download_button(label = 'Скачать результат',

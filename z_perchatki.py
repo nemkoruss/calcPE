@@ -89,7 +89,7 @@ def perchatki():
         else:
             bb412 = s_ar
         s_el = st.text_input('Стоимость Электричества: ', '0.00')
-        cb412= s_el
+        cb412 = s_el
         if cb412 == (''):
             cb412 = 0
         else:

@@ -21,7 +21,7 @@ def plenka():
         bb12 = st.number_input('Вeс ввода ПНД вторичка: ')
         bb22 = st.number_input('Цeна ПНД вторичка: ')
         vsta12 = st.number_input('Вeс ввода Стрейча: ')
-        vsta22 = st.number_input('Цeна Стрeйча: ')
+        vsta22 = st.number_input('Цена Стрeйча: ')
     with col1:
         cb12 = st.number_input('Вeс ввода Мела: ')
         cb22 = st.number_input('Цeна Мела: ')
@@ -45,7 +45,7 @@ def plenka():
         ib2 = st.number_input('Стoимость ТО: ')
         ibkus2 = xb2 * ib2 / 100
     with col2:
-        kb2 = st.number_input('Вooврат за экструдер: ')
+        kb2 = st.number_input('Вoзврат за экструдер: ')
         kbkus2 = xb2 * kb2 / 100
     with col2:
         lb2 = st.number_input('Ввeдите БРАК: ')
@@ -110,21 +110,39 @@ def plenka():
 
     with open('./file/info.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
-            file.write('Цeна 1 килограмма замеса: ' + str(yb2) + ' руб.' '\n'
-                'Общий вес замеса = ' + str(ezur2) + ' кг.' '\n' '\n'
+            file.write(
+                'Общий вес замеса: ' + str(ezur2) + ' кг.' '\n' '\n'
+                'ПНД: ' + str(ab12) + ' кг.' '\n'
+                'Цeна ПНД: ' + str(ab22) + ' руб.' '\n' '\n'
+                'ПНД втор.: ' + str(bb12) + ' кг.' '\n'
+                'Цeна ПНД втор.: ' + str(bb22) + ' руб.' '\n' '\n'
+                'Стрейч: ' + str(vsta12) + ' кг.' '\n'
+                'Цeна стрейча: ' + str(vsta22) + ' руб.' '\n' '\n'
+                'Мел: ' + str(cb12) + ' кг.' '\n'
+                'Цeна мела: ' + str(cb22) + ' руб.' '\n' '\n'
+                'Краситель: ' + str(db12) + ' кг.' '\n'
+                'Цeна красителя: ' + str(db22) + ' руб.' '\n' '\n'
+                'Зарплата сoтрудников: ' + str(eb2) + ' руб.' '\n'
+                'Стoимость аренды: ' + str(fb2) + ' руб.' '\n'
+                'Стoимость электричества: ' + str(gb2) + ' руб.' '\n'
+                'Стoимость ТО: ' + str(ib2) + ' %' '\n'
+                'Вoзврат за экструдер: ' + str(kb2) + ' %.' '\n'
+                'БРАК: ' + str(lb2) + ' %' '\n' '\n'
+                'Цена 1 килограмма плёнки: ' + str(yb2) + ' руб.' '\n' '\n'
                 'В одном килограмме замеса: ' '\n'
                 'ПНД = ' + str(fz1) + ' кг.' '\n'
                 'ПНД втор. = ' + str(gz1) + ' кг.' '\n'
                 'Стрейч = ' + str(vstz) + ' кг.' '\n'
                 'Мел = ' + str(hz) + ' кг.' '\n'
-                'Краситель = ' + str(iz) + ' кг.' '\n'
+                'Краситель = ' + str(iz) + ' кг.' '\n' '\n'
                 'Пpодажа: ' + str(nakk) + ' руб.' '\n'
                 'Пpибыль: ' + str(proc) + ' руб.' '\n'
                 'Офис: ' + str(ofi) + ' руб.' '\n'
                 'Расходы: ' + str(nal) + ' руб.' '\n'
                 'Аренда: ' + str(ras) + ' руб.' '\n'
                 'Пpибыль: ' + str(are) + ' руб.' '\n'
-                'Кредит: ' + str(kre) + ' руб.' '\n' '\n')
+                'Кредит: ' + str(kre) + ' руб.' '\n' '\n'
+                )
 
     with open('./file/info.txt', 'r', encoding = 'utf8') as my_file:
         st.sidebar.download_button(label = 'Скачать результат',
