@@ -151,9 +151,8 @@ def plenka():
         st.sidebar.download_button(label = 'Скачать результат',
         data = my_file, file_name = 'rinfo.txt',
         mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
-    st.write('')
+
     with col4:
-        st.write('')
         options = {
         #"title": {"text": "Отображение расчёта: ", "subtext": "Прибыль", "left": "right"},
         "tooltip": {"trigger": "item"},
