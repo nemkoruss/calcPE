@@ -136,8 +136,15 @@ def perchatki():
             gb412 = 0
         else:
             gb412 = s_pa
+    with col20:
+        pal = st.text_input('Паллетирование: ', '0.00')
+        pallet = pal
+        if pallet == (''):
+            pallet = 0
+        else:
+            pallet = pal
         ob4122012 = (pb412 - oth) + ab412 + float(bb412) + float(cb412) + hb412 + ret12
-        ob412812 = ob4122012 + float(eb412) + float(gb412) #+ float(fb412) + float(ib412)
+        ob412812 = ob4122012 + float(eb412) + float(gb412) + float(pallet)#+ float(fb412) + float(ib412)
         ob412812 = float('{:.3f}'.format(ob412812))
     st.write('')
     st.write('Себестоимость перчаток: ' + str(ob412812) + ' руб.')
@@ -216,7 +223,8 @@ def perchatki():
                 'Стоимость TO: ' + str(s_to) + ' руб.' '\n'
                 #'Стоимость скотча: ' + str(s_sk) + ' руб.' '\n'
                 #'Стоимость кредита: ' + str(s_kr) + ' руб.' '\n'
-                'Стоимость пакетов: ' + str(s_pa) + ' руб.' '\n' '\n'
+                'Стоимость пакетов: ' + str(s_pa) + ' руб.' '\n'
+                'Паллетирование: ' + str(pallet) + ' руб.' '\n' '\n'
                 'Себестоимость перчаток: ' + str(ob412812) + ' руб.' '\n' '\n'
                 'Процент удорожания:' + str(nak212) + ' %' '\n'
                 'Продажа: ' + str(nakk212) + ' руб.' '\n' '\n'

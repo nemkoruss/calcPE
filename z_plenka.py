@@ -56,6 +56,15 @@ def plenka():
         lbkus2 =  xb2 * lb2 / 100
         yb2 = xb2 + zb2 + ibkus2 + kbkus2 + lbkus2
         yb2 = float('{:.3f}'.format(yb2))
+    with col1:
+        pal = st.text_input('Паллетирование: ', '0.00')
+        pallet = pal
+        if pallet == (''):
+            pallet = 0
+        else:
+            pallet = pal
+    yb2 = xb2 + zb2 + ibkus2 + kbkus2 + lbkus2 + + float(pallet)
+    yb2 = float('{:.3f}'.format(yb2))
     st.write('')
     st.write('Цeна 1 килограмма замеса: ' + str(yb2) + ' руб.')
     with col1:
@@ -72,11 +81,14 @@ def plenka():
         iz = float('{:.3f}'.format(iz))
     st.write('Общий вес замеса = ' + str(ezur2) + ' кг.')
     st.subheader('В одном килограмме замеса: ')
-    st.write('ПНД = ' + str(fz1) + ' кг.')
-    st.write('ПНД втор. = ' + str(gz1) + ' кг.')
-    st.write('Стрейч = ' + str(vstz) + ' кг.')
-    st.write('Мел = ' + str(hz) + ' кг.')
-    st.write('Краситель = ' + str(iz) + ' кг.')
+    col400, col401 = st.columns(2)
+    with col400:
+        st.write('ПНД = ' + str(fz1) + ' кг.')
+        st.write('ПНД втор. = ' + str(gz1) + ' кг.')
+        st.write('Стрейч = ' + str(vstz) + ' кг.')
+    with col401:
+        st.write('Мел = ' + str(hz) + ' кг.')
+        st.write('Краситель = ' + str(iz) + ' кг.')
 
     col3, col4 = st.columns(2)
     with col3:
@@ -136,7 +148,8 @@ def plenka():
                 'Стoимость электричества: ' + str(gb2) + ' руб.' '\n'
                 'Стoимость ТО: ' + str(ib2) + ' %' '\n'
                 'Вoзврат за экструдер: ' + str(kb2) + ' %.' '\n'
-                'БРАК: ' + str(lb2) + ' %' '\n' '\n'
+                'БРАК: ' + str(lb2) + ' %' '\n'
+                'Паллетирование: ' + str(pallet) + ' руб.' '\n' '\n'
                 'Цена 1 килограмма плёнки: ' + str(yb2) + ' руб.' '\n' '\n'
                 'В одном килограмме замеса:' '\n'
                 'ПНД = ' + str(fz1) + ' кг.' '\n'

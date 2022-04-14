@@ -79,6 +79,13 @@ def individualka():
             qe_up = 0
         else:
             qe_up = s_ui
+    with col125:
+        pal = st.text_input('Паллетирование: ', '0.00')
+        pallet = pal
+        if pallet == (''):
+            pallet = 0
+        else:
+            pallet = pal
     with col126:
         k_ui = st.text_input('Количество продукции в упаковке: ', '0.00')
         qw_up = k_ui
@@ -86,7 +93,7 @@ def individualka():
             qw_up = 0
         else:
             qw_up = k_ui
-        vi_iup = (float(s_ui) * float(k_ui)) + float(iup)
+        vi_iup = (float(s_ui) * float(k_ui)) + float(iup) + float(pallet)
     vi_iup = float('{:.3f}'.format(vi_iup))
     st.write('Себестоимость изделия в инд. упак.: ' + str(vi_iup) + ' руб.')
 

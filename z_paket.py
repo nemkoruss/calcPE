@@ -148,11 +148,18 @@ def paketi():
             gb41 = 0
         else:
             gb41 = s_pa
+    with col8:
+        pal = st.text_input('Паллетирование: ', '0.00')
+        pallet = pal
+        if pallet == (''):
+            pallet = 0
+        else:
+            pallet = pal
         #eb41 = 0.005 # Стоимость TO:
         #fb41 = float(0.004) # Стоимость Скотча
         #ib41 = float(0.005) # Стоимость кредита
         #gb41 = float(0.008) # Стоимость пакетов
-        ob41281 = (pb41 - oth1) + ab41 + float(bb41) + float(cb41) + hb41 + ret1 + float(eb41) + float(fb41) + float(ib41) + float(gb41)
+        ob41281 = (pb41 - oth1) + ab41 + float(bb41) + float(cb41) + hb41 + ret1 + float(eb41) + float(fb41) + float(ib41) + float(gb41) + float(pallet)
         ob41281 = float('{:.3f}'.format(ob41281))
     st.write('')
     st.write('Себестоимость пакета: ' + str(ob41281) + ' руб.')
@@ -233,6 +240,7 @@ def paketi():
                 'Количество в коробке пар: ' + str(rit1) + ' пар' '\n'
                 'Стоимость TO: ' + str(s_to) + ' руб.' '\n'
                 'Стоимость скотча: ' + str(s_sk) + ' руб.' '\n'
+                'Паллетирование: ' + str(pallet) + ' руб.' '\n'
                 'Стоимость кредита: ' + str(s_kr) + ' руб.' '\n'
                 'Стоимость пакетов: ' + str(s_pa) + ' руб.' '\n' '\n'
                 'Себестоимость пакетов: ' + str(ob41281) + ' руб.' '\n' '\n'

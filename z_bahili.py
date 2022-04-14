@@ -150,11 +150,18 @@ def bahili():
             gb4 = 0
         else:
             gb4 = s_pa
+    with col13:
+        pal = st.text_input('Паллетирование: ', '0.00')
+        pallet = pal
+        if pallet == (''):
+            pallet = 0
+        else:
+            pallet = pal
         #eb4 = 0.005 # Стоимость TO:
         #fb4 = float(0.004) # Стоимость Скотча
         #ib4 = float(0.005) # Стоимость кредита
         #gb4 = float(0.008) # Стоимость пакетов
-        ob4128 = pb4 + float(ab4) + float(bb4) + float(cb4) + hb4 + ret + float(eb4) + float(fb4) + float(ib4) + float(gb4)
+        ob4128 = pb4 + float(ab4) + float(bb4) + float(cb4) + hb4 + ret + float(eb4) + float(fb4) + float(ib4) + float(gb4) + float(pallet)
     with col14:
         zb4256 = ob4128 + ob4288
     zb4256 = float('{:.3f}'.format(zb4256))
@@ -235,7 +242,8 @@ def bahili():
                 'Стоимость TO: ' + str(s_to) + ' руб.' '\n'
                 'Стоимость скотча: ' + str(s_sk) + ' руб.' '\n'
                 'Стоимость кредита: ' + str(s_kr) + ' руб.' '\n'
-                'Стоимость пакетов: ' + str(s_pa) + ' руб.' '\n' '\n'
+                'Стоимость пакетов: ' + str(s_pa) + ' руб.' '\n'
+                'Паллетирование: ' + str(pallet) + ' руб.' '\n' '\n'
                 'Себестоимость бахил: ' + str(zb4256) + ' руб.' '\n' '\n'
                 'Процент удорожания:' + str(nak2) + ' %' '\n'
                 'Продажа: ' + str(nakk2) + ' руб.' '\n' '\n'
