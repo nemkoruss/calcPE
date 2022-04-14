@@ -164,5 +164,37 @@ def individualka():
         data = my_file, file_name = 'rinfo.txt',
         mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
+        '''
+    with open('./file/info.docx', 'a+', encoding = 'utf8') as file_docx:
+        if st.sidebar.button('Записать DOCX'):
+            file_docx.write(
+                'Индивидуальная упаковка' '\n' '\n'
+                'Дата выполнения расчёта: ' + str(data_ras)  + '\n' '\n'
+                'Вес упаковки: ' + str(v_ip) + ' кг.' '\n'
+                'Стоимость 1 кг. упаковочной плёнки: ' + str(s_ip) + ' руб.' '\n'
+                'Зарплата сoтрудников: ' + str(r_ip) + ' руб.' '\n'
+                'Стoимость аренды: ' + str(a_ip) + ' руб.' '\n'
+                'Стoимость электричества: ' + str(e_ip) + ' руб.' '\n'
+                'Стoимость ТО: ' + str(t_ip) + ' %' '\n'
+                'Доставка: ' + str(d_ip) + ' %' '\n'
+                'Этикетка: ' + str(q_ip) + ' руб.' '\n' '\n'
+                'Себестоимость упаковки: ' + str(iup) + ' руб.' '\n' '\n'
+                'Себестоимость изделия в инд. упак.: ' + str(vi_iup) + ' руб.' '\n' '\n'
+                'Процент удорожания:' + str(nak2) + ' %' '\n'
+                'Продажа: ' + str(nakk2) + ' руб.' '\n' '\n'
+                'Пpибыль: ' + str(proc1) + ' руб.' '\n'
+                'Офис: ' + str(ofi1) + ' руб.' '\n'
+                'Налог: ' + str(nal1) + ' руб.' '\n'
+                'Аренда: ' + str(ras1) + ' руб.' '\n'
+                'Расходы: ' + str(are1) + ' руб.' '\n'
+                'Кредит: ' + str(kre1) + ' руб.' '\n' '\n'
+                )
+
+    with open('./file/info.docx', 'rb') as my_file_dosx:
+        st.sidebar.download_button(label = 'Скачать DOCX',
+        data = my_file_dosx, file_name = 'info.docx',
+        mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+        '''
+
 if __name__ == "__main__":
     individualka()
