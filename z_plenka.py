@@ -4,6 +4,10 @@ import datetime as dt
 import pandas as pd
 import numpy as np
 from streamlit_echarts import st_echarts
+import yadisk
+import local_settings as set
+import time
+
 
 def plenka():
     st.write('')
@@ -170,6 +174,16 @@ def plenka():
         st.sidebar.download_button(label = 'Скачать результат',
         data = my_file, file_name = 'rinfo.txt',
         mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+
+    y = set.YA
+    if st.sidebar.button('Сохранить на Яндекс-Диск'):
+        with open("./file/info.txt", "rb") as f:
+            y.upload(f, "/Загрузки/Калькулятор calcPE/rinfo.txt", overwrite = True)
+            my_bar = st.sidebar.progress(0)
+
+            for percent_complete in range(100):
+                time.sleep(0.01)
+                my_bar.progress(percent_complete + 1)
 
     with col4:
         options = {

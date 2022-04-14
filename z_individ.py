@@ -2,6 +2,9 @@ import streamlit as st
 import datetime as dt
 import pandas as pd
 import numpy as np
+import yadisk
+import local_settings as set
+import time
 
 def individualka():
 
@@ -192,9 +195,19 @@ def individualka():
 
     with open('./file/info.docx', 'rb') as my_file_dosx:
         st.sidebar.download_button(label = 'Скачать DOCX',
-        data = my_file_dosx, file_name = 'info.docx',
+        data = my_file_dosx, file_name = 'rinfo.docx',
         mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
         '''
+    y = set.YA
+    if st.sidebar.button('Сохранить на Яндекс-Диск'):
+        with open("./file/info.txt", "rb") as f:
+            y.upload(f, "/Загрузки/Калькулятор calcPE/rinfo.txt", overwrite = True)
+            my_bar = st.sidebar.progress(0)
+
+            for percent_complete in range(100):
+                time.sleep(0.01)
+                my_bar.progress(percent_complete + 1)
+
 
 if __name__ == "__main__":
     individualka()

@@ -9,7 +9,6 @@ import vibor_rascheta as vib # Модуль расчета продукции
 from vibor_rascheta import products, orders, salarys
 
 
-
 #imgs = Image.open('icon.jpg')
 PAGE_CONFIG = {'page_title':'calcPe' , 'page_icon':'./file/polietilen.png' , 'layout':'centered'}
 st.set_page_config(**PAGE_CONFIG)
