@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import datetime as dt
 import local_settings as settings # Самописный модуль с информацией
-#from PIL import Image # Для отображения изображений
+from PIL import Image # Для отображения изображений
 import vibor_rascheta as vib # Модуль расчета продукции
 from vibor_rascheta import products, orders, salarys
 
@@ -24,7 +24,14 @@ def main():
             st.subheader ('Инструкция')
             st.subheader('Для работы калькулятора выберите в боковом меню нужный расчёт !')
             st.markdown('*Для входа в боковое меню на устройстве с маленьким экраном нажмите, в левом вверхнем углу, значок в виде стрелки  ">"*')
-            st.markdown('Для более комфортной работы, не забывайте "Очищать экран"')
+            st.markdown('Для полного сброса данных, нажмите "Очистить"')
+            image = Image.open('./img/ochistit.png')
+            st.image(image, caption='Очищаем от данных')
+            st.markdown('После отправки расчётов на яндекс диск, искать их стоит:')
+            st.markdown('Яндекс диск -> Загрузки -> Калькулятор calcPE')
+            image = Image.open('./img/yandex.png')
+            st.image(image, caption='Очищаем от данных')
+
 
     elif choice == 'Калькулятор':
 
