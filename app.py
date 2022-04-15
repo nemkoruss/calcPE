@@ -21,7 +21,7 @@ def main():
     choice = st.sidebar.selectbox("Меню" ,menu)
 
     if choice == 'Инструкция':
-            st.subheader ('Инструкция')
+            st.header ('Инструкция')
             st.subheader('Для работы калькулятора выберите в боковом меню нужный расчёт !')
             st.markdown('Для входа в боковое меню на устройстве с маленьким экраном нажмите, в левом вверхнем углу, значок в виде стрелки  ">"')
             image = Image.open('./img/strelka.png')
