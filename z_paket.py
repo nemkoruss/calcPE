@@ -116,7 +116,12 @@ def paketi():
         else:
             cb41 = s_el
     with col8:
-        hb41 = st.number_input('Стоимость Доставки: ')
+        s_dos = st.text_input('Стоимость Доставки: ', '0.00')
+        hb41 = s_dos
+        if hb41 == (''):
+            hb41 = 0
+        else:
+            hb41 = s_dos
         jb41 = st.number_input('Стоимость Коробки: ')
         rit1 = st.number_input('Количество в коробке штук')
         if rit1 == 0:
@@ -131,7 +136,7 @@ def paketi():
         else:
             eb41 = s_to
     with col8:
-        s_sk = st.text_input('Стоимость Скотча: ', '0.00')
+        s_sk = st.text_input('Стоимость стяжки: ', '0.00')
         fb41 = s_sk
         if fb41 == (''):
             fb41 = 0
@@ -145,7 +150,7 @@ def paketi():
         else:
             ib41 = s_kr
     with col7:
-        s_pa = st.text_input('Стоимость пакетов: ', '0.00')
+        s_pa = st.text_input('Стоимость флексографии: ', '0.00')
         gb41 = s_pa
         if gb41 == (''):
             gb41 = 0
@@ -162,7 +167,7 @@ def paketi():
         #fb41 = float(0.004) # Стоимость Скотча
         #ib41 = float(0.005) # Стоимость кредита
         #gb41 = float(0.008) # Стоимость пакетов
-        ob41281 = (pb41 - oth1) + ab41 + float(bb41) + float(cb41) + hb41 + ret1 + float(eb41) + float(fb41) + float(ib41) + float(gb41) + float(pallet)
+        ob41281 = (pb41 - oth1) + ab41 + float(bb41) + float(cb41) + float(hb41) + ret1 + float(eb41) + float(fb41) + float(ib41) + float(gb41) + float(pallet)
         ob41281 = float('{:.3f}'.format(ob41281))
     st.write('')
     st.write('Себестоимость пакета: ' + str(ob41281) + ' руб.')
@@ -240,12 +245,12 @@ def paketi():
                 'Стоимость электричества: ' + str(s_el) + ' руб.' '\n'
                 'Стоимость доставки: ' + str(hb41) + ' руб.' '\n'
                 'Стоимость коробки: ' + str(jb41) + ' руб.' '\n'
-                'Количество в коробке пар: ' + str(rit1) + ' пар' '\n'
+                'Количество в коробке шт.: ' + str(rit1) + ' шт' '\n'
                 'Стоимость TO: ' + str(s_to) + ' руб.' '\n'
-                'Стоимость скотча: ' + str(s_sk) + ' руб.' '\n'
+                'Стоимость стяжки: ' + str(s_sk) + ' руб.' '\n'
                 'Паллетирование: ' + str(pallet) + ' руб.' '\n'
                 'Стоимость кредита: ' + str(s_kr) + ' руб.' '\n'
-                'Стоимость пакетов: ' + str(s_pa) + ' руб.' '\n' '\n'
+                'Стоимость флексографии ' + str(s_pa) + ' руб.' '\n' '\n'
                 'Себестоимость пакетов: ' + str(ob41281) + ' руб.' '\n' '\n'
                 'Процент удорожания:' + str(nak11) + ' %' '\n'
                 'Продажа: ' + str(nakk11) + ' руб.' '\n' '\n'
