@@ -23,14 +23,16 @@ def main():
     if choice == 'Инструкция':
             st.subheader ('Инструкция')
             st.subheader('Для работы калькулятора выберите в боковом меню нужный расчёт !')
-            st.markdown('*Для входа в боковое меню на устройстве с маленьким экраном нажмите, в левом вверхнем углу, значок в виде стрелки  ">"*')
+            st.markdown('Для входа в боковое меню на устройстве с маленьким экраном нажмите, в левом вверхнем углу, значок в виде стрелки  ">"')
+            image = Image.open('./img/strelka.png')
+            st.image(image, caption='Открытие бокового меню')
             st.markdown('Для полного сброса данных, нажмите "Очистить"')
             image = Image.open('./img/ochistit.png')
             st.image(image, caption='Очищаем от данных')
             st.markdown('После отправки расчётов на яндекс диск, искать их стоит:')
             st.markdown('Яндекс диск -> Загрузки -> Калькулятор calcPE')
             image = Image.open('./img/yandex.png')
-            st.image(image, caption='Очищаем от данных')
+            st.image(image, caption='Размещение на яндекс диске')
 
 
     elif choice == 'Калькулятор':
