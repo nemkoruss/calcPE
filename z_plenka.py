@@ -130,7 +130,71 @@ def plenka():
         st.write('Аренда: ' + str(ras) + ' руб.')
         st.write('Расходы: ' + str(are) + ' руб.')
         st.write('Кредит: ' + str(kre) + ' руб.')
+        exe = proc + ofi + nal + ras + are + kre
+        nakk = float('{:.3f}'.format(nakk))
+        exe = float('{:.3f}'.format(exe))
     st.write('')
+
+    st.header('Таблица: ')
+    #col333, col422 = st.columns(2)
+    #with col333:
+    df = pd.DataFrame({'Название': ['Прибыль', 'Офис', 'Налог',
+                    'Аренда', 'Расходы', 'Кредит', 'Сумма', 'Продажа'],
+                    'Количество': [proc, ofi, nal,
+                                        ras, are, kre, exe, nakk],
+                    'Ед. изм.': ['.руб', '.руб',
+                                '.руб', '.руб',
+                                '.руб', '.руб',  '.руб', '.руб'],
+                        #'Итого' : [prib + ofi + nal +
+                                            #ras + are + kre]
+                                            })
+
+    df.to_excel('./file/proba.xlsx', sheet_name='Продажа', index=False)
+    st.dataframe(df)
+    col333, col422 = st.columns(2)
+    with col333:
+        if st.button('Записать график'):
+            with open("./file/proba.xlsx", "rb") as f:
+                df.to_excel('./file/proba.xlsx', sheet_name='Продажа', index=False)
+    with col422:
+        if st.button('Скачать график'):
+            with open('./file/proba.xlsx', 'r', encoding = 'utf8') as my_file:
+                st.sidebar.download_button(label = 'Скачать результат',
+                data = f, file_name = 'Расчёт.xlsx',
+                mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+    with col333:
+        options = {
+        #"title": {"text": "Отображение расчёта: ", "subtext": "Прибыль", "left": "right"},
+        "tooltip": {"trigger": "item"},
+        "legend": {"orient": "vertical","left": "left",},
+        "series": [
+            {
+                "name": "Продажа",
+                "type": "pie",
+                "radius": "50%",
+                "data": [
+                    {"value": proc, "name": "Пpибыль"},
+                    #{"value": nakk, "name": "Пpодажа"},
+                    {"value": ofi , "name": "Офис"},
+                    {"value": nal, "name": "Налог"},
+                    {"value": ras, "name": "Аренда"},
+                    {"value": are, "name": "Расходы"},
+                    {"value": kre, "name": "Кредит"},
+                ],
+                "emphasis": {
+                    "itemStyle": {
+                        "shadowBlur": 10,
+                        "shadowOffsetX": 0,
+                        "shadowColor": "rgba(0, 0, 0, 0.5)",
+                    }
+                },
+            }
+        ],
+    }
+    st.header('График: ')
+    events = {"legendselectchanged": "function(params) { return params.selected }",}
+    s = st_echarts(options=options, events=events, height="600px", key="render_pie_events")
+
     with open('./file/raschet.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
             file.write(
@@ -206,21 +270,21 @@ def plenka():
                     'Расходы: ' + str(are) + ' руб.' '\n'
                     'Кредит: ' + str(kre) + ' руб.' '\n' '\n'
                     )
+        '''
+    df = pd.DataFrame({'Название': ['Прибыль', 'Офис', 'Налог',
+                                'Аренда', 'Расходы', 'Кредит'],
+                    'Количество': [prib, ofi, nal,
+                                        ras, are, kre],
+                    'Единица измерения': ['.руб', '.руб',
+                                '.руб', '.руб',
+                                '.руб', '.руб'],
+                    #'Итого' : [prib + ofi + nal +
+                                        #ras + are + kre]
+                                         })
 
-    with open('./file/raschet.txt', 'r', encoding = 'utf8') as my_file:
-        st.sidebar.download_button(label = 'Скачать результат',
-        data = my_file, file_name = 'Расчёт.txt',
-        mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
-    y = set.YA
-    if st.sidebar.button('Сохранить на Яндекс-Диск'):
-        with open("./file/raschet.docx", "rb") as f:
-            y.upload(f, "/Загрузки/Калькулятор calcPE/Расчёт.docx", overwrite = True)
-            my_bar = st.sidebar.progress(0)
-
-            for percent_complete in range(100):
-                time.sleep(0.01)
-                my_bar.progress(percent_complete + 1)
+    df.to_excel('./file/proba.xlsx', sheet_name='Продажа', index=False)
+    st.dataframe(df)
 
     with col4:
         options = {
@@ -253,7 +317,23 @@ def plenka():
     }
     st.header('Что отобразить: ')
     events = {"legendselectchanged": "function(params) { return params.selected }",}
-    s = st_echarts(options=options, events=events, height="600px", key="render_pie_events")
+    s = st_echarts(options=options, events=events, height="600px", key="render_pie_events"))'''
+
+    with open('./file/raschet.txt', 'r', encoding = 'utf8') as my_file:
+        st.sidebar.download_button(label = 'Скачать результат',
+        data = my_file, file_name = 'Расчёт.txt',
+        mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+
+    y = set.YA
+    if st.sidebar.button('Сохранить на Яндекс-Диск'):
+        with open("./file/raschet.docx", "rb") as f:
+            y.upload(f, "/Загрузки/Калькулятор calcPE/Расчёт.docx", overwrite = True)
+            my_bar = st.sidebar.progress(0)
+
+            for percent_complete in range(100):
+                time.sleep(0.01)
+                my_bar.progress(percent_complete + 1)
+
 
 if __name__ == "__main__":
     plenka()
