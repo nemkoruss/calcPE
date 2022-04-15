@@ -34,6 +34,17 @@ def main():
             image = Image.open('./img/yandex.png')
             st.image(image, caption='Размещение на яндекс диске')
 
+            st.markdown('Поля для ввода данных с 2-мя знаками после запятой')
+            image = Image.open('./img/2znaka.png')
+            st.image(image, caption='2 знака после запятой')
+
+            st.markdown('Поля для ввода данных с 3-мя знаками после запятой')
+            st.markdown('Строгие правила по вводу данных:')
+            st.markdown('1. Только числовые данные')
+            st.markdown('2. Только знак " . ", знак " , " запрещен')
+            image = Image.open('./img/3znaka.png')
+            st.image(image, caption='3 знака после запятой')
+
 
     elif choice == 'Калькулятор':
 
