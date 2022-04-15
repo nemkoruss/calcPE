@@ -149,18 +149,17 @@ def plenka():
                                             #ras + are + kre]
                                             })
 
-    df.to_excel('./file/proba.xlsx', sheet_name='Продажа', index=False)
+    df.to_excel('./file/tablica.xlsx', sheet_name='Продажа', index=False)
     st.dataframe(df)
     col333, col422 = st.columns(2)
+    #with col333:
+        #if st.button('Записать график'):
+           # with open("./file/proba.xlsx", "rb") as f:
+               # df.to_excel('./file/proba.xlsx', sheet_name='Продажа', index=False)
     with col333:
-        if st.button('Записать график'):
-            with open("./file/proba.xlsx", "rb") as f:
-                df.to_excel('./file/proba.xlsx', sheet_name='Продажа', index=False)
-    with col422:
-        if st.button('Скачать график'):
-            with open('./file/proba.xlsx', 'r', encoding = 'utf8') as my_file:
-                st.sidebar.download_button(label = 'Скачать результат',
-                data = f, file_name = 'Расчёт.xlsx',
+            with open('./file/tablica.xlsx', 'rb') as my_file:
+                st.download_button(label = 'Скачать таблицу',
+                data = my_file, file_name = 'Расчёт.xlsx',
                 mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
     with col333:
         options = {
