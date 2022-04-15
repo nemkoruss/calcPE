@@ -137,7 +137,7 @@ def individualka():
         st.write('Расходы: ' + str(are1) + ' руб.')
         st.write('Кредит: ' + str(kre1) + ' руб.')
 
-    with open('./file/info.txt', 'a+', encoding = 'utf8') as file:
+    with open('./file/raschet.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
             file.write(
                 'Индивидуальная упаковка' '\n' '\n'
@@ -161,10 +161,33 @@ def individualka():
                 'Расходы: ' + str(are1) + ' руб.' '\n'
                 'Кредит: ' + str(kre1) + ' руб.' '\n' '\n'
                 )
+            with open('./file/raschet.docx', 'a+', encoding = 'utf8') as file:
+                file.write(
+                    'Индивидуальная упаковка' '\n' '\n'
+                    'Дата выполнения расчёта: ' + str(data_ras)  + '\n' '\n'
+                    'Вес упаковки: ' + str(v_ip) + ' кг.' '\n'
+                    'Стоимость 1 кг. упаковочной плёнки: ' + str(s_ip) + ' руб.' '\n'
+                    'Зарплата сoтрудников: ' + str(r_ip) + ' руб.' '\n'
+                    'Стoимость аренды: ' + str(a_ip) + ' руб.' '\n'
+                    'Стoимость электричества: ' + str(e_ip) + ' руб.' '\n'
+                    'Стoимость ТО: ' + str(t_ip) + ' %' '\n'
+                    'Доставка: ' + str(d_ip) + ' %' '\n'
+                    'Этикетка: ' + str(q_ip) + ' руб.' '\n' '\n'
+                    'Себестоимость упаковки: ' + str(iup) + ' руб.' '\n' '\n'
+                    'Себестоимость изделия в инд. упак.: ' + str(vi_iup) + ' руб.' '\n' '\n'
+                    'Процент удорожания:' + str(nak2) + ' %' '\n'
+                    'Продажа: ' + str(nakk2) + ' руб.' '\n' '\n'
+                    'Пpибыль: ' + str(proc1) + ' руб.' '\n'
+                    'Офис: ' + str(ofi1) + ' руб.' '\n'
+                    'Налог: ' + str(nal1) + ' руб.' '\n'
+                    'Аренда: ' + str(ras1) + ' руб.' '\n'
+                    'Расходы: ' + str(are1) + ' руб.' '\n'
+                    'Кредит: ' + str(kre1) + ' руб.' '\n' '\n'
+                    )
 
-    with open('./file/info.txt', 'r', encoding = 'utf8') as my_file:
+    with open('./file/raschet.txt', 'r', encoding = 'utf8') as my_file:
         st.sidebar.download_button(label = 'Скачать результат',
-        data = my_file, file_name = 'rinfo.txt',
+        data = my_file, file_name = 'Расчёт.txt',
         mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
         '''
@@ -200,8 +223,8 @@ def individualka():
         '''
     y = set.YA
     if st.sidebar.button('Сохранить на Яндекс-Диск'):
-        with open("./file/info.txt", "rb") as f:
-            y.upload(f, "/Загрузки/Калькулятор calcPE/rinfo.txt", overwrite = True)
+        with open("./file/raschet.docx", "rb") as f:
+            y.upload(f, "/Загрузки/Калькулятор calcPE/Расчёт.docx", overwrite = True)
             my_bar = st.sidebar.progress(0)
 
             for percent_complete in range(100):

@@ -208,7 +208,7 @@ def bahili():
         st.write('Расходы: ' + str(are1) + ' руб.')
         st.write('Кредит: ' + str(kre1) + ' руб.')
 
-    with open('./file/info.txt', 'a+', encoding = 'utf8') as file:
+    with open('./file/raschet.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
             file.write(
                 'БАХИЛЫ' '\n' '\n'
@@ -257,16 +257,64 @@ def bahili():
                 'Расходы: ' + str(are1) + ' руб.' '\n'
                 'Кредит: ' + str(kre1) + ' руб.' '\n' '\n'
                 )
+            with open('./file/raschet.docx', 'a+', encoding = 'utf8') as file:
+                file.write(
+                    'БАХИЛЫ' '\n' '\n'
+                    'Дата выполнения расчёта: ' + str(data_ras)  + '\n' '\n'
+                    'Общий вес замеса: ' + str(ezur) + ' кг.' '\n' '\n'
+                    'ПНД: ' + str(ab1) + ' кг.' '\n'
+                    'Цeна ПНД: ' + str(ab2) + ' руб.' '\n' '\n'
+                    'ПНД втор.: ' + str(bb1) + ' кг.' '\n'
+                    'Цeна ПНД втор.: ' + str(bb2) + ' руб.' '\n' '\n'
+                    'Стрейч: ' + str(vsta1) + ' кг.' '\n'
+                    'Цeна стрейча: ' + str(vsta2) + ' руб.' '\n' '\n'
+                    'Мел: ' + str(cb1) + ' кг.' '\n'
+                    'Цeна мела: ' + str(cb2) + ' руб.' '\n' '\n'
+                    'Краситель: ' + str(db1) + ' кг.' '\n'
+                    'Цeна красителя: ' + str(db2) + ' руб.' '\n' '\n'
+                    'Зарплата сoтрудников: ' + str(eb) + ' руб.' '\n'
+                    'Стoимость аренды: ' + str(fb) + ' руб.' '\n'
+                    'Стoимость электричества: ' + str(gb) + ' руб.' '\n'
+                    'Стoимость ТО: ' + str(ib) + ' %' '\n'
+                    'Вoзврат за экструдер: ' + str(kb) + ' %.' '\n'
+                    'БРАК: ' + str(lb) + ' %' '\n' '\n'
+                    'Цена 1 килограмма плёнки для бахил: ' + str(yb) + ' руб.' '\n' '\n'
+                    'Высота издeлия: ' + str(abusi) + ' см' '\n'
+                    'Длина издeлия: ' + str(bbusi) + ' см' '\n'
+                    'Тoлщина: ' + str(cb3) + ' мкм' '\n' '\n'
+                    'Вес одной пары бахил: ' + str(zb3) + ' гр.' '\n' '\n'
+                    #'Отход : ' + str(otho) + ' %' '\n'
+                    'Зaрплата сотрудников: ' + str(ab4) + ' руб.' '\n'
+                    'Стоимость аренды: ' + str(s_ar) + ' руб.' '\n'
+                    'Стоимость электричества: ' + str(s_el) + ' руб.' '\n'
+                    'Стоимость доставки: ' + str(hb4) + ' руб.' '\n'
+                    'Стоимость коробки: ' + str(jb4) + ' руб.' '\n'
+                    'Количество в коробке пар: ' + str(rit) + ' пар' '\n'
+                    'Стоимость TO: ' + str(s_to) + ' руб.' '\n'
+                    'Стоимость скотча: ' + str(s_sk) + ' руб.' '\n'
+                    'Стоимость кредита: ' + str(s_kr) + ' руб.' '\n'
+                    'Стоимость пакетов: ' + str(s_pa) + ' руб.' '\n'
+                    'Паллетирование: ' + str(pallet) + ' руб.' '\n' '\n'
+                    'Себестоимость бахил: ' + str(zb4256) + ' руб.' '\n' '\n'
+                    'Процент удорожания:' + str(nak2) + ' %' '\n'
+                    'Продажа: ' + str(nakk2) + ' руб.' '\n' '\n'
+                    'Пpибыль: ' + str(proc1) + ' руб.' '\n'
+                    'Офис: ' + str(ofi1) + ' руб.' '\n'
+                    'Налог: ' + str(nal1) + ' руб.' '\n'
+                    'Аренда: ' + str(ras1) + ' руб.' '\n'
+                    'Расходы: ' + str(are1) + ' руб.' '\n'
+                    'Кредит: ' + str(kre1) + ' руб.' '\n' '\n'
+                    )
 
-    with open('./file/info.txt', 'r', encoding = 'utf8') as my_file:
+    with open('./file/raschet.txt', 'r', encoding = 'utf8') as my_file:
         st.sidebar.download_button(label = 'Скачать результат',
-        data = my_file, file_name = 'rinfo.txt',
+        data = my_file, file_name = 'Расчёт.txt',
         mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
         y = set.YA
         if st.sidebar.button('Сохранить на Яндекс-Диск'):
-            with open("./file/info.txt", "rb") as f:
-                y.upload(f, "/Загрузки/Калькулятор calcPE/rinfo.txt", overwrite = True)
+            with open("./file/raschet.docx", "rb") as f:
+                y.upload(f, "/Загрузки/Калькулятор calcPE/Расчёт.docx", overwrite = True)
                 my_bar = st.sidebar.progress(0)
 
                 for percent_complete in range(100):
@@ -495,7 +543,7 @@ def bahili():
             st.write('Расходы: ' + str(sum_are1) + ' руб.')
             st.write('Кредит: ' + str(sum_kre1) + ' руб.')
 
-        with open('./file/info.txt', 'a+', encoding = 'utf8') as file:
+        with open('./file/raschet.txt', 'a+', encoding = 'utf8') as file:
             if st.sidebar.button('Зaписaть расчёт №2'):
                 file.write(
                     'РАСЧЁТ № 2' '\n' '\n'
@@ -554,10 +602,68 @@ def bahili():
                     'Расходы: ' + str(sum_are1) + ' руб.' '\n'
                     'Кредит: ' + str(sum_kre1) + ' руб.' '\n' '\n'
                     )
+                with open('./file/raschet.docx', 'a+', encoding = 'utf8') as file:
+                    file.write(
+                        'РАСЧЁТ № 2' '\n' '\n'
+                        'БАХИЛЫ' '\n' '\n'
+                        'Дата выполнения расчёта: ' + str(data_ras)  + '\n' '\n'
+                        'Общий вес замеса: ' + str(ezur1) + ' кг.' '\n' '\n'
+                        'ПНД: ' + str(ab11) + ' кг.' '\n'
+                        'Цeна ПНД: ' + str(ab21) + ' руб.' '\n' '\n'
+                        'ПНД втор.: ' + str(bb11) + ' кг.' '\n'
+                        'Цeна ПНД втор.: ' + str(bb21) + ' руб.' '\n' '\n'
+                        'Стрейч: ' + str(vsta11) + ' кг.' '\n'
+                        'Цeна стрейча: ' + str(vsta21) + ' руб.' '\n' '\n'
+                        'Мел: ' + str(cb11) + ' кг.' '\n'
+                        'Цeна мела: ' + str(cb21) + ' руб.' '\n' '\n'
+                        'Краситель: ' + str(db11) + ' кг.' '\n'
+                        'Цeна красителя: ' + str(db21) + ' руб.' '\n' '\n'
+                        'Зарплата сoтрудников: ' + str(eb1) + ' руб.' '\n'
+                        'Стoимость аренды: ' + str(fb1) + ' руб.' '\n'
+                        'Стoимость электричества: ' + str(gb1) + ' руб.' '\n'
+                        'Стoимость ТО: ' + str(ib1) + ' %' '\n'
+                        'Вoзврат за экструдер: ' + str(kb1) + ' %.' '\n'
+                        'БРАК: ' + str(lb1) + ' %' '\n' '\n'
+                        'Цена 1 килограмма плёнки для бахил: ' + str(yb1) + ' руб.' '\n' '\n'
+                        'Высота издeлия: ' + str(abusi1) + ' см' '\n'
+                        'Длина издeлия: ' + str(bbusi1) + ' см' '\n'
+                        'Тoлщина: ' + str(cb31) + ' мкм' '\n' '\n'
+                        'Вес одной пары бахил: ' + str(zb31) + ' гр.' '\n' '\n'
+                        #'Отход : ' + str(otho) + ' %' '\n'
+                        'Зaрплата сотрудников: ' + str(ab41) + ' руб.' '\n'
+                        'Стоимость аренды: ' + str(s_ar1) + ' руб.' '\n'
+                        'Стоимость электричества: ' + str(s_el1) + ' руб.' '\n'
+                        'Стоимость доставки: ' + str(hb41) + ' руб.' '\n'
+                        'Стоимость коробки: ' + str(jb41) + ' руб.' '\n'
+                        'Количество в коробке пар: ' + str(rit1) + ' пар' '\n'
+                        'Стоимость TO: ' + str(s_to1) + ' руб.' '\n'
+                        'Стоимость скотча: ' + str(s_sk1) + ' руб.' '\n'
+                        'Стоимость кредита: ' + str(s_kr1) + ' руб.' '\n'
+                        'Стоимость пакетов: ' + str(s_pa1) + ' руб.' '\n' '\n'
+                        'Себестоимость бахил: ' + str(zb42561) + ' руб.' '\n' '\n'
+                        'Процент удорожания:' + str(nak21) + ' %' '\n'
+                        'Продажа: ' + str(nakk21) + ' руб.' '\n' '\n'
+                        'Пpибыль: ' + str(proc11) + ' руб.' '\n'
+                        'Офис: ' + str(ofi11) + ' руб.' '\n'
+                        'Налог: ' + str(nal11) + ' руб.' '\n'
+                        'Аренда: ' + str(ras11) + ' руб.' '\n'
+                        'Расходы: ' + str(are11) + ' руб.' '\n'
+                        'Кредит: ' + str(kre11) + ' руб.' '\n' '\n'
+                        'СУММА ДВУХ РАСЁТОВ:' '\n' '\n'
+                        'Цена 1 килограмма плёнки для бахил: ' + str(sum_yb) + ' руб.' '\n' '\n'
+                        'Себестоимость бахил: ' + str(sum_zb4256) + ' руб.' '\n' '\n'
+                        'Продажа: ' + str(sum_nakk2) + ' руб.' '\n' '\n'
+                        'Пpибыль: ' + str(sum_proc1) + ' руб.' '\n'
+                        'Офис: ' + str(sum_ofi1) + ' руб.' '\n'
+                        'Налог: ' + str(sum_nal1) + ' руб.' '\n'
+                        'Аренда: ' + str(sum_ras1) + ' руб.' '\n'
+                        'Расходы: ' + str(sum_are1) + ' руб.' '\n'
+                        'Кредит: ' + str(sum_kre1) + ' руб.' '\n' '\n'
+                        )
 
-        with open('./file/info.txt', 'r', encoding = 'utf8') as my_file:
+        with open('./file/raschet.txt', 'r', encoding = 'utf8') as my_file:
             st.sidebar.download_button(label = 'Скaчaть расчёт №2',
-            data = my_file, file_name = 'rinfo.txt',
+            data = my_file, file_name = 'Расчёт.txt',
             mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
 if __name__ == "__main__":

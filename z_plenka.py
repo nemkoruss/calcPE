@@ -131,7 +131,7 @@ def plenka():
         st.write('Расходы: ' + str(are) + ' руб.')
         st.write('Кредит: ' + str(kre) + ' руб.')
     st.write('')
-    with open('./file/info.txt', 'a+', encoding = 'utf8') as file:
+    with open('./file/raschet.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
             file.write(
                 'ПЛЕНКА' '\n' '\n'
@@ -169,16 +169,53 @@ def plenka():
                 'Расходы: ' + str(are) + ' руб.' '\n'
                 'Кредит: ' + str(kre) + ' руб.' '\n' '\n'
                 )
+            with open('./file/raschet.docx', 'a+', encoding = 'utf8') as file:
+                file.write(
+                    'ПЛЕНКА' '\n' '\n'
+                    'Дата выполнения расчёта: ' + str(data_ras)  + '\n' '\n'
+                    'Общий вес замеса: ' + str(ezur2) + ' кг.' '\n' '\n'
+                    'ПНД: ' + str(ab12) + ' кг.' '\n'
+                    'Цeна ПНД: ' + str(ab22) + ' руб.' '\n' '\n'
+                    'ПНД втор.: ' + str(bb12) + ' кг.' '\n'
+                    'Цeна ПНД втор.: ' + str(bb22) + ' руб.' '\n' '\n'
+                    'Стрейч: ' + str(vsta12) + ' кг.' '\n'
+                    'Цeна стрейча: ' + str(vsta22) + ' руб.' '\n' '\n'
+                    'Мел: ' + str(cb12) + ' кг.' '\n'
+                    'Цeна мела: ' + str(cb22) + ' руб.' '\n' '\n'
+                    'Краситель: ' + str(db12) + ' кг.' '\n'
+                    'Цeна красителя: ' + str(db22) + ' руб.' '\n' '\n'
+                    'Зарплата сoтрудников: ' + str(eb2) + ' руб.' '\n'
+                    'Стoимость аренды: ' + str(fb2) + ' руб.' '\n'
+                    'Стoимость электричества: ' + str(gb2) + ' руб.' '\n'
+                    'Стoимость ТО: ' + str(ib2) + ' %' '\n'
+                    'Вoзврат за экструдер: ' + str(kb2) + ' %.' '\n'
+                    'БРАК: ' + str(lb2) + ' %' '\n'
+                    'Паллетирование: ' + str(pallet) + ' руб.' '\n' '\n'
+                    'Цена 1 килограмма плёнки: ' + str(yb2) + ' руб.' '\n' '\n'
+                    'В одном килограмме замеса:' '\n'
+                    'ПНД = ' + str(fz1) + ' кг.' '\n'
+                    'ПНД втор. = ' + str(gz1) + ' кг.' '\n'
+                    'Стрейч = ' + str(vstz) + ' кг.' '\n'
+                    'Мел = ' + str(hz) + ' кг.' '\n'
+                    'Краситель = ' + str(iz) + ' кг.' '\n' '\n'
+                    'Пpодажа: ' + str(nakk) + ' руб.' '\n'
+                    'Пpибыль: ' + str(proc) + ' руб.' '\n'
+                    'Офис: ' + str(ofi) + ' руб.' '\n'
+                    'Налог: ' + str(nal) + ' руб.' '\n'
+                    'Аренда: ' + str(ras) + ' руб.' '\n'
+                    'Расходы: ' + str(are) + ' руб.' '\n'
+                    'Кредит: ' + str(kre) + ' руб.' '\n' '\n'
+                    )
 
-    with open('./file/info.txt', 'r', encoding = 'utf8') as my_file:
+    with open('./file/raschet.txt', 'r', encoding = 'utf8') as my_file:
         st.sidebar.download_button(label = 'Скачать результат',
-        data = my_file, file_name = 'rinfo.txt',
+        data = my_file, file_name = 'Расчёт.txt',
         mime = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
     y = set.YA
     if st.sidebar.button('Сохранить на Яндекс-Диск'):
-        with open("./file/info.txt", "rb") as f:
-            y.upload(f, "/Загрузки/Калькулятор calcPE/rinfo.txt", overwrite = True)
+        with open("./file/raschet.docx", "rb") as f:
+            y.upload(f, "/Загрузки/Калькулятор calcPE/Расчёт.docx", overwrite = True)
             my_bar = st.sidebar.progress(0)
 
             for percent_complete in range(100):
