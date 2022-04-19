@@ -208,6 +208,39 @@ def bahili():
         st.write('Расходы: ' + str(are1) + ' руб.')
         st.write('Кредит: ' + str(kre1) + ' руб.')
 
+
+
+    col13, col14 = st.columns(2)
+    with col13:
+        st.write('')
+        st.header('Расчёт заказа: ')
+        col_zakaza = st.text_input('Количество бахил в заказе в парах:', '0.00')
+        kol_zakaza = col_zakaza
+        if kol_zakaza == (''):
+            kol_zakaza = 0
+        else:
+            kol_zakaza = col_zakaza
+
+        plenka = float(kol_zakaza) * yb
+
+        ves = (float(kol_zakaza) * (zb3 + 1) / 100) * 1000
+
+        sebes = float(kol_zakaza) * zb4256
+
+        prod = float(kol_zakaza) * nakk2
+
+
+    #plenka = float('{:.3f}'.format(plenka))
+    st.write('Цена плёнки для бахил: ' + str(plenka) + ' руб.')
+    #ves = float('{:.3f}'.format(ves))
+    st.write('Вес: ' + str(ves) + ' кг.')
+    st.write('Себестоимость: ' + str(sebes) + ' руб.')
+    st.write('Продажа: ' + str(prod) + ' руб.')
+
+
+
+
+
     with open('./file/raschet.txt', 'a+', encoding = 'utf8') as file:
         if st.sidebar.button('Записать результат'):
             file.write(
