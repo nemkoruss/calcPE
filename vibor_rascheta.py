@@ -11,6 +11,8 @@ import z_paket as pr # Модуль расчета пакетов
 from z_paket import paketi
 import z_perchatki as pr # Модуль расчета перчаток
 from z_perchatki import perchatki
+import z_dav_sirie as ds # Модуль расчета давальческое сырьё
+from z_dav_sirie import daval_sir
 import z_a_bahili # Модуль расчета выполнения заказа бахил
 from z_a_bahili import zabahili
 import z_a_plenka # Модуль расчета выполнения заказа пленки
@@ -32,7 +34,7 @@ from z_p_paketi import zppaketi
 
 def products():
 
-    b = st.sidebar.selectbox('ПРОДУКЦИЯ:', ['Выбрать/Очистить','Плёнка', 'Бахилы', 'Индивидуальная уп.', 'Пакеты', 'Перчатки'])
+    b = st.sidebar.selectbox('ПРОДУКЦИЯ:', ['Выбрать/Очистить','Плёнка', 'Бахилы', 'Индивидуальная уп.', 'Пакеты', 'Перчатки', 'Дав. сырьё'])
 
     if b == 'Плёнка':
         b = plenka()
@@ -55,6 +57,13 @@ def products():
 
     elif b == 'Перчатки':
         b = perchatki()
+
+#-------------------------
+
+    elif b == 'Дав. сырьё':
+        b = daval_sir()
+
+#-------------------------
 
 if __name__ == "__main__":
     products()
